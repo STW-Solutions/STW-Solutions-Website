@@ -1,15 +1,14 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import Home from './Pages/Home';
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <div className="App">
-      <p className="text-center fs-2 mt-5">
-        STW-Solutions Website
-      </p>
+      <Home/>
     </div>
   )
 }
