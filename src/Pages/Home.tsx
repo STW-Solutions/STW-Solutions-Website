@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar/NavBar";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {

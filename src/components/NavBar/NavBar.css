@@ -1,0 +1,19 @@
+.stw-solutions-logo-box {
+    width: 5%;
+}
+
+.stw-nav-link {
+    padding: 0 4px !important;
+    color: #000000 !important;
+    font-weight: 500 !important;
+}
+
+.stw-nav-link:focus {
+    border-bottom: 3px solid;
+    border-color: #257251;
+}
+
+.stw-nav-link:hover {
+    color: #257251 !important;
+    font-weight: normal;
+}
