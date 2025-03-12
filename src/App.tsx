@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
-import Home from './Pages/Home';
+import Company from "./Pages/Company/Company";
+import Values from "./Pages/values/Values";
+import Team from "./Pages/Team/Team";
+import WhatWeDo from "./Pages/whatweDo/WhatWeDo";
 
 function App() {
  
 
   return (
     <div className="App">
-      <Home/>
+      {/*<Home/>*/}
+        <Company/>
+        <Values/>
+        <Team/>
+        <WhatWeDo/>
     </div>
   )
 }
