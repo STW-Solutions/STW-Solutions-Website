@@ -1,21 +1,18 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
 import './App.css'
-import Company from "./Pages/Company/Company";
-import Values from "./Pages/values/Values";
-import Team from "./Pages/Team/Team";
-import WhatWeDo from "./Pages/whatweDo/WhatWeDo";
+import Home from './Pages/Home';
 
 function App() {
- 
-
+  const { i18n } = useTranslation();
+  const handleLanguageChange = (language: string) => {
+    i18n.changeLanguage(language);
+  };
   return (
     <div className="App">
-      {/*<Home/>*/}
-        <Company/>
-        <Values/>
-        <Team/>
-        <WhatWeDo/>
+      <Home/>
     </div>
   )
 }
 
-export default App
+export default App;

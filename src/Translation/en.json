@@ -1,58 +1,5 @@
 {
   "test": "test kdxgklepegkakertkgmflvosgtlg",
   "english": "fjgdjsjrej",
-  "french": "French",
-  "whatWeDo": {
-    "heading": "WHAT WE DO",
-    "testimonialsHeading": "Testimonials",
-    "description": "Lorem ipsum dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea",
-    "forestConversationLabel": "Forest Conversation ok",
-    "wasteManagementLabel": "Waste Management ok",
-    "sustainableAgricultureLabel": "Sustainable Agriculture",
-    "communityManagementLabel": "Community Management",
-    "achievementAndGoals": "Our Achievement and Goals",
-    "impactDescription": "Since its inception, STW Solutions has made significant strides in promoting sustainability and environmental awareness. Our projects have reached thousands of individuals and communities, fostering a culture of environmental stewardship and creating lasting change. We have successfully:",
-    "ourImpact": "Our Impact",
-    "impactStatements": {
-      "preservedRainforest": "Preserved 600 ha of rainforest.",
-      "cultivatedKiriTrees": "Cultivated Kiri trees in Cameroon.",
-      "plasticWasteInitiatives": "Implemented plastic waste collection initiatives.",
-      "regenerativeFarming": "Implemented regenerative farming on a 40 ha farmland.",
-      "greenhouseFarming": "Promoted greenhouse farming."
-    },
-    "testimonialsDescription": "Some testimonials and review of our work from our clients",
-    "testimonialExperience": "We're an international non-profit founded in 2003, with offices in London, New York, New Delhi, Amsterdam and Beijing."
-  },
-  "company": {
-    "companyName": "STW Solutions Ltd",
-    "ourVision": "Our Vision",
-    "ourMission": "Our Mission",
-    "visionDescription": "STW Solutions is committed to make a significant contribution to climate & environmental protection, and the preservation of nature for future generations. With the conservation of forest, cultivation of trees, prevention of plastic waste pollution, we strive to create a sustainable future. <br/> At STW Solutions, we want to make the world a better place - Creating a clean, greener, and more compassionate future for everyone.",
-    "missionDescription": "Our mission is to pave the way to climate and environmental neutrality and combat climate and environmental change through active measures. We are passionate about preserving, protecting, and restoring forests, and regenerative agriculture in Cameroon to reduce CO2 emissions and promote biodiversity. We are dedicated to eliminating plastic pollution at scale and accelerate the shift to a circular economy. Through innovative solutions and partnerships, we strive to promote sustainable development and make a positive contribution to the preservation of our planet and humanity. Together, we are dedicated to solving global social and environmental challenges.",
-    "seeProjects": "See Projects"
-  },
-  "team": {
-    "ourTeam": "Our Team",
-    "johnDoe": "John Doe",
-    "ceoFounder": "CEO & Founder",
-    "teamMemberAbout": "We're an international non-profit founded in 2003, with offices in London, New York, New Delhi, Amsterdam and Beijing.",
-    "name2": "Name 2",
-    "jobTitle2": "Job Title 2",
-    "name3": "Name 3",
-    "jobTitle3": "Job Title 3",
-    "name4": "Name 4",
-    "jobTitle4": "Job Title 4"
-  },
-  "values": {
-    "ourValues": "Our Values",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborio consequat.",
-    "sustainability": "Sustainability",
-    "responsibility": "Responsibility",
-    "trust": "Trust",
-    "socialImpact": "Social Impact",
-    "sustainabilityInfo": "We lay emphasis on sustainable forest management, agriculture waste management and contribute to climate and environmental protection",
-    "responsibilityInfo": "We take ownership of our actions and strive for a positive and safe work environment",
-    "trustInfo": "We cultivate a culture of openness, reliability, transparency and ethical practices. We have excellent relationships with our investors, partners and the government",
-    "socialImpactInfo": "Commitment to positive impact on local communities and the environment"
-  }
+  "french": "French"
 }
