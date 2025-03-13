@@ -1,6 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faGlobe } from "@fortawesome/free-solid-svg-icons";
+
 import "./NavBar.css";
+
 import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
 import ButtonOutline from "../ButtonOutline/ButtonOutline";
 
@@ -12,16 +16,9 @@ const NavBar = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
   return (
     <nav className="navbar navbar-expand-lg">
-      <div className="bg-white container-fluid px-5 mx-5">
-        <Link className="navbar-brand stw-solutions-logo-box mx-5" to={"/"}>
-          <img
-            src="STW-Solution-Logo.png"
-            alt={`${t("stw_solutions_logo")}`}
-            className="w-100"
-          />
-        </Link>
+      <div className="bg-white d-flex justify-content-between align-items-center w-100">
         <button
-          className="navbar-toggler"
+          className="navbar-toggler ms-1"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
@@ -29,20 +26,29 @@ const NavBar = ({ onClickLanguageChange }: Props) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span>
+            <FontAwesomeIcon icon={faBars} className="stw-green-icon" />
+          </span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarContent">
+        <Link className="navbar-brand stw-solutions-logo-box mx-5" to={"/"}>
+          <img
+            src="STW-Solution-Logo.png"
+            alt={`${t("stw_solutions_logo")}`}
+            className="w-100"
+          />
+        </Link>
+        <div className="collapse navbar-collapse stw-navlinks-box" id="navbarContent">
           <ul className="navbar-nav mb-2 mb-lg-0 text-capitalize mx-auto">
             <li className="nav-item">
               <Link
-                className="nav-link mx-5 stw-nav-link my-1"
+                className="nav-link stw-nav-link my-1 mx-4"
                 aria-current="page"
                 to="/"
               >
                 {t("home")}
               </Link>
             </li>
-            <li className="nav-item dropdown mx-5">
+            <li className="nav-item dropdown mx-4">
               <a
                 className="nav-link dropdown-toggle stw-nav-link my-1"
                 data-bs-toggle="dropdown"
@@ -51,7 +57,7 @@ const NavBar = ({ onClickLanguageChange }: Props) => {
               >
                 {t("company")}
               </a>
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu company-dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="#">
                     {t("about_us")}
@@ -81,14 +87,14 @@ const NavBar = ({ onClickLanguageChange }: Props) => {
             </li>
             <li className="nav-item">
               <Link
-                className="nav-link active mx-5 stw-nav-link my-1"
+                className="nav-link active mx-4 stw-nav-link my-1"
                 aria-current="page"
                 to="/"
               >
                 {t("services")}
               </Link>
             </li>
-            <li className="nav-item dropdown mx-5">
+            <li className="nav-item dropdown mx-4">
               <a
                 className="nav-link dropdown-toggle stw-nav-link my-1"
                 data-bs-toggle="dropdown"
@@ -97,7 +103,7 @@ const NavBar = ({ onClickLanguageChange }: Props) => {
               >
                 {t("projects")}
               </a>
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu project-dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="#">
                     {t("category1")}
@@ -116,28 +122,28 @@ const NavBar = ({ onClickLanguageChange }: Props) => {
               </ul>
             </li>
           </ul>
-          <div className="d-flex w-100">
-            <span className="w-25 me-2">
-            <ButtonPrimary children={`${t("contact_us")}`} />
+        </div>
+        <div className="d-none d-lg-flex justify-content-between stw-navbtns-box px-5 mx-5">
+          <ButtonPrimary
+            classes={["stw-btn-w", "me-2"]}
+            children={`${t("contact_us")}`}
+          />
+          <ButtonOutline
+            classes={["stw-btn-w", "me-2"]}
+            children={`${t("blog")}`}
+          />
+          <div className="stw-select-box d-flex align-items-center ps-1">
+            <span>
+              <FontAwesomeIcon icon={faGlobe} className="stw-green-icon" />
             </span>
-            <span className="w-25 me-2">
-            <ButtonOutline children={`${t("blog")}`} />
-            </span>
-            
-            {/* <button
-              type="button"
-              className="btn btn-primary"
-              onClick={() => onClickLanguageChange("en")}
+            <select
+              className="text-uppercase form-select rounded-0"
+              aria-label="language options"
+              onChange={(event) => onClickLanguageChange(event.target.value)}
             >
-              {t("english")}
-            </button>
-            <button
-              type="button"
-              className="ms-2 btn btn-secondary"
-              onClick={() => onClickLanguageChange("fr")}
-            >
-              {t("french")}
-            </button> */}
+              <option defaultValue={`${t("en")}`}>{t("en")}</option>
+              <option value={`${t("fr")}`}>{t("fr")}</option>
+            </select>
           </div>
         </div>
       </div>
