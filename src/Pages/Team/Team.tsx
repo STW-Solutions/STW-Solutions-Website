@@ -46,7 +46,7 @@ const Team = () => {
             <div>
                 <SectionHeading heading={t("team.ourTeam")} position={'left'}/>
             </div>
-            <div className="row px-5 mx-5">
+            <div className="row mx-md-5 px-md-5">
                 {teamData.map((team, index) => (
                     <div key={index} className="col-md-3 d-flex justify-content-center">
                         <Card

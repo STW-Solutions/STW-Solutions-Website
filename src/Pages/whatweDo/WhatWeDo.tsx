@@ -47,7 +47,7 @@ const WhatWeDo = () => {
 
     return (
         <div className="container-fluid container-main ">
-            <div className="row px-5 mx-5">
+            <div className="row mx-md-5 px-md-5">
                 <div className="col-md-7">
                     <SectionHeading heading={t("whatWeDo.heading")} position={"left"}/>
                     <div className="d-flex gap-3">

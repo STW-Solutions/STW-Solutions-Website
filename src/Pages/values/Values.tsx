@@ -49,7 +49,7 @@ const Values = () => {
             <div className="w-100 text-white text-center">
                 {t("values.description")}
             </div>
-            <div className="row px-5 mx-5">
+            <div className="row mx-md-5 px-md-5">
                 {cardData.map((card, index) => (
                     <div key={index} className="col-md-3 mb-2">
                         <Card

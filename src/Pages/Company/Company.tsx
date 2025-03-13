@@ -5,6 +5,9 @@ import image3 from '../../../public/images/image2.png'
 import image4 from '../../../public/images/image3.png'
 import './Company.css'
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import Values from "../values/Values";
+import Team from "../Team/Team";
+import WhatWeDo from "../whatweDo/WhatWeDo";
 
 
 const Company = () => {
@@ -13,7 +16,7 @@ const Company = () => {
     return (
         <>
             <div className="container-fluid container-main ">
-                <div className="row px-5 mx-5">
+                <div className="row mx-md-5 px-md-5">
                     <div className="col-md-6">
                         <h1 className="fw-bold py-5" style={{color:"#257251"}}>{t("company.companyName")}</h1>
                         <SectionHeading heading={t("company.ourVision")} position={"left"}/>
@@ -53,6 +56,9 @@ const Company = () => {
                     </div>
                 </div>
             </div>
+            <Values/>
+            <Team/>
+            <WhatWeDo/>
         </>
     )
 
