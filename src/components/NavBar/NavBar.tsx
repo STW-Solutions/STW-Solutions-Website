@@ -15,7 +15,7 @@ interface Props {
 const NavBar = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg fixed-top">
       <div className="bg-white d-flex justify-content-between align-items-center w-100">
         <button
           className="navbar-toggler ms-1"

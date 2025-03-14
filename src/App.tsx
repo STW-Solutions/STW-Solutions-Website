@@ -10,7 +10,6 @@ import Footer from "./components/Footer/Footer";
 function App() {
   const { i18n } = useTranslation();
   const handleLanguageChange = (language: string) => {
-    console.log(language)
     i18n.changeLanguage(language);
   };
   return (

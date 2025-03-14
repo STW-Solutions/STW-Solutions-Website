@@ -1,11 +1,57 @@
-import './Footer.css'
+import { useTranslation } from "react-i18next";
+import "./Footer.css";
+import { Link } from "react-router";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
-   <footer>
-    
-   </footer>
-  )
-}
+    <footer className="position-fixed bottom-0">
+      <div className="container py-5 text-white">
+        <div className="row">
+          <div className="col-md-3">
+            <h6>{t("company")}</h6>
+            <div className="d-flex justify-content-evenly flex-column">
+              <a href="#">{t("about_us")}</a>
+              <a href="#">{t("blog")}</a>
+              <a href="#">{t("contact_us")}</a>
+              <a href="#">{t("our_team")}</a>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <h6>{t("services")}</h6>
+            <div className="d-flex justify-content-center flex-column">
+              <a href="#">{t("service1")}</a>
+              <a href="#">{t("service2")}</a>
+              <a href="#">{t("service3")}</a>
+              <a href="#">{t("service4")}</a>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <h6>{t("projects")}</h6>
+            <div className="d-flex justify-content-center flex-column">
+              <a href="#">{t("projects1")}</a>
+              <a href="#">{t("projects2")}</a>
+              <a href="#">{t("projects3")}</a>
+              <a href="#">{t("projects4")}</a>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <Link className="navbar-brand stw-solutions-logo-box mx-5" to={"/"}>
+              <img
+                src="STW-Solution-Logo.png"
+                alt={`${t("stw_solutions_logo")}`}
+                className="w-100"
+              />
+            </Link>
+            <div>
+              <span className="fs-bold">{t("business_address" + ':')}</span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
