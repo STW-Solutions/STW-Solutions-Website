@@ -18,12 +18,12 @@ const Company = () => {
             <div className="container-fluid container-main ">
                 <div className="row mx-md-5 px-md-5">
                     <div className="col-md-6">
-                        <h1 className="fw-bold py-5" style={{color:"#257251"}}>{t("company.companyName")}</h1>
-                        <SectionHeading heading={t("company.ourVision")} position={"left"}/>
-                        <div className="text-start w-100" style={{color:"#1E1E1E"}} dangerouslySetInnerHTML={{ __html: t("company.visionDescription") }}>
+                        <h1 className="fw-bold py-5" style={{color:"#257251"}}>{t("companyName")}</h1>
+                        <SectionHeading heading={t("ourVision")} position={"left"}/>
+                        <div className="text-start w-100" style={{color:"#1E1E1E"}} dangerouslySetInnerHTML={{ __html: t("visionDescription") }}>
                         </div>
                         <div className="text-start" style={{ marginTop: "7rem"}}>
-                            <button className="btn p-3 rounded-2 text-white" style={{backgroundColor:"#257251"}}>{t("company.seeProjects")}</button>
+                            <button className="btn p-3 rounded-2 text-white" style={{backgroundColor:"#257251"}}>{t("seeProjects")}</button>
                         </div>
                         <hr className="mb-4 " style={{marginTop: "23rem",  border: "1px solid #9db2e1"}}/>
                     </div>
@@ -48,9 +48,9 @@ const Company = () => {
                         </div>
                         {/*make the code below responsive on small screen*/}
                         <div className="">
-                            <SectionHeading heading={t("company.ourMission")} position={"right"}/>
+                            <SectionHeading heading={t("ourMission")} position={"right"}/>
                         </div>
-                        <div className="text-start" dangerouslySetInnerHTML={{ __html: t("company.missionDescription") }}>
+                        <div className="text-start" dangerouslySetInnerHTML={{ __html: t("missionDescription") }}>
                         </div>
 
                     </div>
