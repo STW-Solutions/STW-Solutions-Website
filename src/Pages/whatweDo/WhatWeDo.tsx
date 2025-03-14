@@ -37,12 +37,7 @@ const WhatWeDo = () => {
             imageSrc: team3,
             experience: t("whatWeDo.testimonialExperience"),
             name: "Name 3",
-        },
-        {
-            imageSrc: team4,
-            experience: t("whatWeDo.testimonialExperience"),
-            name: "Name 4",
-        },
+        }
     ];
 
     return (
