@@ -6,6 +6,7 @@ import "./App.css";
 import Home from "./Pages/Home";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import Company from "./Pages/Company/Company";
 
 function App() {
   const { i18n } = useTranslation();
@@ -13,17 +14,19 @@ function App() {
     i18n.changeLanguage(language);
   };
   return (
-    <>
-      <NavBar onClickLanguageChange={handleLanguageChange} />
-      <main>
-        <Routes>
-          <Route index element={<Home />} />
-          {/* <Route path="about" element={<About />} /> */}
-        </Routes>
-      </main>
-      <Footer />
-    </>
-  );
+      <>
+        <NavBar onClickLanguageChange={handleLanguageChange} />
+        <main>
+          <Routes>
+            <Route path="/" element={<Company />} />
+            <Route path="/company" element={<Company />}/>
+              <Route path="*" element={<Home />} />
+              {/* <Route path="about" element={<About />} /> */}
+          </Routes>
+        </main>
+        <Footer />
+      </>
+  )
 }
 
 export default App;

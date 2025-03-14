@@ -1,0 +1,7 @@
+.cont{
+    background: linear-gradient(156.35deg, #275944 15.2%, #6AA189 22.39%, #9ACBB6 26.02%, #89B09F 33%, #B7EDD6 51.94%, #749F8D 67.49%, #80AF9C 73.03%, #275944 76.59%, #275944 79.6%);
+}
+.container-fluid {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}

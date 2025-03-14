@@ -7,7 +7,7 @@ import French from './Translation/fr.json';
 
 const resources = {
   en: {
-    translation: English
+    translation: English,
   },
   fr: {
     translation: French
