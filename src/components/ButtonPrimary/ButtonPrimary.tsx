@@ -2,11 +2,12 @@ import "./ButtonPrimary.css"
 
 interface Props {
     children: string;
+    classes: string[];
 }
 
-const ButtonPrimary = ({ children }: Props) => {
+const ButtonPrimary = ({ children, classes }: Props) => {
   return (
-    <button className='btn text-white stw-btn-color text-capitalize w-100' type='button'>{children}</button>
+    <button className={'btn text-white stw-btn-color text-capitalize ' + classes.join(' ')} type='button'>{children}</button>
   )
 }
 

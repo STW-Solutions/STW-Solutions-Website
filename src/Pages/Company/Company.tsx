@@ -15,7 +15,7 @@ const Company = () => {
 
     return (
         <>
-            <div className="container-fluid container-main ">
+            <div className="container-fluid container-main">
                 <div className="row mx-md-5 px-md-5">
                     <div className="col-md-6">
                         <h1 className="fw-bold py-5" style={{color:"#257251"}}>{t("companyName")}</h1>
