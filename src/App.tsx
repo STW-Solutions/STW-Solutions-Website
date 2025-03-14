@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import Home from './Pages/Home';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { Route, Routes } from "react-router";
+
+import "./App.css";
+
+import Home from "./Pages/Home";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Company from "./Pages/Company/Company";
-import {Route, Routes} from "react-router";
 
 function App() {
   const { i18n } = useTranslation();
