@@ -1,0 +1,32 @@
+.parallelogram {
+    width: 104px;
+    height: 10px;
+    transform: skewX(-20deg);
+    overflow: hidden;
+    background-color: #257251;
+    margin: 0 auto; /* Center the parallelogram horizontally */
+}
+
+.section-heading-text {
+    font-family: Lora, serif;
+    color: #181820;
+}
+
+.section-heading-hr {
+    border: 1px solid #E6E9EF;
+    width: 100%;
+}
+
+.section-heading-container {
+    display: flex;
+    flex-direction: column; /* Ensure heading is above parallelogram */
+    align-items: center; /* Center content horizontally */
+    width: fit-content;
+}
+.ml-4 {
+    margin-left: 4rem;
+}
+
+.mr-4 {
+    margin-left: 18rem;
+}
