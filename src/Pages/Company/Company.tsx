@@ -18,7 +18,7 @@ const Company = () => {
             <div className="container-fluid ">
                 <div className="row mx-md-5 px-md-5">
                     <div className="col-md-6">
-                        <h1 className="fw-bolder py-5 text-center" style={{color:"#257251"}}>{t("companyName")}</h1>
+                        <h1 className="fw-bolder py-5 text-md-start text-center" style={{color:"#257251"}}>{t("companyName")}</h1>
                         <SectionHeading heading={t("ourVision")} position={"left"}/>
                         <div className="text-start w-100" style={{color:"#1E1E1E"}} dangerouslySetInnerHTML={{ __html: t("visionDescription") }}>
                         </div>

@@ -15,7 +15,7 @@ function App() {
   };
   return (
       <>
-        <NavBar onClickLanguageChange={handleLanguageChange} />
+        {/*<NavBar onClickLanguageChange={handleLanguageChange} />*/}
         <main>
           <Routes>
             <Route path="/" element={<Company />} />
