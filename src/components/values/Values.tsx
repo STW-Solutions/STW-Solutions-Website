@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import './Values.css';
-import Card from '../../components/Card/Card'
+import Card from '../Card/Card'
 import value1 from '../../../public/images/values/value1.png';
 import value2 from '../../../public/images/values/value2.png';
 import value3 from '../../../public/images/values/value3.png';

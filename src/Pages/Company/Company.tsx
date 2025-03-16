@@ -5,9 +5,9 @@ import image3 from '../../../public/images/image2.png'
 import image4 from '../../../public/images/image3.png'
 import './Company.css'
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
-import Values from "../values/Values";
-import Team from "../Team/Team";
-import WhatWeDo from "../whatweDo/WhatWeDo";
+import Values from "../../components/values/Values";
+import Team from "../../components/Team/Team";
+import WhatWeDo from "../../components/whatweDo/WhatWeDo";
 
 
 const Company = () => {
@@ -15,18 +15,17 @@ const Company = () => {
 
     return (
         <>
-            <div className="container-fluid container-main ">
+            <div className="container-fluid ">
                 <div className="row mx-md-5 px-md-5">
                     <div className="col-md-6">
-                        <h1 className="fw-bold py-5" style={{color:"#257251"}}>{t("companyName")}</h1>
+                        <h1 className="fw-bolder py-5 text-center" style={{color:"#257251"}}>{t("companyName")}</h1>
                         <SectionHeading heading={t("ourVision")} position={"left"}/>
                         <div className="text-start w-100" style={{color:"#1E1E1E"}} dangerouslySetInnerHTML={{ __html: t("visionDescription") }}>
                         </div>
                         <div className="text-start" style={{ marginTop: "7rem"}}>
                             <button className="btn p-3 rounded-2 text-white" style={{backgroundColor:"#257251"}}>{t("seeProjects")}</button>
                         </div>
-                        <hr className="mb-4 " style={{marginTop: "23rem",  border: "1px solid #9db2e1"}}/>
-                    </div>
+                        <hr className="mb-4 responsive-margin-top" style={{ border: "1px solid #9db2e1" }}/>                    </div>
                     <div className="col-md-6 ">
                         <div className="d-md-block d-none" style={{ marginTop: "5rem", marginBottom: "4rem"}}>
                             <div className="row ms-5 p-0">

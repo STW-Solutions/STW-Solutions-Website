@@ -1,4 +1,4 @@
-import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import SectionHeading from "../SectionHeading/SectionHeading";
 import './WhatWeDo.css'
 import React from "react";
 import team1 from '../../../public/images/team/team1.png';

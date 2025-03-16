@@ -45,6 +45,16 @@
     height: 13rem;
 }
 
+@media (max-width: 768px) {
+    .circle {
+        width: 3.5rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: #257251;;
+        position: relative;
+    }
+}
+
 
 @media (max-width: 576px) {
     .impact-section {

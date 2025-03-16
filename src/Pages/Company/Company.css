@@ -2,3 +2,12 @@
 .container-fluid{
     background-color: rgba(7,237,140,0.06);
 }
+.responsive-margin-top {
+    margin-top: 23rem;
+}
+
+@media (max-width: 768px) {
+    .responsive-margin-top {
+        margin-top: 4rem;
+    }
+}
