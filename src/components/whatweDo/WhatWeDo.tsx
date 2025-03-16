@@ -4,7 +4,6 @@ import React from "react";
 import team1 from '../../../public/images/team/team1.png';
 import team2 from '../../../public/images/team/team2.png';
 import team3 from '../../../public/images/team/team3.png';
-import team4 from '../../../public/images/team/team4.png';
 import {useTranslation} from "react-i18next";
 interface TestimonialsData {
     imageSrc: string;
@@ -85,7 +84,7 @@ const WhatWeDo = () => {
                 </div>
                 <div className="col-md-5 my-5 py-5">
                     <div className="card-box p-4 rounded-3">
-                        <div className="div">
+                        <div className="">
                             <h4>{t("whatWeDo.achievementAndGoals")}</h4>
                             <p>
                                 {t("whatWeDo.impactDescription")}

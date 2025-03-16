@@ -1,13 +1,9 @@
-.card{
-    height: 60rem;
-    margin-top: 3rem;
-}
+
 .card-image {
     width: 4rem;
 }
 
 .card-title {
-    font-family: Lora;
     font-weight: 600;
     font-size: 20px;
     line-height: 100%;
@@ -17,8 +13,8 @@
 }
 .team-card-image{
     width: 100%;
-    height: 300px; /* Fixed height for image container */
-    object-fit: cover; /* Ensure image covers the container, cropping if necessary */
+    height: 300px;
+    object-fit: cover;
     object-position: center;
 }
 .team-card{

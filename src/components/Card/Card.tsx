@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({
                                        aboutInfo,
                                    }) => {
     return (
-        <div className={`card border-0 px-4 py-1 mb-3 h-100 ${cardType === 'team' ? 'team-card' : ''}`} style={{ backgroundColor }}>
+        <div className={`card card-box border-0 px-4 py-1 mb-3 h-100 ${cardType === 'team' ? 'team-card' : ''}`} style={{ backgroundColor }}>
             {cardType === 'default' ? (
                 <>
                     <div className="">

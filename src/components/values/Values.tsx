@@ -51,7 +51,7 @@ const Values = () => {
             </div>
             <div className="row mx-md-5 px-md-5">
                 {cardData.map((card, index) => (
-                    <div key={index} className="col-md-3 mb-2">
+                    <div key={index} className="col-md-3 mb-5 mt-5">
                         <Card
                             cardType="default"
                             imageSrc={card.imageSrc}
