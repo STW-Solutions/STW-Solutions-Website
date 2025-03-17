@@ -11,7 +11,6 @@ import svg2 from '../../../public/images/img_1.png';
 import svg3 from '../../../public/images/img_2.png';
 import './Services.css';
 
-
 interface CardInfo {
     imageSrc: string;
     title: string;
@@ -27,28 +26,28 @@ const Services = () => {
     const data: CardInfo[] = [
         {
             imageSrc: value1,
-            title: t("agricultureTitle"),
+            title: t("agriculture_title"),
             backgroundColor: "#FFFFFF",
-            information: t("agricultureInfo"),
-            intro: t("agricultureIntro")
+            information: t("agriculture_info"),
+            intro: t("agriculture_intro")
         },
         {
             imageSrc: value2,
-            title: t("wasteManagementTitle"),
+            title: t("waste_management_title"),
             backgroundColor: "#B7EDD6",
-            information: t("values.responsibilityInfo"),
+            information: t("values_responsibility_info"),
         },
         {
             imageSrc: value3,
-            title: t("forestTitle"),
+            title: t("forest_title"),
             backgroundColor: "#FFFFFF",
-            information: t("values.trustInfo"),
+            information: t("values_trust_info"),
         },
         {
             imageSrc: value4,
-            title: t("educationTitle"),
+            title: t("education_title"),
             backgroundColor: "#B7EDD6",
-            information: t("values.socialImpactInfo"),
+            information: t("values_social_impact_info"),
         },
     ];
 
@@ -57,7 +56,7 @@ const Services = () => {
     };
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid container-fluid-service">
             <div className="services-container" style={{backgroundImage: `url(${bgImage})`}}>
                 <div className="row">
                     <div className="col-md-6 text-white d-flex align-items-center justify-content-center">
@@ -67,22 +66,22 @@ const Services = () => {
                         <div className="info-card d-flex align-items-center">
                             <div className="info-item text-center">
                                 <h1 className="fw-bolder">12 +</h1>
-                                <p>{t("projectsDone")}</p>
+                                <p>{t("projects_done")}</p>
                             </div>
                             <div className="info-item text-center">
                                 <h1 className="fw-bolder">600</h1>
-                                <p>{t("treesPlanted")}</p>
+                                <p>{t("trees_planted")}</p>
                             </div>
                             <div className="info-item text-center">
                                 <h1 className="fw-bolder">+ 600 Ha</h1>
-                                <p>{t("forestPreserved")}</p>
+                                <p>{t("forest_preserved")}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="py-5">
-                <h2 className="fw-light section-head-text text-center">{t("sectionHeading")}</h2>
+                <h2 className="fw-light section-head-text text-center">{t("section_heading")}</h2>
                 <div className="head-bottom-line"></div>
             </div>
             <div className="row mx-md-5 px-md-5">
@@ -105,15 +104,15 @@ const Services = () => {
                 ))}
             </div>
             <div className="container bg-white py-5 rounded-5 bg-white-container" >
-                <h2 className="text-center">{t("howItWorks")}</h2>
+                <h2 className="text-center">{t("how_it_works")}</h2>
                 <hr className="my-4 hr-class"  />
                 <div className="row mb-4">
                     <div className="col-md-3">
                         <img src={svg1} alt="Image 1" width="240" className="img-fluid" />
                     </div>
                     <div className="col-md-9">
-                        <h5 >{t("chooseService")}</h5>
-                        <div>{t("chooseServiceDescription")}</div>
+                        <h5 >{t("choose_service")}</h5>
+                        <div>{t("choose_service_description")}</div>
                     </div>
                 </div>
                 <hr className="my-4 hr-class"  />
@@ -122,8 +121,8 @@ const Services = () => {
                         <img src={svg2} alt="Image 2" width="190" className="img-fluid p-2 mx-4" />
                     </div>
                     <div className="col-md-9">
-                        <h5 >{t("tellUsAboutProject")}</h5>
-                        <p>{t("tellUsAboutProjectDescription")}</p>
+                        <h5 >{t("tell_us_about_project")}</h5>
+                        <p>{t("tell_us_about_project_description")}</p>
                     </div>
                 </div>
                 <hr className="my-4 hr-class" />
@@ -132,8 +131,8 @@ const Services = () => {
                         <img src={svg3} alt="Image 3" width="170" className="img-fluid p-2 mx-4" />
                     </div>
                     <div className="col-md-9">
-                        <h5 >{t("weTakeItFromHere")}</h5>
-                        <p>{t("weTakeItFromHereDescription")}</p>
+                        <h5 >{t("we_take_it_from_here")}</h5>
+                        <p>{t("we_take_it_from_here_description")}</p>
                     </div>
                 </div>
             </div>
@@ -158,7 +157,7 @@ const Services = () => {
                                 </div>
                                 <div className="modal-body" style={{backgroundColor: modalData.backgroundColor}}>
                                     <div className="centered-div float-end">
-                                        <button className="btn btn-success p-2  centered-btn m-3">{t("getInvolved")}</button>
+                                        <button className="btn btn-success p-2  centered-btn m-3">{t("get_involved")}</button>
                                     </div>
                                 </div>
                             </div>

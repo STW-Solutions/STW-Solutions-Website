@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Company from "./Pages/Company/Company";
 import {Route, Routes} from "react-router";
 import Services from "./Pages/Services/Services";
+import Projects from "./Pages/Projects/Projects";
 
 function App() {
   const { i18n } = useTranslation();
@@ -17,9 +18,10 @@ function App() {
         <NavBar onClickLanguageChange={handleLanguageChange} />
         <main>
           <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/" element={<Projects/>} />
             <Route path="/company" element={<Company />}/>
             <Route path="/services" element={<Services />}/>
+            <Route path="/projects" element={<Projects />}/>
               <Route path="*" element={<Home />} />
                {/*<Route path="about" element={<About />} /> */}
           </Routes>

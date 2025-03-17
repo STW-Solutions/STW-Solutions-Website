@@ -1,0 +1,11 @@
+.project-container{
+    background-color: #257251 !important;
+    padding: 3rem;
+}
+.card-div{
+    border: #257251 2px solid;
+}
+.isActive{
+    background-color: #C7FBE5!important;
+    border-radius: 0!important;
+}
