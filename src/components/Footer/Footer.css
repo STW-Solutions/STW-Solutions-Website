@@ -1,4 +1,6 @@
 footer {
-    height: 40vh;
     background-color: #257251;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
