@@ -1,4 +1,6 @@
 footer {
     background-color: #257251;
-    width: 100vw;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
