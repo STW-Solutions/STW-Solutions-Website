@@ -1,0 +1,11 @@
+.stw-solutions-logo-box {
+    width: 15%;
+}
+
+.hamburger-icon::after {
+    display: none !important;
+}
+
+.dropdown-divider {
+    border-top: 1px solid #257251 !important;
+}
