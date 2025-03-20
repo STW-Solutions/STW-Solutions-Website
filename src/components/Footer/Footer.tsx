@@ -6,7 +6,7 @@ const Footer = () => {
   const { t } = useTranslation();
   return (
     <footer>
-      <div className="container py-5 text-white">
+      <div className="container py-5 text-white text-capitalize">
         <div className="row">
           <div className="col-md-3">
             <h6>{t("company")}</h6>
