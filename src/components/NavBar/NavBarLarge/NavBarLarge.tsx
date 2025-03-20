@@ -5,9 +5,15 @@ import { Link } from "react-router";
 import ButtonOutline from "../../ButtonOutline/ButtonOutline";
 import ButtonPrimary from "../../ButtonPrimary/ButtonPrimary";
 import "./NavBarLarge.css";
+import { useState } from "react";
 
-const NavBarLarge = () => {
+interface Props {
+  onClickLanguageChange: (language: string) => void;
+}
+
+const NavBarLarge = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
   return (
     <div className="bg-white d-none d-md-flex justify-content-between align-items-center w-100 text-capitalize py-1 px-5">
       <Link className="stw-solutions-logo-box mx-lg-5" to={"/"}>
@@ -19,11 +25,15 @@ const NavBarLarge = () => {
       </Link>
       <div className="d-flex align-items-center mx-2">
         <span>
-          <Link aria-current="page" to="/" className="py-1 px-2 px-lg-3 stw-nav-lg-link fw-bold">
+          <Link
+            aria-current="page"
+            to="/"
+            className="py-1 px-2 px-lg-5 stw-nav-lg-link fw-bold"
+          >
             {t("home")}
           </Link>
         </span>
-        <div className="dropdown py-1 px-2 px-lg-3">
+        <div className="dropdown py-1 px-2 px-lg-5">
           <button
             className="dropdown-toggle my-1 border-0 text-capitalize bg-white fw-bold"
             data-bs-toggle="dropdown"
@@ -33,7 +43,10 @@ const NavBarLarge = () => {
           >
             {t("company")}
           </button>
-          <ul className="dropdown-menu company-dropdown-menu" aria-labelledby="companyDropDownLarge">
+          <ul
+            className="dropdown-menu company-dropdown-menu"
+            aria-labelledby="companyDropDownLarge"
+          >
             <li>
               <Link className="dropdown-item stw-nav-lg-link" to={"/company"}>
                 {t("about_us")}
@@ -63,20 +76,20 @@ const NavBarLarge = () => {
         </div>
         <span>
           <Link
-            className="stw-nav-lg-link py-1 px-2 px-lg-3 fw-bold"
+            className="stw-nav-lg-link py-1 px-2 px-lg-5 fw-bold"
             aria-current="page"
             to="/"
           >
             {t("services")}
           </Link>
         </span>
-        <div className="dropdown mx-2 mx-lg-3">
+        <div className="dropdown mx-2 mx-lg-5">
           <button
             className="dropdown-toggle my-1 border-0 bg-white text-capitalize fw-bold"
             data-bs-toggle="dropdown"
             aria-expanded="false"
-           type="button"
-           id="projectsDropdownLg"
+            type="button"
+            id="projectsDropdownLg"
           >
             {t("projects")}
           </button>
@@ -108,16 +121,23 @@ const NavBarLarge = () => {
           classes={["stw-btn-width", "me-2", "mx-1"]}
           children={`${t("blog")}`}
         />
-        <div className="stw-select-box d-flex align-items-center ps-1">
+        <div className="stw-select-box d-flex align-items-center ps-2">
           <span>
-            <FontAwesomeIcon icon={faGlobe} className="stw-green-icon" />
+            <FontAwesomeIcon icon={faGlobe} className="stw-green-icon fw-bold" />
           </span>
           <select
-            className="text-uppercase form-select rounded-0 px-5 py-2"
+            className="text-uppercase form-select rounded-0 px-5 py-2 fw-bold"
             aria-label="language options"
+            onChange={(event) => {
+              setSelectedLanguage(event.target.value);
+              onClickLanguageChange(event.target.value);
+            }}
+            id="language-options-lg"
+            defaultValue={"en"}
+            value={selectedLanguage}
           >
-            <option defaultValue={`${t("en")}`} className="language-option">{t("en")}</option>
-            <option value={`${t("fr")}`} className="language-option">{t("fr")}</option>
+            <option value={"en"}>{t("en")}</option>
+            <option value={"fr"}>{t("fr")}</option>
           </select>
         </div>
       </div>

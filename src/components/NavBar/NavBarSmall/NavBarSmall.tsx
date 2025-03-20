@@ -6,11 +6,15 @@ import "./NavBarSmall.css";
 import ButtonPrimary from "../../ButtonPrimary/ButtonPrimary";
 import ButtonOutline from "../../ButtonOutline/ButtonOutline";
 
-const NavBarSmall = () => {
+interface Props {
+  onClickLanguageChange: (language: string) => void;
+}
+
+const NavBarSmall = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
   return (
     <>
-      <div className="d-block d-md-none text-capitalize">
+      <div className="d-block d-md-none text-capitalize bg-white">
         <div className="d-flex justify-content-between align-items-center w-100 px-3 px-sm-5">
           <div className="dropdown">
             <button
@@ -28,16 +32,23 @@ const NavBarSmall = () => {
                 />
               </span>
             </button>
-            <ul className="dropdown-menu shadow" aria-labelledby="navBarSmallDropDown">
+            <ul
+              className="dropdown-menu shadow"
+              aria-labelledby="navBarSmallDropDown"
+            >
               <li>
-                <Link className="dropdown-item stw-nav-sm-li" aria-current="page" to="/">
+                <Link
+                  className="dropdown-item stw-nav-sm-li"
+                  aria-current="page"
+                  to="/"
+                >
                   {t("home")}
                 </Link>
               </li>
               <li className="dropdown-item bg-white stw-nav-sm-li">
                 <div className="dropend">
                   <button
-                    className="dropdown-toggle border-0 bg-transparent"
+                    className="dropdown-toggle border-0 bg-transparent text-capitalize"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                     type="button"
@@ -50,7 +61,10 @@ const NavBarSmall = () => {
                     aria-labelledby="companyDropDown"
                   >
                     <li>
-                      <Link className="dropdown-item stw-nav-sm-li" to={"/company"}>
+                      <Link
+                        className="dropdown-item stw-nav-sm-li"
+                        to={"/company"}
+                      >
                         {t("about_us")}
                       </Link>
                     </li>
@@ -78,14 +92,18 @@ const NavBarSmall = () => {
                 </div>
               </li>
               <li>
-                <Link className="dropdown-item stw-nav-sm-li" aria-current="page" to="/">
+                <Link
+                  className="dropdown-item stw-nav-sm-li"
+                  aria-current="page"
+                  to="/"
+                >
                   {t("services")}
                 </Link>
               </li>
               <li className="dropdown-item bg-white stw-nav-sm-li">
                 <div className="dropend">
                   <button
-                    className="dropdown-toggle border-0 bg-transparent"
+                    className="dropdown-toggle border-0 bg-transparent text-capitalize"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                     type="button"
@@ -118,7 +136,7 @@ const NavBarSmall = () => {
               <li className="dropdown-item bg-white stw-nav-sm-li">
                 <div className="dropend">
                   <button
-                    className="dropdown-toggle border-0 bg-transparent"
+                    className="dropdown-toggle border-0 bg-transparent text-capitalize"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                     type="button"
@@ -131,7 +149,11 @@ const NavBarSmall = () => {
                     aria-labelledby="languagesDropdown"
                   >
                     <li className="text-uppercase">
-                      <a className="dropdown-item border-0 stw-nav-sm-li" type="button">
+                      <a
+                        className="dropdown-item border-0 stw-nav-sm-li"
+                        type="button"
+                        onClick={() => onClickLanguageChange('en')}
+                      >
                         <FontAwesomeIcon
                           icon={faGlobe}
                           className="stw-green-icon me-2"
@@ -140,7 +162,11 @@ const NavBarSmall = () => {
                       </a>
                     </li>
                     <li>
-                      <button className="dropdown-item border-0 stw-nav-sm-li text-uppercase" type="button">
+                      <button
+                        className="dropdown-item border-0 stw-nav-sm-li text-uppercase"
+                        type="button"
+                        onClick={() => onClickLanguageChange('fr')}
+                      >
                         <FontAwesomeIcon
                           icon={faGlobe}
                           className="stw-green-icon me-2"

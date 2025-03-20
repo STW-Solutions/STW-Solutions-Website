@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+
 import NavBarLarge from "./NavBarLarge/NavBarLarge";
 import NavBarSmall from "./NavBarSmall/NavBarSmall";
 
@@ -10,8 +11,8 @@ const NavBar = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
   return (
     <nav className="fixed-top">
-      <NavBarLarge />
-      <NavBarSmall />
+      <NavBarLarge onClickLanguageChange={onClickLanguageChange} />
+      <NavBarSmall onClickLanguageChange={onClickLanguageChange} />
     </nav>
   )
 };

@@ -24,7 +24,7 @@
 .stw-select-box,
 select {
     background-color: #96FDD1 !important;
-    color: #ffffff !important;
+    color: #000000 !important;
 }
 
 .stw-select-box select {
@@ -40,9 +40,13 @@ select {
     width: 50%;
 }
 
+.form-select {
+    width: auto !important;
+}
+
 @media screen and (min-width: 992px) {
     .stw-solutions-logo-box {
-        width: 6%;
+        width: 5%;
     }
 
     .stw-btn-width {
