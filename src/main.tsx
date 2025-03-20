@@ -6,6 +6,8 @@ import "./i18n";
 import { BrowserRouter, Route, Routes } from "react-router";
 import Company from "./Pages/Company/Company";
 import MainLayout from "./MainLayout";
+import Services from "./Pages/Services/Services";
+import Projects from "./Pages/Projects/Projects";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>
@@ -13,6 +15,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/company" element={<Company />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
     </MainLayout>
   </BrowserRouter>

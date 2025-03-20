@@ -49,35 +49,35 @@ const WhatWeDo = () => {
                         <div className="circle"></div>
                         <div className="label d-flex flex-column align-items-start">
                             <h5>{t("forest_conversation_label")}</h5>
-                            <p>{t("description")}</p>
+                            <p>{t("forest_description")}</p>
                         </div>
                     </div>
                     <div className="d-flex gap-3 mt-0">
                         <div className="circle"></div>
                         <div className="label d-flex flex-column align-items-start">
-                            <h5>{t("forest_conversation_label")}</h5>
-                            <p>{t("description")}</p>
+                            <h5>{t("tree_planting")}</h5>
+                            <p>{t("tree_planting_description")}</p>
                         </div>
                     </div>
                     <div className="d-flex gap-3 mt-0">
                         <div className="circle"></div>
                         <div className="label d-flex flex-column align-items-start">
                             <h5>{t("waste_management_label")}</h5>
-                            <p>{t("description")}</p>
+                            <p>{t("waste_management_description")}</p>
                         </div>
                     </div>
                     <div className="d-flex gap-3 mt-0">
                         <div className="circle"></div>
                         <div className="label d-flex flex-column align-items-start">
                             <h5>{t("sustainable_agriculture_label")}</h5>
-                            <p>{t("description")}</p>
+                            <p>{t("sustainable_agriculture_description")}</p>
                         </div>
                     </div>
                     <div className="d-flex gap-3 mt-0">
                         <div className="circle"></div>
                         <div className="label d-flex flex-column align-items-start">
                             <h5>{t("community_management_label")}</h5>
-                            <p>{t("description")}</p>
+                            <p>{t("community_mgmt_description")}</p>
                         </div>
                     </div>
                     <hr className="mb-4 w-50" style={{color: "#257251", borderColor: "#257251", borderWidth: 2}}/>

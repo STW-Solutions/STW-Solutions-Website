@@ -5,6 +5,7 @@
     opacity: 2.5;
     border-radius: 3.5rem;
     display: flex;
+    margin-top: 4rem;
 
 }
 .container-fluid-service{
@@ -53,7 +54,7 @@
     background-color: #257251!important;
 }
 .centered-div{
-    border: 1px dashed #9747FF;
+    border: 1px dashed #51dfa2;
 }
 .mod-title{
     color: #257251;
