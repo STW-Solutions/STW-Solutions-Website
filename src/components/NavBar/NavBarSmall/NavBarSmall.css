@@ -1,4 +1,4 @@
-.stw-solutions-logo-box {
+.stw-solutions-logo-sm-box {
     width: 15%;
 }
 
@@ -8,4 +8,13 @@
 
 .dropdown-divider {
     border-top: 1px solid #257251 !important;
+}
+
+.stw-nav-sm-li:hover, .stw-nav-sm-li:focus {
+    background-color: #E4FFF3 !important;
+    color: #000000;
+}
+
+.stw-green-icon {
+    color: #257251 !important;
 }
