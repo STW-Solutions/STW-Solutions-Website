@@ -13,7 +13,7 @@ const MainLayout = ({ children }: Props) => {
   };
   return (
     <div>
-      <NavBar onClickLanguageChange={handleLanguageChange} />;
+      <NavBar onClickLanguageChange={handleLanguageChange} />
       <main>{children}</main>
       <Footer />
     </div>

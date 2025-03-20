@@ -3,4 +3,22 @@ footer {
     position: absolute;
     left: 0;
     right: 0;
+    height: 40vh;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-top: .5rem;
+    font-weight: lighter;
+}
+
+footer a:hover {
+    font-weight: 400;
+    text-decoration: underline;
+    color: #E4FFF3;
+}
+
+.stw-solutions-footer-logo-box img {
+    width: 70%;
 }
