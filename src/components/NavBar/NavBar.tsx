@@ -1,12 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faGlobe } from "@fortawesome/free-solid-svg-icons";
-
-import "./NavBar.css";
-
-import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
-import ButtonOutline from "../ButtonOutline/ButtonOutline";
 import NavBarLarge from "./NavBarLarge/NavBarLarge";
 import NavBarSmall from "./NavBarSmall/NavBarSmall";
 
@@ -17,7 +9,7 @@ interface Props {
 const NavBar = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
   return (
-    <nav className="fixed-top py-2 pe-5">
+    <nav className="fixed-top">
       <NavBarLarge />
       <NavBarSmall />
     </nav>
