@@ -6,14 +6,17 @@ import "./i18n";
 import { BrowserRouter, Route, Routes } from "react-router";
 import Company from "./Pages/Company/Company";
 import MainLayout from "./MainLayout";
+import { StrictMode } from "react";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>
-    <MainLayout>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/company" element={<Company />} />
-      </Routes>
-    </MainLayout>
+    <StrictMode>
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/company" element={<Company />} />
+        </Routes>
+      </MainLayout>
+    </StrictMode>
   </BrowserRouter>
 );
