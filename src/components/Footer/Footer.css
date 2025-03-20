@@ -3,4 +3,9 @@ footer {
     position: absolute;
     left: 0;
     right: 0;
+    height: 30vh;
+}
+
+.stw-solutions-footer-logo-box img {
+    width: 70%;
 }

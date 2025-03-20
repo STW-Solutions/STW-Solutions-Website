@@ -36,11 +36,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-md-3">
-            <Link className="navbar-brand stw-solutions-logo-box mx-5" to={"/"}>
+            <Link className="stw-solutions-footer-logo-box" to={"/"}>
               <img
                 src="STW-Solution-Logo.png"
                 alt={`${t("stw_solutions_logo")}`}
-                className="w-100"
               />
             </Link>
             <div>
