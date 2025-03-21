@@ -2,14 +2,14 @@ import React from 'react';
 import './Card.css';
 
 interface CardProps {
-    cardType: 'default' | 'team'; // New: Card type prop
+    cardType: 'default' | 'team';
     imageSrc: string;
-    title?: string; // Optional: Title for default card
-    backgroundColor?: string; // Optional: Background color for default card
-    information?: string; // Optional: Information for default card
-    name?: string; // Optional: Name for team card
-    jobTitle?: string; // Optional: Job title for team card
-    aboutInfo?: string; // Optional: About info for team card
+    title?: string;
+    backgroundColor?: string;
+    information?: string;
+    name?: string;
+    jobTitle?: string;
+    aboutInfo?: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({
                                        aboutInfo,
                                    }) => {
     return (
-        <div className={`card border-0 px-4 py-1 mb-3 h-100 ${cardType === 'team' ? 'team-card' : ''}`} style={{ backgroundColor }}>
+        <div className={`card card-box border-0 px-4 py-1 mb-3 h-100 ${cardType === 'team' ? 'team-card' : ''}`} style={{ backgroundColor }}>
             {cardType === 'default' ? (
                 <>
                     <div className="">

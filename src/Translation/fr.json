@@ -20,14 +20,13 @@
     "testimonialsDescription": "Quelques témoignages et avis sur notre travail de nos clients",
     "testimonialExperience": "Nous sommes une organisation internationale à but non lucratif fondée en 2003, avec des bureaux à Londres, New York, New Delhi, Amsterdam et Pékin."
   },
-  "company": {
     "companyName": "STW Solutions SARL",
     "ourVision": "Notre Vision",
     "ourMission": "Notre Mission",
     "visionDescription": "STW Solutions s'engage à apporter une contribution significative à la protection du climat et de l'environnement, ainsi qu'à la préservation de la nature pour les générations futures. Avec la conservation des forêts, la culture des arbres, la prévention de la pollution par les déchets plastiques, nous nous efforçons de créer un avenir durable. <br/> Chez STW Solutions, nous voulons améliorer le monde - Créer un avenir propre, plus vert et plus compatissant pour tous.",
     "missionDescription": "Notre mission est d'ouvrir la voie à la neutralité climatique et environnementale et de lutter contre le changement climatique et environnemental par des mesures actives. Nous sommes passionnés par la préservation, la protection et la restauration des forêts, ainsi que par l'agriculture régénérative au Cameroun, afin de réduire les émissions de CO2 et de promouvoir la biodiversité. Nous sommes déterminés à éliminer la pollution plastique à grande échelle et à accélérer la transition vers une économie circulaire. Grâce à des solutions et des partenariats innovants, nous nous efforçons de promouvoir le développement durable et d'apporter une contribution positive à la préservation de notre planète et de l'humanité. Ensemble, nous nous engageons à résoudre les défis sociaux et environnementaux mondiaux.",
     "seeProjects": "Voir les Projets"
-  },
+  ,
   "team": {
     "ourTeam": "Notre Équipe",
     "johnDoe": "John Doe",
@@ -51,5 +50,35 @@
     "responsibilityInfo": "Nous assumons la responsabilité de nos actions et nous efforçons de créer un environnement de travail positif et sûr.",
     "trustInfo": "Nous cultivons une culture d'ouverture, de fiabilité, de transparence et de pratiques éthiques. Nous entretenons d'excellentes relations avec nos investisseurs, nos partenaires et le gouvernement.",
     "socialImpactInfo": "Engagement à avoir un impact positif sur les communautés locales et l'environnement."
-  }
+  },
+  "agricultureTitle": "Agriculture",
+  "agricultureInfo": "STW Solutions est une entreprise neutre en carbone qui propose des solutions visant à contribuer à rendre notre monde plus vert pour tous.",
+  "agricultureIntro": "Nos projets agricoles promeuvent des pratiques à la fois écologiquement durables et économiquement viables. Nous préconisons des techniques agricoles durables, telles que l'agriculture biologique et la gestion intégrée des ravageurs, qui maintiennent la santé des sols et réduisent l'utilisation de produits chimiques. Nos initiatives d'agriculture régénérative se concentrent sur la restauration de la fertilité des sols et l'amélioration de la biodiversité grâce à des méthodes telles que la rotation des cultures, les cultures de couverture et l'agriculture sans labour. L'agroforesterie, un autre pilier de notre stratégie agricole, intègre des arbres et des arbustes dans les paysages agricoles pour améliorer la structure du sol, fournir de l'ombre et un abri, et augmenter la productivité globale des exploitations. De plus, nous traitons la gestion des déchets animaux et le traitement des déchets agro-industriels en transformant les déchets en compost, en biogaz et en d'autres produits précieux, réduisant ainsi la pollution et améliorant l'efficacité des ressources.",
+  "wasteManagementTitle": "Gestion des Déchets",
+  "forestTitle": "Forêt",
+  "educationTitle": "Éducation",
+  "header": "Nous Offrons des Solutions et Services Neutres en Carbone",
+  "projectsDone": "Projets Réalisés",
+  "treesPlanted": "Arbres Plantés",
+  "forestPreserved": "Forêt Préservée",
+  "sectionHeading": "Nos Services Climatiques et Environnementaux",
+  "howItWorks": "Comment ça marche",
+  "chooseService": "Choisissez un service",
+  "chooseServiceDescription": "Lorem Ipsum est simplement un texte factice de l'industrie de l'impression et de la composition. Lorem Ipsum est le texte factice standard de l'industrie depuis les années 1500, lorsqu'un imprimeur inconnu a pris une galère de type",
+  "tellUsAboutProject": "Parlez-nous de votre projet",
+  "tellUsAboutProjectDescription": "Lorem Ipsum est simplement un texte factice de l'industrie de l'impression et de la composition. Lorem Ipsum est le texte factice standard de l'industrie depuis les années 1500, lorsqu'un imprimeur inconnu a pris une galère de type.",
+  "weTakeItFromHere": "Nous nous en occupons",
+  "weTakeItFromHereDescription": "Lorem Ipsum est simplement un texte factice de l'industrie de l'impression et de la composition. Lorem Ipsum est le texte factice standard de l'industrie depuis les années 1500, lorsqu'un imprimeur inconnu a pris une galère de type",
+  "getInvolved": "Impliquez-vous",
+
+  "biomass_storage_with_solar": "stockage de biomasse avec solaire",
+  "plastic_waste_management": "gestion des déchets plastiques",
+  "sustainable_agriculture": "agriculture durable",
+  "projects": "projets",
+  "stw_solutions_is_a": "stw solutions est une entreprise neutre en carbone qui propose des solutions visant à contribuer à rendre notre monde plus vert pour tous.",
+  "upcoming": "à venir",
+  "recent": "récent",
+  "forestry": "foresterie",
+  "agriculture": "agriculture",
+  "navigation": "navigation"
 }

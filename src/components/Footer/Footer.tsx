@@ -6,7 +6,7 @@ const Footer = () => {
   const { t } = useTranslation();
   return (
     <footer>
-      <div className="container py-5 text-white">
+      <div className="container py-5 text-white text-capitalize">
         <div className="row">
           <div className="col-md-3">
             <h6>{t("company")}</h6>
@@ -36,11 +36,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-md-3">
-            <Link className="navbar-brand stw-solutions-logo-box mx-5" to={"/"}>
+            <Link className="stw-solutions-footer-logo-box" to={"/"}>
               <img
                 src="STW-Solution-Logo.png"
                 alt={`${t("stw_solutions_logo")}`}
-                className="w-100"
               />
             </Link>
             <div>

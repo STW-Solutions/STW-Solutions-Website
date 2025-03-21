@@ -1,0 +1,55 @@
+.stw-solutions-logo-box {
+    width: 12%;
+}
+
+.stw-nav-lg-link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.stw-nav-lg-link:hover {
+    background-color: #E4FFF3 !important;
+    color: #000000;
+}
+
+.stw-nav-lg-link:focus {
+    border-bottom: 3px solid;
+    border-color: #257251;
+}
+
+.stw-select-box {
+    width: 20%;
+}
+
+.stw-select-box,
+select {
+    background-color: #96FDD1 !important;
+    color: #000000 !important;
+}
+
+.stw-select-box select {
+    box-shadow: none !important;
+}
+
+select:focus,
+select {
+    border-color: transparent !important;
+}
+
+.stw-btn-width {
+    width: 50%;
+}
+
+.form-select {
+    width: auto !important;
+}
+
+@media screen and (min-width: 992px) {
+    .stw-solutions-logo-box {
+        width: 5%;
+    }
+
+    .stw-btn-width {
+        width: 100%;
+    }
+}

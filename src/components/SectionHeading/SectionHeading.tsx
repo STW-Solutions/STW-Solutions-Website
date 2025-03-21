@@ -3,7 +3,7 @@ import './SectionHeading.css';
 
 interface SectionHeadingProps {
     heading: string;
-    position?: 'left' | 'right'; // Optional position prop
+    position?: 'left' | 'right';
 }
 
 const SectionHeading: React.FC<SectionHeadingProps> = ({ heading, position = 'left' }) => {

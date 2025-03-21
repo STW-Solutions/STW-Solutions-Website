@@ -1,5 +1,5 @@
 .circle {
-    width: 2rem;
+    width: 2.5rem;
     height: 1.2rem;
     border-radius: 50%;
     background-color: #257251;;
@@ -18,7 +18,7 @@
 }
 
 .card-box{
-    background-color: #A2FAD4 !important;
+    background-color: #A2FAD4;
 }
 
 
@@ -43,6 +43,16 @@
 .testimonial-image {
     width: 13rem;
     height: 13rem;
+}
+
+@media (max-width: 768px) {
+    .circle {
+        width: 4.5rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: #257251;;
+        position: relative;
+    }
 }
 
 
