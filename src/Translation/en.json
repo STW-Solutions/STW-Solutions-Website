@@ -13,8 +13,8 @@
   "en": "en",
   "fr": "fr",
   "languages": "languages",
-  "business_address":"business address",
-  "company_name": "STW Solutions LLC",
+  "business_address": "business address",
+  "company_name": "STW Solutions Ltd",
   "our_vision": "Our Vision",
   "our_mission": "Our Mission",
   "vision_description": "STW Solutions is committed to making a significant contribution to climate and environmental protection, as well as to the preservation of nature for future generations. With forest conservation, tree cultivation, and plastic waste pollution prevention, we strive to create a sustainable future. <br/> At STW Solutions, we want to make the world a better place - Creating a clean, greener, and more compassionate future for all.",
@@ -97,5 +97,12 @@
   "tree_planting": "Tree Planting",
   "tree_planting_description": "We undertake large-scale tree planting using native species to combat deforestation and restore land. They involve local communities, creating economic opportunities and fostering environmental stewardship. These projects improve air and water quality and help mitigate climate change.",
   "environmental_education": "Environmental Education",
-  "environmental_education_description": "We provide environmental education to raise awareness and promote sustainability. They work with schools and communities to integrate environmental topics into education and engage people in conservation."
+  "environmental_education_description": "We provide environmental education to raise awareness and promote sustainability. They work with schools and communities to integrate environmental topics into education and engage people in conservation.",
+  "hero_hint": "Lorem ipsum dolor sit amet, consectetur adipiscing eli",
+  "hero_details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "12_+": "12 +",
+  "9000_tCO2": "9000 tCO2",
+  "annual_tons_of_CO2_reduced": "annual tons of CO2 reduced",
+  "+_600_Ha": "+ 600Ha",
+  "forest_planted": "forest planted"
 }

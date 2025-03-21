@@ -1,9 +1,5 @@
 footer {
     background-color: #257251;
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 40vh;
 }
 
 footer a {
@@ -21,4 +17,10 @@ footer a:hover {
 
 .stw-solutions-footer-logo-box img {
     width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+    .stw-solutions-footer-logo-box img {
+        width: 30%;
+    }
 }
