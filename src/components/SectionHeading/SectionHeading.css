@@ -19,8 +19,8 @@
 
 .section-heading-container {
     display: flex;
-    flex-direction: column; /* Ensure heading is above parallelogram */
-    align-items: center; /* Center content horizontally */
+    flex-direction: column;
+    align-items: center;
     width: fit-content;
 }
 .ml-4 {
@@ -28,5 +28,13 @@
 }
 
 .mr-4 {
-    margin-left: 16rem;
+    margin-left: 28rem;
+}
+@media (max-width: 768px) {
+    .mr-4 {
+        margin-left: 11rem;
+    }
+    .ml-4{
+        margin-left: 2rem;
+    }
 }

@@ -1,9 +1,9 @@
-import Card from "../../components/Card/Card";
+import Card from "../Card/Card";
 import team1 from '../../../public/images/team/team1.png';
 import team2 from '../../../public/images/team/team2.png';
 import team3 from '../../../public/images/team/team3.png';
 import team4 from '../../../public/images/team/team4.png';
-import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import SectionHeading from "../SectionHeading/SectionHeading";
 import {useTranslation} from "react-i18next";
 
 interface TeamData {
@@ -18,33 +18,33 @@ const Team = () => {
     const teamData: TeamData[] = [
         {
             imageSrc: team1,
-            name: t("team.johnDoe"),
-            jobTitle: t("team.ceoFounder"),
-            aboutInfo: t("team.teamMemberAbout"),
+            name: t("john_doe"),
+            jobTitle: t("ceo_founder"),
+            aboutInfo: t("team_member_about"),
         },
         {
             imageSrc: team2,
-            name: t("team.name2"),
-            jobTitle: t("team.jobTitle2"),
-            aboutInfo: t("team.teamMemberAbout"),
+            name: t("name_2"),
+            jobTitle: t("job_title_2"),
+            aboutInfo: t("team_member_about"),
         },
         {
             imageSrc: team3,
-            name: t("team.name3"),
-            jobTitle: t("team.jobTitle3"),
-            aboutInfo: t("team.teamMemberAbout"),
+            name: t("name_3"),
+            jobTitle: t("job_title_3"),
+            aboutInfo: t("team_member_about"),
         },
         {
             imageSrc: team4,
-            name: t("team.name4"),
-            jobTitle: t("team.jobTitle4"),
-            aboutInfo: t("team.teamMemberAbout"),
+            name: t("name_4"),
+            jobTitle: t("job_title_4"),
+            aboutInfo: t("team_member_about"),
         },
     ];
     return (
         <div className="container-fluid container-main">
             <div>
-                <SectionHeading heading={t("team.ourTeam")} position={'left'}/>
+                <SectionHeading heading={t("our_team")} position={'left'}/>
             </div>
             <div className="row mx-md-5 px-md-5">
                 {teamData.map((team, index) => (

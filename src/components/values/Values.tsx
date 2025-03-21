@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import './Values.css';
-import Card from '../../components/Card/Card'
+import Card from '../Card/Card';
 import value1 from '../../../public/images/values/value1.png';
 import value2 from '../../../public/images/values/value2.png';
 import value3 from '../../../public/images/values/value3.png';
@@ -19,39 +19,39 @@ const Values = () => {
     const cardData: CardData[] = [
         {
             imageSrc: value1,
-            title: t("values.sustainability"),
+            title: t("sustainability"),
             backgroundColor: "#FFFFFF",
-            information: t("values.sustainabilityInfo"),
+            information: t("we_emphasize_sustainable"),
         },
         {
             imageSrc: value2,
-            title: t("values.responsibility"),
+            title: t("responsibility"),
             backgroundColor: "#B7EDD6",
-            information: t("values.responsibilityInfo"),
+            information: t("we_take_responsibility"),
         },
         {
             imageSrc: value3,
-            title: t("values.trust"),
+            title: t("trust"),
             backgroundColor: "#FFFFFF",
-            information: t("values.trustInfo"),
+            information: t("we_foster_a"),
         },
         {
             imageSrc: value4,
-            title: t("values.socialImpact"),
+            title: t("social_impact"),
             backgroundColor: "#B7EDD6",
-            information: t("values.socialImpactInfo"),
+            information: t("commitment_to_making"),
         },
     ];
 
     return (
-        <div className="container-fluid cont">
-            <h4 className="text-center fw-bold text-white">{t("values.ourValues")}</h4>
+        <div className="container-fluid cont fade-in">
+            <h4 className="text-center fw-bold text-white">{t("our_values")}</h4>
             <div className="w-100 text-white text-center">
-                {t("values.description")}
+                {t("values_description")}
             </div>
             <div className="row mx-md-5 px-md-5">
                 {cardData.map((card, index) => (
-                    <div key={index} className="col-md-3 mb-2">
+                    <div key={index} className="col-md-3 mb-5 mt-5 slide-up">
                         <Card
                             cardType="default"
                             imageSrc={card.imageSrc}
