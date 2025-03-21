@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import "./Home.css";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
+import earth from "../../images/earth-nobg.png";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -27,7 +28,7 @@ const Home = () => {
             </div>
             <div className="col-md-6 hero-img-box text-center">
               <img
-                src="/public/earth-nobg.png"
+                src={earth}
                 className="hero-img"
                 alt={t("earth")}
               />
