@@ -27,7 +27,7 @@ const Home = () => {
             </div>
             <div className="col-md-6 hero-img-box text-center">
               <img
-                src="public/earth-nobg.png"
+                src="/public/earth-nobg.png"
                 className="hero-img"
                 alt={t("earth")}
               />
