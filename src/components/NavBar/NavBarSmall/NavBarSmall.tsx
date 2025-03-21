@@ -95,7 +95,7 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                 <Link
                   className="dropdown-item stw-nav-sm-li"
                   aria-current="page"
-                  to="/"
+                  to="/services"
                 >
                   {t("services")}
                 </Link>
@@ -116,9 +116,9 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                     aria-labelledby="projectsDropdown"
                   >
                     <li>
-                      <a className="dropdown-item stw-nav-sm-li" href="#">
+                      <Link className="dropdown-item stw-nav-sm-li" to="/projects">
                         {t("category1")}
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <a className="dropdown-item stw-nav-sm-li" href="#">

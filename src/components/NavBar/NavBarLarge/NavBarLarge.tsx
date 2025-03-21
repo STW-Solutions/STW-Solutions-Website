@@ -78,7 +78,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           <Link
             className="stw-nav-lg-link py-1 px-2 px-lg-5 fw-bold"
             aria-current="page"
-            to="/"
+            to="/services"
           >
             {t("services")}
           </Link>
@@ -95,9 +95,9 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           </button>
           <ul className="dropdown-menu" aria-labelledby="projectsDropdownLg">
             <li>
-              <a className="dropdown-item stw-nav-lg-link" href="#">
+              <Link className="dropdown-item stw-nav-lg-link" to="/projects">
                 {t("category1")}
-              </a>
+              </Link>
             </li>
             <li>
               <a className="dropdown-item stw-nav-lg-link" href="#">
