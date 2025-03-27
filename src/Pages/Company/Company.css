@@ -1,7 +1,8 @@
 
-.container-fluid{
-    background-color: rgba(7,237,140,0.06);
+.container-fluid {
+    background-color: rgba(7, 237, 140, 0.06);
 }
+
 .responsive-margin-top {
     margin-top: 23rem;
 }
@@ -9,6 +10,12 @@
 @media (max-width: 768px) {
     .responsive-margin-top {
         margin-top: 4rem;
+    }
+
+}
+@media (max-width: 1024px) {
+    .hr-style{
+        margin-top: 4rem !important;
     }
 }
 
@@ -36,4 +43,46 @@
 
 .slide-in {
     animation: slideIn 1s ease-in-out;
+}
+
+.company-name {
+    color: #257251;
+}
+
+.vision-description {
+    color: #1E1E1E;
+}
+
+.see-projects-btn {
+    background-color: #257251;
+}
+
+.hr-style {
+    border: 1px solid #025710;
+    margin-top: 23rem;
+}
+
+.company-image {
+    width: 30rem;
+    height: auto;
+}
+
+.margin-top-5rem {
+    margin-top: 5rem;
+}
+
+.margin-bottom-4rem {
+    margin-bottom: 4rem;
+}
+
+.margin-left-neg-0_5rem {
+    margin-left: -0.5rem;
+}
+
+.margin-top-neg-0_8rem {
+    margin-top: -0.8rem;
+}
+
+.margin-top-7rem {
+    margin-top: 7rem;
 }

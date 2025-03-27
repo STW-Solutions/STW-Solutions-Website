@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import bgImage from '../../../public/images/service-bg.png';
-import serviceImg from '../../../public/images/service1.png';
-import value1 from '../../../public/images/service3.png';
+import { useState } from 'react';
+import bgImage from '../../images/service-bg.png';
+import serviceImg from '../../images/service1.png';
+import value1 from '../../images/service3.png';
 import { useTranslation } from "react-i18next";
-import value2 from "../../../public/images/values/value2.png";
-import value3 from "../../../public/images/values/value3.png";
-import value4 from "../../../public/images/values/value4.png";
-import svg1 from '../../../public/images/img.png';
-import svg2 from '../../../public/images/img_1.png';
-import svg3 from '../../../public/images/img_2.png';
+import value2 from "../../images/values/value2.png";
+import value3 from "../../images/values/value3.png";
+import value4 from "../../images/values/value4.png";
+import svg1 from '../../images/img.png';
+import svg2 from '../../images/img_1.png';
+import svg3 from '../../images/img_2.png';
 import './Solutions.css';
 
 interface CardInfo {
@@ -62,7 +62,7 @@ const Solutions = () => {
                     <div className="col-md-6 text-white d-flex align-items-center justify-content-center">
                         <h1 className="text-md-start text-center fw-medium p-5 header">{t("header")}</h1>
                     </div>
-                    <div className="col-md-6 d-flex align-items-end justify-content-end d-none d-md-flex">
+                    <div className="col-md-6 d-flex align-items-end justify-content-end d-none d-lg-flex">
                         <div className="info-card d-flex align-items-center">
                             <div className="info-item text-center">
                                 <h1 className="fw-bolder">12 +</h1>
@@ -86,7 +86,7 @@ const Solutions = () => {
             </div>
             <div className="row mx-md-5 px-md-5">
                 {data.map((card, index) => (
-                    <div className="col-md-4" key={index} data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div className="col-lg-4 col-md-12 col-sm-12" key={index} data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div
                             className="card shadow card-info p-4"
                             onClick={() => handleCardClick(card)}

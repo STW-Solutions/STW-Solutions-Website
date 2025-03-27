@@ -1,9 +1,8 @@
 import SectionHeading from "../SectionHeading/SectionHeading";
 import './WhatWeDo.css'
-import React from "react";
-import team1 from '../../../public/images/team/team1.png';
-import team2 from '../../../public/images/team/team2.png';
-import team3 from '../../../public/images/team/team3.png';
+import team1 from '../../images/team/team1.png';
+import team2 from '../../images/team/team2.png';
+import team3 from '../../images/team/team3.png';
 import {useTranslation} from "react-i18next";
 
 interface TestimonialsData {
@@ -43,7 +42,7 @@ const WhatWeDo = () => {
     return (
         <div className="container-fluid container-main ">
             <div className="row mx-md-5 px-md-5">
-                <div className="col-md-7">
+                <div className="col-lg-7 col-md-12 col-sm-12">
                     <SectionHeading heading={t("what_we_do")} position={"left"}/>
                     <div className="d-flex gap-3">
                         <div className="circle"></div>
@@ -80,10 +79,10 @@ const WhatWeDo = () => {
                             <p>{t("community_mgmt_description")}</p>
                         </div>
                     </div>
-                    <hr className="mb-4 w-50" style={{color: "#257251", borderColor: "#257251", borderWidth: 2}}/>
+                    <hr className="mb-4 w-50 hr-sty-class"/>
 
                 </div>
-                <div className="col-md-5 my-5 py-5">
+                <div className="col-lg-5 col-md-12 col-sm-12 my-5 py-5">
                     <div className="card-box p-4 rounded-3">
                         <div className="">
                             <h4>{t("achievement_and_goals")}</h4>
@@ -106,7 +105,7 @@ const WhatWeDo = () => {
             <div>
                 <SectionHeading heading={t("testimonials_heading")} position={'left'}/>
                 <p className="ms-5">{t("testimonials_description")}</p>
-                <div className="row px-5 mx-5">
+                <div className="row px-5 mx-5 d-none d-lg-flex">
                     {testimonials.map((team, index) => (
                         <div key={index} className="col-md-3 testimonial-item">
                             <div className="testimonial-img-container">
@@ -115,6 +114,21 @@ const WhatWeDo = () => {
                             <div className="text-start">
                                 <p className="">{team.experience}</p>
                                 <h5 className="">- {team.name}</h5>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="d-sm-block d-lg-none">
+                    {testimonials.map((team, index) => (
+                        <div key={index} className="testimonial-item">
+                            <div className="row">
+                                <div className="testimonial-img-container col-4">
+                                    <img src={team.imageSrc} alt={team.name} className="img-fluid rounded-circle mb-4 testimonial-image" />
+                                </div>
+                                <div className="text-start col-8 mt-1">
+                                    <p className="">{team.experience}</p>
+                                    <h5 className="">- {team.name}</h5>
+                                </div>
                             </div>
                         </div>
                     ))}
