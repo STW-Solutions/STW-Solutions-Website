@@ -60,7 +60,7 @@ const Solutions = () => {
             <div className="services-container" style={{backgroundImage: `url(${bgImage})`}}>
                 <div className="row">
                     <div className="col-md-6 text-white d-flex align-items-center justify-content-center">
-                        <h1 className="text-md-start text-center fw-medium p-5 header">{t("header")}</h1>
+                        <h2 className="text-md-start text-center fw-medium p-5 header">{t("header")}</h2>
                     </div>
                     <div className="col-md-6 d-flex align-items-end justify-content-end d-none d-lg-flex">
                         <div className="info-card d-flex align-items-center">
