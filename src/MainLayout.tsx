@@ -12,11 +12,11 @@ const MainLayout = ({ children }: Props) => {
     i18n.changeLanguage(language);
   };
   return (
-    <div>
+    <>
       <NavBar onClickLanguageChange={handleLanguageChange} />
       <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 export default MainLayout;

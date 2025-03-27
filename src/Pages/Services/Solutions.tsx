@@ -9,7 +9,7 @@ import value4 from "../../../public/images/values/value4.png";
 import svg1 from '../../../public/images/img.png';
 import svg2 from '../../../public/images/img_1.png';
 import svg3 from '../../../public/images/img_2.png';
-import './Services.css';
+import './Solutions.css';
 
 interface CardInfo {
     imageSrc: string;
@@ -19,7 +19,7 @@ interface CardInfo {
     intro?: string;
 }
 
-const Services = () => {
+const Solutions = () => {
     const { t } = useTranslation();
     const [modalData, setModalData] = useState<CardInfo | null>(null);
 
@@ -169,4 +169,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default Solutions;
