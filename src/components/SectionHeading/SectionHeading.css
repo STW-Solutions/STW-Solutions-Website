@@ -4,7 +4,7 @@
     transform: skewX(-20deg);
     overflow: hidden;
     background-color: #257251;
-    margin: 0 auto; /* Center the parallelogram horizontally */
+    margin: 0 auto;
 }
 
 .section-heading-text {
@@ -30,11 +30,31 @@
 .mr-4 {
     margin-left: 28rem;
 }
+
+.mr-4 {
+    margin-left: 35rem;
+}
+
+@media (max-width: 1280px) {
+    .mr-4 {
+        margin-left: 18rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mr-4 {
+        margin-left: 22rem;
+    }
+}
+
 @media (max-width: 768px) {
     .mr-4 {
         margin-left: 11rem;
     }
-    .ml-4{
-        margin-left: 2rem;
+}
+
+@media (max-width: 480px) {
+    .mr-4 {
+        margin-left: 13rem;
     }
 }

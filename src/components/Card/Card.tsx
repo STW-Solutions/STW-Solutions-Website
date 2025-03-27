@@ -2,8 +2,8 @@ import React from 'react';
 import './Card.css';
 
 interface CardProps {
-    cardType: 'default' | 'team';
-    imageSrc: string;
+    cardType?: string;
+    imageSrc?: string;
     title?: string;
     backgroundColor?: string;
     information?: string;
