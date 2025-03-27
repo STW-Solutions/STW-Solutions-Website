@@ -6,7 +6,7 @@ import Card from "../../components/Card/Card";
 
 const Home = () => {
   const { t } = useTranslation();
-  const values = [
+  const whyUs = [
     {
       name: "promote_sustainability_development",
       imageUrl: "/src/images/value1.png",
@@ -88,13 +88,13 @@ const Home = () => {
           <div>{t("why_choose_stw_solutions_sub")}</div>
         </span>
         <div className="row mt-5">
-          {values.map((value, index) => (
+          {whyUs.map((reason, index) => (
             <div className="col-12 col-md-4 px-5" key={index}>
               <Card
                 cardType="default"
-                imageSrc={value.imageUrl}
-                information={t(value.description)}
-                title={t(value.name)}
+                imageSrc={reason.imageUrl}
+                information={t(reason.description)}
+                title={t(reason.name)}
                 backgroundColor="#E4FFF3"
               />
             </div>
