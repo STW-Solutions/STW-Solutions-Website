@@ -56,6 +56,8 @@ const Team = () => {
                             name={team.name}
                             jobTitle={team.jobTitle}
                             aboutInfo={team.aboutInfo}
+                            cardTitleClasses={['card-title']}
+                            cardTextClasses={['card-text']}
                         />
                     </div>
                 ))}

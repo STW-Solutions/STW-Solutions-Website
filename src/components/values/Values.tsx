@@ -59,6 +59,8 @@ const Values = () => {
                                 title={card.title}
                                 backgroundColor={card.backgroundColor}
                                 information={card.information}
+                                cardTitleClasses={['card-title']}
+                                cardTextClasses={['card-text']}
                             />
                         </div>
                     </div>

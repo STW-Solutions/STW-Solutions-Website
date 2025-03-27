@@ -84,18 +84,20 @@ const Home = () => {
       </section>
       <section className="our-values-main bg-white container-fluid ">
         <span className="text-center">
-          <h2>{t("why_choose_stw_solutions")}?</h2>
-          <div>{t("why_choose_stw_solutions_sub")}</div>
+          <h2 className="fw-bold">{t("why_choose_stw_solutions")}?</h2>
+          <div className="text-muted">{t("why_choose_stw_solutions_sub")}</div>
         </span>
         <div className="row mt-5">
           {whyUs.map((reason, index) => (
-            <div className="col-12 col-md-4 px-5" key={index}>
+            <div className="col-12 col-md-4 px-xl-5 fly-in" key={index}>
               <Card
                 cardType="default"
                 imageSrc={reason.imageUrl}
                 information={t(reason.description)}
                 title={t(reason.name)}
                 backgroundColor="#E4FFF3"
+                cardTitleClasses={['stw-card-title', 'text-capitalize']}
+                cardTextClasses={['text-muted']}
               />
             </div>
           ))}
