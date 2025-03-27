@@ -10,8 +10,8 @@ import App from "./App";
 import Company from "./Pages/Company/Company";
 import MainLayout from "./MainLayout";
 import Projects from "./Pages/Projects/Projects";
-import Services from "./Pages/Services/Services";
 import "./index.css";
+import Solutions from "./Pages/Services/Solutions";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>
@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/company" element={<Company />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/solutions" element={<Solutions />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
       </MainLayout>
