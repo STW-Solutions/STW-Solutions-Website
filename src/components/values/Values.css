@@ -1,29 +1,46 @@
-.cont{
+.cont {
     background: linear-gradient(156.35deg, #275944 15.2%, #6AA189 22.39%, #9ACBB6 26.02%, #89B09F 33%, #B7EDD6 51.94%, #749F8D 67.49%, #80AF9C 73.03%, #275944 76.59%, #275944 79.6%);
 }
+
 .container-fluid {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.cards{
+    height: 24rem;
 }
 
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0);
-    }
+
+.values-row .col-md-3 {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-.slide-up {
-    animation: slideUp 1s ease-in-out;
+@media (max-width: 850px) {
+
+    .card-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .card-container:nth-child(odd) {
+        justify-content: flex-end;
+
+    }
+
+    .cards {
+        width: 65%;
+        height:18rem;
+    }
+
+}
+@media (max-width: 480px) {
+    .cards {
+        width: 65%;
+        height:21rem;
+    }
 }

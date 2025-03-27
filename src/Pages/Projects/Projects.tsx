@@ -48,11 +48,11 @@ const Projects = () => {
         <>
             <div className="rounded-4  project-container">
                 <div className="row py-5">
-                    <div className="col-md-6 text-center">
+                    <div className="col-lg-6 col-md-12 col-sm-12 text-center">
                         <h2 className="fw-bold text-white py-md-4">{t("projects")}</h2>
                         <p className="text-white px-md-5 mx-md-5">{t("stw_solutions_is_a")}</p>
                     </div>
-                    <div className="col-md-6 text-center align-content-center d-md-block d-none">
+                    <div className="col-lg-6 col-md-12 col-sm-12 text-center align-content-center d-lg-block  d-none">
                         <img src={firstImg} alt="image 1"  width="75" height="75" className="  img-fluid rounded mb-4" />
                         <img src={secondImg} alt="image 1"  width="115" height="115" className=" img-fluid rounded mb-4" />
                         <span className="border-danger">
@@ -61,11 +61,17 @@ const Projects = () => {
                         <img src={secondImg} alt="image 1"  width="115" height="115" className="img-fluid rounded mb-4" />
                         <img src={firstImg} alt="image 1"  width="75" height="75" className="img-fluid rounded mb-4" />
                     </div>
-                    <div className=" justify-content-between w-100 p-0 m-0 d-md-none ">
-                        <img src={secondImg} alt="image 1"  width= "95"
+                    <div className="justify-content-center w-100 p-0 m-0 d-none d-md-flex col-md-12">
+                        <img src={secondImg} alt="image 1"  width= "125"
                              className="img-fluid rounded" />
-                        <img src={thirdImg} alt="image 1" width="120" className="img-fluid rounded" />
-                        <img src={secondImg} alt="image 1"  width="95"  className="img-fluid rounded" />
+                        <img src={thirdImg} alt="image 1" width="140" className="img-fluid rounded" />
+                        <img src={secondImg} alt="image 1"  width="125"  className="img-fluid rounded" />
+                    </div>
+                    <div className=" justify-content-center w-100 p-0 m-0 d-md-none d-lg-none d-sm-flex col-sm-12">
+                        <img src={secondImg} alt="image 1"  width= "85"
+                             className="img-fluid rounded" />
+                        <img src={thirdImg} alt="image 1" width="110" className="img-fluid rounded" />
+                        <img src={secondImg} alt="image 1"  width="85"  className="img-fluid rounded" />
                     </div>
                 </div>
             </div>
@@ -99,16 +105,16 @@ const Projects = () => {
                 </div>
                 {projectData.map((project, index) => (
                     <div className="row p-md-5 m-md-5 p-2 m-2 card-div rounded-4" key={index} style={{ backgroundColor: project.backgroundColor }}>
-                        <div className="col-md-3 pt-5 pt-md-0">
+                        <div className="col-lg-3 col-md-12 pt-lg-5 pt-md-0">
                             <img src={project.imgSrc} width="240" height="240" className="img-fluid w-100 mt-md-5" alt="alt-image" />
                         </div>
-                        <div className="col-md-3">
-                            <h2 className="fw-bold py-4 my-md-4 text-center text-md-start">{t(project.title)}</h2>
+                        <div className="col-lg-3 col-md-12">
+                            <h2 className="fw-bold py-lg-4 my-lg-4 my-md-2 text-center text-md-start">{t(project.title)}</h2>
                         </div>
-                        <div className="col-md-3 py-4 my-md-4 ">
+                        <div className="col-lg-3 col-md-12 py-lg-4 my-lg-4 my-md-2 ">
                             {t(project.explanation)}
                         </div>
-                        <div className="col-md-2 text-end py-5 my-md-5">
+                        <div className="col-lg-2 col-md-12 text-end py-lg-5 my-lg-5 my-md-2">
                             <img src={icon} width="50" height="50" className="img-fluid" alt="alt-image" />
                         </div>
                     </div>
