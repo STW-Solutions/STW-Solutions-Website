@@ -115,5 +115,13 @@
   "events": "events",
   "blog": "blog",
   "news": "news",
-  "podcast": "podcast"
+  "podcast": "podcast",
+  "promote_sustainability_development_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatem ut praesentium dignissimos error necessitatibus adipisci magni id tempore ratione, quidem porro voluptatibus. Suscipit, architecto. Beatae reprehenderit vel repudiandae veritatis.",
+  "promote_sustainability_development": "promote sustainability development",
+  "conserve_natural_resources_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatem ut praesentium dignissimos error necessitatibus adipisci magni id tempore ratione, quidem porro voluptatibus. Suscipit, architecto. Beatae reprehenderit vel repudiandae veritatis.",
+  "conserve_natural_resources": "conserve natural resources",
+  "support_communities_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatem ut praesentium dignissimos error necessitatibus adipisci magni id tempore ratione, quidem porro voluptatibus. Suscipit, architecto. Beatae reprehenderit vel repudiandae veritatis.",
+  "support_communities": "support communities",
+  "why_choose_stw_solutions": "Why Choose STW Solutions",
+  "why_choose_stw_solutions_sub": "Lorem ipsum dolor sit amet, consectetur"
 }
