@@ -11,7 +11,7 @@ import Company from "./Pages/Company/Company";
 import MainLayout from "./MainLayout";
 import Projects from "./Pages/Projects/Projects";
 import "./index.css";
-import Solutions from "./Pages/Services/Solutions";
+import Solutions from "./Pages/Solutions/Solutions";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>

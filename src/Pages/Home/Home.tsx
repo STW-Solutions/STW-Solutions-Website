@@ -40,7 +40,8 @@ const Home = () => {
               <span className="hero-hint d-block text-center px-3 mt-5">
                 {t("hero_hint")}
               </span>
-              <div className="hero-details d-block mt-5 ps-3">
+              <div className="line"></div>
+              <div className="hero-details d-block mt-4 ps-3">
                 <div className="pt-5">{t("hero_details")}</div>
               </div>
               <div className="mt-5 ps-3">

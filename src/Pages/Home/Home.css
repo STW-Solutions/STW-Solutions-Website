@@ -20,14 +20,13 @@
     font-size: 2rem;
 }
 
-.hero-details,
 .line {
     border-top: 6px solid #257251;
-    /* transform: skew(-20deg); */
+    transform: skew(-20deg);
 }
 
 .line {
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 
 .hero-statistics .bold-green-text {
