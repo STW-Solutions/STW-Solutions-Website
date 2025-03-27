@@ -4,6 +4,8 @@ import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
 import earth from "../../images/earth-nobg.png";
 import Card from "../../components/Card/Card";
 import reason1 from "../../images/reason1.png";
+import reason2 from "../../images/reason2.png";
+import reason3 from "../../images/reason3.png";
 import AnimateOnScroll from "../../components/AnimateOnScroll/AnimateOnScroll";
 
 const Home = () => {
@@ -17,13 +19,13 @@ const Home = () => {
     },
     {
       name: "conserve_natural_resources",
-      imageUrl: "../../images/reason2.png",
+      imageUrl: reason2,
       alt: "conserve_natural_resources",
       description: "conserve_natural_resources_description",
     },
     {
       name: "support_communities",
-      imageUrl: "../../images/reason3.png",
+      imageUrl: reason3,
       alt: "support_communities",
       description: "support_communities_description",
     },
