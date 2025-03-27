@@ -10,19 +10,19 @@ const Home = () => {
   const whyUs = [
     {
       name: "promote_sustainability_development",
-      imageUrl: "/src/images/value1.png",
+      imageUrl: "../../images/reason1.png",
       alt: "promote_sustainability_development",
       description: "promote_sustainability_development_description",
     },
     {
       name: "conserve_natural_resources",
-      imageUrl: "/src/images/value2.png",
+      imageUrl: "../../images/reason2.png",
       alt: "conserve_natural_resources",
       description: "conserve_natural_resources_description",
     },
     {
       name: "support_communities",
-      imageUrl: "/src/images/value3.png",
+      imageUrl: "../../images/reason3.png",
       alt: "support_communities",
       description: "support_communities_description",
     },
