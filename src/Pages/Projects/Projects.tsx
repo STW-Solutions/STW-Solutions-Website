@@ -47,12 +47,12 @@ const Projects = () => {
     return (
         <>
             <div className="rounded-4  project-container">
-                <div className="row py-5">
+                <div className="row py-lg-5">
                     <div className="col-lg-6 col-md-12 col-sm-12 text-center">
                         <h2 className="fw-bold text-white py-md-4">{t("projects")}</h2>
                         <p className="text-white px-md-5 mx-md-5">{t("stw_solutions_is_a")}</p>
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12 text-center align-content-center d-lg-block  d-none">
+                    <div className="pt-5 col-lg-6 col-md-12 col-sm-12 text-center align-content-center d-lg-block  d-none">
                         <img src={firstImg} alt="image 1"  width="75" height="75" className="  img-fluid rounded mb-4" />
                         <img src={secondImg} alt="image 1"  width="115" height="115" className=" img-fluid rounded mb-4" />
                         <span className="border-danger">
@@ -61,17 +61,10 @@ const Projects = () => {
                         <img src={secondImg} alt="image 1"  width="115" height="115" className="img-fluid rounded mb-4" />
                         <img src={firstImg} alt="image 1"  width="75" height="75" className="img-fluid rounded mb-4" />
                     </div>
-                    <div className="justify-content-center w-100 p-0 m-0 d-none d-md-flex col-md-12">
-                        <img src={secondImg} alt="image 1"  width= "125"
-                             className="img-fluid rounded" />
-                        <img src={thirdImg} alt="image 1" width="140" className="img-fluid rounded" />
-                        <img src={secondImg} alt="image 1"  width="125"  className="img-fluid rounded" />
-                    </div>
-                    <div className=" justify-content-center w-100 p-0 m-0 d-md-none d-lg-none d-sm-flex col-sm-12">
-                        <img src={secondImg} alt="image 1"  width= "85"
-                             className="img-fluid rounded" />
-                        <img src={thirdImg} alt="image 1" width="110" className="img-fluid rounded" />
-                        <img src={secondImg} alt="image 1"  width="85"  className="img-fluid rounded" />
+                    <div className="justify-content-center align-content-center w-100 d-lg-none d-md-flex d-sm-flex">
+                        <img src={secondImg} alt="image 1"  width="80" className="img-fluid rounded" />
+                        <img src={thirdImg} alt="image 1" width="115" className="img-fluid rounded" />
+                        <img src={secondImg} alt="image 1"  width="80"  className="img-fluid rounded" />
                     </div>
                 </div>
             </div>
