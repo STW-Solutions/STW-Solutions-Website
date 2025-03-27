@@ -3,6 +3,7 @@ import "./Home.css";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
 import earth from "../../images/earth-nobg.png";
 import Card from "../../components/Card/Card";
+import reason1 from "../../images/reason1.png";
 import AnimateOnScroll from "../../components/AnimateOnScroll/AnimateOnScroll";
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
   const whyUs = [
     {
       name: "promote_sustainability_development",
-      imageUrl: "../../images/reason1.png",
+      imageUrl: reason1,
       alt: "promote_sustainability_development",
       description: "promote_sustainability_development_description",
     },
