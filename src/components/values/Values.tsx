@@ -45,7 +45,7 @@ const Values = () => {
 
     return (
         <div className="container-fluid cont">
-            <h4 className="text-center fw-bold text-white">{t("our_values")}</h4>
+            <h2 className="text-center fw-bold text-white">{t("our_values")}</h2>
             <div className="w-100 text-white text-center">
                 {t("values_description")}
             </div>

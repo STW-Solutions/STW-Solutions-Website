@@ -31,18 +31,18 @@ const Company = () => {
                         <div className="d-lg-block d-none margin-top-5rem margin-bottom-4rem">
                             <div className="row ms-5 p-0">
                                 <div className="col-md-4 p-0">
-                                    <img src={image1} alt="Company Image" className="img-fluid rounded-circle mx-auto d-block slide-in company-image" />
+                                    <img src={image1} alt="Company Image" className="img-fluid rounded-circle mx-auto d-block slide-in-left company-image" />
                                 </div>
                                 <div className="col-md-4 p-0 margin-left-neg-0_5rem">
-                                    <img src={image2} alt="Company Image" className="img-fluid rounded-circle mx-auto d-block slide-in company-image" />
+                                    <img src={image2} alt="Company Image" className="img-fluid rounded-circle mx-auto d-block slide-in-right company-image" />
                                 </div>
                             </div>
                             <div className="row me-5 margin-top-neg-0_8rem">
                                 <div className="col-md-4 p-0">
-                                    <img src={image3} alt="Company Image" className="img-fluid rounded-circle mx-auto d-block slide-in company-image" />
+                                    <img src={image3} alt="Company Image" className="img-fluid rounded-circle mx-auto d-block slide-in-top company-image" />
                                 </div>
                                 <div className="col-md-4 p-0 margin-left-neg-0_5rem">
-                                    <img src={image4} alt="Company Image" className="img-fluid rounded-circle mx-auto d-block slide-in company-image" />
+                                    <img src={image4} alt="Company Image" className="img-fluid rounded-circle mx-auto d-block slide-in-bottom company-image" />
                                 </div>
                             </div>
                         </div>
