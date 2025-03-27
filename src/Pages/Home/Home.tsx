@@ -3,6 +3,7 @@ import "./Home.css";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
 import earth from "../../images/earth-nobg.png";
 import Card from "../../components/Card/Card";
+import AnimateOnScroll from "../../components/AnimateOnScroll/AnimateOnScroll";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -89,16 +90,18 @@ const Home = () => {
         </span>
         <div className="row mt-5">
           {whyUs.map((reason, index) => (
-            <div className="col-12 col-md-4 px-xl-5 fly-in" key={index}>
-              <Card
-                cardType="default"
-                imageSrc={reason.imageUrl}
-                information={t(reason.description)}
-                title={t(reason.name)}
-                backgroundColor="#E4FFF3"
-                cardTitleClasses={['stw-card-title', 'text-capitalize']}
-                cardTextClasses={['text-muted']}
-              />
+            <div className="col-12 col-md-4 px-xl-5" key={index}>
+              <AnimateOnScroll reappear={true}>
+                <Card
+                  cardType="default"
+                  imageSrc={reason.imageUrl}
+                  information={t(reason.description)}
+                  title={t(reason.name)}
+                  backgroundColor="#E4FFF3"
+                  cardTitleClasses={["stw-card-title", "text-capitalize"]}
+                  cardTextClasses={["text-muted"]}
+                />
+              </AnimateOnScroll>
             </div>
           ))}
         </div>

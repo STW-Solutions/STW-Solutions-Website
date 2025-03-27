@@ -23,6 +23,7 @@
 .hero-details,
 .line {
     border-top: 6px solid #257251;
+    /* transform: skew(-20deg); */
 }
 
 .line {
