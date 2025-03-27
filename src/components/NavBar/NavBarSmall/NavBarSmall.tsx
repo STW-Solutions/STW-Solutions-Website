@@ -12,6 +12,7 @@ interface Props {
 
 const NavBarSmall = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
+  const languages = ["en", "fr", "de"];
   return (
     <>
       <div className="d-block d-md-none text-capitalize bg-white">
@@ -54,7 +55,7 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                     type="button"
                     id="companyDropDown"
                   >
-                    {t("company")}
+                    {t("about")}
                   </button>
                   <ul
                     className="dropdown-menu"
@@ -65,40 +66,64 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                         className="dropdown-item stw-nav-sm-li"
                         to={"/company"}
                       >
-                        {t("about_us")}
+                        {t("company")}
                       </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item stw-nav-sm-li" href="#">
-                        {t("our_team")}
-                      </a>
+                      <Link className="dropdown-item stw-nav-sm-li" to="#">
+                        {t("sustainability")}
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item stw-nav-sm-li" href="#">
-                        {t("recent_projects")}
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item stw-nav-sm-li" href="#">
+                      <Link className="dropdown-item stw-nav-sm-li" to="#">
                         {t("partners")}
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item stw-nav-sm-li" href="#">
-                        {t("how_it_works")}
-                      </a>
+                      <Link className="dropdown-item stw-nav-sm-li" to="#">
+                        {t("careers")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item stw-nav-sm-li" to="#">
+                        {t("contact")}
+                      </Link>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li>
-                <Link
-                  className="dropdown-item stw-nav-sm-li"
-                  aria-current="page"
-                  to="/services"
-                >
-                  {t("services")}
-                </Link>
+              <li className="dropdown-item bg-white stw-nav-sm-li">
+                <div className="dropend">
+                  <button
+                    className="dropdown-toggle border-0 bg-transparent text-capitalize"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    type="button"
+                    id="solutionsDropDown"
+                  >
+                    {t("solutions")}
+                  </button>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="solutionsDropDown"
+                  >
+                    <li>
+                      <Link className="dropdown-item stw-nav-sm-li" to={"#"}>
+                        {t("forestry_solutions")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item stw-nav-sm-li" to="#">
+                        {t("waste_management_solutions")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item stw-nav-sm-li" to="#">
+                        {t("renewable_energy_solutions")}
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li className="dropdown-item bg-white stw-nav-sm-li">
                 <div className="dropend">
@@ -116,19 +141,60 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                     aria-labelledby="projectsDropdown"
                   >
                     <li>
-                      <Link className="dropdown-item stw-nav-sm-li" to="/projects">
-                        {t("category1")}
+                      <Link
+                        className="dropdown-item stw-nav-sm-li"
+                        to="/projects"
+                      >
+                        {t("our_projects")}
                       </Link>
                     </li>
                     <li>
                       <a className="dropdown-item stw-nav-sm-li" href="#">
-                        {t("category2")}
+                        {t("project#1")}
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item stw-nav-sm-li" href="#">
-                        {t("category3")}
+                        {t("project#2")}
                       </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="dropdown-item bg-white stw-nav-sm-li">
+                <div className="dropend">
+                  <button
+                    className="dropdown-toggle border-0 bg-transparent text-capitalize"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    type="button"
+                    id="insightsDropDown"
+                  >
+                    {t("insights")}
+                  </button>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="insightsDropDown"
+                  >
+                    <li>
+                      <Link className="dropdown-item stw-nav-sm-li" to={"#"}>
+                        {t("blog")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item stw-nav-sm-li" to="#">
+                        {t("events")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item stw-nav-sm-li" to="#">
+                        {t("news")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item stw-nav-sm-li" to="#">
+                        {t("podcast")}
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -148,32 +214,21 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                     className="dropdown-menu"
                     aria-labelledby="languagesDropdown"
                   >
-                    <li className="text-uppercase">
-                      <a
-                        className="dropdown-item border-0 stw-nav-sm-li"
-                        type="button"
-                        onClick={() => onClickLanguageChange('en')}
-                      >
-                        <FontAwesomeIcon
-                          icon={faGlobe}
-                          className="stw-green-icon me-2"
-                        />
-                        {t("en")}
-                      </a>
-                    </li>
-                    <li>
-                      <button
-                        className="dropdown-item border-0 stw-nav-sm-li text-uppercase"
-                        type="button"
-                        onClick={() => onClickLanguageChange('fr')}
-                      >
-                        <FontAwesomeIcon
-                          icon={faGlobe}
-                          className="stw-green-icon me-2"
-                        />
-                        {t("fr")}
-                      </button>
-                    </li>
+                    {languages.map((item, index) => (
+                      <li className="text-uppercase" key={item}>
+                        <a
+                          className="dropdown-item border-0 stw-nav-sm-li"
+                          type="button"
+                          onClick={() => onClickLanguageChange(item)}
+                        >
+                          <FontAwesomeIcon
+                            icon={faGlobe}
+                            className="stw-green-icon me-2"
+                          />
+                          {t(item)}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </li>
