@@ -1,10 +1,11 @@
 import Card from "../Card/Card";
-import team1 from '../../../public/images/team/team1.png';
-import team2 from '../../../public/images/team/team2.png';
-import team3 from '../../../public/images/team/team3.png';
-import team4 from '../../../public/images/team/team4.png';
+import team1 from '../../images/team/team1.png';
+import team2 from '../../images/team/team2.png';
+import team3 from '../../images/team/team3.png';
+import team4 from '../../images/team/team4.png';
 import SectionHeading from "../SectionHeading/SectionHeading";
 import {useTranslation} from "react-i18next";
+import "./Team.css"
 
 interface TeamData {
     imageSrc: string;
@@ -48,18 +49,20 @@ const Team = () => {
             </div>
             <div className="row mx-md-5 px-md-5">
                 {teamData.map((team, index) => (
-                    <div key={index} className="col-md-3 d-flex justify-content-center">
+                    <div key={index} className="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
                         <Card
                             cardType="team"
                             imageSrc={team.imageSrc}
                             name={team.name}
                             jobTitle={team.jobTitle}
                             aboutInfo={team.aboutInfo}
+                            cardTitleClasses={['card-title']}
+                            cardTextClasses={['card-text']}
                         />
                     </div>
                 ))}
             </div>
-            <hr className="mb-4 w-50" style={{color: "#257251", borderColor: "#257251", borderWidth: 3}}/>
+            <hr className="mb-4 w-50 fw-bolder hr-style-class"/>
         </div>
     )
 }

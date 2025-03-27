@@ -20,15 +20,40 @@
     font-size: 2rem;
 }
 
-.hero-details, .line {
+.line {
     border-top: 6px solid #257251;
+    transform: skew(-20deg);
 }
 
 .line {
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 
 .hero-statistics .bold-green-text {
     font-size: 2.5rem;
 }
 
+.our-values-main .row {
+    padding: 6px 6rem 0 6rem;
+}
+
+.stw-card-title {
+    font-size: 1.2rem;
+}
+
+.fly-in {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fly-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 1240px) {
+    .our-values-main .row {
+        padding: 6px 3rem 0 2rem;
+    }
+}

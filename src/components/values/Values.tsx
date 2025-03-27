@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import './Values.css';
 import Card from '../Card/Card';
-import value1 from '../../../public/images/values/value1.png';
-import value2 from '../../../public/images/values/value2.png';
-import value3 from '../../../public/images/values/value3.png';
-import value4 from '../../../public/images/values/value4.png';
+import value1 from '../../images/values/value1.png';
+import value2 from '../../images/values/value2.png';
+import value3 from '../../images/values/value3.png';
+import value4 from '../../images/values/value4.png';
 
 interface CardData {
     imageSrc: string;
@@ -44,21 +44,25 @@ const Values = () => {
     ];
 
     return (
-        <div className="container-fluid cont fade-in">
+        <div className="container-fluid cont">
             <h4 className="text-center fw-bold text-white">{t("our_values")}</h4>
             <div className="w-100 text-white text-center">
                 {t("values_description")}
             </div>
-            <div className="row mx-md-5 px-md-5">
+            <div className="row values-row">
                 {cardData.map((card, index) => (
-                    <div key={index} className="col-md-3 mb-5 mt-5 slide-up">
-                        <Card
-                            cardType="default"
-                            imageSrc={card.imageSrc}
-                            title={card.title}
-                            backgroundColor={card.backgroundColor}
-                            information={card.information}
-                        />
+                    <div key={index} className={`col-md-3 card-container`}>
+                        <div className="cards">
+                            <Card
+                                cardType="default"
+                                imageSrc={card.imageSrc}
+                                title={card.title}
+                                backgroundColor={card.backgroundColor}
+                                information={card.information}
+                                cardTitleClasses={['card-title']}
+                                cardTextClasses={['card-text']}
+                            />
+                        </div>
                     </div>
                 ))}
             </div>
