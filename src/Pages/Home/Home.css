@@ -2,8 +2,12 @@
     min-height: 100vh;
 }
 
-.hero-main {
+.bg-light-green {
     background-color: #E4FFF3;
+}
+
+.bg-thick-green {
+    background-color: #257251;
 }
 
 .company-name {
@@ -29,6 +33,10 @@
     margin-top: 5rem;
 }
 
+.our-partners-head {
+    border-bottom: 4px dashed #257251;
+}
+
 .hero-statistics .bold-green-text {
     font-size: 2.5rem;
 }
@@ -52,8 +60,45 @@
     transform: translateY(0);
 }
 
+.partner-logo-box {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 10vw;
+    transition: transform 0.2s ease;
+}
+
+a:hover .partner-logo-box {
+    animation: bounce 1s;
+}
+
+.volkswagen-logo {
+    width: 12vw;
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
 @media screen and (max-width: 1240px) {
     .our-values-main .row {
         padding: 6px 3rem 0 2rem;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    a:hover .partner-logo-box {
+        animation: none !important;
     }
 }

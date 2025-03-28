@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 import "./Home.css";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
 import earth from "../../images/earth-nobg.png";
@@ -7,6 +8,12 @@ import reason1 from "../../images/reason1.png";
 import reason2 from "../../images/reason2.png";
 import reason3 from "../../images/reason3.png";
 import AnimateOnScroll from "../../components/AnimateOnScroll/AnimateOnScroll";
+import cleanhub from "../../images/CleanHub.png";
+import enef from "../../images/ENEFCam.png";
+import carbonsate from "../../images/Carbonsate.png";
+import minepded from "../../images/MINEPDED.png";
+import ministryForestry from "../../images/MinistryForestry.png";
+import volkswagen from "../../images/Volkswagen.png";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -33,7 +40,7 @@ const Home = () => {
 
   return (
     <div className="home-main">
-      <section className="hero-main container-fluid">
+      <section className="hero-main container-fluid bg-light-green">
         <div className="container py-5">
           <div className="row align-items-center">
             <div className="col-md-6">
@@ -108,6 +115,81 @@ const Home = () => {
               </AnimateOnScroll>
             </div>
           ))}
+        </div>
+      </section>
+      <section className="our-partners-main">
+        <div className="container-fluid px-5 our-partners-head">
+          <div className="row px-5">
+            <h2 className="fw-bold col-md-2 text-break">
+              {t("our_partners_and_investors")}
+            </h2>
+            <div className="col-md-7"></div>
+            <span className="col-md-3">
+              {t("we_believe_that_collaboration_is_key")}
+            </span>
+          </div>
+        </div>
+        <div className="container-fluid px-5">
+          <div className="row px-5">
+            <div className="col-md-3 col-lg-2">
+              <Link to="#" target="_blank">
+                <div className="shadow bg-white partner-logo-box rounded">
+                  <img
+                    src={cleanhub}
+                    alt="CleanHub logo"
+                    className="cleanhub-logo w-75"
+                  />
+                </div>
+              </Link>
+            </div>
+            <div className="col-md-3 col-lg-2">
+              <Link to="#" target="_blank">
+                <div className="shadow bg-white partner-logo-box rounded">
+                  <img
+                    src={carbonsate}
+                    alt="Carbonsate logo"
+                    className="w-100"
+                  />
+                </div>
+              </Link>
+            </div>
+            <div className="col-md-3 col-lg-2">
+              <Link to="#" target="_blank">
+                <div className="shadow bg-white partner-logo-box rounded">
+                  <img
+                    src={volkswagen}
+                    alt="Volkswagen logo"
+                    className="volkswagen-logo"
+                  />
+                </div>
+              </Link>
+            </div>
+            <div className="col-md-3 col-lg-2">
+              <Link to="#" target="_blank">
+                <div className="shadow bg-white partner-logo-box rounded">
+                  <img src={enef} alt="ENEF logo" className="w-100" />
+                </div>
+              </Link>
+            </div>
+            <div className="col-md-3 col-lg-2">
+              <Link to="#" target="_blank">
+                <div className="shadow bg-white partner-logo-box rounded">
+                  <img src={minepded} alt="MINEPDED logo" className="w-100" />
+                </div>
+              </Link>
+            </div>
+            <div className="col-md-3 col-lg-2">
+              <Link to="#" target="_blank">
+                <div className="shadow bg-white partner-logo-box rounded">
+                  <img
+                    src={ministryForestry}
+                    alt="Ministry of Forestry logo"
+                    className="w-100"
+                  />
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
