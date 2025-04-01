@@ -13,3 +13,20 @@
 .description {
     font-size: 14px;
 }
+
+hr {
+    border: 1px solid #257251;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .step-box {
+        border-bottom: 2px solid #257251;
+        padding-bottom: 5px;
+    }
+
+    hr {
+        display: none;
+    }
+}

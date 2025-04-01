@@ -34,10 +34,11 @@ const HowItWorks = () => {
         <div className="text-muted">
           {t("discover_the_effortless_process_behind_our_solution")}
         </div>
+        <hr/>
       </span>
-      <div className="d-flex justify-content-center align-items-center flex-column flex-md-row mt-5">
+      <div className="d-flex justify-content-center align-items-center flex-column flex-md-row mt-3 mt-md-5">
         {steps.map((step, index) => (
-          <div className="mx-5 mt-4 mt-md-0">
+          <div className="mx-5 mt-4 mt-md-0 step-box">
             <div className="how-it-works-img-box d-flex justify-content-center align-items-center ">
               <img src={step.imageUrl} />
             </div>
