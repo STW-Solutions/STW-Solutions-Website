@@ -6,9 +6,9 @@ import { useTranslation } from "react-i18next";
 import value2 from "../../images/values/value2.png";
 import value3 from "../../images/values/value3.png";
 import value4 from "../../images/values/value4.png";
-import svg1 from '../../images/img.png';
-import svg2 from '../../images/img_1.png';
-import svg3 from '../../images/img_2.png';
+import svg1 from '../../images/two_people_standing_sitting.webp';
+import svg2 from '../../images/girl_pointing_mobile.webp';
+import svg3 from '../../images/girl_sitting.webp';
 import './Solutions.css';
 
 interface CardInfo {

@@ -186,7 +186,6 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             }}
             id="language-options-lg"
             defaultValue={"en"}
-            value={selectedLanguage}
           >
             <option value={"en"}>{t("en")}</option>
             <option value={"fr"}>{t("fr")}</option>

@@ -1,5 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet";
+import { useState } from "react";
+
 import "./Home.css";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
 import earth from "../../images/earth-nobg.png";
@@ -14,9 +17,19 @@ import carbonsate from "../../images/Carbonsate.png";
 import minepded from "../../images/MINEPDED.png";
 import ministryForestry from "../../images/MinistryForestry.png";
 import volkswagen from "../../images/Volkswagen.png";
+import Carousel from "../../components/Carousel/Carousel";
+import twoPeopleOnBoard from "../../images/two_people_standing_sitting.webp";
+import girlPointingMobile from "../../images/girl_pointing_mobile.webp";
+import girlSitting from "../../images/girl_sitting.webp";
 
 const Home = () => {
   const { t } = useTranslation();
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex: number) => {
+    setIndex(selectedIndex);
+  };
+
   const whyUs = [
     {
       name: "promote_sustainability_development",
@@ -38,8 +51,45 @@ const Home = () => {
     },
   ];
 
+  const partners = [
+    {
+      logoUrl: cleanhub,
+      alt: "CleanHub logo",
+      classes: "cleanhub-logo w-75",
+    },
+    {
+      logoUrl: carbonsate,
+      alt: "Carbonsate logo",
+      classes: "w-100",
+    },
+    {
+      logoUrl: volkswagen,
+      alt: "Volkswagen logo",
+      classes: "w-100",
+    },
+    {
+      logoUrl: enef,
+      alt: "ENEF logo",
+      classes: "w-100",
+    },
+    {
+      logoUrl: minepded,
+      alt: "MINEPDED logo",
+      classes: "w-100",
+    },
+    {
+      logoUrl: ministryForestry,
+      alt: "Ministry of Forestry Logo",
+      classes: "w-100",
+    },
+  ];
+
   return (
     <div className="home-main">
+      <Helmet>
+        <title>{t("home_page")} - STW-Solutions Ltd</title>
+        <meta name="home" content={t("meta_home")} />
+      </Helmet>
       <section className="hero-main container-fluid bg-light-green">
         <div className="container py-5">
           <div className="row align-items-center">
@@ -94,14 +144,14 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="our-values-main bg-white container-fluid ">
+      <section className="our-values-main bg-white container-fluid">
         <span className="text-center">
           <h2 className="fw-bold">{t("why_choose_stw_solutions")}?</h2>
           <div className="text-muted">{t("why_choose_stw_solutions_sub")}</div>
         </span>
-        <div className="row mt-5">
-          {whyUs.map((reason, index) => (
-            <div className="col-12 col-md-4 px-xl-5" key={index}>
+        <div className="row mt-5 our-values-md">
+          {whyUs.map((reason, i) => (
+            <div className="col-12 col-md-4 px-xl-5" key={i}>
               <AnimateOnScroll reappear={true}>
                 <Card
                   cardType="default"
@@ -116,6 +166,13 @@ const Home = () => {
             </div>
           ))}
         </div>
+        <div className="row our-values-sm mt-5">
+          <Carousel
+            id="ourValuesCarousel"
+            carouselItems={whyUs}
+            useCard={true}
+          ></Carousel>
+        </div>
       </section>
       <section className="our-partners-main">
         <div className="container-fluid px-5 our-partners-head">
@@ -129,68 +186,57 @@ const Home = () => {
             </span>
           </div>
         </div>
-        <div className="container-fluid px-5">
+        <div className="container-fluid px-5 our-partners-md">
           <div className="row px-5">
-            <div className="col-md-3 col-lg-2">
-              <Link to="#" target="_blank">
-                <div className="shadow bg-white partner-logo-box rounded">
-                  <img
-                    src={cleanhub}
-                    alt="CleanHub logo"
-                    className="cleanhub-logo w-75"
-                  />
+            {partners.map((partner, index) => (
+              <div className="col-md-3 col-lg-2" key={index}>
+                <Link to="#" target="_blank">
+                  <div className="shadow bg-white partner-logo-box rounded">
+                    <img
+                      src={partner.logoUrl}
+                      alt={t(partner.alt)}
+                      className={partner.classes}
+                    />
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="our-partners-sm">
+          <div
+            id="carouselExampleSlidesOnly"
+            className="carousel slide container-fluid"
+            data-bs-ride="carousel"
+          >
+            <div className="carousel-inner row">
+              {partners.map((partner, index) => (
+                <div
+                  className={
+                    `col-12 carousel-item` + (index === 0 ? " active" : "")
+                  }
+                  key={index}
+                >
+                  <Link to="#" target="_blank">
+                    <div className={`shadow bg-white rounded`}>
+                      <img
+                        src={partner.logoUrl}
+                        alt={t(partner.alt)}
+                        className={partner.classes}
+                      />
+                    </div>
+                  </Link>
                 </div>
-              </Link>
-            </div>
-            <div className="col-md-3 col-lg-2">
-              <Link to="#" target="_blank">
-                <div className="shadow bg-white partner-logo-box rounded">
-                  <img
-                    src={carbonsate}
-                    alt="Carbonsate logo"
-                    className="w-100"
-                  />
-                </div>
-              </Link>
-            </div>
-            <div className="col-md-3 col-lg-2">
-              <Link to="#" target="_blank">
-                <div className="shadow bg-white partner-logo-box rounded">
-                  <img
-                    src={volkswagen}
-                    alt="Volkswagen logo"
-                    className="volkswagen-logo"
-                  />
-                </div>
-              </Link>
-            </div>
-            <div className="col-md-3 col-lg-2">
-              <Link to="#" target="_blank">
-                <div className="shadow bg-white partner-logo-box rounded">
-                  <img src={enef} alt="ENEF logo" className="w-100" />
-                </div>
-              </Link>
-            </div>
-            <div className="col-md-3 col-lg-2">
-              <Link to="#" target="_blank">
-                <div className="shadow bg-white partner-logo-box rounded">
-                  <img src={minepded} alt="MINEPDED logo" className="w-100" />
-                </div>
-              </Link>
-            </div>
-            <div className="col-md-3 col-lg-2">
-              <Link to="#" target="_blank">
-                <div className="shadow bg-white partner-logo-box rounded">
-                  <img
-                    src={ministryForestry}
-                    alt="Ministry of Forestry logo"
-                    className="w-100"
-                  />
-                </div>
-              </Link>
+              ))}
             </div>
           </div>
         </div>
+      </section>
+      <section className="how-it-works-main bg-white container-fluid">
+        <span className="text-center">
+          <h2 className="fw-bold text-capitalize">{t("how_it_works")}</h2>
+          <div className="text-muted">{t("discover_the_effortless_process_behind_our_solution")}</div>
+        </span>
       </section>
     </div>
   );

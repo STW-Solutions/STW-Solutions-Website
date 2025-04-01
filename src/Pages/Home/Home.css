@@ -78,6 +78,10 @@ a:hover .partner-logo-box {
     width: 12vw;
 }
 
+.our-values-sm, .our-partners-sm {
+    display: none;
+}
+
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
@@ -97,8 +101,31 @@ a:hover .partner-logo-box {
     }
 }
 
+@media screen and (max-width: 1240px) {
+    .our-values-main .row {
+        padding: 6px 3rem 0 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .our-values-sm, .our-partners-sm {
+        display: block;
+    }
+    .our-values-md, .our-partners-md {
+        display: none;
+    }
+}
+
 @media (prefers-reduced-motion) {
     a:hover .partner-logo-box {
         animation: none !important;
+    }
+
+    .our-values-sm, .our-partners-sm {
+        display: none;
+    }
+
+    .our-values-md, .our-partners-md {
+        display: block;
     }
 }
