@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import { Helmet } from "react-helmet";
-import { useState } from "react";
 
 import "./Home.css";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
@@ -18,17 +17,10 @@ import minepded from "../../images/MINEPDED.png";
 import ministryForestry from "../../images/MinistryForestry.png";
 import volkswagen from "../../images/Volkswagen.png";
 import Carousel from "../../components/Carousel/Carousel";
-import twoPeopleOnBoard from "../../images/two_people_standing_sitting.webp";
-import girlPointingMobile from "../../images/girl_pointing_mobile.webp";
-import girlSitting from "../../images/girl_sitting.webp";
+import HowItWorks from "../../components/HowItWorks/HowItWorks";
 
 const Home = () => {
   const { t } = useTranslation();
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex: number) => {
-    setIndex(selectedIndex);
-  };
 
   const whyUs = [
     {
@@ -233,10 +225,7 @@ const Home = () => {
         </div>
       </section>
       <section className="how-it-works-main bg-white container-fluid">
-        <span className="text-center">
-          <h2 className="fw-bold text-capitalize">{t("how_it_works")}</h2>
-          <div className="text-muted">{t("discover_the_effortless_process_behind_our_solution")}</div>
-        </span>
+        <HowItWorks/>
       </section>
     </div>
   );
