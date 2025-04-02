@@ -123,7 +123,7 @@
   "support_communities_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatem ut praesentium dignissimos error necessitatibus adipisci magni id tempore ratione, quidem porro voluptatibus. Suscipit, architecto. Beatae reprehenderit vel repudiandae veritatis.",
   "support_communities": "support communities",
   "why_choose_stw_solutions": "Why Choose STW Solutions",
-  "why_choose_stw_solutions_sub": "Lorem ipsum dolor sit amet, consectetur",
+  "why_choose_stw_solutions_sub": "Discover what sets us apart and why our clients trust us for their most critical projects.",
   "our_partners_and_investors": "Our Partners & Investors",
   "we_believe_that_collaboration_is_key": "We believe that collaboration is key to building a sustainable future. Our partners play a crucial role in driving our mission forward.",
   "home_page": "Home Page",
@@ -134,5 +134,9 @@
   "tell_us_about_your_project": "Tell us about your project",
   "tell_us_about_your_project_description": "Lorem Ipsum is simply dummy text of the printing  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
   "we_will_take_it_from_there": "We will take it from there",
-  "we_will_take_it_from_there_description": "Lorem Ipsum is simply dummy text of the printing  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+  "we_will_take_it_from_there_description": "Lorem Ipsum is simply dummy text of the printing  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+  "recent_project_highlights_description": "Explore the transformative projects we've recently completed, demonstrating our expertise and passion for delivering outstanding results.",
+  "recent_project_highlights": "recent project highlights",
+  "biomass_with_solar_energy": "Biomass with solar energy",
+  "biomass_with_solar_energy_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 }

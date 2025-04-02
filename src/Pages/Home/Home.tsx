@@ -18,6 +18,9 @@ import ministryForestry from "../../images/MinistryForestry.png";
 import volkswagen from "../../images/Volkswagen.png";
 import Carousel from "../../components/Carousel/Carousel";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
+import wasteManagement from "../../images/waste-management.webp";
+import biomassImg from "../../images/biomassImg.png";
+import arrowRightCircle from "../../images/Arrow-right-circle.png";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -73,6 +76,23 @@ const Home = () => {
       logoUrl: ministryForestry,
       alt: "Ministry of Forestry Logo",
       classes: "w-100",
+    },
+  ];
+
+  const recentProjectHighLights = [
+    {
+      imageUrl: biomassImg,
+      name: "biomass_with_solar_energy",
+      description: "biomass_with_solar_energy_description",
+      alt: "",
+      projectLink: "#"
+    },
+    {
+      imageUrl: biomassImg,
+      name: "biomass_with_solar_energy",
+      description: "biomass_with_solar_energy_description",
+      alt: "",
+      projectLink: "#"
     },
   ];
 
@@ -225,7 +245,38 @@ const Home = () => {
         </div>
       </section>
       <section className="how-it-works-main bg-white container-fluid">
-        <HowItWorks/>
+        <HowItWorks />
+      </section>
+      <section className="our-projects-main">
+        <div className="px-5 our-projects-head bg-light-green container-fluid">
+          <div className="row px-5">
+            <h2 className="fw-bold col-md-3 text-break text-capitalize">
+              {t("recent_project_highlights")}
+            </h2>
+            <div className="col-md-6"></div>
+            <span className="col-md-3">
+              {t("recent_project_highlights_description")}
+            </span>
+          </div>
+        </div>
+        {recentProjectHighLights.map((project, index) => (
+          <div className="bg-white project-items">
+            <div className="container d-flex justify-content-between align-items-center my-5 flex-column flex-md-row">
+              <img src={project.imageUrl} alt={project.alt} />
+              <h4 className="fw-bold text-center mt-3 mt-md-0">{t(project.name)}</h4>
+              <p className="description">{t(project.description)}</p>
+              <Link to={project.projectLink} className="ms-auto ms-md-0">
+                <img
+                  src={arrowRightCircle}
+                  width="55"
+                  height="55"
+                  className="right-arrow"
+                  alt={t("right_arrow")}
+                />
+              </Link>
+            </div>
+          </div>
+        ))}
       </section>
     </div>
   );
