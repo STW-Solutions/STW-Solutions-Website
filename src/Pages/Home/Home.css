@@ -125,9 +125,6 @@ a:hover .partner-logo-box {
     .project-items .description {
         width: 60%;
     }
-    .project-items .d-flex {
-        
-    }
 }
 
 @media (prefers-reduced-motion) {

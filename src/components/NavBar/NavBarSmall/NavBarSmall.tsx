@@ -15,9 +15,9 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
   const languages = ["en", "fr", "de"];
   return (
     <>
-      <div className="d-block d-md-none text-capitalize bg-white">
-        <div className="d-flex justify-content-between align-items-center w-100 px-3 px-sm-5">
-          <div className="dropdown">
+      <div className="text-capitalize bg-white py-2 navbar-sm">
+        <div className="row mx-auto">
+          <div className="dropdown col-3">
             <button
               className="ms-1 dropdown-toggle border-0 hamburger-icon rounded p-2"
               type="button"
@@ -247,11 +247,11 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
               </li>
             </ul>
           </div>
-          <Link className="stw-solutions-logo-sm-box" to={"/"}>
+          <div className="col-6"></div>
+          <Link className="stw-solutions-logo-sm-box col-3 d-flex justify-content-center" to={"/"}>
             <img
               src="STW-Solution-Logo.png"
               alt={`${t("stw_solutions_logo")}`}
-              className="w-100"
             />
           </Link>
         </div>

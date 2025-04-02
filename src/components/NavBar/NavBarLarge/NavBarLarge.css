@@ -1,5 +1,6 @@
-.stw-solutions-logo-box {
-    width: 12%;
+
+.navbar-lg {
+    width: 100vw;
 }
 
 .stw-nav-lg-link {
@@ -44,12 +45,12 @@ select {
     width: auto !important;
 }
 
-@media screen and (min-width: 992px) {
-    .stw-solutions-logo-box {
-        width: 5%;
-    }
+.stw-solutions-logo-box img {
+    width: 60px;
+}
 
-    .stw-btn-width {
-        width: 100%;
+@media screen and (min-width: 925px) {
+    .navbar-lg {
+        display: flex !important;
     }
 }
