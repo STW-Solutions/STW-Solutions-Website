@@ -15,7 +15,7 @@ import enef from "../../images/ENEFCam.png";
 import carbonsate from "../../images/Carbonsate.png";
 import minepded from "../../images/MINEPDED.png";
 import ministryForestry from "../../images/MinistryForestry.png";
-import volkswagen from "../../images/Volkswagen.png";
+import volkswagen from "../../images/Volkswagen.webp";
 import Carousel from "../../components/Carousel/Carousel";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
 import wasteManagement from "../../images/waste-management.webp";
@@ -33,7 +33,7 @@ const Home = () => {
   const co2Ref = useRef<HTMLDivElement>(null);
   const co2Count = useScrollTriggeredCountUp(co2Ref, 9000);
   const co2SmRef = useRef<HTMLDivElement>(null);
-  const co2SmCount =  useScrollTriggeredCountUp(co2SmRef, 9000);
+  const co2SmCount = useScrollTriggeredCountUp(co2SmRef, 9000);
   const treesPlantedRef = useRef<HTMLDivElement>(null);
   const treesPlantedCount = useScrollTriggeredCountUp(treesPlantedRef, 600);
   const treesSmPlantedRef = useRef<HTMLDivElement>(null);
@@ -41,7 +41,10 @@ const Home = () => {
   const forestPlantedRef = useRef<HTMLDivElement>(null);
   const forestPlantedCount = useScrollTriggeredCountUp(forestPlantedRef, 600);
   const forestSmPlantedRef = useRef<HTMLDivElement>(null);
-  const forestSmPlantedCount = useScrollTriggeredCountUp(forestSmPlantedRef, 600);
+  const forestSmPlantedCount = useScrollTriggeredCountUp(
+    forestSmPlantedRef,
+    600
+  );
 
   const whyUs = [
     {
@@ -68,32 +71,26 @@ const Home = () => {
     {
       logoUrl: cleanhub,
       alt: "CleanHub logo",
-      classes: "cleanhub-logo w-75",
     },
     {
       logoUrl: carbonsate,
       alt: "Carbonsate logo",
-      classes: "w-100",
     },
     {
       logoUrl: volkswagen,
       alt: "Volkswagen logo",
-      classes: "w-100",
     },
     {
       logoUrl: enef,
       alt: "ENEF logo",
-      classes: "w-100",
     },
     {
       logoUrl: minepded,
       alt: "MINEPDED logo",
-      classes: "w-100",
     },
     {
       logoUrl: ministryForestry,
       alt: "Ministry of Forestry Logo",
-      classes: "w-100",
     },
   ];
 
@@ -145,17 +142,23 @@ const Home = () => {
               <div className="d-block d-lg-none">
                 <div className="mt-5 row ps-5 justify-content-center hero-statistics">
                   <div className="col-6 col-sm-3">
-                    <span className="bold-green-text" ref={projectsSmRef}>{projectsSmCount}+</span>
+                    <span className="bold-green-text" ref={projectsSmRef}>
+                      {projectsSmCount}+
+                    </span>
                     <span className="d-block">{t("projects_done")}</span>
                   </div>
                   <div className="col-6">
-                    <span className="bold-green-text" ref={co2SmRef}>{co2SmCount} {t("tCO2")}</span>
+                    <span className="bold-green-text" ref={co2SmRef}>
+                      {co2SmCount} {t("tCO2")}
+                    </span>
                     <span className="d-block">
                       {t("annual_tons_of_CO2_reduced")}
                     </span>
                   </div>
                   <div className="col-6 col-sm-3">
-                    <span className="bold-green-text" ref={treesSmPlantedRef}>{treesSmPlantedCount}</span>
+                    <span className="bold-green-text" ref={treesSmPlantedRef}>
+                      {treesSmPlantedCount}
+                    </span>
                     <span className="d-block">{t("trees_planted")}</span>
                   </div>
                   <div className="col-6 col-sm-4 mt-2">
@@ -166,7 +169,10 @@ const Home = () => {
                   </div>
                   <div className="col-6 mt-4 mt-sm-0">
                     <span className="bold-green-text">+</span>
-                    <span className="bold-green-text" ref={forestSmPlantedRef}>{forestSmPlantedCount}{t("Ha")}</span>
+                    <span className="bold-green-text" ref={forestSmPlantedRef}>
+                      {forestSmPlantedCount}
+                      {t("Ha")}
+                    </span>
                     <span className="d-block ms-4">{t("forest_planted")}</span>
                   </div>
                 </div>
@@ -193,17 +199,23 @@ const Home = () => {
             </div>
             <div className="mt-5 col-lg-12 d-none d-lg-flex justify-content-between align-items-center hero-statistics">
               <div>
-                <span className="bold-green-text" ref={projectsRef}>{projectCount}+</span>
+                <span className="bold-green-text" ref={projectsRef}>
+                  {projectCount}+
+                </span>
                 <span className="d-block">{t("projects_done")}</span>
               </div>
               <div>
-                <span className="bold-green-text" ref={co2Ref}>{co2Count} {t("tCO2")}</span>
+                <span className="bold-green-text" ref={co2Ref}>
+                  {co2Count} {t("tCO2")}
+                </span>
                 <span className="d-block">
                   {t("annual_tons_of_CO2_reduced")}
                 </span>
               </div>
               <div>
-                <span className="bold-green-text" ref={treesPlantedRef}>{treesPlantedCount}</span>
+                <span className="bold-green-text" ref={treesPlantedRef}>
+                  {treesPlantedCount}
+                </span>
                 <span className="d-block">{t("trees_planted")}</span>
               </div>
               <div>
@@ -213,7 +225,10 @@ const Home = () => {
                 <span className="d-block">{t("(1,8,11,13,15,17)")}</span>
               </div>
               <div>
-                <span className="bold-green-text" ref={forestPlantedRef}>{forestPlantedCount}{t("Ha")}</span>
+                <span className="bold-green-text" ref={forestPlantedRef}>
+                  {forestPlantedCount}
+                  {t("Ha")}
+                </span>
                 <span className="d-block">{t("forest_planted")}</span>
               </div>
             </div>
@@ -252,13 +267,13 @@ const Home = () => {
         </div>
       </section>
       <section className="our-partners-main">
-        <div className="container-fluid px-5 our-partners-head">
-          <div className="row px-5">
-            <h2 className="fw-bold col-md-2 text-break">
+        <div className="container-fluid px-md-5 our-partners-head">
+          <div className="row px-sm-2 px-md-5">
+            <h2 className="fw-bold col-12 col-md-4 col-lg-3 text-break">
               {t("our_partners_and_investors")}
             </h2>
-            <div className="col-md-7"></div>
-            <span className="col-md-3">
+            <div className="col-md-4 col-lg-5"></div>
+            <span className="col-12 col-md-4">
               {t("we_believe_that_collaboration_is_key")}
             </span>
           </div>
@@ -266,14 +281,10 @@ const Home = () => {
         <div className="container-fluid px-5 our-partners-md">
           <div className="row px-5">
             {partners.map((partner, index) => (
-              <div className="col-md-3 col-lg-2" key={index}>
+              <div className="mt-4 col-md-4 col-lg-3 col-xl-2" key={index}>
                 <Link to="#" target="_blank">
                   <div className="shadow bg-white partner-logo-box rounded">
-                    <img
-                      src={partner.logoUrl}
-                      alt={t(partner.alt)}
-                      className={partner.classes}
-                    />
+                    <img src={partner.logoUrl} alt={t(partner.alt)} />
                   </div>
                 </Link>
               </div>
@@ -283,24 +294,20 @@ const Home = () => {
         <div className="our-partners-sm">
           <div
             id="carouselExampleSlidesOnly"
-            className="carousel slide container-fluid"
+            className="carousel slide container-fluid px-2 py-5 px-md-5"
             data-bs-ride="carousel"
           >
-            <div className="carousel-inner row">
+            <div className="carousel-inner">
               {partners.map((partner, index) => (
                 <div
-                  className={
-                    `col-12 carousel-item` + (index === 0 ? " active" : "")
-                  }
+                  className={`carousel-item` + (index === 0 ? " active" : "")}
                   key={index}
                 >
                   <Link to="#" target="_blank">
-                    <div className={`shadow bg-white rounded`}>
-                      <img
-                        src={partner.logoUrl}
-                        alt={t(partner.alt)}
-                        className={partner.classes}
-                      />
+                    <div
+                      className={`shadow bg-white rounded partner-logo-box mx-auto`}
+                    >
+                      <img src={partner.logoUrl} alt={t(partner.alt)} />
                     </div>
                   </Link>
                 </div>

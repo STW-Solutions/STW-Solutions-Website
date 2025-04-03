@@ -66,8 +66,12 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    width: 10vw;
+    width: 100%;
     transition: transform 0.2s ease;
+}
+
+.partner-logo-box img {
+    width: 80%;
 }
 
 a:hover .partner-logo-box {
@@ -117,12 +121,6 @@ a:hover .partner-logo-box {
     }
 }
 
-@media screen and (max-width: 1240px) {
-    .our-values-main .row {
-        padding: 6px 3rem 0 2rem;
-    }
-}
-
 @media screen and (max-width: 992px) {
     .company-name {
         font-size: 2.5rem;
@@ -142,7 +140,7 @@ a:hover .partner-logo-box {
 
     .our-values-sm,
     .our-partners-sm {
-        display: block;
+        display: flex;
     }
 
     .our-values-md,
@@ -152,6 +150,29 @@ a:hover .partner-logo-box {
 
     .project-items .description {
         width: 60%;
+    }
+
+    .our-partners-head {
+        text-align: center;
+    }
+
+    .partner-logo-box {
+        width: 30vw;
+        height: 20vh;
+    }
+
+    .partner-logo-box img {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .partner-logo-box {
+        width: 80vw;
+        height: auto;
+    }
+    .partner-logo-box img {
+        width: 80%;
     }
 }
 
