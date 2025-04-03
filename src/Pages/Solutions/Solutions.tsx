@@ -120,39 +120,6 @@ const Solutions = () => {
           </div>
         ))}
       </div>
-      {/* <div className="container bg-white py-5 rounded-5 bg-white-container" >
-                <h2 className="text-center">{t("how_it_works")}</h2>
-                <hr className="my-4 hr-class"  />
-                <div className="row mb-4">
-                    <div className="col-md-3">
-                        <img src={svg1} alt="Image 1" width="240" className="img-fluid" />
-                    </div>
-                    <div className="col-md-9">
-                        <h5 >{t("choose_service")}</h5>
-                        <div>{t("choose_service_description")}</div>
-                    </div>
-                </div>
-                <hr className="my-4 hr-class"  />
-                <div className="row mb-4">
-                    <div className="col-md-3">
-                        <img src={svg2} alt="Image 2" width="190" className="img-fluid p-2 mx-4" />
-                    </div>
-                    <div className="col-md-9">
-                        <h5 >{t("tell_us_about_project")}</h5>
-                        <p>{t("tell_us_about_project_description")}</p>
-                    </div>
-                </div>
-                <hr className="my-4 hr-class" />
-                <div className="row mb-4">
-                    <div className="col-md-3">
-                        <img src={svg3} alt="Image 3" width="170" className="img-fluid p-2 mx-4" />
-                    </div>
-                    <div className="col-md-9">
-                        <h5 >{t("we_take_it_from_here")}</h5>
-                        <p>{t("we_take_it_from_here_description")}</p>
-                    </div>
-                </div>
-            </div> */}
       <div className="bg-white container-fluid">
         <HowItWorks />
       </div>
