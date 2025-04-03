@@ -320,26 +320,26 @@ const Home = () => {
         <HowItWorks />
       </section>
       <section className="our-projects-main">
-        <div className="px-5 our-projects-head bg-light-green container-fluid">
-          <div className="row px-5">
-            <h2 className="fw-bold col-md-3 text-break text-capitalize">
+        <div className="px-2 px-md-5 our-projects-head bg-light-green container-fluid">
+          <div className="row px-2 px-md-5">
+            <h2 className="fw-bold col-12 col-md-4 col-lg-3 text-capitalize">
               {t("recent_project_highlights")}
             </h2>
-            <div className="col-md-6"></div>
-            <span className="col-md-3">
+            <div className="col-md-4 col-lg-5"></div>
+            <span className="col-12 col-md-4">
               {t("recent_project_highlights_description")}
             </span>
           </div>
         </div>
         {recentProjectHighLights.map((project, index) => (
           <div className="bg-white project-items">
-            <div className="container d-flex justify-content-between align-items-center my-5 flex-column flex-md-row">
-              <img src={project.imageUrl} alt={project.alt} />
+            <div className="container-fluid bg-white project-item-box d-flex justify-content-between align-items-center my-2 my-md-5 flex-column flex-md-row">
+              <img src={project.imageUrl} alt={project.alt} className="project-image" />
               <h4 className="fw-bold text-center mt-3 mt-md-0">
                 {t(project.name)}
               </h4>
               <p className="description">{t(project.description)}</p>
-              <Link to={project.projectLink} className="ms-auto ms-md-0">
+              <Link to={project.projectLink} className="ms-auto ms-md-0 me-5 me-md-0">
                 <img
                   src={arrowRightCircle}
                   width="55"

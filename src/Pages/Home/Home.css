@@ -95,6 +95,10 @@ a:hover .partner-logo-box {
     border-top: 2px solid #257251;
 }
 
+.project-item-box {
+    padding: 0 10rem;
+}
+
 
 @keyframes bounce {
 
@@ -119,6 +123,10 @@ a:hover .partner-logo-box {
     .our-values-main .row {
         padding: 6px 3rem 0 2rem;
     }
+
+    .project-item-box {
+        padding: 0 5rem;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -134,6 +142,11 @@ a:hover .partner-logo-box {
     .hero-statistics .bold-green-text {
         font-size: 2rem;
     }
+
+    .project-item-box {
+        padding: 0 1rem;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -152,7 +165,7 @@ a:hover .partner-logo-box {
         width: 60%;
     }
 
-    .our-partners-head {
+    .our-partners-head, .our-projects-head {
         text-align: center;
     }
 
@@ -172,6 +185,12 @@ a:hover .partner-logo-box {
         height: auto;
     }
     .partner-logo-box img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .project-image {
         width: 80%;
     }
 }
