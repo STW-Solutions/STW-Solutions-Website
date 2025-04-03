@@ -220,7 +220,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="our-values-main bg-white container-fluid">
+      <section className="our-values-main bg-white container-fluid pb-5">
         <span className="text-center">
           <h2 className="fw-bold">{t("why_choose_stw_solutions")}?</h2>
           <div className="text-muted">{t("why_choose_stw_solutions_sub")}</div>
@@ -247,6 +247,7 @@ const Home = () => {
             id="ourValuesCarousel"
             carouselItems={whyUs}
             useCard={true}
+            hasMovementBtn={false}
           ></Carousel>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../Card/Card";
 import { useTranslation } from "react-i18next";
+import "./Carousel.css"
 
 interface Props {
   id?: string;
@@ -12,6 +13,7 @@ interface Props {
     description: string;
   }[];
   useCard?: boolean;
+  hasMovementBtn?: boolean;
 }
 
 const Carousel = ({
@@ -19,6 +21,7 @@ const Carousel = ({
   carouselMainDivClasses,
   carouselItems,
   useCard,
+  hasMovementBtn = true,
 }: Props) => {
   const { t } = useTranslation();
   return (
@@ -80,30 +83,33 @@ const Carousel = ({
             </div>
           ))}
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target={`#${id}`}
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target={`#${id}`}
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+        {hasMovementBtn &&
+        (
+          <><button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target={`#${id}`}
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button><button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target={`#${id}`}
+            data-bs-slide="next"
+          >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button></>
+        )
+      }
       </div>
     </>
   );
