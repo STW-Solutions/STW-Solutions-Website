@@ -1,11 +1,11 @@
-import firstImg from '../../assets/project1.png'
-import secondImg from '../../assets/project2.png'
-import thirdImg from '../../assets/project3.png'
-import icon from '../../assets/Arrow-right-circle.png'
-import biomassImg from '../../assets/biomassImg.png'
-import wasteManagement from '../../assets/waste-management.webp'
+import firstImg from '../../images/project1.png'
+import secondImg from '../../images/project2.png'
+import thirdImg from '../../images/project3.png'
+import icon from '../../images/Arrow-right-circle.png'
+import biomassImg from '../../images/biomassImg.png'
+import wasteManagement from '../../images/waste-management.webp'
 import React, {useState} from "react";
-import agriImg from '../../assets/agri-management.jpg'
+import agriImg from '../../images/agri-management.jpg'
 import './Projects.css'
 import { useTranslation } from "react-i18next";
 

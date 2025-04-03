@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import bgImage from '../../../public/images/service-bg.png';
-import serviceImg from '../../../public/images/service1.png';
-import value1 from '../../../public/images/service3.png';
+import { useState } from 'react';
+import bgImage from '../../images/service-bg.png';
+import serviceImg from '../../images/service1.png';
+import value1 from '../../images/service3.png';
 import { useTranslation } from "react-i18next";
-import value2 from "../../../public/images/values/value2.png";
-import value3 from "../../../public/images/values/value3.png";
-import value4 from "../../../public/images/values/value4.png";
-import svg1 from '../../../public/images/img.png';
-import svg2 from '../../../public/images/img_1.png';
-import svg3 from '../../../public/images/img_2.png';
-import './Services.css';
+import value2 from "../../images/values/value2.png";
+import value3 from "../../images/values/value3.png";
+import value4 from "../../images/values/value4.png";
+import svg1 from '../../images/img.png';
+import svg2 from '../../images/img_1.png';
+import svg3 from '../../images/img_2.png';
+import './Solutions.css';
 
 interface CardInfo {
     imageSrc: string;
@@ -19,7 +19,7 @@ interface CardInfo {
     intro?: string;
 }
 
-const Services = () => {
+const Solutions = () => {
     const { t } = useTranslation();
     const [modalData, setModalData] = useState<CardInfo | null>(null);
 
@@ -169,4 +169,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default Solutions;

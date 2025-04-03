@@ -41,7 +41,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             type="button"
             id="companyDropDownLarge"
           >
-            {t("company")}
+            {t("about")}
           </button>
           <ul
             className="dropdown-menu company-dropdown-menu"
@@ -49,17 +49,12 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           >
             <li>
               <Link className="dropdown-item stw-nav-lg-link" to={"/company"}>
-                {t("about_us")}
+                {t("company")}
               </Link>
             </li>
             <li>
               <a className="dropdown-item stw-nav-lg-link" href="#">
-                {t("our_team")}
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item stw-nav-lg-link" href="#">
-                {t("recent_projects")}
+                {t("sustainability")}
               </a>
             </li>
             <li>
@@ -69,20 +64,44 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             </li>
             <li>
               <a className="dropdown-item stw-nav-lg-link" href="#">
-                {t("how_it_works")}
+                {t("careers")}
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item stw-nav-lg-link" href="#">
+                {t("contact")}
               </a>
             </li>
           </ul>
         </div>
-        <span>
-          <Link
-            className="stw-nav-lg-link py-1 px-2 px-lg-5 fw-bold"
-            aria-current="page"
-            to="/"
+        <div className="dropdown mx-2 mx-lg-5">
+          <button
+            className="dropdown-toggle my-1 border-0 bg-white text-capitalize fw-bold"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            type="button"
+            id="solutionsDropdownLg"
           >
-            {t("services")}
-          </Link>
-        </span>
+            {t("solutions")}
+          </button>
+          <ul className="dropdown-menu" aria-labelledby="solutionsDropdownLg">
+            <li>
+              <Link className="dropdown-item stw-nav-lg-link" to="#">
+                {t("forestry_solutions")}
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item stw-nav-lg-link" to="#">
+                {t("waste_management_solutions")}
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item stw-nav-lg-link" to="#">
+                {t("renewable_energy_solutions")}
+              </Link>
+            </li>
+          </ul>
+        </div>
         <div className="dropdown mx-2 mx-lg-5">
           <button
             className="dropdown-toggle my-1 border-0 bg-white text-capitalize fw-bold"
@@ -95,19 +114,52 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           </button>
           <ul className="dropdown-menu" aria-labelledby="projectsDropdownLg">
             <li>
+              <Link className="dropdown-item stw-nav-lg-link" to="/projects">
+                {t("our_projects")}
+              </Link>
+            </li>
+            <li>
               <a className="dropdown-item stw-nav-lg-link" href="#">
-                {t("category1")}
+                {t("Project#1")}
               </a>
             </li>
             <li>
               <a className="dropdown-item stw-nav-lg-link" href="#">
-                {t("category2")}
+                {t("Project#2")}
               </a>
             </li>
+          </ul>
+        </div>
+        <div className="dropdown mx-2 mx-lg-5">
+          <button
+            className="dropdown-toggle my-1 border-0 bg-white text-capitalize fw-bold"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            type="button"
+            id="insightsDropdownLg"
+          >
+            {t("insights")}
+          </button>
+          <ul className="dropdown-menu" aria-labelledby="insightsDropdownLg">
             <li>
-              <a className="dropdown-item stw-nav-lg-link" href="#">
-                {t("category3")}
-              </a>
+              <Link className="dropdown-item stw-nav-lg-link" to="#">
+                {t("blog")}
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item stw-nav-lg-link" to="#">
+                {t("events")}
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item stw-nav-lg-link" to="#">
+                {t("news")}
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item stw-nav-lg-link" to="#">
+                {t("podcast")}
+              </Link>
             </li>
           </ul>
         </div>
@@ -138,6 +190,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           >
             <option value={"en"}>{t("en")}</option>
             <option value={"fr"}>{t("fr")}</option>
+            <option value={"de"}>{t("de")}</option>
           </select>
         </div>
       </div>

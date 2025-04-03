@@ -1,9 +1,8 @@
 import SectionHeading from "../SectionHeading/SectionHeading";
 import './WhatWeDo.css'
-import React from "react";
-import team1 from '../../../public/images/team/team1.png';
-import team2 from '../../../public/images/team/team2.png';
-import team3 from '../../../public/images/team/team3.png';
+import team1 from '../../images/team/team1.png';
+import team2 from '../../images/team/team2.png';
+import team3 from '../../images/team/team3.png';
 import {useTranslation} from "react-i18next";
 
 interface TestimonialsData {

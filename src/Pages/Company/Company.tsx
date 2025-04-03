@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import image1 from '../../../public/images/image.png';
-import image2 from '../../../public/images/image1.png';
-import image3 from '../../../public/images/image2.png';
-import image4 from '../../../public/images/image3.png';
+import image1 from '../../images/image.png';
+import image2 from '../../images/image1.png';
+import image3 from '../../images/image2.png';
+import image4 from '../../images/image3.png';
 import './Company.css';
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import Values from "../../components/values/Values";
