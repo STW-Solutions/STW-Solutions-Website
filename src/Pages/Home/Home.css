@@ -78,7 +78,8 @@ a:hover .partner-logo-box {
     width: 12vw;
 }
 
-.our-values-sm, .our-partners-sm {
+.our-values-sm,
+.our-partners-sm {
     display: none;
 }
 
@@ -92,12 +93,19 @@ a:hover .partner-logo-box {
 
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-20px);
     }
+
     60% {
         transform: translateY(-10px);
     }
@@ -115,13 +123,33 @@ a:hover .partner-logo-box {
     }
 }
 
+@media screen and (max-width: 992px) {
+    .company-name {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .hero-hint {
+        font-size: 1.5rem;
+    }
+
+    .hero-statistics .bold-green-text {
+        font-size: 2rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
-    .our-values-sm, .our-partners-sm {
+
+    .our-values-sm,
+    .our-partners-sm {
         display: block;
     }
-    .our-values-md, .our-partners-md {
+
+    .our-values-md,
+    .our-partners-md {
         display: none;
     }
+
     .project-items .description {
         width: 60%;
     }
@@ -132,11 +160,13 @@ a:hover .partner-logo-box {
         animation: none !important;
     }
 
-    .our-values-sm, .our-partners-sm {
+    .our-values-sm,
+    .our-partners-sm {
         display: none;
     }
 
-    .our-values-md, .our-partners-md {
+    .our-values-md,
+    .our-partners-md {
         display: block;
     }
 }
