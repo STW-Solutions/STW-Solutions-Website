@@ -15,12 +15,11 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState("en");
   return (
-    <div className="bg-white d-none d-md-flex justify-content-between align-items-center w-100 text-capitalize py-1 px-5">
+    <div className="bg-white d-none navbar-lg justify-content-between align-items-center text-capitalize py-1 px-5">
       <Link className="stw-solutions-logo-box mx-lg-5" to={"/"}>
         <img
           src="STW-Solution-Logo.png"
           alt={`${t("stw_solutions_logo")}`}
-          className="w-100"
         />
       </Link>
       <div className="d-flex align-items-center mx-2">
@@ -28,12 +27,12 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           <Link
             aria-current="page"
             to="/"
-            className="py-1 px-2 px-lg-5 stw-nav-lg-link fw-bold"
+            className="py-1 px-2 px-xl-3 stw-nav-lg-link fw-bold"
           >
             {t("home")}
           </Link>
         </span>
-        <div className="dropdown py-1 px-2 px-lg-5">
+        <div className="dropdown py-1 px-2 px-xl-4">
           <button
             className="dropdown-toggle my-1 border-0 text-capitalize bg-white fw-bold"
             data-bs-toggle="dropdown"
@@ -74,7 +73,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             </li>
           </ul>
         </div>
-        <div className="dropdown mx-2 mx-lg-5">
+        <div className="dropdown mx-2 mx-xl-4">
           <button
             className="dropdown-toggle my-1 border-0 bg-white text-capitalize fw-bold"
             data-bs-toggle="dropdown"
@@ -102,7 +101,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             </li>
           </ul>
         </div>
-        <div className="dropdown mx-2 mx-lg-5">
+        <div className="dropdown mx-2 mx-xl-4">
           <button
             className="dropdown-toggle my-1 border-0 bg-white text-capitalize fw-bold"
             data-bs-toggle="dropdown"
@@ -130,7 +129,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             </li>
           </ul>
         </div>
-        <div className="dropdown mx-2 mx-lg-5">
+        <div className="dropdown mx-2 mx-xl-4">
           <button
             className="dropdown-toggle my-1 border-0 bg-white text-capitalize fw-bold"
             data-bs-toggle="dropdown"
@@ -164,7 +163,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           </ul>
         </div>
       </div>
-      <div className="d-flex justify-content-between mx-lg-5 px-5 px-lg-0 py-2 py-lg-0">
+      <div className="d-flex justify-content-between mx-3 mx-lg-4 px-lg-4 mx-xl-5 py-2 py-lg-0">
         <ButtonPrimary
           classes={["stw-btn-w", "me-2", "mx-1", "w-100"]}
           children={`${t("contact_us")}`}
@@ -186,7 +185,6 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             }}
             id="language-options-lg"
             defaultValue={"en"}
-            value={selectedLanguage}
           >
             <option value={"en"}>{t("en")}</option>
             <option value={"fr"}>{t("fr")}</option>

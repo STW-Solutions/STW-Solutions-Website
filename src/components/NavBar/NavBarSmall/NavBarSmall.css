@@ -1,7 +1,3 @@
-.stw-solutions-logo-sm-box {
-    width: 15%;
-}
-
 .hamburger-icon::after {
     display: none !important;
 }
@@ -10,11 +6,22 @@
     border-top: 1px solid #257251 !important;
 }
 
-.stw-nav-sm-li:hover, .stw-nav-sm-li:focus {
+.stw-nav-sm-li:hover,
+.stw-nav-sm-li:focus {
     background-color: #E4FFF3 !important;
     color: #000000;
 }
 
 .stw-green-icon {
     color: #257251 !important;
+}
+
+.stw-solutions-logo-sm-box img {
+    width: 60px;
+}
+
+@media screen and (min-width: 925px) {
+    .navbar-sm {
+        display: none;
+    }
 }
