@@ -10,6 +10,7 @@ interface CardProps {
   name?: string;
   jobTitle?: string;
   aboutInfo?: string;
+  cardClass?: string[];
   cardTitleClasses?: string[];
   cardTextClasses?: string[];
 }
@@ -23,8 +24,9 @@ const Card: React.FC<CardProps> = ({
   name,
   jobTitle,
   aboutInfo,
+    cardClass,
   cardTitleClasses,
-  cardTextClasses
+  cardTextClasses,
 }) => {
   return (
     <div
@@ -42,7 +44,7 @@ const Card: React.FC<CardProps> = ({
               className="card-image img-fluid rounded mb-4"
             />
           </div>
-          <div className="card-body p-0 text-start">
+          <div className={cardClass?.join(' ') + "card-body p-0 text-start"}>
             <h3 className={cardTitleClasses?.join(' ')}>{title}</h3>
             <p className={cardTextClasses?.join(' ')}>{information}</p>
           </div>

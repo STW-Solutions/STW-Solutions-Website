@@ -1,8 +1,8 @@
 import Card from "../Card/Card";
-import team1 from '../../images/team/team1.png';
-import team2 from '../../images/team/team2.png';
-import team3 from '../../images/team/team3.png';
-import team4 from '../../images/team/team4.png';
+import team1 from '../../images/team/team1.webp';
+import team2 from '../../images/team/team2.webp';
+import team3 from '../../images/team/team3.webp';
+import team4 from '../../images/team/team4.webp';
 import SectionHeading from "../SectionHeading/SectionHeading";
 import {useTranslation} from "react-i18next";
 import "./Team.css"
