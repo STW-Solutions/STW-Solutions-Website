@@ -2,11 +2,16 @@ footer {
     background-color: #257251;
 }
 
+.footer-main {
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
 footer a {
     text-decoration: none;
-    color: #ffffff;
+    color: #E4FFF3;
     margin-top: .5rem;
-    font-weight: lighter;
+    font-size: 14px;
 }
 
 footer a:hover {
@@ -19,8 +24,83 @@ footer a:hover {
     width: 70%;
 }
 
+.stw-solutions-footer-logo-box {
+    border-left: 1px solid white;
+}
+
+.lower-footer {
+    border-top: 1px solid white;
+}
+
+.last-line {
+    border-left: 1px solid white;
+    height: 5vh;
+}
+
+.social-icon a  {
+    font-size: 1.5rem !important;
+}
+
+.contact {
+    font-size: 14px;
+}
+
+.footer-col {
+    margin-top: 4rem;
+}
+
+.rights-reserved-box {
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1240px) {
+    .footer-main {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer-main {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .stw-solutions-footer-logo-box img {
         width: 30%;
     }
+
+    .stw-solutions-footer-logo-box {
+        border-left: 0;
+        border-bottom: 2px solid white;
+    }
+
+    .stw-solutions-footer-logo-box img {
+        width: 32%;
+    }
+
+    .contact, footer a {
+        font-size: 1rem;
+    }
+
+    .footer-col {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .rights-reserved-box {
+        margin-top: 0;
+    }
+
+    .footer-col {
+        border-bottom: 2px solid white;
+        margin-top: 1rem;
+        padding-bottom: .5rem;
+    }
+    .lower-footer {
+        border-top: 0;
+    }   
 }
