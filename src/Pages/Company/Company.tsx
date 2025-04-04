@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import image1 from '../../images/image.png';
-import image2 from '../../images/image1.png';
-import image3 from '../../images/image2.png';
-import image4 from '../../images/image3.png';
+import image1 from '../../images/company/image1.webp';
+import image2 from '../../images/company/image.webp';
+import image3 from '../../images/company/image2.webp';
+import image4 from '../../images/company/image3.webp';
 import './Company.css';
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import Values from "../../components/values/Values";
@@ -49,7 +49,7 @@ const Company = () => {
                         <div className="">
                             <SectionHeading heading={t("our_mission")} position={"right"} />
                         </div>
-                        <div className="text-end">
+                        <div className="text-end text-lg-start">
                             {t("mission_description")}
                         </div>
                     </div>
