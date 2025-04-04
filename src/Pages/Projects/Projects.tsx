@@ -95,9 +95,9 @@ const Projects = () => {
   const { t } = useTranslation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+//   const toggleDropdown = () => {
+//     setIsDropdownOpen(!isDropdownOpen);
+//   };
 
   const [currentTab, setCurrentTab] = useState(Category.UPCOMING);
 
@@ -247,14 +247,16 @@ const Projects = () => {
             </li>
           </ul>
         </div>
-        <div className="dropdown d-md-none p-5">
+        <div className="dropdown d-md-none px-2 pt-4">
           <button
             className="btn isActive dropdown-toggle w-100 py-3"
             type="button"
-            onClick={toggleDropdown}
+            data-bs-toggle="dropdown" aria-expanded="false"
+           
           >
             {t("project_categories")}
           </button>
+          <h5 className="text-capitalize pt-3 pb-2 fw-bold">{t(currentTab.toString().toLowerCase())}{" "}{t("projects")}</h5>
           <ul className={`dropdown-menu category-dropdown ${isDropdownOpen ? "show" : ""}`}>
             <li>
               <button
