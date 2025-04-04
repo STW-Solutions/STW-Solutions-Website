@@ -21,10 +21,16 @@ import HowItWorks from "../../components/HowItWorks/HowItWorks";
 import wasteManagement from "../../images/waste-management.webp";
 import biomassImg from "../../images/biomassImg.png";
 import arrowRightCircle from "../../images/Arrow-right-circle.png";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import useScrollTriggeredCountUp from "../../hooks/useScrollTriggeredCountUp";
 
 const Home = () => {
+  //remove when # have been taken out of page
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); 
+  
   const { t } = useTranslation();
   const projectsRef = useRef<HTMLDivElement>(null);
   const projectCount = useScrollTriggeredCountUp(projectsRef, 12);
@@ -266,7 +272,7 @@ const Home = () => {
           ></Carousel>
         </div>
       </section>
-      <section className="our-partners-main">
+      <section className="our-partners-main" id="ourPartners">
         <div className="container-fluid px-md-5 our-partners-head">
           <div className="row px-sm-2 px-md-5">
             <h2 className="fw-bold col-12 col-md-4 col-lg-3 text-break">

@@ -15,6 +15,7 @@ import "./index.css";
 import Solutions from "./Pages/Solutions/Solutions";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  
   <BrowserRouter>
     <StrictMode>
       <MainLayout>
