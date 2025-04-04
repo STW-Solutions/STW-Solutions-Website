@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import './Values.css';
 import Card from '../Card/Card';
-import value1 from '../../images/values/value1.png';
-import value2 from '../../images/values/value2.png';
-import value3 from '../../images/values/value3.png';
-import value4 from '../../images/values/value4.png';
+import value1 from '../../images/values/value1.webp';
+import value2 from '../../images/values/value2.webp';
+import value3 from '../../images/values/value3.webp';
+import value4 from '../../images/values/value4.webp';
 
 interface CardData {
     imageSrc: string;
@@ -61,6 +61,7 @@ const Values = () => {
                                 information={card.information}
                                 cardTitleClasses={['card-title']}
                                 cardTextClasses={['card-text']}
+                                cardClass={['card-h ']}
                             />
                         </div>
                     </div>
