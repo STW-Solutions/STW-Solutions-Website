@@ -7,18 +7,6 @@
     margin-top: 23rem;
 }
 
-@media (max-width: 768px) {
-    .responsive-margin-top {
-        margin-top: 4rem;
-    }
-
-}
-@media (max-width: 1024px) {
-    .hr-style{
-        margin-top: 4rem !important;
-    }
-}
-
 .vision-description {
     color: #1E1E1E;
 }
@@ -114,6 +102,19 @@
 
 .slide-in-bottom {
     animation: slideInFromBottom 1s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+    .hr-style{
+        margin-top: 4rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .responsive-margin-top {
+        margin-top: 4rem;
+    }
+
 }
 
 @media (prefers-reduced-motion) {
