@@ -165,7 +165,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
       </div>
       <div className="d-flex justify-content-between mx-3 mx-lg-4 px-lg-4 mx-xl-5 py-2 py-lg-0">
         <ButtonPrimary
-          classes={["stw-btn-w", "me-2", "mx-1", "w-100"]}
+          classes={["stw-btn-w text-capitalize", "me-2", "mx-1", "w-100"]}
           children={`${t("contact_us")}`}
         />
         <ButtonOutline

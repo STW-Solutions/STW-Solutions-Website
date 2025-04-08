@@ -4,12 +4,6 @@
     transform: skewX(-20deg);
     overflow: hidden;
     background-color: #257251;
-    margin: 0 auto;
-}
-
-.section-heading-text {
-    font-family: Lora, serif;
-    color: #181820;
 }
 
 .section-heading-hr {

@@ -7,48 +7,6 @@
     margin-top: 23rem;
 }
 
-@media (max-width: 768px) {
-    .responsive-margin-top {
-        margin-top: 4rem;
-    }
-
-}
-@media (max-width: 1024px) {
-    .hr-style{
-        margin-top: 4rem !important;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-.fade-in {
-    animation: fadeIn 1s ease-in-out;
-}
-
-.slide-in {
-    animation: slideIn 1s ease-in-out;
-}
-
-.company-name {
-    color: #257251;
-}
-
 .vision-description {
     color: #1E1E1E;
 }
@@ -57,14 +15,13 @@
     background-color: #257251;
 }
 
-.hr-style {
-    border: 1px solid #025710;
-    margin-top: 23rem;
+.horizontal-line {
+    border-bottom: 2px solid #025710;
 }
 
 .company-image {
-    width: 30rem;
-    height: auto;
+    width: 20rem;
+    border-radius: 50%;
 }
 
 .margin-top-5rem {
@@ -86,8 +43,6 @@
 .margin-top-7rem {
     margin-top: 7rem;
 }
-
-/* src/Pages/Company/Company.css */
 
 @keyframes slideInFromLeft {
     from {
@@ -147,4 +102,23 @@
 
 .slide-in-bottom {
     animation: slideInFromBottom 1s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+    .hr-style{
+        margin-top: 4rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .responsive-margin-top {
+        margin-top: 4rem;
+    }
+
+}
+
+@media (prefers-reduced-motion) {
+    .slide-in-bottom, .slide-in-top, .slide-in-right, .slide-in-left {
+        animation: none;
+    }
 }

@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
 import { Link } from "react-router";
 
 interface Props {

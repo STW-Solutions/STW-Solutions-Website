@@ -6,6 +6,10 @@
     border-top: 1px solid #257251 !important;
 }
 
+.dropdown-menu {
+    min-width: 13rem;
+}
+
 .stw-nav-sm-li:hover,
 .stw-nav-sm-li:focus {
     background-color: #E4FFF3 !important;
