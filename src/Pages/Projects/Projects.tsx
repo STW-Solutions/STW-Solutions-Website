@@ -117,7 +117,7 @@ const Projects = () => {
       <div className="rounded-4  project-container">
         <div className="row pt-5 pb-3">
           <div className="col-12 col-lg-6 text-center mt-md-5">
-            <h1 className="fw-bold text-white py-md-4">
+            <h1 className="stw-solutions-h1 text-white py-md-4">
               {t("company_name")}{" "}
               <span className="text-capitalize">{t("projects")}</span>
             </h1>
@@ -342,9 +342,9 @@ const Projects = () => {
                 />
               </div>
               <div className="col-lg-3 col-md-12">
-                <h2 className="fw-bold text-center text-md-start">
+                <span className="fs-4 fw-bold text-center text-md-start">
                   {t(project.title)}
-                </h2>
+                </span>
               </div>
               <div className="col-lg-3 col-md-12">{t(project.explanation)}</div>
               <Link className="col-lg-2 col-md-12 text-end" to="#">

@@ -10,10 +10,6 @@
     background-color: #257251;
 }
 
-.company-name {
-    font-size: 3.5rem;
-}
-
 .bold-green-text {
     color: #257251;
     font-weight: 800;
@@ -131,7 +127,6 @@ a:hover .partner-logo-box {
 
 @media screen and (max-width: 992px) {
     .company-name {
-        font-size: 2.5rem;
         text-align: center;
     }
 

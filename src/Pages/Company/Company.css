@@ -7,10 +7,6 @@
     margin-top: 23rem;
 }
 
-.mission-description {
-    margin-left: -10rem;
-}
-
 @media (max-width: 768px) {
     .responsive-margin-top {
         margin-top: 4rem;
@@ -23,10 +19,6 @@
     }
 }
 
-.company-name {
-    color: #257251;
-}
-
 .vision-description {
     color: #1E1E1E;
 }
@@ -36,14 +28,12 @@
 }
 
 .horizontal-line {
-    border-top: 2px solid #025710;
-    width: 80%;
-    margin-top: 21rem;
+    border-bottom: 2px solid #025710;
 }
 
 .company-image {
-    width: 30rem;
-    height: auto;
+    width: 20rem;
+    border-radius: 50%;
 }
 
 .margin-top-5rem {

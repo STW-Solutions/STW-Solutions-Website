@@ -30,7 +30,7 @@ const HowItWorks = () => {
   return (
     <div className="bg-transparent container">
       <span className="text-center">
-        <h2 className="fw-bold text-capitalize">{t("how_it_works")}</h2>
+        <h2 className="stw-solutions-h2 text-capitalize">{t("how_it_works")}</h2>
         <div className="text-muted">
           {t("discover_the_effortless_process_behind_our_solution")}
         </div>

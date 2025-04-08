@@ -127,7 +127,7 @@ const Home = () => {
         <div className="container pt-5 pb-lg-5">
           <div className="row align-items-center">
             <div className="col-12 col-lg-6">
-              <h1 className="company-name ps-md-3 bold-green-text">
+              <h1 className="company-name ps-md-3 stw-solutions-h1">
                 {t("company_name")}
               </h1>
               <span className="hero-hint d-block text-center px-3 mt-5">
@@ -243,7 +243,7 @@ const Home = () => {
       </section>
       <section className="our-values-main bg-white container-fluid pb-5">
         <span className="text-center">
-          <h2 className="fw-bold">{t("why_choose_stw_solutions")}?</h2>
+          <h2 className="stw-solutions-h2">{t("why_choose_stw_solutions")}?</h2>
           <div className="text-muted">{t("why_choose_stw_solutions_sub")}</div>
         </span>
         <div className="row mt-5 our-values-md">
@@ -275,7 +275,7 @@ const Home = () => {
       <section className="our-partners-main" id="ourPartners">
         <div className="container-fluid px-md-5 our-partners-head">
           <div className="row px-sm-2 px-md-5">
-            <h2 className="fw-bold col-12 col-md-4 col-lg-3 text-break">
+            <h2 className="stw-solutions-h2 col-12 col-md-4 col-lg-3 text-break">
               {t("our_partners_and_investors")}
             </h2>
             <div className="col-md-4 col-lg-5"></div>
@@ -328,7 +328,7 @@ const Home = () => {
       <section className="our-projects-main">
         <div className="px-2 px-md-5 our-projects-head bg-light-green container-fluid">
           <div className="row px-2 px-md-5">
-            <h2 className="fw-bold col-12 col-md-4 col-lg-3 text-capitalize">
+            <h2 className="stw-solutions-h2 col-12 col-md-4 col-lg-3 text-capitalize">
               {t("recent_project_highlights")}
             </h2>
             <div className="col-md-4 col-lg-5"></div>

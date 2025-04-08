@@ -21,15 +21,15 @@ const Company = () => {
 
   return (
     <>
-      <div className="container-fluid container-main fade-in">
+      <div className="container-fluid container-main">
         <div className="row mx-md-5 px-md-5">
-          <div className="col-md-12 col-lg-6">
-            <h1 className="fw-bold py-5 company-name">
+          <div className="col-md-12 col-lg-7">
+            <h1 className="stw-solutions-h1 py-5">
               <span className="text-capitalize">{t("about")}</span>{" "}
               {t("company_name")}
             </h1>
-            <SectionHeading heading={t("our_vision")} position={"left"} />
-            <div className="text-start w-100 vision-description">
+            <SectionHeading heading={t("our_vision")} parentClasses="ml-5" />
+            <div className="text-start w-100 vision-description mt-4">
               {t("vision_description1")}
               <br />
               {t("vision_description2")}
@@ -37,27 +37,26 @@ const Company = () => {
             <div className="text-start margin-top-7rem">
               <ButtonPrimary
                 children={t("see_our_projects")}
-                classes={["w-50 fw-bold"]}
+                classes={["w-50 fw-bold py-2"]}
                 onButtonClick={handleClick}
               />
             </div>
-            <div className="horizontal-line"></div>
           </div>
-          <div className="col-md-12 col-lg-6">
+          <div className="col-md-12 col-lg-5">
             <div className="d-lg-block d-none margin-top-5rem margin-bottom-4rem">
               <div className="row ms-5 p-0">
                 <div className="col-md-4 p-0">
                   <img
                     src={image1}
                     alt="Company Image"
-                    className="img-fluid rounded-circle mx-auto d-block slide-in-left company-image"
+                    className="img-fluid mx-auto d-block slide-in-left company-image"
                   />
                 </div>
                 <div className="col-md-4 p-0 margin-left-neg-0_5rem">
                   <img
                     src={image2}
                     alt="Company Image"
-                    className="img-fluid rounded-circle mx-auto d-block slide-in-right company-image"
+                    className="img-fluid mx-auto d-block slide-in-right company-image"
                   />
                 </div>
               </div>
@@ -66,7 +65,7 @@ const Company = () => {
                   <img
                     src={image3}
                     alt="Company Image"
-                    className="img-fluid rounded-circle mx-auto d-block slide-in-top company-image"
+                    className="img-fluid mx-auto d-block slide-in-top company-image"
                   />
                 </div>
                 <div className="col-md-4 p-0 margin-left-neg-0_5rem">
@@ -78,10 +77,11 @@ const Company = () => {
                 </div>
               </div>
             </div>
-            <div className="mx-auto w-50">
-              <SectionHeading heading={t("our_mission")} />
-            </div>
-            <div className="text-end text-lg-start mission-description">
+          </div>
+          <div className="col-12 col-md-5 horizontal-line"></div>
+          <div className="col-12 col-md-7 mission-section">
+            <SectionHeading heading={t("our_mission")} parentClasses="text-center" skewLineClasses="mx-auto"/>
+            <div className="mission-description mt-4">
               {t("mission_description")}
             </div>
           </div>
