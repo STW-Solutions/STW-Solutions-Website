@@ -7,6 +7,10 @@
     margin-top: 23rem;
 }
 
+.mission-description {
+    margin-left: -10rem;
+}
+
 @media (max-width: 768px) {
     .responsive-margin-top {
         margin-top: 4rem;
@@ -17,32 +21,6 @@
     .hr-style{
         margin-top: 4rem !important;
     }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-.fade-in {
-    animation: fadeIn 1s ease-in-out;
-}
-
-.slide-in {
-    animation: slideIn 1s ease-in-out;
 }
 
 .company-name {
@@ -57,9 +35,10 @@
     background-color: #257251;
 }
 
-.hr-style {
-    border: 1px solid #025710;
-    margin-top: 23rem;
+.horizontal-line {
+    border-top: 2px solid #025710;
+    width: 80%;
+    margin-top: 21rem;
 }
 
 .company-image {
@@ -86,8 +65,6 @@
 .margin-top-7rem {
     margin-top: 7rem;
 }
-
-/* src/Pages/Company/Company.css */
 
 @keyframes slideInFromLeft {
     from {
@@ -147,4 +124,10 @@
 
 .slide-in-bottom {
     animation: slideInFromBottom 1s ease-in-out;
+}
+
+@media (prefers-reduced-motion) {
+    .slide-in-bottom, .slide-in-top, .slide-in-right, .slide-in-left {
+        animation: none;
+    }
 }

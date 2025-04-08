@@ -95,9 +95,9 @@ const Projects = () => {
   const { t } = useTranslation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-//   const toggleDropdown = () => {
-//     setIsDropdownOpen(!isDropdownOpen);
-//   };
+  //   const toggleDropdown = () => {
+  //     setIsDropdownOpen(!isDropdownOpen);
+  //   };
 
   const [currentTab, setCurrentTab] = useState(Category.UPCOMING);
 
@@ -117,7 +117,10 @@ const Projects = () => {
       <div className="rounded-4  project-container">
         <div className="row pt-5 pb-3">
           <div className="col-12 col-lg-6 text-center mt-md-5">
-            <h1 className="fw-bold text-white py-md-4">{t("company_name")}{" "}<span className="text-capitalize">{t("projects")}</span></h1>
+            <h1 className="fw-bold text-white py-md-4">
+              {t("company_name")}{" "}
+              <span className="text-capitalize">{t("projects")}</span>
+            </h1>
             <p className="text-white px-md-5 mx-md-5">
               {t("stw_solutions_is_a")}
             </p>
@@ -251,13 +254,19 @@ const Projects = () => {
           <button
             className="btn isActive dropdown-toggle w-100 py-3"
             type="button"
-            data-bs-toggle="dropdown" aria-expanded="false"
-           
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
             {t("project_categories")}
           </button>
-          <h5 className="text-capitalize pt-3 pb-2 fw-bold">{t(currentTab.toString().toLowerCase())}{" "}{t("projects")}</h5>
-          <ul className={`dropdown-menu category-dropdown ${isDropdownOpen ? "show" : ""}`}>
+          <h5 className="text-capitalize pt-3 pb-2 fw-bold">
+            {t(currentTab.toString().toLowerCase())} {t("projects")}
+          </h5>
+          <ul
+            className={`dropdown-menu category-dropdown ${
+              isDropdownOpen ? "show" : ""
+            }`}
+          >
             <li>
               <button
                 className={
@@ -316,38 +325,40 @@ const Projects = () => {
             </li>
           </ul>
         </div>
-        {filteredProjects.map((project, index) => (
-          <div
-            className="row p-md-5 my-md-5 p-2 mx-auto rounded-4 align-items-center mb-3 mt-1 card-div"
-            key={index}
-            style={{ backgroundColor: project.backgroundColor }}
-          >
-            <div className="col-md-12 col-lg-3">
-              <img
-                src={project.imgSrc}
-                width="240"
-                height="240"
-                className="img-fluid w-100"
-                alt="alt-image"
-              />
+        <div className="ps-md-5">
+          {filteredProjects.map((project, index) => (
+            <div
+              className="row p-md-5 my-md-5 p-2 mx-auto rounded-4 align-items-center mb-3 mt-1 card-div"
+              key={index}
+              style={{ backgroundColor: project.backgroundColor }}
+            >
+              <div className="col-md-12 col-lg-3">
+                <img
+                  src={project.imgSrc}
+                  width="240"
+                  height="240"
+                  className="img-fluid w-100"
+                  alt="alt-image"
+                />
+              </div>
+              <div className="col-lg-3 col-md-12">
+                <h2 className="fw-bold text-center text-md-start">
+                  {t(project.title)}
+                </h2>
+              </div>
+              <div className="col-lg-3 col-md-12">{t(project.explanation)}</div>
+              <Link className="col-lg-2 col-md-12 text-end" to="#">
+                <img
+                  src={icon}
+                  width="50"
+                  height="50"
+                  className="img-fluid"
+                  alt="alt-image"
+                />
+              </Link>
             </div>
-            <div className="col-lg-3 col-md-12">
-              <h2 className="fw-bold text-center text-md-start">
-                {t(project.title)}
-              </h2>
-            </div>
-            <div className="col-lg-3 col-md-12">{t(project.explanation)}</div>
-            <Link className="col-lg-2 col-md-12 text-end" to="#">
-              <img
-                src={icon}
-                width="50"
-                height="50"
-                className="img-fluid"
-                alt="alt-image"
-              />
-            </Link>
-          </div>
-        ))}
+          ))}
+        </div>
         {!filteredProjects.length && (
           <div className="w-75 mx-auto">
             <NoItemAlert
