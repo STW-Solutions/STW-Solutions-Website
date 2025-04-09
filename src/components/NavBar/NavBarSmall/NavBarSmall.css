@@ -16,8 +16,18 @@
     color: #000000;
 }
 
-.stw-green-icon {
-    color: #257251 !important;
+.globe-icon-sm {
+    fill: currentColor;
+    width: 1.2rem;
+}
+
+.bars-icon-box {
+    color: #257251;
+}
+
+.bars-icon {
+    fill: currentColor;
+    width: 1.5rem;
 }
 
 .stw-solutions-logo-sm-box img {
