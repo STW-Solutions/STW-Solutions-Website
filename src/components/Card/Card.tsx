@@ -10,13 +10,14 @@ interface CardProps {
   name?: string;
   jobTitle?: string;
   aboutInfo?: string;
-  cardClass?: string[];
-  cardTitleClasses?: string[];
-  cardTextClasses?: string[];
+  cardBodyClasses?: string;
+  cardTitleClasses?: string;
+  cardTextClasses?: string;
+  cardMainClasses?: string;
 }
 
 const Card: React.FC<CardProps> = ({
-  cardType,
+  cardType = "default",
   imageSrc,
   title,
   backgroundColor,
@@ -24,13 +25,14 @@ const Card: React.FC<CardProps> = ({
   name,
   jobTitle,
   aboutInfo,
-    cardClass,
+  cardBodyClasses,
   cardTitleClasses,
   cardTextClasses,
+  cardMainClasses
 }) => {
   return (
     <div
-      className={`card card-box border-0 px-4 py-3 mb-3 ${
+      className={`card border-0 px-4 py-3 mb-3 ${cardMainClasses} ${
         cardType === "team" ? "team-card" : ""
       }`}
       style={{ backgroundColor }}
@@ -44,9 +46,9 @@ const Card: React.FC<CardProps> = ({
               className="card-image img-fluid rounded mb-4"
             />
           </div>
-          <div className={cardClass?.join(' ') + "card-body p-0 text-start"}>
-            <h3 className={cardTitleClasses?.join(' ')}>{title}</h3>
-            <p className={cardTextClasses?.join(' ')}>{information}</p>
+          <div className={cardBodyClasses + " card-body p-0 text-start"}>
+            <h3 className={cardTitleClasses}>{title}</h3>
+            <p className={cardTextClasses}>{information}</p>
           </div>
         </>
       ) : (

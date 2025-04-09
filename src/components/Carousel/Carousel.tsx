@@ -1,20 +1,19 @@
 import React from "react";
 import Card from "../Card/Card";
 import { useTranslation } from "react-i18next";
-import "./Carousel.css"
+import "./Carousel.css";
+import { SlideButtonData, CarouselItems } from "../../models";
 
-interface Props {
+export interface Props {
   id?: string;
   carouselMainDivClasses?: string[];
-  carouselItems?: {
-    name: string;
-    imageUrl?: string;
-    alt?: string;
-    description: string;
-  }[];
+  carouselItems?: CarouselItems[];
   useCard?: boolean;
   hasMovementBtn?: boolean;
+  slideButtonsData?: SlideButtonData[];
+  carouselIndicatorClasses?: string;
 }
+
 
 const Carousel = ({
   id,
@@ -22,32 +21,37 @@ const Carousel = ({
   carouselItems,
   useCard,
   hasMovementBtn = true,
+  slideButtonsData = [
+    {
+      dataBsSlideTo: "0",
+      ariaLabel: "Slide 1",
+    },
+    {
+      dataBsSlideTo: "1",
+      ariaLabel: "Slide 2",
+    },
+    {
+      dataBsSlideTo: "2",
+      ariaLabel: "Slide 3",
+    },
+  ],
+  carouselIndicatorClasses
 }: Props) => {
   const { t } = useTranslation();
   return (
     <>
       <div id={id} className="carousel carousel-dark slide">
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target={`#${id}`}
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target={`#${id}`}
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target={`#${id}`}
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+        <div className={`carousel-indicators ${carouselIndicatorClasses}`}>
+          {slideButtonsData.map((button, index) => (
+            <button
+              type="button"
+              data-bs-target={`#${id}`}
+              data-bs-slide-to={button.dataBsSlideTo}
+              className={index === 0 ? "active" : ""}
+              aria-current={index === 0 ? "true" : "false"}
+              aria-label={button.ariaLabel}
+            ></button>
+          ))}
         </div>
         <div className="carousel-inner">
           {carouselItems?.map((carouselItem, index) => (
@@ -59,57 +63,58 @@ const Carousel = ({
               {useCard && (
                 <Card
                   cardType="default"
-                  imageSrc={carouselItem.imageUrl}
-                  information={t(carouselItem.description)}
-                  title={t(carouselItem.name)}
-                  backgroundColor="#E4FFF3"
-                  cardTitleClasses={["stw-card-title", "text-capitalize"]}
-                  cardTextClasses={["text-muted"]}
+                  imageSrc={carouselItem.imageSrc}
+                  information={carouselItem.information}
+                  title={carouselItem.title}
+                  backgroundColor={carouselItem.backgroundColor || "#E4FFF3"}
+                  cardTitleClasses={"stw-card-title text-capitalize"}
+                  cardTextClasses={"text-muted"}
                 />
               )}
               {!useCard && (
                 <div>
                   <img
-                    src={carouselItem.imageUrl}
+                    src={carouselItem.imageSrc}
                     className="d-block w-100"
                     alt={carouselItem.alt}
                   />
                   <div className="carousel-caption d-none d-md-block">
-                    <h5>{carouselItem.name}</h5>
-                    <p>{carouselItem.description}</p>
+                    <h5>{carouselItem.title}</h5>
+                    <p>{carouselItem.information}</p>
                   </div>
                 </div>
               )}
             </div>
           ))}
         </div>
-        {hasMovementBtn &&
-        (
-          <><button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target={`#${id}`}
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button><button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target={`#${id}`}
-            data-bs-slide="next"
-          >
+        {hasMovementBtn && (
+          <>
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target={`#${id}`}
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target={`#${id}`}
+              data-bs-slide="next"
+            >
               <span
                 className="carousel-control-next-icon"
                 aria-hidden="true"
               ></span>
               <span className="visually-hidden">Next</span>
-            </button></>
-        )
-      }
+            </button>
+          </>
+        )}
       </div>
     </>
   );

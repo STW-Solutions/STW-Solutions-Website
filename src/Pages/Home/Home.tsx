@@ -54,22 +54,22 @@ const Home = () => {
 
   const whyUs = [
     {
-      name: "promote_sustainability_development",
-      imageUrl: reason1,
+      title: t("promote_sustainability_development"),
+      imageSrc: reason1,
       alt: "promote_sustainability_development",
-      description: "promote_sustainability_development_description",
+      information: t("promote_sustainability_development_description"),
     },
     {
-      name: "conserve_natural_resources",
-      imageUrl: reason2,
+      title: t("conserve_natural_resources"),
+      imageSrc: reason2,
       alt: "conserve_natural_resources",
-      description: "conserve_natural_resources_description",
+      information: t("conserve_natural_resources_description"),
     },
     {
-      name: "support_communities",
-      imageUrl: reason3,
+      title: t("support_communities"),
+      imageSrc: reason3,
       alt: "support_communities",
-      description: "support_communities_description",
+      information: t("support_communities_description"),
     },
   ];
 
@@ -252,12 +252,12 @@ const Home = () => {
               <AnimateOnScroll reappear={true}>
                 <Card
                   cardType="default"
-                  imageSrc={reason.imageUrl}
-                  information={t(reason.description)}
-                  title={t(reason.name)}
+                  imageSrc={reason.imageSrc}
+                  information={t(reason.information)}
+                  title={reason.title}
                   backgroundColor="#E4FFF3"
-                  cardTitleClasses={["stw-card-title", "text-capitalize"]}
-                  cardTextClasses={["text-muted"]}
+                  cardTitleClasses={"stw-card-title text-capitalize"}
+                  cardTextClasses={"text-muted"}
                 />
               </AnimateOnScroll>
             </div>

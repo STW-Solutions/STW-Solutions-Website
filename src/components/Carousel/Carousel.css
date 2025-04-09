@@ -3,5 +3,9 @@
 }
 
 .carousel-dark .carousel-indicators [data-bs-target]  {
-    background-color: #257251 !important;
+    background-color: #257251;
+}
+
+.stw-carousel-indicators [data-bs-target] {
+    background-color: #000000 !important;
 }
