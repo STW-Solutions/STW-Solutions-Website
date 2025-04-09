@@ -66,8 +66,8 @@ const Values = () => {
   ];
 
   return (
-    <div className="container-fluid cont">
-      <h2 className="text-center text-white stw-solutions-h2">{t("our_values")}</h2>
+    <div className="container-fluid values-container">
+      <h2 className="text-center stw-solutions-h2">{t("our_values")}</h2>
       <div className="w-100 text-black fw-bold text-center">
         {t("values_description")}
       </div>
@@ -84,8 +84,7 @@ const Values = () => {
                   information={card.information}
                   cardTitleClasses={"card-title"}
                   cardTextClasses={"card-text"}
-                  cardBodyClasses={"card-h"}
-                  cardMainClasses={index > 1 ? "mt-md-5 mt-lg-4" : "mt-md-4"}
+                  cardMainClasses="mt-md-5"
                 />
               </AnimateOnScroll>
             </div>

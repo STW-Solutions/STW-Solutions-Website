@@ -60,13 +60,13 @@ const Home = () => {
       information: t("promote_sustainability_development_description"),
     },
     {
-      name: "conserve_natural_resources",
+      title: t("conserve_natural_resources"),
       imageSrc: reason2,
       alt: "conserve_natural_resources",
       information: t("conserve_natural_resources_description"),
     },
     {
-      name: "support_communities",
+      title: t("support_communities"),
       imageSrc: reason3,
       alt: "support_communities",
       information: t("support_communities_description"),

@@ -2,8 +2,8 @@ import React from 'react';
 import './SectionHeading.css';
 
 interface SectionHeadingProps {
-    heading: string;
-    parentClasses: string;
+    heading?: string;
+    parentClasses?: string;
     skewLineClasses?: string;
 }
 

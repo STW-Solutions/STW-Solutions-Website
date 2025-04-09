@@ -1,142 +1,161 @@
 import SectionHeading from "../SectionHeading/SectionHeading";
-import './WhatWeDo.css'
-import team1 from '../../images/team/team1.webp';
-import team2 from '../../images/team/team2.webp';
-import team3 from '../../images/team/team3.webp';
-import {useTranslation} from "react-i18next";
+import "./WhatWeDo.css";
+import team1 from "../../images/team/team1.webp";
+import team2 from "../../images/team/team2.webp";
+import team3 from "../../images/team/team3.webp";
+import { useTranslation } from "react-i18next";
 
 interface TestimonialsData {
-    imageSrc: string;
-    experience: string;
-    name: string;
+  imageSrc: string;
+  experience: string;
+  name: string;
 }
 
 const WhatWeDo = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
-    const impactStatements: string[] = [
-        t("preserved_rainforest"),
-        t("cultivated_kiri_trees"),
-        t("plastic_waste_initiatives"),
-        t("regenerative_farming"),
-        t("greenhouse_farming"),
-    ];
-    const testimonials: TestimonialsData[] = [
-        {
-            imageSrc: team1,
-            experience: t("testimonial_experience"),
-            name: "John Doe",
-        },
-        {
-            imageSrc: team2,
-            experience: t("testimonial_experience"),
-            name: "Name 2",
-        },
-        {
-            imageSrc: team3,
-            experience: t("testimonial_experience"),
-            name: "Name 3",
-        }
-    ];
+  const impactStatements: string[] = [
+    t("preserved_rainforest"),
+    t("cultivated_kiri_trees"),
+    t("plastic_waste_initiatives"),
+    t("regenerative_farming"),
+    t("greenhouse_farming"),
+  ];
+  const testimonials: TestimonialsData[] = [
+    {
+      imageSrc: team1,
+      experience: t("testimonial_experience"),
+      name: "John Doe",
+    },
+    {
+      imageSrc: team2,
+      experience: t("testimonial_experience"),
+      name: "Name 2",
+    },
+    {
+      imageSrc: team3,
+      experience: t("testimonial_experience"),
+      name: "Name 3",
+    },
+  ];
 
-    return (
-        <div className="container-fluid container-main ">
-            <div className="row mx-md-5 px-md-5">
-                <div className="col-lg-7 col-md-12 col-sm-12">
-                    <SectionHeading heading={t("what_we_do")} position={"left"}/>
-                    <div className="d-flex gap-3">
-                        <div className="circle"></div>
-                        <div className="label d-flex flex-column align-items-start">
-                            <h5>{t("forest_conversation_label")}</h5>
-                            <p>{t("forest_description")}</p>
-                        </div>
-                    </div>
-                    <div className="d-flex gap-3 mt-0">
-                        <div className="circle"></div>
-                        <div className="label d-flex flex-column align-items-start">
-                            <h5>{t("tree_planting")}</h5>
-                            <p>{t("tree_planting_description")}</p>
-                        </div>
-                    </div>
-                    <div className="d-flex gap-3 mt-0">
-                        <div className="circle"></div>
-                        <div className="label d-flex flex-column align-items-start">
-                            <h5>{t("waste_management_label")}</h5>
-                            <p>{t("waste_management_description")}</p>
-                        </div>
-                    </div>
-                    <div className="d-flex gap-3 mt-0">
-                        <div className="circle"></div>
-                        <div className="label d-flex flex-column align-items-start">
-                            <h5>{t("sustainable_agriculture_label")}</h5>
-                            <p>{t("sustainable_agriculture_description")}</p>
-                        </div>
-                    </div>
-                    <div className="d-flex gap-3 mt-0">
-                        <div className="circle"></div>
-                        <div className="label d-flex flex-column align-items-start">
-                            <h5>{t("community_management_label")}</h5>
-                            <p>{t("community_mgmt_description")}</p>
-                        </div>
-                    </div>
-                    <hr className="mb-4 w-50 hr-sty-class"/>
-
-                </div>
-                <div className="col-lg-5 col-md-12 col-sm-12 my-5 py-5">
-                    <div className="card-box p-4 rounded-3">
-                        <div className="">
-                            <h4>{t("achievement_and_goals")}</h4>
-                            <p>
-                                {t("impact_description")}
-                            </p>
-                        </div>
-                        <div className="impact-section">
-                            <h4>{t("our_impact")}</h4>
-                            <ul className="text-start">
-                                {impactStatements.map((statement, index) => (
-                                    <li key={index} className="impact-statement">{statement}</li>
-                                ))}
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="container-fluid pt-0">
+      <div className="row mx-md-5 px-md-5">
+        <div className="col-12 col-lg-8">
+          <SectionHeading heading={t("what_we_do")} parentClasses="mb-4" />
+          <div className="d-flex gap-3">
             <div>
-                <SectionHeading heading={t("testimonials_heading")} position={'left'}/>
-                <p className="ms-5">{t("testimonials_description")}</p>
-                <div className="row px-5 mx-5 d-none d-lg-flex">
-                    {testimonials.map((team, index) => (
-                        <div key={index} className="col-md-3 testimonial-item">
-                            <div className="testimonial-img-container">
-                                <img src={team.imageSrc} alt={team.name} className="img-fluid rounded-circle mb-4 testimonial-image" />
-                            </div>
-                            <div className="text-start">
-                                <p className="">{team.experience}</p>
-                                <h5 className="">- {team.name}</h5>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="d-sm-block d-lg-none">
-                    {testimonials.map((team, index) => (
-                        <div key={index} className="testimonial-item">
-                            <div className="row">
-                                <div className="testimonial-img-container col-4">
-                                    <img src={team.imageSrc} alt={team.name} className="img-fluid rounded-circle mb-4 testimonial-image" />
-                                </div>
-                                <div className="text-start col-8 mt-1">
-                                    <p className="">{team.experience}</p>
-                                    <h5 className="">- {team.name}</h5>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+              <span className="circle d-block"></span>
             </div>
+            <div className="label">
+              <h5>{t("forest_conversation_label")}</h5>
+              <p>{t("forest_description")}</p>
+            </div>
+          </div>
+          <div className="d-flex gap-3 mt-0">
+            <div>
+              <span className="circle d-block"></span>
+            </div>
+            <div className="label">
+              <h5>{t("tree_planting")}</h5>
+              <p>{t("tree_planting_description")}</p>
+            </div>
+          </div>
+          <div className="d-flex gap-3 mt-0">
+            <div>
+              <span className="circle d-block"></span>
+            </div>
+            <div className="label">
+              <h5>{t("waste_management_label")}</h5>
+              <p>{t("waste_management_description")}</p>
+            </div>
+          </div>
+          <div className="d-flex gap-3 mt-0">
+            <div>
+              <span className="circle d-block"></span>
+            </div>
+            <div className="label">
+              <h5>{t("sustainable_agriculture_label")}</h5>
+              <p>{t("sustainable_agriculture_description")}</p>
+            </div>
+          </div>
+          <div className="d-flex gap-3 mt-0">
+            <div>
+              <span className="circle d-block"></span>
+            </div>
+            <div className="label">
+              <h5>{t("community_management_label")}</h5>
+              <p>{t("community_mgmt_description")}</p>
+            </div>
+          </div>
         </div>
-
-    )
-
-}
+        <div className="col-12 col-lg-4 my-5 py-lg-5">
+          <div className="card-box p-4 rounded-3">
+            <div className="">
+              <h4>{t("achievement_and_goals")}</h4>
+              <p>{t("impact_description")}</p>
+            </div>
+            <div className="impact-section">
+              <h4>{t("our_impact")}</h4>
+              <ul className="text-start">
+                {impactStatements.map((statement, index) => (
+                  <li key={index} className="impact-statement">
+                    {statement}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12 col-lg-6 horizontal-line-what pb-3"></div>
+        <div className="col-12 col-lg-6"></div>
+      </div>
+      {/* <div className="mt-5">
+        <SectionHeading
+          heading={t("testimonials_heading")}
+        />
+        <p className="ms-5">{t("testimonials_description")}</p>
+        <div className="row px-5 mx-5 d-none d-lg-flex">
+          {testimonials.map((team, index) => (
+            <div key={index} className="col-md-3 testimonial-item">
+              <div className="testimonial-img-container">
+                <img
+                  src={team.imageSrc}
+                  alt={team.name}
+                  className="img-fluid rounded-circle mb-4 testimonial-image"
+                />
+              </div>
+              <div className="text-start">
+                <p className="">{team.experience}</p>
+                <h5 className="">- {team.name}</h5>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="d-sm-block d-lg-none">
+          {testimonials.map((team, index) => (
+            <div key={index} className="testimonial-item">
+              <div className="row">
+                <div className="testimonial-img-container col-4">
+                  <img
+                    src={team.imageSrc}
+                    alt={team.name}
+                    className="img-fluid rounded-circle mb-4 testimonial-image"
+                  />
+                </div>
+                <div className="text-start col-8 mt-1">
+                  <p className="">{team.experience}</p>
+                  <h5 className="">- {team.name}</h5>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div> */}
+    </div>
+  );
+};
 export default WhatWeDo;

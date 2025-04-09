@@ -1,6 +1,6 @@
 .circle {
-    width: 2.5rem;
-    height: 1.2rem;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: #257251;;
     position: relative;
@@ -20,7 +20,6 @@
 .card-box{
     background-color: #A2FAD4;
 }
-
 
 .testimonial-item {
     margin-top: 4rem;
@@ -44,6 +43,10 @@
     height: 13rem;
 }
 
+.horizontal-line-what {
+    border-bottom: 2px solid #257251;
+}
+
 @media (max-width: 768px) {
     .circle {
         width: 4.5rem;
@@ -59,7 +62,6 @@
 
 }
 
-
 @media (max-width: 576px) {
     .testimonial-image {
         width: 7.5rem;
@@ -70,7 +72,4 @@
         margin-bottom: 1rem;
     }
 
-}
-.hr-sty-class{
-    border: 1px solid #025710;
 }

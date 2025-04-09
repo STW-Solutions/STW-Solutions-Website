@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className={`card card-box border-0 px-4 py-3 mb-3 ${cardMainClasses} ${
+      className={`card border-0 px-4 py-3 mb-3 ${cardMainClasses} ${
         cardType === "team" ? "team-card" : ""
       }`}
       style={{ backgroundColor }}
