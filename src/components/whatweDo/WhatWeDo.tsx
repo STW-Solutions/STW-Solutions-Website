@@ -109,7 +109,7 @@ const WhatWeDo = () => {
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row d-none d-md-block">
         <div className="col-12 col-lg-6 horizontal-line-what pb-3"></div>
         <div className="col-12 col-lg-6"></div>
       </div>

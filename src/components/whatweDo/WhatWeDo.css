@@ -2,7 +2,8 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #257251;;
+    background-color: #257251;
+    ;
     position: relative;
 }
 
@@ -17,7 +18,7 @@
     border: 1px solid #E6E9EF
 }
 
-.card-box{
+.card-box {
     background-color: #A2FAD4;
 }
 
@@ -48,14 +49,11 @@
 }
 
 @media (max-width: 768px) {
-    .circle {
-        width: 4.5rem;
-        height: 1rem;
-        border-radius: 50%;
-        background-color: #257251;;
-        position: relative;
-    }
-    .testimonial-item, .testimonial-item:nth-child(2) , .testimonial-item:nth-child(3) , .testimonial-item:nth-child(4)  {
+
+    .testimonial-item,
+    .testimonial-item:nth-child(2),
+    .testimonial-item:nth-child(3),
+    .testimonial-item:nth-child(4) {
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
@@ -67,6 +65,7 @@
         width: 7.5rem;
         height: 7.5rem;
     }
+
     .testimonial-item {
         margin-top: 1rem;
         margin-bottom: 1rem;
