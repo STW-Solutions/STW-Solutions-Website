@@ -23,7 +23,7 @@ const Company = () => {
     <>
       <div className="container-fluid container-main">
         <div className="row mx-md-5 px-md-5">
-          <div className="col-12 col-lg-7 col-sm-10 me-auto">
+          <div className="col-12 col-lg-7 me-auto">
             <h1 className="stw-solutions-h1 py-3 py-lg-5">
               <span className="text-capitalize">{t("about")}</span>{" "}
               {t("company_name")}
