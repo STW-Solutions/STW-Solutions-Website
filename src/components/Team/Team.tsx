@@ -1,4 +1,3 @@
-import Card from "../Card/Card";
 import team1 from "../../images/team/team1.webp";
 import team2 from "../../images/team/team2.webp";
 import team3 from "../../images/team/team3.webp";

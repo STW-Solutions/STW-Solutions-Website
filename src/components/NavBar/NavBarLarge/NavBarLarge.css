@@ -49,6 +49,15 @@ select {
     width: 60px;
 }
 
+.globe-icon-box {
+    color: #257251;
+}
+
+.globe-icon {
+    fill: currentColor;
+    width: 1.5rem;
+}
+
 @media screen and (min-width: 925px) {
     .navbar-lg {
         display: flex !important;

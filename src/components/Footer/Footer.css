@@ -54,6 +54,11 @@ footer a:hover {
     font-size: 12px;
 }
 
+.insta-icon, .ln-icon {
+    fill: currentColor;
+    width: 1.5rem;
+}
+
 @media screen and (max-width: 1240px) {
     .footer-main {
         padding-left: 10rem;
