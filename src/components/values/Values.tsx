@@ -71,7 +71,7 @@ const Values = () => {
       <div className="w-100 text-black fw-bold text-center">
         {t("values_description")}
       </div>
-      <div className="row values-row">
+      <div className="row values-row mx-3 mx-lg-5">
         {cardData.map((card, index) => (
           <div key={index} className={`d-none d-md-block col-md-6 col-lg-3`}>
             <div className="cards mx-md-auto"> 
