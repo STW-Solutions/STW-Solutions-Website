@@ -45,7 +45,7 @@ const Team = () => {
     return (
         <div className="container-fluid container-main">
             <div>
-                <SectionHeading heading={t("our_team")} position={'left'}/>
+                <SectionHeading heading={t("our_team")} parentClasses="ml-5"/>
             </div>
             <div className="row mx-md-5 px-md-5">
                 {teamData.map((team, index) => (

@@ -237,7 +237,7 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
               </li>
               <li className="dropdown-item bg-white d-flex flex-column align-items-center justify-content-center">
                 <ButtonPrimary
-                  classes={["stw-btn-w", "me-2", "w-100"]}
+                  classes={["stw-btn-w text-capitalize", "me-2", "w-100"]}
                   children={`${t("contact_us")}`}
                 />
                 <ButtonOutline
