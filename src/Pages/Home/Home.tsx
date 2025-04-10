@@ -91,7 +91,7 @@ const Home = () => {
               </div>
               {/* on small screens */}
               <div className="d-block d-lg-none">
-                <div className="mt-5 row ps-5 justify-content-center hero-statistics">
+                <div className="mt-5 row ps-1 ps-md-5 justify-content-center hero-statistics">
                   <div className="col-6 col-sm-3 projects-done-sm-box stats-border">
                     <span className="bold-green-text" ref={projectsSmRef}>
                       {projectsSmCount}+
