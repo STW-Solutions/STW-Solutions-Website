@@ -83,6 +83,7 @@ a:hover .partner-logo-box {
 }
 
 
+
 @keyframes bounce {
 
     0%,
@@ -175,6 +176,28 @@ a:hover .partner-logo-box {
     }
     .our-partners-sm {
         width: 70%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .projects-done-sm-box {
+        border-width: 0 2px 2px 0;
+        border-style: solid;
+        border-color: #257251;
+        text-align: center;
+    }
+    
+    .co2-sm-box {
+        border-bottom: 2px solid #257251;
+    }
+
+    .trees-planted-sm-box {
+        border-right: 2px solid #257251;
+        text-align: center;
+    }
+
+    .forest-panted-sm-box {
+        border-top: 2px solid #257251;
     }
 }
 
