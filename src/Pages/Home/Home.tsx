@@ -6,23 +6,14 @@ import "./Home.css";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
 import earth from "../../images/earth-nobg.png";
 import Card from "../../components/Card/Card";
-import reason1 from "../../images/reason1.png";
-import reason2 from "../../images/reason2.png";
-import reason3 from "../../images/reason3.png";
 import AnimateOnScroll from "../../components/AnimateOnScroll/AnimateOnScroll";
-import cleanhub from "../../images/CleanHub.png";
-import enef from "../../images/ENEFCam.png";
-import carbonsate from "../../images/Carbonsate.png";
-import minepded from "../../images/MINEPDED.png";
-import ministryForestry from "../../images/MinistryForestry.png";
-import volkswagen from "../../images/Volkswagen.webp";
 import Carousel from "../../components/Carousel/Carousel";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
-import wasteManagement from "../../images/waste-management.webp";
 import biomassImg from "../../images/biomassImg.png";
 import arrowRightCircle from "../../images/Arrow-right-circle.png";
 import { useEffect, useRef } from "react";
 import useScrollTriggeredCountUp from "../../hooks/useScrollTriggeredCountUp";
+import { WhyUs, Partners, SlideButtonsPartnersData } from "../../constants";
 
 const Home = () => {
   //remove when # have been taken out of page
@@ -51,87 +42,6 @@ const Home = () => {
     forestSmPlantedRef,
     600
   );
-
-  const whyUs = [
-    {
-      title: t("promote_sustainability_development"),
-      imageSrc: reason1,
-      alt: "promote_sustainability_development",
-      information: t("promote_sustainability_development_description"),
-    },
-    {
-      title: t("conserve_natural_resources"),
-      imageSrc: reason2,
-      alt: "conserve_natural_resources",
-      information: t("conserve_natural_resources_description"),
-    },
-    {
-      title: t("support_communities"),
-      imageSrc: reason3,
-      alt: "support_communities",
-      information: t("support_communities_description"),
-    },
-  ];
-
-  const partners = [
-    {
-      imageSrc: cleanhub,
-      alt: "CleanHub logo",
-      link: "https://www.cleanhub.com/"
-    },
-    {
-      imageSrc: carbonsate,
-      alt: "Carbonsate logo",
-      link: "https://www.carbonsate.com/"
-    },
-    {
-      imageSrc: volkswagen,
-      alt: "Volkswagen logo",
-      link: "https://www.vw.com/"
-    },
-    {
-      imageSrc: enef,
-      alt: "ENEF logo",
-      link: "https://www.minfof.gov.cm/"
-    },
-    {
-      imageSrc: minepded,
-      alt: "MINEPDED logo",
-      link: "https://www.minfof.gov.cm/"
-    },
-    {
-      imageSrc: ministryForestry,
-      alt: "Ministry of Forestry Logo",
-      link: "https://www.minfof.gov.cm/"
-    },
-  ];
-
-  const slideButtonsData = [
-    {
-      dataBsSlideTo: "0",
-      ariaLabel: "Slide 1",
-    },
-    {
-      dataBsSlideTo: "1",
-      ariaLabel: "Slide 2",
-    },
-    {
-      dataBsSlideTo: "2",
-      ariaLabel: "Slide 3",
-    },
-    {
-      dataBsSlideTo: "3",
-      ariaLabel: "Slide 4",
-    },
-    {
-      dataBsSlideTo: "4",
-      ariaLabel: "Slide 5",
-    },
-    {
-      dataBsSlideTo: "5",
-      ariaLabel: "Slide 6",
-    },
-  ];
 
   const recentProjectHighLights = [
     {
@@ -182,13 +92,13 @@ const Home = () => {
               {/* on small screens */}
               <div className="d-block d-lg-none">
                 <div className="mt-5 row ps-5 justify-content-center hero-statistics">
-                  <div className="col-6 col-sm-3">
+                  <div className="col-6 col-sm-3 projects-done-sm-box stats-border">
                     <span className="bold-green-text" ref={projectsSmRef}>
                       {projectsSmCount}+
                     </span>
                     <span className="d-block">{t("projects_done")}</span>
                   </div>
-                  <div className="col-6">
+                  <div className="col-6 co2-sm-box stats-border">
                     <span className="bold-green-text" ref={co2SmRef}>
                       {co2SmCount} {t("tCO2")}
                     </span>
@@ -196,7 +106,7 @@ const Home = () => {
                       {t("annual_tons_of_CO2_reduced")}
                     </span>
                   </div>
-                  <div className="col-6 col-sm-3">
+                  <div className="col-6 col-sm-3 trees-planted-sm-box">
                     <span className="bold-green-text" ref={treesSmPlantedRef}>
                       {treesSmPlantedCount}
                     </span>
@@ -208,7 +118,7 @@ const Home = () => {
                     </span>
                     <span className="d-block">{t("(1,8,11,13,15,17)")}</span>
                   </div>
-                  <div className="col-6 mt-4 mt-sm-0">
+                  <div className="col-12 col-sm-6 pt-3 pt-md-0 text-center forest-panted-sm-box">
                     <span className="bold-green-text">+</span>
                     <span className="bold-green-text" ref={forestSmPlantedRef}>
                       {forestSmPlantedCount}
@@ -282,14 +192,14 @@ const Home = () => {
           <div className="text-muted">{t("why_choose_stw_solutions_sub")}</div>
         </span>
         <div className="row mt-5 our-values-md">
-          {whyUs.map((reason, i) => (
+          {WhyUs.map((reason, i) => (
             <div className="col-12 col-md-4 px-xl-5" key={i}>
               <AnimateOnScroll reappear={true}>
                 <Card
                   cardType="default"
                   imageSrc={reason.imageSrc}
                   information={t(reason.information)}
-                  title={reason.title}
+                  title={t(reason.title)}
                   backgroundColor="#E4FFF3"
                   cardTitleClasses={"stw-card-title text-capitalize"}
                   cardTextClasses={"text-muted"}
@@ -301,7 +211,7 @@ const Home = () => {
         <div className="row our-values-sm mt-5">
           <Carousel
             id="ourValuesCarousel"
-            carouselItems={whyUs}
+            carouselItems={WhyUs}
             useCard={true}
             hasMovementBtn={false}
           ></Carousel>
@@ -321,7 +231,7 @@ const Home = () => {
         </div>
         <div className="container-fluid px-5 our-partners-md">
           <div className="row px-5">
-            {partners.map((partner, index) => (
+            {Partners.map((partner, index) => (
               <div className="mt-4 col-md-4 col-lg-3 col-xl-2" key={index}>
                 <Link to={partner.link} target="_blank">
                   <div className="shadow bg-white partner-logo-box rounded">
@@ -332,13 +242,13 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="our-partners-sm w-50 container pt-4">
+        <div className="our-partners-sm container pt-4">
           <Carousel
             id="partnersCarousel"
             hasMovementBtn={false}
-            slideButtonsData={slideButtonsData}
+            slideButtonsData={SlideButtonsPartnersData}
           >
-            {partners.map((partner, index) => (
+            {Partners.map((partner, index) => (
               <img
                 src={partner.imageSrc}
                 className="partner-logo-sm"

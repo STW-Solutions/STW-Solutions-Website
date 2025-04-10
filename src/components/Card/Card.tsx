@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card.css";
+import { useTranslation } from "react-i18next";
 
 interface CardProps {
   cardType?: string;
@@ -30,6 +31,7 @@ const Card: React.FC<CardProps> = ({
   cardTextClasses,
   cardMainClasses
 }) => {
+  const { t } = useTranslation();
   return (
     <div
       className={`card border-0 px-4 py-3 mb-3 ${cardMainClasses} ${
