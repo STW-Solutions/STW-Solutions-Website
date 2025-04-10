@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 import { useTranslation } from "react-i18next";
 import "./Carousel.css";
 import { SlideButtonData, CarouselItems } from "../../models";
+import { Link } from "react-router";
 
 export interface Props {
   id?: string;
@@ -12,14 +13,14 @@ export interface Props {
   hasMovementBtn?: boolean;
   slideButtonsData?: SlideButtonData[];
   carouselIndicatorClasses?: string;
+  children?: any;
 }
-
 
 const Carousel = ({
   id,
   carouselMainDivClasses,
   carouselItems,
-  useCard,
+  useCard = false,
   hasMovementBtn = true,
   slideButtonsData = [
     {
@@ -35,7 +36,8 @@ const Carousel = ({
       ariaLabel: "Slide 3",
     },
   ],
-  carouselIndicatorClasses
+  carouselIndicatorClasses = "",
+  children,
 }: Props) => {
   const { t } = useTranslation();
   return (
@@ -71,20 +73,16 @@ const Carousel = ({
                   cardTextClasses={"text-muted"}
                 />
               )}
-              {!useCard && (
-                <div>
-                  <img
-                    src={carouselItem.imageSrc}
-                    className="d-block w-100"
-                    alt={carouselItem.alt}
-                  />
-                  <div className="carousel-caption d-none d-md-block">
-                    <h5>{carouselItem.title}</h5>
-                    <p>{carouselItem.information}</p>
-                  </div>
-                </div>
-              )}
             </div>
+          ))}
+          {children && React.Children.map(children, (child, index) => (
+            <Link to={child.link} target="_blank"
+              className={`shadow p-5 card carousel-item partner-carousel-item` + (index === 0 ? " active" : "")}
+              data-bs-interval="10000"
+              key={index}
+            >
+              {child}
+            </Link>
           ))}
         </div>
         {hasMovementBtn && (
