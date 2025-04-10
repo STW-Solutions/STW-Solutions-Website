@@ -66,8 +66,8 @@ const Carousel = ({
                 <Card
                   cardType="default"
                   imageSrc={carouselItem.imageSrc}
-                  information={carouselItem.information}
-                  title={carouselItem.title}
+                  information={t(carouselItem.information || '')}
+                  title={t(carouselItem.title || '')}
                   backgroundColor={carouselItem.backgroundColor || "#E4FFF3"}
                   cardTitleClasses={"stw-card-title text-capitalize"}
                   cardTextClasses={"text-muted"}
