@@ -332,7 +332,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="our-partners-sm w-50 container pt-4">
+        <div className="our-partners-sm container pt-4">
           <Carousel
             id="partnersCarousel"
             hasMovementBtn={false}
