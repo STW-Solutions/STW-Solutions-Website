@@ -29,8 +29,8 @@ const Home = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []); 
-  
+  }, []);
+
   const { t } = useTranslation();
   const projectsRef = useRef<HTMLDivElement>(null);
   const projectCount = useScrollTriggeredCountUp(projectsRef, 12);
@@ -75,28 +75,61 @@ const Home = () => {
 
   const partners = [
     {
-      logoUrl: cleanhub,
+      imageSrc: cleanhub,
       alt: "CleanHub logo",
+      link: "https://www.cleanhub.com/"
     },
     {
-      logoUrl: carbonsate,
+      imageSrc: carbonsate,
       alt: "Carbonsate logo",
+      link: "https://www.carbonsate.com/"
     },
     {
-      logoUrl: volkswagen,
+      imageSrc: volkswagen,
       alt: "Volkswagen logo",
+      link: "https://www.vw.com/"
     },
     {
-      logoUrl: enef,
+      imageSrc: enef,
       alt: "ENEF logo",
+      link: "https://www.minfof.gov.cm/"
     },
     {
-      logoUrl: minepded,
+      imageSrc: minepded,
       alt: "MINEPDED logo",
+      link: "https://www.minfof.gov.cm/"
     },
     {
-      logoUrl: ministryForestry,
+      imageSrc: ministryForestry,
       alt: "Ministry of Forestry Logo",
+      link: "https://www.minfof.gov.cm/"
+    },
+  ];
+
+  const slideButtonsData = [
+    {
+      dataBsSlideTo: "0",
+      ariaLabel: "Slide 1",
+    },
+    {
+      dataBsSlideTo: "1",
+      ariaLabel: "Slide 2",
+    },
+    {
+      dataBsSlideTo: "2",
+      ariaLabel: "Slide 3",
+    },
+    {
+      dataBsSlideTo: "3",
+      ariaLabel: "Slide 4",
+    },
+    {
+      dataBsSlideTo: "4",
+      ariaLabel: "Slide 5",
+    },
+    {
+      dataBsSlideTo: "5",
+      ariaLabel: "Slide 6",
     },
   ];
 
@@ -127,12 +160,14 @@ const Home = () => {
         <div className="container pt-5 pb-lg-5">
           <div className="row align-items-center">
             <div className="col-12 col-lg-6">
-              <h1 className="company-name ps-md-3 stw-solutions-h1">
-                {t("company_name")}
-              </h1>
-              <span className="hero-hint d-block text-center px-3 mt-5">
-                {t("hero_hint")}
-              </span>
+              <div className="d-flex flex-column align-items-center">
+                <h1 className="company-name ps-md-3 stw-solutions-h1">
+                  {t("company_name")}
+                </h1>
+                <span className="hero-hint d-block text-center px-3 mt-3 fw-bold">
+                  {t("hero_hint")}
+                </span>
+              </div>
               <div className="mt-5 ps-3">
                 <ButtonPrimary
                   children={t("get_involved")}
@@ -185,7 +220,7 @@ const Home = () => {
               </div>
               <div className="line d-none d-lg-block"></div>
               <div className="hero-details d-block mt-2 mt-lg-4 ps-3">
-                <div className="pt-5">{t("hero_details")}</div>
+                <div className="pt-3">{t("hero_details")}</div>
               </div>
               <div className="mt-5 ps-3">
                 <ButtonPrimary
@@ -288,41 +323,32 @@ const Home = () => {
           <div className="row px-5">
             {partners.map((partner, index) => (
               <div className="mt-4 col-md-4 col-lg-3 col-xl-2" key={index}>
-                <Link to="#" target="_blank">
+                <Link to={partner.link} target="_blank">
                   <div className="shadow bg-white partner-logo-box rounded">
-                    <img src={partner.logoUrl} alt={t(partner.alt)} />
+                    <img src={partner.imageSrc} alt={t(partner.alt)} />
                   </div>
                 </Link>
               </div>
             ))}
           </div>
         </div>
-        <div className="our-partners-sm">
-          <div
-            id="carouselExampleSlidesOnly"
-            className="carousel slide container-fluid px-2 py-5 px-md-5"
-            data-bs-ride="carousel"
+        <div className="our-partners-sm w-50 container pt-4">
+          <Carousel
+            id="partnersCarousel"
+            hasMovementBtn={false}
+            slideButtonsData={slideButtonsData}
           >
-            <div className="carousel-inner">
-              {partners.map((partner, index) => (
-                <div
-                  className={`carousel-item` + (index === 0 ? " active" : "")}
-                  key={index}
-                >
-                  <Link to="#" target="_blank">
-                    <div
-                      className={`shadow bg-white rounded partner-logo-box mx-auto`}
-                    >
-                      <img src={partner.logoUrl} alt={t(partner.alt)} />
-                    </div>
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
+            {partners.map((partner, index) => (
+              <img
+                src={partner.imageSrc}
+                className="partner-logo-sm"
+                alt={t(partner.alt)}
+              />
+            ))}
+          </Carousel>
         </div>
       </section>
-      <section className="how-it-works-main bg-white container-fluid">
+      <section className="how-it-works-main bg-white container-fluid pt-5 mt-md-5">
         <HowItWorks />
       </section>
       <section className="our-projects-main">
@@ -340,12 +366,19 @@ const Home = () => {
         {recentProjectHighLights.map((project, index) => (
           <div className="bg-white project-items">
             <div className="container-fluid bg-white project-item-box d-flex justify-content-between align-items-center my-2 my-md-5 flex-column flex-md-row">
-              <img src={project.imageUrl} alt={project.alt} className="project-image" />
+              <img
+                src={project.imageUrl}
+                alt={project.alt}
+                className="project-image"
+              />
               <h4 className="fw-bold text-center mt-3 mt-md-0">
                 {t(project.name)}
               </h4>
               <p className="description">{t(project.description)}</p>
-              <Link to={project.projectLink} className="ms-auto ms-md-0 me-5 me-md-0">
+              <Link
+                to={project.projectLink}
+                className="ms-auto ms-md-0 me-5 me-md-0"
+              >
                 <img
                   src={arrowRightCircle}
                   width="55"

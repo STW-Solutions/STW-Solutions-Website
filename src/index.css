@@ -69,6 +69,32 @@ ol {
     font-weight: 700;
 }
 
+.partner-logo-box {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.partner-logo-box img {
+    width: 80%;
+}
+
+/* .partner-logo-box-sm img {
+    width: 50%;
+} */
+ 
+.partner-logo-sm {
+    width: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width: 992px) {
     .stw-solutions-h1 {
         font-size: 2.5rem;
@@ -76,5 +102,11 @@ ol {
     }
     .stw-solutions-h2 {
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .partner-logo-sm {
+        width: 8rem;
     }
 }
