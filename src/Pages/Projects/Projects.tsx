@@ -2,110 +2,30 @@ import firstImg from "../../images/project1.png";
 import secondImg from "../../images/project2.png";
 import thirdImg from "../../images/project3.png";
 import icon from "../../images/Arrow-right-circle.png";
-import biomassImg from "../../images/biomassImg.png";
-import wasteManagement from "../../images/waste-management.webp";
-import { useState } from "react";
-import agriImg from "../../images/agri-management.jpg";
+import { useEffect, useState } from "react";
 import "./Projects.css";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import NoItemAlert from "../../components/NoItemAlert/NoItemAlert";
 import { Helmet } from "react-helmet";
+import { projects } from "../../constants";
+import { ProjectCategory } from "../../models";
+import { filterProjectsByCategories } from "../../services";
 
-interface Project {
-  imgSrc: string;
-  title: string;
-  explanation: string;
-  backgroundColor: string;
-  location: string;
-  completedDate: string;
-  category: Category;
-}
-
-enum Category {
-  RECENT = "RECENT",
-  UPCOMING = "UPCOMING",
-  FORESTRY = "FORESTRY",
-  AGRICULTURE = "AGRICULTURE",
-}
-
-const projectData: Project[] = [
-  {
-    imgSrc: biomassImg,
-    title: "biomass storage with solar",
-    explanation:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    backgroundColor: "#FFFFFF",
-    location: "",
-    completedDate: "",
-    category: Category.AGRICULTURE,
-  },
-  {
-    imgSrc: wasteManagement,
-    title: "plastic waste management",
-    explanation:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    backgroundColor: "#E4FFF3",
-    location: "",
-    completedDate: "",
-    category: Category.RECENT,
-  },
-  {
-    imgSrc: agriImg,
-    title: "sustainable agriculture",
-    explanation:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    backgroundColor: "#FFFFFF",
-    location: "",
-    completedDate: "",
-    category: Category.UPCOMING,
-  },
-  {
-    imgSrc: biomassImg,
-    title: "biomass storage with solar",
-    explanation:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    backgroundColor: "#FFFFFF",
-    location: "",
-    completedDate: "",
-    category: Category.AGRICULTURE,
-  },
-  {
-    imgSrc: wasteManagement,
-    title: "plastic waste management",
-    explanation:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    backgroundColor: "#E4FFF3",
-    location: "",
-    completedDate: "",
-    category: Category.RECENT,
-  },
-  {
-    imgSrc: agriImg,
-    title: "sustainable agriculture",
-    explanation:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    backgroundColor: "#FFFFFF",
-    location: "",
-    completedDate: "",
-    category: Category.UPCOMING,
-  },
-];
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { t } = useTranslation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  //   const toggleDropdown = () => {
-  //     setIsDropdownOpen(!isDropdownOpen);
-  //   };
+  const [currentTab, setCurrentTab] = useState(
+    ProjectCategory.UNDER_DEVELOPMENT
+  );
 
-  const [currentTab, setCurrentTab] = useState(Category.UPCOMING);
-
-  const filterProjects = (category: Category) => {
-    return projectData.filter((project) => project.category === category);
-  };
   const [filteredProjects, setFilteredProjects] = useState(
-    filterProjects(Category.UPCOMING)
+    filterProjectsByCategories(projects, [ProjectCategory.UNDER_DEVELOPMENT])
   );
 
   return (
@@ -122,7 +42,7 @@ const Projects = () => {
               <span className="text-capitalize">{t("projects")}</span>
             </h1>
             <p className="text-white px-md-5 mx-md-5">
-              {t("stw_solutions_is_a")}
+              {t("ongoing_project_highlights_description")}
             </p>
           </div>
           <div className="pt-5 col-12 col-lg-6 text-center align-content-center d-lg-block d-none">
@@ -193,42 +113,58 @@ const Projects = () => {
               <button
                 className={
                   "nav-link text-dark text-uppercase" +
-                  (currentTab === Category.UPCOMING ? " isActive" : "")
+                  (currentTab === ProjectCategory.UNDER_DEVELOPMENT
+                    ? " isActive"
+                    : "")
                 }
                 aria-current="page"
                 type="button"
                 onClick={() => {
-                  setFilteredProjects(filterProjects(Category.UPCOMING));
-                  setCurrentTab(Category.UPCOMING);
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.UNDER_DEVELOPMENT,
+                    ])
+                  );
+                  setCurrentTab(ProjectCategory.UNDER_DEVELOPMENT);
                 }}
               >
-                {t("upcoming")}
+                {t("under_development")}
               </button>
             </li>
             <li className="nav-item">
               <button
                 className={
                   "nav-link text-dark text-uppercase" +
-                  (currentTab === Category.RECENT ? " isActive" : "")
+                  (currentTab === ProjectCategory.COMING_SOON
+                    ? " isActive"
+                    : "")
                 }
                 type="button"
                 onClick={() => {
-                  setFilteredProjects(filterProjects(Category.RECENT));
-                  setCurrentTab(Category.RECENT);
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.COMING_SOON,
+                    ])
+                  );
+                  setCurrentTab(ProjectCategory.COMING_SOON);
                 }}
               >
-                {t("recent")}
+                {t("coming_soon")}
               </button>
             </li>
             <li className="nav-item">
               <button
                 className={
                   "nav-link text-dark text-uppercase" +
-                  (currentTab === Category.FORESTRY ? " isActive" : "")
+                  (currentTab === ProjectCategory.FORESTRY ? " isActive" : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjects(Category.FORESTRY));
-                  setCurrentTab(Category.FORESTRY);
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.FORESTRY,
+                    ])
+                  );
+                  setCurrentTab(ProjectCategory.FORESTRY);
                 }}
               >
                 {t("forestry")}
@@ -238,14 +174,20 @@ const Projects = () => {
               <button
                 className={
                   "nav-link text-dark text-uppercase" +
-                  (currentTab === Category.AGRICULTURE ? " isActive" : "")
+                  (currentTab === ProjectCategory.WASTE_MANAGEMENT
+                    ? " isActive"
+                    : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjects(Category.AGRICULTURE));
-                  setCurrentTab(Category.AGRICULTURE);
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.WASTE_MANAGEMENT,
+                    ])
+                  );
+                  setCurrentTab(ProjectCategory.WASTE_MANAGEMENT);
                 }}
               >
-                {t("agriculture")}
+                {t("waste_management")}
               </button>
             </li>
           </ul>
@@ -271,39 +213,55 @@ const Projects = () => {
               <button
                 className={
                   "dropdown-item text-uppercase" +
-                  (currentTab === Category.UPCOMING ? " isActive" : "")
+                  (currentTab === ProjectCategory.UNDER_DEVELOPMENT
+                    ? " isActive"
+                    : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjects(Category.UPCOMING));
-                  setCurrentTab(Category.UPCOMING);
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.UNDER_DEVELOPMENT,
+                    ])
+                  );
+                  setCurrentTab(ProjectCategory.UNDER_DEVELOPMENT);
                 }}
               >
-                {t("upcoming")}
+                {t("under_development")}
               </button>
             </li>
             <li>
               <button
                 className={
                   "dropdown-item text-uppercase" +
-                  (currentTab === Category.RECENT ? " isActive" : "")
+                  (currentTab === ProjectCategory.COMING_SOON
+                    ? " isActive"
+                    : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjects(Category.RECENT));
-                  setCurrentTab(Category.RECENT);
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.COMING_SOON,
+                    ])
+                  );
+                  setCurrentTab(ProjectCategory.COMING_SOON);
                 }}
               >
-                {t("recent")}
+                {t("coming_soon")}
               </button>
             </li>
             <li>
               <button
                 className={
                   "dropdown-item text-uppercase" +
-                  (currentTab === Category.FORESTRY ? " isActive" : "")
+                  (currentTab === ProjectCategory.FORESTRY ? " isActive" : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjects(Category.FORESTRY));
-                  setCurrentTab(Category.FORESTRY);
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.FORESTRY,
+                    ])
+                  );
+                  setCurrentTab(ProjectCategory.FORESTRY);
                 }}
               >
                 {t("forestry")}
@@ -313,14 +271,20 @@ const Projects = () => {
               <button
                 className={
                   "dropdown-item text-uppercase" +
-                  (currentTab === Category.AGRICULTURE ? " isActive" : "")
+                  (currentTab === ProjectCategory.WASTE_MANAGEMENT
+                    ? " isActive"
+                    : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjects(Category.AGRICULTURE));
-                  setCurrentTab(Category.AGRICULTURE);
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.WASTE_MANAGEMENT,
+                    ])
+                  );
+                  setCurrentTab(ProjectCategory.WASTE_MANAGEMENT);
                 }}
               >
-                {t("agriculture")}
+                {t("waste_management")}
               </button>
             </li>
           </ul>
@@ -334,19 +298,19 @@ const Projects = () => {
             >
               <div className="col-md-12 col-lg-3">
                 <img
-                  src={project.imgSrc}
+                  src={project.imageSrc}
                   width="240"
                   height="240"
-                  className="img-fluid w-100"
-                  alt="alt-image"
+                  className={`img-fluid w-100 ${project.imageClass}`}
+                  alt={t(project.imageAlt)}
                 />
               </div>
               <div className="col-lg-3 col-md-12">
                 <span className="fs-4 fw-bold text-center text-md-start">
-                  {t(project.title)}
+                  {t(project.name)}
                 </span>
               </div>
-              <div className="col-lg-3 col-md-12">{t(project.explanation)}</div>
+              <div className="col-lg-3 col-md-12">{t(project.description)}</div>
               <Link className="col-lg-2 col-md-12 text-end" to="#">
                 <img
                   src={icon}

@@ -9,17 +9,15 @@ import Card from "../../components/Card/Card";
 import AnimateOnScroll from "../../components/AnimateOnScroll/AnimateOnScroll";
 import Carousel from "../../components/Carousel/Carousel";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
-import biomassImg from "../../images/biomassImg.png";
 import arrowRightCircle from "../../images/Arrow-right-circle.png";
 import { useEffect, useRef } from "react";
 import useScrollTriggeredCountUp from "../../hooks/useScrollTriggeredCountUp";
 import { WhyUs, Partners, SlideButtonsPartnersData, projects } from "../../constants";
-import { ProjectCategories } from "../../models";
+import { ProjectCategory } from "../../models";
 import { filterProjectsByCategories } from "../../services";
 
 const Home = () => {
   //remove when # have been taken out of page
-
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
@@ -45,7 +43,7 @@ const Home = () => {
     600
   );
 
-  const projectHighLights = filterProjectsByCategories(projects, [ProjectCategories.UNDER_DEVELOPMENT, ProjectCategories.FORESTRY])
+  const projectHighLights = filterProjectsByCategories(projects, [ProjectCategory.UNDER_DEVELOPMENT, ProjectCategory.FORESTRY])
 
   return (
     <div className="home-main">
@@ -204,7 +202,7 @@ const Home = () => {
           ></Carousel>
         </div>
       </section>
-      <section className="our-partners-main" id="ourPartners">
+      <section className="our-partners-main" id="our-partners">
         <div className="container-fluid px-md-5 our-partners-head py-5">
           <div className="row px-sm-2 px-md-5">
             <h2 className="stw-solutions-h2 col-12 col-md-4 col-lg-3 text-break">
@@ -236,7 +234,7 @@ const Home = () => {
             slideButtonsData={SlideButtonsPartnersData}
           >
             {Partners.map((partner, index) => (
-              <img
+              <img key={index}
                 src={partner.imageSrc}
                 className="partner-logo-sm"
                 alt={t(partner.alt)}

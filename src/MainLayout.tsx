@@ -7,6 +7,7 @@ interface Props {
 }
 
 const MainLayout = ({ children }: Props) => {
+
   const { i18n } = useTranslation();
   const handleLanguageChange = (language: string) => {
     i18n.changeLanguage(language);
