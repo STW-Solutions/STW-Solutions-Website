@@ -82,6 +82,13 @@ a:hover .partner-logo-box {
     padding: 0 10rem;
 }
 
+.carbonsate-cameroon-img {
+    width: 25rem;
+}
+
+.project-title {
+    width: 25%;
+}
 
 
 @keyframes bounce {
@@ -127,7 +134,15 @@ a:hover .partner-logo-box {
     }
 
     .project-item-box {
-        padding: 0 1rem;
+        padding: 2rem 1rem !important;
+    }
+
+    .carbonsate-cameroon-img {
+        width: 12rem;
+    }
+
+    .project-items .description {
+        width: 50%;
     }
 
 }
@@ -149,7 +164,8 @@ a:hover .partner-logo-box {
     }
 
     .project-items .description {
-        width: 60%;
+        width: 100%;
+        text-align: center;
     }
 
     .our-partners-head, .our-projects-head {
@@ -163,6 +179,18 @@ a:hover .partner-logo-box {
 
     .partner-logo-box img {
         width: 75%;
+    }
+
+    .project-title {
+        width: 100%;
+    }
+
+    .project-item-box {
+        padding: 3rem !important;
+    }
+
+    .carbonsate-cameroon-img {
+        width: 18rem;
     }
 }
 
@@ -201,10 +229,13 @@ a:hover .partner-logo-box {
     }
 }
 
-@media screen and (max-width: 360px) {
-    .project-image {
-        width: 80%;
+/* @media screen and (max-width: 425px) {
+    .carbonsate-cameroon-img {
+        width: 18rem;
     }
+} */
+
+@media screen and (max-width: 360px) {
     .our-partners-sm {
         width: 80%;
     }
