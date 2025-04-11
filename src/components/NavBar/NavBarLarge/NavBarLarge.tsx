@@ -47,7 +47,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
               </Link>
             </li>
             <li>
-              <a className="dropdown-item stw-nav-lg-link" href="#">
+              <a className="dropdown-item stw-nav-lg-link" href="">
                 {t("sustainability")}
               </a>
             </li>
@@ -80,7 +80,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           </button>
           <ul className="dropdown-menu" aria-labelledby="solutionsDropdownLg">
             <li>
-              <Link className="dropdown-item stw-nav-lg-link" to="#">
+              <Link className="dropdown-item stw-nav-lg-link" to="/solutions-forestry">
                 {t("forestry_solutions")}
               </Link>
             </li>
