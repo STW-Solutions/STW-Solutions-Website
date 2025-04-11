@@ -18,7 +18,6 @@ import { filterProjectsByCategories } from "../../services";
 
 const Home = () => {
   //remove when # have been taken out of page
-
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
@@ -203,7 +202,7 @@ const Home = () => {
           ></Carousel>
         </div>
       </section>
-      <section className="our-partners-main" id="ourPartners">
+      <section className="our-partners-main" id="our-partners">
         <div className="container-fluid px-md-5 our-partners-head py-5">
           <div className="row px-sm-2 px-md-5">
             <h2 className="stw-solutions-h2 col-12 col-md-4 col-lg-3 text-break">

@@ -5,8 +5,13 @@ import earthImg from "../../images/earth.svg"
 import climate from "../../images/climate-change.png"
 import plant from "../../images/plant.png"
 import agriImg from "../../images/agri-management.jpg"
+import { useEffect } from "react";
 
 const SolutionForestry = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
     const { t } = useTranslation();
     const cardData = [
         {

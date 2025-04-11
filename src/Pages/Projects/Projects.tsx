@@ -2,10 +2,7 @@ import firstImg from "../../images/project1.png";
 import secondImg from "../../images/project2.png";
 import thirdImg from "../../images/project3.png";
 import icon from "../../images/Arrow-right-circle.png";
-import biomassImg from "../../images/biomassImg.png";
-import wasteManagement from "../../images/waste-management.webp";
-import { useState } from "react";
-import agriImg from "../../images/agri-management.jpg";
+import { useEffect, useState } from "react";
 import "./Projects.css";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
@@ -16,10 +13,16 @@ import { ProjectCategory } from "../../models";
 import { filterProjectsByCategories } from "../../services";
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { t } = useTranslation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const [currentTab, setCurrentTab] = useState(ProjectCategory.UNDER_DEVELOPMENT);
+  const [currentTab, setCurrentTab] = useState(
+    ProjectCategory.UNDER_DEVELOPMENT
+  );
 
   const [filteredProjects, setFilteredProjects] = useState(
     filterProjectsByCategories(projects, [ProjectCategory.UNDER_DEVELOPMENT])
@@ -110,12 +113,18 @@ const Projects = () => {
               <button
                 className={
                   "nav-link text-dark text-uppercase" +
-                  (currentTab === ProjectCategory.UNDER_DEVELOPMENT ? " isActive" : "")
+                  (currentTab === ProjectCategory.UNDER_DEVELOPMENT
+                    ? " isActive"
+                    : "")
                 }
                 aria-current="page"
                 type="button"
                 onClick={() => {
-                  setFilteredProjects(filterProjectsByCategories(projects, [ProjectCategory.UNDER_DEVELOPMENT]));
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.UNDER_DEVELOPMENT,
+                    ])
+                  );
                   setCurrentTab(ProjectCategory.UNDER_DEVELOPMENT);
                 }}
               >
@@ -126,11 +135,17 @@ const Projects = () => {
               <button
                 className={
                   "nav-link text-dark text-uppercase" +
-                  (currentTab === ProjectCategory.COMING_SOON ? " isActive" : "")
+                  (currentTab === ProjectCategory.COMING_SOON
+                    ? " isActive"
+                    : "")
                 }
                 type="button"
                 onClick={() => {
-                  setFilteredProjects(filterProjectsByCategories(projects, [ProjectCategory.COMING_SOON]));
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.COMING_SOON,
+                    ])
+                  );
                   setCurrentTab(ProjectCategory.COMING_SOON);
                 }}
               >
@@ -144,7 +159,11 @@ const Projects = () => {
                   (currentTab === ProjectCategory.FORESTRY ? " isActive" : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjectsByCategories(projects, [ProjectCategory.FORESTRY]));
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.FORESTRY,
+                    ])
+                  );
                   setCurrentTab(ProjectCategory.FORESTRY);
                 }}
               >
@@ -155,10 +174,16 @@ const Projects = () => {
               <button
                 className={
                   "nav-link text-dark text-uppercase" +
-                  (currentTab === ProjectCategory.WASTE_MANAGEMENT ? " isActive" : "")
+                  (currentTab === ProjectCategory.WASTE_MANAGEMENT
+                    ? " isActive"
+                    : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjectsByCategories(projects, [ProjectCategory.WASTE_MANAGEMENT]));
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.WASTE_MANAGEMENT,
+                    ])
+                  );
                   setCurrentTab(ProjectCategory.WASTE_MANAGEMENT);
                 }}
               >
@@ -188,10 +213,16 @@ const Projects = () => {
               <button
                 className={
                   "dropdown-item text-uppercase" +
-                  (currentTab === ProjectCategory.UNDER_DEVELOPMENT ? " isActive" : "")
+                  (currentTab === ProjectCategory.UNDER_DEVELOPMENT
+                    ? " isActive"
+                    : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjectsByCategories(projects, [ProjectCategory.UNDER_DEVELOPMENT]));
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.UNDER_DEVELOPMENT,
+                    ])
+                  );
                   setCurrentTab(ProjectCategory.UNDER_DEVELOPMENT);
                 }}
               >
@@ -202,10 +233,16 @@ const Projects = () => {
               <button
                 className={
                   "dropdown-item text-uppercase" +
-                  (currentTab === ProjectCategory.COMING_SOON ? " isActive" : "")
+                  (currentTab === ProjectCategory.COMING_SOON
+                    ? " isActive"
+                    : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjectsByCategories(projects, [ProjectCategory.COMING_SOON]));
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.COMING_SOON,
+                    ])
+                  );
                   setCurrentTab(ProjectCategory.COMING_SOON);
                 }}
               >
@@ -219,7 +256,11 @@ const Projects = () => {
                   (currentTab === ProjectCategory.FORESTRY ? " isActive" : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjectsByCategories(projects, [ProjectCategory.FORESTRY]));
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.FORESTRY,
+                    ])
+                  );
                   setCurrentTab(ProjectCategory.FORESTRY);
                 }}
               >
@@ -230,10 +271,16 @@ const Projects = () => {
               <button
                 className={
                   "dropdown-item text-uppercase" +
-                  (currentTab === ProjectCategory.WASTE_MANAGEMENT ? " isActive" : "")
+                  (currentTab === ProjectCategory.WASTE_MANAGEMENT
+                    ? " isActive"
+                    : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(filterProjectsByCategories(projects, [ProjectCategory.WASTE_MANAGEMENT]));
+                  setFilteredProjects(
+                    filterProjectsByCategories(projects, [
+                      ProjectCategory.WASTE_MANAGEMENT,
+                    ])
+                  );
                   setCurrentTab(ProjectCategory.WASTE_MANAGEMENT);
                 }}
               >
@@ -255,7 +302,7 @@ const Projects = () => {
                   width="240"
                   height="240"
                   className={`img-fluid w-100 ${project.imageClass}`}
-                  alt="alt-image"
+                  alt={t(project.imageAlt)}
                 />
               </div>
               <div className="col-lg-3 col-md-12">

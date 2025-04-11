@@ -106,7 +106,7 @@ export const SlideButtonsPartnersData = [
     description: "Reforestation and restoration project",
     moreInfo: "#",
     imageSrc: forestryProjectNgaoundal,
-    imageAlt: "",
+    imageAlt: "forest_in_ngaoundal",
     backgroundColor: "#FFFFFF"
   },
   {
@@ -115,7 +115,7 @@ export const SlideButtonsPartnersData = [
     description: "Forest restoration project",
     moreInfo: "#",
     imageSrc: forestryProjectGaroua,
-    imageAlt: "",
+    imageAlt: "forest_in_garoua",
     backgroundColor: "#FFFFFF"
   },
   {
@@ -124,7 +124,7 @@ export const SlideButtonsPartnersData = [
     description: "Reforestation and restoration project",
     moreInfo: "#",
     imageSrc: forestryProjectBetare,
-    imageAlt: "",
+    imageAlt: "forest_in_beta_oya",
     backgroundColor: "#FFFFFF"
   },
   {
@@ -133,7 +133,7 @@ export const SlideButtonsPartnersData = [
     description: "Kiri tree plantation",
     moreInfo: "#",
     imageSrc: forestryProjectBafia,
-    imageAlt: "",
+    imageAlt: "kiri_trees",
     backgroundColor: "#FFFFFF",
     imageClass: "bafia-project-image"
   },
@@ -154,7 +154,7 @@ export const SlideButtonsPartnersData = [
       "The Cameroon Project is a unique initiative that combines biomass storage with solar energy and community-driven development to address both environmental and social challenges in Cameroon. The project utilizes wood residues from a sawmill for long-term carbon storage.",
     moreInfo: "https://www.carbonsate.com/cameroon",
     imageSrc: carbonsateCameroon,
-    imageAlt: "",
+    imageAlt: "the_cameroon_project_image",
     imageClass: "carbonsate-cameroon-img",
     backgroundColor: "#FFFFFF"
   },
