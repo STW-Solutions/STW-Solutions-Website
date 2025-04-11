@@ -9,12 +9,11 @@ import Card from "../../components/Card/Card";
 import AnimateOnScroll from "../../components/AnimateOnScroll/AnimateOnScroll";
 import Carousel from "../../components/Carousel/Carousel";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
-import biomassImg from "../../images/biomassImg.png";
 import arrowRightCircle from "../../images/Arrow-right-circle.png";
 import { useEffect, useRef } from "react";
 import useScrollTriggeredCountUp from "../../hooks/useScrollTriggeredCountUp";
 import { WhyUs, Partners, SlideButtonsPartnersData, projects } from "../../constants";
-import { ProjectCategories } from "../../models";
+import { ProjectCategory } from "../../models";
 import { filterProjectsByCategories } from "../../services";
 
 const Home = () => {
@@ -45,7 +44,7 @@ const Home = () => {
     600
   );
 
-  const projectHighLights = filterProjectsByCategories(projects, [ProjectCategories.UNDER_DEVELOPMENT, ProjectCategories.FORESTRY])
+  const projectHighLights = filterProjectsByCategories(projects, [ProjectCategory.UNDER_DEVELOPMENT, ProjectCategory.FORESTRY])
 
   return (
     <div className="home-main">
@@ -236,7 +235,7 @@ const Home = () => {
             slideButtonsData={SlideButtonsPartnersData}
           >
             {Partners.map((partner, index) => (
-              <img
+              <img key={index}
                 src={partner.imageSrc}
                 className="partner-logo-sm"
                 alt={t(partner.alt)}
