@@ -10,6 +10,11 @@
     min-width: 13rem;
 }
 
+.stw-nav-sm-li {
+    background-color: transparent !important;
+    color: #000000 !important;
+}
+
 .stw-nav-sm-li:hover,
 .stw-nav-sm-li:focus {
     background-color: #E4FFF3 !important;

@@ -4,6 +4,7 @@ import ButtonOutline from "../../ButtonOutline/ButtonOutline";
 import ButtonPrimary from "../../ButtonPrimary/ButtonPrimary";
 import "./NavBarLarge.css";
 import { useState } from "react";
+import { NavHashLink } from "react-router-hash-link"
 
 interface Props {
   onClickLanguageChange: (language: string) => void;
@@ -47,14 +48,14 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
               </Link>
             </li>
             <li>
-              <a className="dropdown-item stw-nav-lg-link" href="#">
+              <a className="dropdown-item stw-nav-lg-link" href="">
                 {t("sustainability")}
               </a>
             </li>
             <li>
-              <a className="dropdown-item stw-nav-lg-link" href="#">
+              <NavHashLink className="dropdown-item stw-nav-lg-link" to="/#our-partners">
                 {t("partners")}
-              </a>
+              </NavHashLink>
             </li>
             <li>
               <a className="dropdown-item stw-nav-lg-link" href="#">
@@ -80,7 +81,10 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           </button>
           <ul className="dropdown-menu" aria-labelledby="solutionsDropdownLg">
             <li>
-              <Link className="dropdown-item stw-nav-lg-link" to="#">
+              <Link
+                className="dropdown-item stw-nav-lg-link"
+                to="/solutions-forestry"
+              >
                 {t("forestry_solutions")}
               </Link>
             </li>
@@ -113,14 +117,9 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
               </Link>
             </li>
             <li>
-              <a className="dropdown-item stw-nav-lg-link" href="#">
-                {t("Project#1")}
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item stw-nav-lg-link" href="#">
-                {t("Project#2")}
-              </a>
+              <Link to="https://www.carbonsate.com/cameroon" className="dropdown-item stw-nav-lg-link" target="_blank">
+              {t("the_cameroon_project")}
+              </Link>
             </li>
           </ul>
         </div>

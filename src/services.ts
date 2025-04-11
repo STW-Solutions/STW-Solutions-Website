@@ -1,8 +1,8 @@
-import { ProjectCategories, Project } from "./models";
+import { ProjectCategory, Project } from "./models";
 
 export const filterProjectsByCategories = (
   projects: Project[],
-  categories: ProjectCategories[]
+  categories: ProjectCategory[]
 ) => {
   return projects.filter((project) =>
     categories.every((category) => project.categories.includes(category))
