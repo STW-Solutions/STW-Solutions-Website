@@ -311,7 +311,7 @@ const Projects = () => {
                 </span>
               </div>
               <div className="col-lg-3 col-md-12">{t(project.description)}</div>
-              <Link className="col-lg-2 col-md-12 text-end" to="#">
+              <Link className="col-lg-2 col-md-12 text-end" to={project.moreInfo} target="_blank">
                 <img
                   src={icon}
                   width="50"

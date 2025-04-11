@@ -142,7 +142,7 @@ export const SlideButtonsPartnersData = [
     categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY],
     description:
       "The Koundi Forest Conservation Project, led by STW Solutions, aims to protect and sustainably manage over 100 hectares of critical rainforest in Eastern Cameroon. This initiative focuses on combating climate change, promoting sustainable development, and conserving regional biodiversity.",
-    moreInfo: "#",
+    moreInfo: "https://explorer.land/x/project/koundi_forest_reserve/about",
     imageSrc: forestryProjectKoundi,
     imageAlt: "koundi_conservation_project",
     backgroundColor: "#FFFFFF"
