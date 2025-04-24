@@ -20,3 +20,18 @@
 .bafia-project-image {
     height: 17rem;
 }
+
+.more-btn {
+    background-color: #257251;
+    float: right;
+}
+
+.button-box {
+    margin-bottom: 6rem;
+    margin-right: 4rem;
+}
+
+.arrow-svg {
+    width: 1rem;
+    fill: currentColor;
+}

@@ -184,5 +184,14 @@
   "kiri_trees": "kiri trees",
   "forest_in_beta_oya": "Forest in Betare-Oya",
   "forest_in_garoua": "Forest in Garoua",
-  "forest_in_ngaoundal": "Forest in Ngaoundal"
+  "forest_in_ngaoundal": "Forest in Ngaoundal",
+  "koundi-conversation-project": "Koundi Conservation Project",
+  "cameroon-project": "The Cameroon Project",
+  "meta_koundi-conversation-project": "",
+  "meta_cameroon-project": "",
+  "tags": "tags",
+  "started": "started",
+  "due_date": "due date",
+  "show_more": "show more",
+  "show_less": "show less"
 }
