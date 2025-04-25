@@ -9,7 +9,7 @@ import { Link } from "react-router";
 import NoItemAlert from "../../components/NoItemAlert/NoItemAlert";
 import { Helmet } from "react-helmet";
 import { projects } from "../../constants";
-import { ProjectCategory } from "../../models";
+import { Project, ProjectCategory } from "../../models";
 import { filterProjectsByCategories } from "../../services";
 
 const Projects = () => {
@@ -24,9 +24,29 @@ const Projects = () => {
     ProjectCategory.UNDER_DEVELOPMENT
   );
 
-  const [filteredProjects, setFilteredProjects] = useState(
-    filterProjectsByCategories(projects, [ProjectCategory.UNDER_DEVELOPMENT])
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
+
+  const [displayedProjects, setDisplayedProjects] = useState<Project[]>(
+    filteredProjects.slice(0, 2)
   );
+
+  useEffect(() => {
+    const updatedProjects = filterProjectsByCategories(projects, [currentTab]);
+    setFilteredProjects(updatedProjects);
+    setDisplayedProjects(updatedProjects.slice(0, 2));
+  }, [currentTab]);
+
+  const toggleProjects = (action: string, startIndex: number) => {
+    if (action === "show") {
+      setDisplayedProjects([
+        ...displayedProjects,
+        ...filteredProjects.slice(startIndex, startIndex + 5),
+      ]);
+    }
+    if (action === "hide") {
+      setDisplayedProjects(filteredProjects.slice(startIndex, startIndex + 2));
+    }
+  };
 
   return (
     <>
@@ -120,11 +140,6 @@ const Projects = () => {
                 aria-current="page"
                 type="button"
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.UNDER_DEVELOPMENT,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.UNDER_DEVELOPMENT);
                 }}
               >
@@ -141,11 +156,6 @@ const Projects = () => {
                 }
                 type="button"
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.COMING_SOON,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.COMING_SOON);
                 }}
               >
@@ -159,11 +169,6 @@ const Projects = () => {
                   (currentTab === ProjectCategory.FORESTRY ? " isActive" : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.FORESTRY,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.FORESTRY);
                 }}
               >
@@ -179,11 +184,6 @@ const Projects = () => {
                     : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.WASTE_MANAGEMENT,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.WASTE_MANAGEMENT);
                 }}
               >
@@ -218,11 +218,6 @@ const Projects = () => {
                     : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.UNDER_DEVELOPMENT,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.UNDER_DEVELOPMENT);
                 }}
               >
@@ -238,11 +233,6 @@ const Projects = () => {
                     : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.COMING_SOON,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.COMING_SOON);
                 }}
               >
@@ -256,11 +246,6 @@ const Projects = () => {
                   (currentTab === ProjectCategory.FORESTRY ? " isActive" : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.FORESTRY,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.FORESTRY);
                 }}
               >
@@ -276,11 +261,6 @@ const Projects = () => {
                     : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.WASTE_MANAGEMENT,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.WASTE_MANAGEMENT);
                 }}
               >
@@ -290,7 +270,7 @@ const Projects = () => {
           </ul>
         </div>
         <div className="ps-md-5">
-          {filteredProjects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <div
               className="row p-md-5 my-md-5 p-2 mx-auto rounded-4 align-items-center mb-3 mt-1 card-div"
               key={index}
@@ -310,8 +290,13 @@ const Projects = () => {
                   {t(project.name)}
                 </span>
               </div>
-              <div className="col-lg-3 col-md-12">{t(project.description)}</div>
-              <Link className="col-lg-2 col-md-12 text-end" to={project.moreInfo} target="_blank">
+              <div className="col-lg-3 col-md-12 text-truncate">
+                {t(project.summary || "")}
+              </div>
+              <Link
+                className="col-lg-2 col-md-12 text-end"
+                to={project.moreInfo}
+              >
                 <img
                   src={icon}
                   width="50"
@@ -331,6 +316,38 @@ const Projects = () => {
             />
           </div>
         )}
+        <div className="button-box">
+          {filteredProjects.length !== displayedProjects.length && (
+            <button
+              className="shadow more-btn rounded text-white border-0 py-1 px-3"
+              onClick={() => toggleProjects("show", displayedProjects.length)}
+            >
+              {t("show_more")}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                className="arrow-svg ms-2"
+              >
+                <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+              </svg>
+            </button>
+          )}
+          {filteredProjects.length === displayedProjects.length && (
+            <button
+              className="shadow more-btn rounded text-white border-0 py-1 px-3"
+              onClick={() => toggleProjects("hide", 0)}
+            >
+              {t("show_less")}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                className="arrow-svg ms-2"
+              >
+                <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+              </svg>
+            </button>
+          )}
+        </div>
       </div>
     </>
   );

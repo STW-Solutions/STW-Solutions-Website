@@ -21,10 +21,17 @@ export enum ProjectCategory {
 export interface Project {
   name: string,
   categories: ProjectCategory[],
-  description: string,
+  summary?: string,
+  firstDetails?: string,
+  secondDetails?: string,
+  thirdDetails?: string,
+  fourthDetails?: string,
   moreInfo: string,
   imageSrc: string,
   imageAlt: string,
   imageClass? : string,
-  backgroundColor?: string
+  backgroundColor?: string,
+  alias?: string,
+  startDate?: string,
+  endDate?: string
 }

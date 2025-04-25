@@ -269,10 +269,9 @@ const Home = () => {
               <h4 className="fw-bold text-center mt-3 mt-md-0 text-break project-title">
                 {t(project.name)}
               </h4>
-              <p className="description">{t(project.description)}</p>
+              <p className="description">{t(project.summary || '')}</p>
               <Link
                 to={project.moreInfo}
-                target="_blank"
                 className="ms-auto ms-md-0 me-5 me-md-0"
               >
                 <img

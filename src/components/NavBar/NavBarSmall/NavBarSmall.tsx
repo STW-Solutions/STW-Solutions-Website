@@ -156,8 +156,7 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                     <li>
                       <Link
                         className="dropdown-item stw-nav-sm-li"
-                        to="https://www.carbonsate.com/cameroon"
-                        target="_blank"
+                        to="/project-details/cameroon-project"
                       >
                         {t("the_cameroon_project")}
                       </Link>
