@@ -48,7 +48,7 @@ export const Partners = [
   {
     imageSrc: carbonsate,
     alt: "Carbonsate logo",
-    link: "https://www.carbonsate.com/",
+    link: "https://www.carbonsate.com/cameroon",
   },
   {
     imageSrc: volkswagen,
@@ -58,12 +58,12 @@ export const Partners = [
   {
     imageSrc: enef,
     alt: "ENEF logo",
-    link: "https://www.minfof.gov.cm/",
+    link: "https://enefcameroun.cm/",
   },
   {
     imageSrc: minepded,
     alt: "MINEPDED logo",
-    link: "https://www.minfof.gov.cm/",
+    link: "https://minepded.gov.cm/en/",
   },
   {
     imageSrc: ministryForestry,
@@ -104,7 +104,7 @@ export const SlideButtonsPartnersData = [
     name: "Ngaoundal - ARR Project",
     categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY],
     summary: "Reforestation and restoration project",
-    moreInfo: "#",
+    moreInfo: "/project-details/koundi-conversation-project",
     imageSrc: forestryProjectNgaoundal,
     imageAlt: "forest_in_ngaoundal",
     backgroundColor: "#FFFFFF"
@@ -113,7 +113,7 @@ export const SlideButtonsPartnersData = [
     name: "Garoua-Boulai - ARR Project",
     categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY],
     summary: "Forest restoration project",
-    moreInfo: "#",
+    moreInfo: "/project-details/koundi-conversation-project",
     imageSrc: forestryProjectGaroua,
     imageAlt: "forest_in_garoua",
     backgroundColor: "#FFFFFF"
@@ -122,7 +122,7 @@ export const SlideButtonsPartnersData = [
     name: "Betare-Oya - ARR Project",
     categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY],
     summary: "Reforestation and restoration project",
-    moreInfo: "#",
+    moreInfo: "/project-details/koundi-conversation-project",
     imageSrc: forestryProjectBetare,
     imageAlt: "forest_in_beta_oya",
     backgroundColor: "#FFFFFF"
@@ -131,7 +131,7 @@ export const SlideButtonsPartnersData = [
     name: "Bafia - ARR Project",
     categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY],
     summary: "Kiri tree plantation",
-    moreInfo: "#",
+    moreInfo: "/project-details/koundi-conversation-project",
     imageSrc: forestryProjectBafia,
     imageAlt: "kiri_trees",
     backgroundColor: "#FFFFFF",
@@ -171,7 +171,7 @@ export const SlideButtonsPartnersData = [
     name: "Limbe - Waste handling",
     categories: [ProjectCategory.UNDER_DEVELOPMENT, ProjectCategory.WASTE_MANAGEMENT],
     summary: "Plastic waste collection",
-    moreInfo: "#",
+    moreInfo: "/project-details/cameroon-project",
     imageSrc: wasteManagementLimbe,
     imageAlt: "waste_management_limbe",
     backgroundColor: "#FFFFFF"
@@ -180,7 +180,7 @@ export const SlideButtonsPartnersData = [
     name: "Douala - Waste handling",
     categories: [ProjectCategory.UNDER_DEVELOPMENT, ProjectCategory.WASTE_MANAGEMENT],
     summary: "Plastic waste collection",
-    moreInfo: "#",
+    moreInfo: "/project-details/cameroon-project",
     imageSrc: wasteManagementDouala,
     imageAlt: "waste_management_douala",
     backgroundColor: "#FFFFFF"
@@ -189,7 +189,7 @@ export const SlideButtonsPartnersData = [
     name: "Kribi - Waste handling",
     categories: [ProjectCategory.UNDER_DEVELOPMENT, ProjectCategory.WASTE_MANAGEMENT],
     summary: "Plastic waste collection",
-    moreInfo: "#",
+    moreInfo: "/project-details/cameroon-project",
     imageSrc: wasteManagementKribi,
     imageAlt: "waste_management_kribi",
     backgroundColor: "#FFFFFF"

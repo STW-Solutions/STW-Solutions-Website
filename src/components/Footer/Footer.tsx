@@ -31,7 +31,7 @@ const Footer = () => {
             <h6 className="fw-bold">{t("projects")}</h6>
             <div className="d-flex justify-content-center flex-column">
               <Link to="/projects">{t("our_projects")}</Link>
-              <Link to="https://www.carbonsate.com/cameroon" target="_blank">{t("the_cameroon_project_long")}</Link>
+              <Link to="/project-details/cameroon-project">{t("the_cameroon_project_long")}</Link>
             </div>
           </div>
           <div className="col-12 col-sm-6 col-md-2 footer-col">

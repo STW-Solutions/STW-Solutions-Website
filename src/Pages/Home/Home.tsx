@@ -272,7 +272,6 @@ const Home = () => {
               <p className="description">{t(project.summary || '')}</p>
               <Link
                 to={project.moreInfo}
-                target="_blank"
                 className="ms-auto ms-md-0 me-5 me-md-0"
               >
                 <img

@@ -1,4 +1,8 @@
 
+.card {
+    height: 40vh;
+}
+
 .card-image {
     width: 4rem;
 }
@@ -30,4 +34,22 @@
 }
 .team-card-about-info{
     color: #676767;
+}
+
+@media screen and (max-width: 1024px) {
+    .card {
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        height: auto;
+    }
 }

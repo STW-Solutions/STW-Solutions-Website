@@ -3,8 +3,12 @@ import { projects } from "../../constants";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import "./ProjectDetails.css";
+import { useEffect } from "react";
 
 const ProjectDetails = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const projectName = useParams().name;
   const { t } = useTranslation();
   const project = projects.find((item) => item.alias === projectName);
