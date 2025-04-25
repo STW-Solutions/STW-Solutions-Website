@@ -218,13 +218,7 @@ const Projects = () => {
                     : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.UNDER_DEVELOPMENT,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.UNDER_DEVELOPMENT);
-                  setDisplayedProjects(filteredProjects.slice(0, 2));
                 }}
               >
                 {t("under_development")}
@@ -239,13 +233,7 @@ const Projects = () => {
                     : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.COMING_SOON,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.COMING_SOON);
-                  setDisplayedProjects(filteredProjects.slice(0, 2));
                 }}
               >
                 {t("coming_soon")}
@@ -258,13 +246,7 @@ const Projects = () => {
                   (currentTab === ProjectCategory.FORESTRY ? " isActive" : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.FORESTRY,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.FORESTRY);
-                  setDisplayedProjects(filteredProjects.slice(0, 2));
                 }}
               >
                 {t("forestry")}
@@ -279,13 +261,7 @@ const Projects = () => {
                     : "")
                 }
                 onClick={() => {
-                  setFilteredProjects(
-                    filterProjectsByCategories(projects, [
-                      ProjectCategory.WASTE_MANAGEMENT,
-                    ])
-                  );
                   setCurrentTab(ProjectCategory.WASTE_MANAGEMENT);
-                  setDisplayedProjects(filteredProjects.slice(0, 2));
                 }}
               >
                 {t("waste_management")}

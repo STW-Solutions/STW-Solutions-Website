@@ -117,7 +117,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
               </Link>
             </li>
             <li>
-              <Link to="https://www.carbonsate.com/cameroon" className="dropdown-item stw-nav-lg-link" target="_blank">
+              <Link to="/project-details/cameroon-project" className="dropdown-item stw-nav-lg-link">
               {t("the_cameroon_project")}
               </Link>
             </li>
