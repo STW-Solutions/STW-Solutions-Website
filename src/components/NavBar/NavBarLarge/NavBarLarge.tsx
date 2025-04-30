@@ -85,12 +85,12 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
               </Link>
             </li>
             <li>
-              <Link className="dropdown-item stw-nav-lg-link" to="#">
+              <Link className="dropdown-item stw-nav-lg-link" to="/waste-management">
                 {t("waste_management_solutions")}
               </Link>
             </li>
             <li>
-              <Link className="dropdown-item stw-nav-lg-link" to="#">
+              <Link className="dropdown-item stw-nav-lg-link" to="/renewable-energy">
                 {t("renewable_energy_solutions")}
               </Link>
             </li>

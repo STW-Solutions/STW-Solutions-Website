@@ -1,0 +1,132 @@
+
+{
+  "solutionForestry": {
+    "header": "path/to/header-image.jpg",
+    "forestryHeader": "Forestry Solutions",
+    "forestrySubHeader": "Projects Completed",
+    "callToAction": "Get Involved",
+    "forestrySolutions": "Forests Preserved",
+    "businessText": "Our Forestry Solutions",
+    "exploreText": "Explore our initiatives",
+    "topProjectsText": "Top Forestry Projects",
+    "cardData": [
+      {
+        "title": "Agriculture",
+        "imgSrc": "path/to/agriculture-image.jpg",
+        "description": "Production and profit with the use of low-cost methods.",
+        "linkText": "Learn More",
+        "altText": "Agriculture Image"
+      },
+      {
+        "title": "Waste Management",
+        "imgSrc": "path/to/waste-management-image.jpg",
+        "description": "Efficient waste management practices for sustainability.",
+        "linkText": "Learn More",
+        "altText": "Waste Management Image"
+      }
+    ],
+    "initiatives": [
+      {
+        "img": "path/to/initiative1-image.jpg",
+        "title": "Forest Conservation Initiatives",
+        "text": "Promoting sustainable forest conservation practices."
+      },
+      {
+        "img": "path/to/initiative2-image.jpg",
+        "title": "Improved Forest Management Practices",
+        "text": "Enhancing forest management for better outcomes."
+      },
+      {
+        "img": "path/to/initiative3-image.jpg",
+        "title": "Paulownia Tomentosa Tree Planting",
+        "text": "Planting trees to combat deforestation and climate change."
+      }
+    ]
+  },
+  "solutionAgriculture": {
+    "header": "path/to/header-image.jpg",
+    "forestryHeader": "Forestry Solutions",
+    "forestrySubHeader": "Projects Completed",
+    "callToAction": "Get Involved",
+    "forestrySolutions": "Forests Preserved",
+    "businessText": "Our Forestry Solutions",
+    "exploreText": "Explore our initiatives",
+    "topProjectsText": "Top Forestry Projects",
+    "cardData": [
+      {
+        "title": "Agriculture",
+        "imgSrc": "path/to/agriculture-image.jpg",
+        "description": "Production and profit with the use of low-cost methods.",
+        "linkText": "Learn More",
+        "altText": "Agriculture Image"
+      },
+      {
+        "title": "Waste Management",
+        "imgSrc": "path/to/waste-management-image.jpg",
+        "description": "Efficient waste management practices for sustainability.",
+        "linkText": "Learn More",
+        "altText": "Waste Management Image"
+      }
+    ],
+    "initiatives": [
+      {
+        "img": "path/to/initiative1-image.jpg",
+        "title": "Forest Conservation Initiatives",
+        "text": "Promoting sustainable forest conservation practices."
+      },
+      {
+        "img": "path/to/initiative2-image.jpg",
+        "title": "Improved Forest Management Practices",
+        "text": "Enhancing forest management for better outcomes."
+      },
+      {
+        "img": "path/to/initiative3-image.jpg",
+        "title": "Paulownia Tomentosa Tree Planting",
+        "text": "Planting trees to combat deforestation and climate change."
+      }
+    ]
+  },
+  "solutionWasteManagement": {
+    "header": "path/to/header-image.jpg",
+    "forestryHeader": "Forestry Solutions",
+    "forestrySubHeader": "Projects Completed",
+    "callToAction": "Get Involved",
+    "forestrySolutions": "Forests Preserved",
+    "businessText": "Our Forestry Solutions",
+    "exploreText": "Explore our initiatives",
+    "topProjectsText": "Top Forestry Projects",
+    "cardData": [
+      {
+        "title": "Agriculture",
+        "imgSrc": "path/to/agriculture-image.jpg",
+        "description": "Production and profit with the use of low-cost methods.",
+        "linkText": "Learn More",
+        "altText": "Agriculture Image"
+      },
+      {
+        "title": "Waste Management",
+        "imgSrc": "path/to/waste-management-image.jpg",
+        "description": "Efficient waste management practices for sustainability.",
+        "linkText": "Learn More",
+        "altText": "Waste Management Image"
+      }
+    ],
+    "initiatives": [
+      {
+        "img": "path/to/initiative1-image.jpg",
+        "title": "Forest Conservation Initiatives",
+        "text": "Promoting sustainable forest conservation practices."
+      },
+      {
+        "img": "path/to/initiative2-image.jpg",
+        "title": "Improved Forest Management Practices",
+        "text": "Enhancing forest management for better outcomes."
+      },
+      {
+        "img": "path/to/initiative3-image.jpg",
+        "title": "Paulownia Tomentosa Tree Planting",
+        "text": "Planting trees to combat deforestation and climate change."
+      }
+    ]
+  }
+}

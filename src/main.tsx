@@ -26,6 +26,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/solutions-forestry" element={<SolutionForestry />} />
+          <Route path="/waste-management" element={<SolutionForestry />} />
+          <Route path="/renewable-energy" element={<SolutionForestry />} />
         </Routes>
       </MainLayout>
     </StrictMode>
