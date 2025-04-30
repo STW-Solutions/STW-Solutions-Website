@@ -10,3 +10,28 @@ export interface CarouselItems {
   information?: string;
   backgroundColor?: string;
 }
+
+export enum ProjectCategory {
+  UNDER_DEVELOPMENT = "UNDER DEVELOPMENT",
+  COMING_SOON = "COMING SOON",
+  FORESTRY = "FORESTRY",
+  WASTE_MANAGEMENT = "WASTE MANAGEMENT"
+ }
+
+export interface Project {
+  name: string,
+  categories: ProjectCategory[],
+  summary?: string,
+  firstDetails?: string,
+  secondDetails?: string,
+  thirdDetails?: string,
+  fourthDetails?: string,
+  moreInfo: string,
+  imageSrc: string,
+  imageAlt: string,
+  imageClass? : string,
+  backgroundColor?: string,
+  alias?: string,
+  startDate?: string,
+  endDate?: string
+}

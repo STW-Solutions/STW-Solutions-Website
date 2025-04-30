@@ -4,11 +4,12 @@
 }
 
 .stw-nav-lg-link {
-    color: #000000;
+    color: #000000 !important;
     text-decoration: none;
+    background-color: transparent !important;
 }
 
-.stw-nav-lg-link:hover {
+.stw-nav-lg-link:hover, .stw-nav-lg-link:visited {
     background-color: #E4FFF3 !important;
     color: #000000;
 }

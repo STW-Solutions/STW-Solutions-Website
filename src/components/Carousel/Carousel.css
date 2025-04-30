@@ -9,3 +9,7 @@
 .stw-carousel-indicators [data-bs-target] {
     background-color: #000000 !important;
 }
+
+.partner-carousel-item {
+    height: 15rem !important;
+}

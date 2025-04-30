@@ -2,8 +2,6 @@ import ReactDOM from "react-dom/client";
 import { StrictMode } from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 import "./i18n";
-
-// import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,6 +12,7 @@ import Projects from "./Pages/Projects/Projects";
 import "./index.css";
 import Solutions from "./Pages/Solutions/Solutions";
 import SolutionForestry from "./Pages/Solution-forestry/Solution-forestry";
+import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   
@@ -28,6 +27,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           <Route path="/solutions-forestry" element={<SolutionForestry />} />
           <Route path="/waste-management" element={<SolutionForestry />} />
           <Route path="/renewable-energy" element={<SolutionForestry />} />
+          <Route path="/project-details/:name" element={<ProjectDetails />} />
         </Routes>
       </MainLayout>
     </StrictMode>

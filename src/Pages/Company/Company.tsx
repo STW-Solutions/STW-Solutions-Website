@@ -11,8 +11,13 @@ import WhatWeDo from "../../components/whatweDo/WhatWeDo";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
 import { useNavigate } from "react-router";
 import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 
 const Company = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const { t } = useTranslation();
   const navigate = useNavigate();
 

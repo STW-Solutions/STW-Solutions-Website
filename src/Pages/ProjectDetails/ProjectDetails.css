@@ -1,0 +1,19 @@
+.main-container {
+    background-color: rgba(7, 237, 140, 0.06);
+}
+
+.project-details-hero {
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 50vh;
+   border-radius: 2rem;
+   width: 95%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.clock-icon {
+    width: 1rem;
+    fill: currentColor;
+}
