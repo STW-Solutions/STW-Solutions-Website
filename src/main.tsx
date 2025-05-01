@@ -13,6 +13,7 @@ import "./index.css";
 import Solutions from "./Pages/Solutions/Solutions";
 import SolutionForestry from "./Pages/Solution-forestry/Solution-forestry";
 import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
+import Blogs from './Pages/Blogs/Blogs';
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           <Route path="/projects" element={<Projects />} />
           <Route path="/solutions-forestry" element={<SolutionForestry />} />
           <Route path="/project-details/:name" element={<ProjectDetails />} />
+          <Route path="/blogs" element={<Blogs />} />
         </Routes>
       </MainLayout>
     </StrictMode>

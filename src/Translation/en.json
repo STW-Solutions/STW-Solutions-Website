@@ -193,5 +193,11 @@
   "started": "started",
   "due_date": "due date",
   "show_more": "show more",
-  "show_less": "show less"
+  "show_less": "show less",
+  "blogs": "blogs",
+  "posted_by": "Posted by",
+  "less_than_an_hour_ago": "less than an hour ago",
+  "hours_ago": "hours ago",
+  "hour_ago": "hour ago",
+  "categories": "categories"
 }
