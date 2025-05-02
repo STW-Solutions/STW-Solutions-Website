@@ -199,5 +199,9 @@
   "less_than_an_hour_ago": "less than an hour ago",
   "hours_ago": "hours ago",
   "hour_ago": "hour ago",
-  "categories": "categories"
+  "categories": "categories",
+  "1_comment": "1 comment",
+  "comments": "comments",
+  "no_comments": "no comments",
+  "recent_posts": "recent posts"
 }

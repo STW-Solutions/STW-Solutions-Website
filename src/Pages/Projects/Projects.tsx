@@ -10,7 +10,7 @@ import NoItemAlert from "../../components/NoItemAlert/NoItemAlert";
 import { Helmet } from "react-helmet";
 import { projects } from "../../constants";
 import { Project, ProjectCategory } from "../../models";
-import { filterProjectsByCategories } from "../../services";
+import { filterProjectsByCategories } from "../../services/general-services";
 
 const Projects = () => {
   useEffect(() => {
