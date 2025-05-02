@@ -40,7 +40,7 @@ const Footer = () => {
               <Link to="#">{t("blog")}</Link>
               <Link to="#">{t("events")}</Link>
               <Link to="#">{t("news")}</Link>
-              <Link to="#">{t("projects")}</Link>
+              <Link to="#">{t("podcast")}</Link>
             </div>
           </div>
           <div className="col-12 col-md-3 stw-solutions-footer-logo-box order-first order-md-last">

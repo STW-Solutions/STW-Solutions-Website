@@ -135,7 +135,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           </button>
           <ul className="dropdown-menu" aria-labelledby="insightsDropdownLg">
             <li>
-              <Link className="dropdown-item stw-nav-lg-link" to="#">
+              <Link className="dropdown-item stw-nav-lg-link" to="/blogs">
                 {t("blog")}
               </Link>
             </li>
