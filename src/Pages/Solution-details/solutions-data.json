@@ -1,44 +1,43 @@
-
 {
   "solutionForestry": {
     "header": "/public/solutions/service-bg.png",
     "forestryHeader": "solution_forestry_header_1",
-    "forestrySubHeader": "Projects Completed",
-    "callToAction": "Get Involved",
-    "forestrySolutions": "Forests Preserved",
-    "businessText": "Our Forestry Solutions",
-    "exploreText": "Explore our initiatives",
-    "topProjectsText": "Let's Talk",
+    "forestrySubHeader": "Projects_Completed",
+    "callToAction": "Get_Involved",
+    "forestrySolutions": "Forests_Preserved",
+    "businessText": "Our_Forestry_Solutions",
+    "exploreText": "Explore_our_initiatives",
+    "topProjectsText": "Lets_Talk",
     "cardData": [
       {
-        "title": "Renewable Resources",
+        "title": "Renewable_Resources",
         "imgSrc": "/public/solutions/renewResource.jpeg",
-        "description": "Our agriculture mirrors renewables: healthy soil, biodiversity, and waste-to-resource conversion.",
-        "linkText": "Learn More",
-        "altText": "Agriculture Image"
+        "description": "Our_agriculture_mirrors",
+        "linkText": "Learn_More",
+        "altText": "Renewable_Resources"
       },
       {
-        "title": "Waste Management",
+        "title": "Waste_Management",
         "imgSrc": "/public/solutions/wasteMgmt.jpeg",
-        "description": "Recycling plastic minimizes pollution, creates resources, and fosters a circular economy.",
-        "linkText": "Learn More",
-        "altText": "Waste Management Image"
+        "description": "Recycling_plastic_minimizes",
+        "linkText": "Learn_More",
+        "altText": "Waste_Management"
       }
     ],
     "initiatives": [
       {
         "img": "/public/solutions/earth.svg",
-        "title": "Forest Conservation Initiatives",
+        "title": "Forest_Conservation_Initiatives",
         "text": "forest_con_text"
       },
       {
         "img": "/public/solutions/climate-change.png",
-        "title": "Improved Forest Management Practices",
+        "title": "Improved_Forest_Management",
         "text": "improved_fores_mgmt_text"
       },
       {
         "img": "/public/solutions/plant.png",
-        "title": "Paulownia Tomentosa Tree Planting",
+        "title": "Paulownia_Tomentosa_Tree",
         "text": "tree_planting_init_text"
       }
     ]
@@ -46,26 +45,26 @@
   "solutionRenewableEnergy": {
     "header": "/public/solutions/renewableResourceBg.png",
     "forestryHeader": "renewable_resources_header_1",
-    "forestrySubHeader": "Projects Completed",
-    "callToAction": "Get Involved",
-    "forestrySolutions": "Forests Preserved",
-    "businessText": "Our Renewable Resources Solutions",
-    "exploreText": "Explore our initiatives",
-    "topProjectsText": "Let's Talk",
+    "forestrySubHeader": "Projects_Completed",
+    "callToAction": "Get_Involved",
+    "forestrySolutions": "Forests_Preserved",
+    "businessText": "Our_Renewable_Resources",
+    "exploreText": "Explore_our_initiatives",
+    "topProjectsText": "Lets_Talk",
     "cardData": [
       {
-        "title": "Renewable Resources",
+        "title": "Renewable_Resources",
         "imgSrc": "/public/solutions/renewResource.jpeg",
-        "description": "Our agriculture mirrors renewables: healthy soil, biodiversity, and waste-to-resource conversion.",
-        "linkText": "Learn More",
-        "altText": "Agriculture Image"
+        "description": "Our_agriculture_mirrors",
+        "linkText": "Learn_More",
+        "altText": "Renewable_Resources"
       },
       {
-        "title": "Waste Management",
+        "title": "Waste_Management",
         "imgSrc": "/public/solutions/wasteMgmt.jpeg",
-        "description": "Recycling plastic minimizes pollution, creates resources, and fosters a circular economy.",
-        "linkText": "Learn More",
-        "altText": "Waste Management Image"
+        "description": "Recycling_plastic_minimizes",
+        "linkText": "Learn_More",
+        "altText": "Waste_Management"
       }
     ],
     "initiatives": [
@@ -75,12 +74,12 @@
         "text": "description_sustainable_agriculture"
       },
       {
-        "img": "/public/solutions/image1RenewableResources.png",
+        "img": "/public/solutions/image2RenewableResources.png",
         "title": "heading_regenerative_agroforestry",
         "text": "description_regenerative_agroforestry"
       },
       {
-        "img": "/public/solutions/image1RenewableResources.png",
+        "img": "/public/solutions/image3RenewableResources.png",
         "title": "heading_waste_to_resource_agriculture",
         "text": "description_waste_to_resource_agriculture"
       }
@@ -89,28 +88,29 @@
   "solutionWasteManagement": {
     "header": "/public/solutions/wasteMgmtBg.png",
     "forestryHeader": "waste_management_header_1",
-    "forestrySubHeader": "Projects Completed",
-    "callToAction": "Get Involved",
-    "forestrySolutions": "Forests Preserved",
-    "businessText": "Our Waste Management Solutions",
-    "exploreText": "Explore our initiatives",
-    "topProjectsText": "Let's Talk",
+    "forestrySubHeader": "Projects_Completed",
+    "callToAction": "Get_Involved",
+    "forestrySolutions": "Forests_Preserved",
+    "businessText": "Our_Waste_Management",
+    "exploreText": "Explore_our_initiatives",
+    "topProjectsText": "Lets_Talk",
     "cardData": [
       {
-        "title": "Renewable Resources",
+        "title": "Renewable_Resources",
         "imgSrc": "/public/solutions/renewResource.jpeg",
-        "description": "Our agriculture mirrors renewables: healthy soil, biodiversity, and waste-to-resource conversion.",
-        "linkText": "Learn More",
-        "altText": "Agriculture Image"
+        "description": "Our_agriculture_mirrors",
+        "linkText": "Learn_More",
+        "altText": "Renewable_Resources"
       },
       {
-        "title": "Waste Management",
+        "title": "Waste_Management",
         "imgSrc": "/public/solutions/wasteMgmt.jpeg",
-        "description": "Recycling plastic minimizes pollution, creates resources, and fosters a circular economy.",
-        "linkText": "Learn More",
-        "altText": "Waste Management Image"
+        "description": "Recycling_plastic_minimizes",
+        "linkText": "Learn_More",
+        "altText": "Waste_Management"
       }
-    ],    "initiatives": [
+    ],
+    "initiatives": [
       {
         "img": "/public/solutions/image1wasteMgmt.png",
         "title": "heading_waste_collection",

@@ -108,22 +108,22 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                   >
                     {t("solutions")}
                   </button>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="solutionsDropDown"
-                  >
+                  <ul className="dropdown-menu" aria-labelledby="solutionsDropdownLg">
                     <li>
-                      <Link className="dropdown-item stw-nav-sm-li" to={"#"}>
+                      <Link
+                          className="dropdown-item stw-nav-lg-link"
+                          to="/solutions/solutions-forestry"
+                      >
                         {t("forestry_solutions")}
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item stw-nav-sm-li" to="#">
+                      <Link className="dropdown-item stw-nav-lg-link" to="/solutions/waste-management">
                         {t("waste_management_solutions")}
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item stw-nav-sm-li" to="#">
+                      <Link className="dropdown-item stw-nav-lg-link" to="/solutions/renewable-energy">
                         {t("renewable_energy_solutions")}
                       </Link>
                     </li>

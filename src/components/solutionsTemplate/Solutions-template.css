@@ -87,6 +87,9 @@ svg{
     padding: 3rem;
     background-color: white;
 }
+.initiatives-box{
+    height: 18rem;
+}
 @media (min-width: 600px) and (max-width: 1024px) {
     .btn-call {
         width: 9rem;
@@ -107,6 +110,12 @@ svg{
     .box-card{
         width: 40rem;
         padding: 3rem;
+    }
+    .header{
+        font-size: 3.5em;
+    }
+    .initiatives-box{
+        height: 35rem;
     }
 }
 @media (max-width: 600px) {
@@ -135,5 +144,11 @@ svg{
     .box-card{
         width: 23rem;
         padding: 3rem;
+    }
+    .header{
+        font-size: 2.5em;
+    }
+    .initiatives-box{
+        height: 28rem;
     }
 }

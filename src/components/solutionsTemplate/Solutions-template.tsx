@@ -49,19 +49,19 @@ const SolutionsTemplate = ({
                 <h1 className="fw-bolder" ref={projectsRef}>
                   {projectCount}+
                 </h1>
-                <p>{forestrySubHeader}</p>
+                <p>{t(forestrySubHeader)}</p>
               </div>
               <div className="info-item text-center">
                 <h1 className="fw-bolder" ref={treesPlantedRef}>
                   {treesPlantedCount} +
                 </h1>
-                <p>{callToAction}</p>
+                <p>{t(callToAction)}</p>
               </div>
               <div className="info-item text-center">
                 <h1 className="fw-bolder" ref={forestsPreservedRef}>
                   + {forestsPreservedCount} Ha
                 </h1>
-                <p>{forestrySolutions}</p>
+                <p>{t(forestrySolutions)}</p>
               </div>
             </div>
           </div>
@@ -72,8 +72,8 @@ const SolutionsTemplate = ({
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-center p-3">
           <div className="py-3">
             <h2 className="fw-bolder fs-2 header-2-text text-center text-md-start">
-              {businessText}
-              <p>{exploreText}</p>
+              {t(businessText)}
+              <p>{t(exploreText)}</p>
             </h2>
           </div>
           <div className="py-3">
@@ -81,19 +81,19 @@ const SolutionsTemplate = ({
               className="btn btn-call btn-success p-2 text-white fs-5"
               href="#"
             >
-              {topProjectsText}
+              {t(topProjectsText)}
             </a>
           </div>
         </div>
         <div className="row mx-2">
           {initiatives.map((item, index) => (
             <div key={index} className="col-md-4 col-12 mb-4">
-              <div className="d-flex flex-column align-items-center text-center p-3 shadow">
+              <div className="d-flex flex-column align-items-center initiatives-box text-center p-3 shadow">
                 <img
                   src={item.img}
                   width="80"
                   className="img-fluid mb-3"
-                  alt={item.title}
+                  alt={t(item.title)}
                 />
                 <h4 className="fw-bold">{t(item.title)}</h4>
                 <p className="text-muted svg-text-1">{t(item.text)}</p>
@@ -104,16 +104,16 @@ const SolutionsTemplate = ({
         <div className="row box-margin-top mb-3">
           <div className="col-med-8 buttom-page text-center text-md-start">
             <p className="text-white text-large text-wrap explore-text">
-              {exploreText}
+              {t(exploreText)}
               <br />
-              <span>{topProjectsText}</span>
+              <span>{t(topProjectsText)}</span>
             </p>
             <div className="my-5">
               <Link
                 className="btn bg-white text-success p-4 fs-2"
                 to="/projects"
               >
-                {callToAction}
+                {t(callToAction)}
                 <span className="fs-4 text-success bg-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@ const SolutionsTemplate = ({
                 className="row py-2 shadow justify-content-center align-items-center mb-4 box-card"
               >
                 <h3 className="text-center title-color fw-bolder">
-                  {card.title}
+                  {t(card.title)}
                 </h3>
                 <div className="col-12 col-md-6 text-center p-md-3">
                   <img
@@ -143,16 +143,16 @@ const SolutionsTemplate = ({
                     className="small-img"
                     height="130"
                     width="200"
-                    alt={card.altText}
+                    alt={t(card.altText)}
                   />
                 </div>
                 <div className="col-12 col-md-6 text-center">
-                  <p className="fs-6">{card.description}</p>
+                  <p className="fs-6">{t(card.description)}</p>
                   <a
                     className="btn btn-success btn-call text-white mt-2"
                     href="#"
                   >
-                    {card.linkText}
+                    {t(card.linkText)}
                   </a>
                 </div>
               </div>
