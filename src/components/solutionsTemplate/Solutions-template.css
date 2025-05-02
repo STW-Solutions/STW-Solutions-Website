@@ -1,3 +1,42 @@
+.services-container {
+    background-size: cover;
+    background-position: center;
+    height: 40rem;
+    opacity: 2.5;
+    border-radius: 3.5rem;
+    display: flex;
+    margin-top: 4rem;
+
+}
+.container-fluid-service{
+    background-color: rgba(7,237,140,0.06);
+    padding: 1.4rem;
+}
+.info-card {
+    background-color: #F1FFF9;
+    width: 100%;
+    max-width: 699px;
+    height: 185px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #257251;
+    position: absolute;
+    right: 13px;
+    border-top-left-radius: 2rem;
+}
+.head-bottom-line {
+    width: 22rem;
+    height: 5px;
+    transform: skewX(-20deg);
+    overflow: hidden;
+    background-color: #257251;
+    margin: 0 auto;
+}
+.header{
+    font-size: 4.5em;
+}
 .svg-image{
     width:3rem;
     color: #257251;
@@ -11,7 +50,7 @@
     padding: 4rem;
 }
 .text-large{
-    font-size: 65px;
+    font-size: 63px;
 }
 .card-width{
     width: 40rem;

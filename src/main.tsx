@@ -10,9 +10,8 @@ import Company from "./Pages/Company/Company";
 import MainLayout from "./MainLayout";
 import Projects from "./Pages/Projects/Projects";
 import "./index.css";
-import Solutions from "./Pages/Solutions/Solutions";
-import SolutionForestry from "./Pages/Solution-forestry/Solution-forestry";
 import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
+import SolutionDetails from "./Pages/Solution-details/Solution-details";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   
@@ -22,11 +21,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/company" element={<Company />} />
-          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/solutions/:name" element={<SolutionDetails />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/solutions-forestry" element={<SolutionForestry />} />
-          <Route path="/waste-management" element={<SolutionForestry />} />
-          <Route path="/renewable-energy" element={<SolutionForestry />} />
           <Route path="/project-details/:name" element={<ProjectDetails />} />
         </Routes>
       </MainLayout>

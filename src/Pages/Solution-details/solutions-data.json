@@ -1,69 +1,69 @@
 
 {
   "solutionForestry": {
-    "header": "path/to/header-image.jpg",
-    "forestryHeader": "Forestry Solutions",
+    "header": "../../images/service-bg.png",
+    "forestryHeader": "solution_forestry_header_1",
     "forestrySubHeader": "Projects Completed",
     "callToAction": "Get Involved",
     "forestrySolutions": "Forests Preserved",
     "businessText": "Our Forestry Solutions",
     "exploreText": "Explore our initiatives",
-    "topProjectsText": "Top Forestry Projects",
+    "topProjectsText": "Let's Talk",
     "cardData": [
       {
-        "title": "Agriculture",
-        "imgSrc": "path/to/agriculture-image.jpg",
-        "description": "Production and profit with the use of low-cost methods.",
+        "title": "Renewable Resources",
+        "imgSrc": "/home/jones/Documents/STS-PROJECTS/STW-Solutions-Website/public/earth.png",
+        "description": "Our agriculture mirrors renewables: healthy soil, biodiversity, and waste-to-resource conversion.",
         "linkText": "Learn More",
         "altText": "Agriculture Image"
       },
       {
         "title": "Waste Management",
         "imgSrc": "path/to/waste-management-image.jpg",
-        "description": "Efficient waste management practices for sustainability.",
+        "description": "Recycling plastic minimizes pollution, creates resources, and fosters a circular economy.",
         "linkText": "Learn More",
         "altText": "Waste Management Image"
       }
     ],
     "initiatives": [
       {
-        "img": "path/to/initiative1-image.jpg",
+        "img": "../../images/agri-management.jpg",
         "title": "Forest Conservation Initiatives",
-        "text": "Promoting sustainable forest conservation practices."
+        "text": "forest_con_text"
       },
       {
         "img": "path/to/initiative2-image.jpg",
         "title": "Improved Forest Management Practices",
-        "text": "Enhancing forest management for better outcomes."
+        "text": "improved_fores_mgmt_text"
       },
       {
         "img": "path/to/initiative3-image.jpg",
         "title": "Paulownia Tomentosa Tree Planting",
-        "text": "Planting trees to combat deforestation and climate change."
+        "text": "tree_planting_init_text"
       }
     ]
   },
-  "solutionAgriculture": {
+  "solutionRenewableEnergy": {
     "header": "path/to/header-image.jpg",
-    "forestryHeader": "Forestry Solutions",
+    "forestryHeader": "renewable_resources_header_1",
     "forestrySubHeader": "Projects Completed",
     "callToAction": "Get Involved",
     "forestrySolutions": "Forests Preserved",
-    "businessText": "Our Forestry Solutions",
+    "businessText": "Our Renewable Resources Solutions",
     "exploreText": "Explore our initiatives",
-    "topProjectsText": "Top Forestry Projects",
+    "topProjectsText": "Let's Talk",
     "cardData": [
       {
-        "title": "Agriculture",
-        "imgSrc": "path/to/agriculture-image.jpg",
-        "description": "Production and profit with the use of low-cost methods.",
+        "title": "Renewable Resources",
+        "imgSrc": "/home/jones/Documents/STS-PROJECTS/STW-Solutions-Website/public/earth.png",
+        "description": "Our agriculture mirrors renewables: healthy soil, biodiversity, and waste-to-resource conversion.",
         "linkText": "Learn More",
         "altText": "Agriculture Image"
       },
       {
         "title": "Waste Management",
         "imgSrc": "path/to/waste-management-image.jpg",
-        "description": "Efficient waste management practices for sustainability.",
+        "description": "Recycling plastic minimizes pollution, creates resources, and fosters a circular economy.",
         "linkText": "Learn More",
         "altText": "Waste Management Image"
       }
@@ -71,42 +71,42 @@
     "initiatives": [
       {
         "img": "path/to/initiative1-image.jpg",
-        "title": "Forest Conservation Initiatives",
-        "text": "Promoting sustainable forest conservation practices."
+        "title": "heading_sustainable_agriculture",
+        "text": "description_sustainable_agriculture"
       },
       {
         "img": "path/to/initiative2-image.jpg",
-        "title": "Improved Forest Management Practices",
-        "text": "Enhancing forest management for better outcomes."
+        "title": "heading_regenerative_agroforestry",
+        "text": "description_regenerative_agroforestry"
       },
       {
         "img": "path/to/initiative3-image.jpg",
-        "title": "Paulownia Tomentosa Tree Planting",
-        "text": "Planting trees to combat deforestation and climate change."
+        "title": "heading_waste_to_resource_agriculture",
+        "text": "description_waste_to_resource_agriculture"
       }
     ]
   },
   "solutionWasteManagement": {
     "header": "path/to/header-image.jpg",
-    "forestryHeader": "Forestry Solutions",
+    "forestryHeader": "waste_management_header_1",
     "forestrySubHeader": "Projects Completed",
     "callToAction": "Get Involved",
     "forestrySolutions": "Forests Preserved",
-    "businessText": "Our Forestry Solutions",
+    "businessText": "Our Waste Management Solutions",
     "exploreText": "Explore our initiatives",
-    "topProjectsText": "Top Forestry Projects",
+    "topProjectsText": "Let's Talk",
     "cardData": [
       {
-        "title": "Agriculture",
-        "imgSrc": "path/to/agriculture-image.jpg",
-        "description": "Production and profit with the use of low-cost methods.",
+        "title": "Renewable Resources",
+        "imgSrc": "/home/jones/Documents/STS-PROJECTS/STW-Solutions-Website/public/earth.png",
+        "description": "Our agriculture mirrors renewables: healthy soil, biodiversity, and waste-to-resource conversion.",
         "linkText": "Learn More",
         "altText": "Agriculture Image"
       },
       {
         "title": "Waste Management",
         "imgSrc": "path/to/waste-management-image.jpg",
-        "description": "Efficient waste management practices for sustainability.",
+        "description": "Recycling plastic minimizes pollution, creates resources, and fosters a circular economy.",
         "linkText": "Learn More",
         "altText": "Waste Management Image"
       }
@@ -114,18 +114,18 @@
     "initiatives": [
       {
         "img": "path/to/initiative1-image.jpg",
-        "title": "Forest Conservation Initiatives",
-        "text": "Promoting sustainable forest conservation practices."
+        "title": "heading_waste_collection",
+        "text": "description_waste_collection"
       },
       {
         "img": "path/to/initiative2-image.jpg",
-        "title": "Improved Forest Management Practices",
-        "text": "Enhancing forest management for better outcomes."
+        "title": "heading_circular_economy",
+        "text": "description_circular_economy"
       },
       {
         "img": "path/to/initiative3-image.jpg",
-        "title": "Paulownia Tomentosa Tree Planting",
-        "text": "Planting trees to combat deforestation and climate change."
+        "title": "heading_community_engagement",
+        "text": "description_community_engagement"
       }
     ]
   }

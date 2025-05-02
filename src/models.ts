@@ -35,3 +35,25 @@ export interface Project {
   startDate?: string,
   endDate?: string
 }
+export interface SolutionsTemplateProps {
+  header: string;
+  forestryHeader: string;
+  forestrySubHeader: string;
+  callToAction: string;
+  forestrySolutions: string;
+  businessText: string;
+  exploreText: string;
+  topProjectsText: string;
+  cardData: {
+    title: string;
+    imgSrc: string;
+    description: string;
+    linkText: string;
+    altText: string;
+  }[];
+  initiatives: {
+    img: string;
+    title: string;
+    text: string;
+  }[];
+}
