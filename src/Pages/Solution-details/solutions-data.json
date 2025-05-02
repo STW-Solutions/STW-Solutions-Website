@@ -1,7 +1,7 @@
 
 {
   "solutionForestry": {
-    "header": "../../images/service-bg.png",
+    "header": "/public/solutions/service-bg.png",
     "forestryHeader": "solution_forestry_header_1",
     "forestrySubHeader": "Projects Completed",
     "callToAction": "Get Involved",
@@ -12,14 +12,14 @@
     "cardData": [
       {
         "title": "Renewable Resources",
-        "imgSrc": "/home/jones/Documents/STS-PROJECTS/STW-Solutions-Website/public/earth.png",
+        "imgSrc": "/public/solutions/renewResource.jpeg",
         "description": "Our agriculture mirrors renewables: healthy soil, biodiversity, and waste-to-resource conversion.",
         "linkText": "Learn More",
         "altText": "Agriculture Image"
       },
       {
         "title": "Waste Management",
-        "imgSrc": "path/to/waste-management-image.jpg",
+        "imgSrc": "/public/solutions/wasteMgmt.jpeg",
         "description": "Recycling plastic minimizes pollution, creates resources, and fosters a circular economy.",
         "linkText": "Learn More",
         "altText": "Waste Management Image"
@@ -27,24 +27,24 @@
     ],
     "initiatives": [
       {
-        "img": "../../images/agri-management.jpg",
+        "img": "/public/solutions/earth.svg",
         "title": "Forest Conservation Initiatives",
         "text": "forest_con_text"
       },
       {
-        "img": "path/to/initiative2-image.jpg",
+        "img": "/public/solutions/climate-change.png",
         "title": "Improved Forest Management Practices",
         "text": "improved_fores_mgmt_text"
       },
       {
-        "img": "path/to/initiative3-image.jpg",
+        "img": "/public/solutions/plant.png",
         "title": "Paulownia Tomentosa Tree Planting",
         "text": "tree_planting_init_text"
       }
     ]
   },
   "solutionRenewableEnergy": {
-    "header": "path/to/header-image.jpg",
+    "header": "/public/solutions/renewableResourceBg.png",
     "forestryHeader": "renewable_resources_header_1",
     "forestrySubHeader": "Projects Completed",
     "callToAction": "Get Involved",
@@ -55,14 +55,14 @@
     "cardData": [
       {
         "title": "Renewable Resources",
-        "imgSrc": "/home/jones/Documents/STS-PROJECTS/STW-Solutions-Website/public/earth.png",
+        "imgSrc": "/public/solutions/renewResource.jpeg",
         "description": "Our agriculture mirrors renewables: healthy soil, biodiversity, and waste-to-resource conversion.",
         "linkText": "Learn More",
         "altText": "Agriculture Image"
       },
       {
         "title": "Waste Management",
-        "imgSrc": "path/to/waste-management-image.jpg",
+        "imgSrc": "/public/solutions/wasteMgmt.jpeg",
         "description": "Recycling plastic minimizes pollution, creates resources, and fosters a circular economy.",
         "linkText": "Learn More",
         "altText": "Waste Management Image"
@@ -70,24 +70,24 @@
     ],
     "initiatives": [
       {
-        "img": "path/to/initiative1-image.jpg",
+        "img": "/public/solutions/image1RenewableResources.png",
         "title": "heading_sustainable_agriculture",
         "text": "description_sustainable_agriculture"
       },
       {
-        "img": "path/to/initiative2-image.jpg",
+        "img": "/public/solutions/image1RenewableResources.png",
         "title": "heading_regenerative_agroforestry",
         "text": "description_regenerative_agroforestry"
       },
       {
-        "img": "path/to/initiative3-image.jpg",
+        "img": "/public/solutions/image1RenewableResources.png",
         "title": "heading_waste_to_resource_agriculture",
         "text": "description_waste_to_resource_agriculture"
       }
     ]
   },
   "solutionWasteManagement": {
-    "header": "path/to/header-image.jpg",
+    "header": "/public/solutions/wasteMgmtBg.png",
     "forestryHeader": "waste_management_header_1",
     "forestrySubHeader": "Projects Completed",
     "callToAction": "Get Involved",
@@ -98,32 +98,31 @@
     "cardData": [
       {
         "title": "Renewable Resources",
-        "imgSrc": "/home/jones/Documents/STS-PROJECTS/STW-Solutions-Website/public/earth.png",
+        "imgSrc": "/public/solutions/renewResource.jpeg",
         "description": "Our agriculture mirrors renewables: healthy soil, biodiversity, and waste-to-resource conversion.",
         "linkText": "Learn More",
         "altText": "Agriculture Image"
       },
       {
         "title": "Waste Management",
-        "imgSrc": "path/to/waste-management-image.jpg",
+        "imgSrc": "/public/solutions/wasteMgmt.jpeg",
         "description": "Recycling plastic minimizes pollution, creates resources, and fosters a circular economy.",
         "linkText": "Learn More",
         "altText": "Waste Management Image"
       }
-    ],
-    "initiatives": [
+    ],    "initiatives": [
       {
-        "img": "path/to/initiative1-image.jpg",
+        "img": "/public/solutions/image1wasteMgmt.png",
         "title": "heading_waste_collection",
         "text": "description_waste_collection"
       },
       {
-        "img": "path/to/initiative2-image.jpg",
+        "img": "/public/solutions/image2wasteMgmt.png",
         "title": "heading_circular_economy",
         "text": "description_circular_economy"
       },
       {
-        "img": "path/to/initiative3-image.jpg",
+        "img": "/public/solutions/image3wasteMgmt.png",
         "title": "heading_community_engagement",
         "text": "description_community_engagement"
       }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import bgImage from "../../images/service-bg.png";
+import bgImage from "../../../public/solutions/service-bg.png";
 import serviceImg from "../../images/service1.png";
 import value1 from "../../images/service3.png";
 import { useTranslation } from "react-i18next";

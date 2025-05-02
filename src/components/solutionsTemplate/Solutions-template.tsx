@@ -3,12 +3,8 @@ import { Link } from "react-router";
 import "./Solutions-template.css";
 import useScrollTriggeredCountUp from "../../hooks/useScrollTriggeredCountUp";
 import { useRef } from "react";
-import bgImage from "../../images/service-bg.png";
 import {SolutionsTemplateProps} from "../../models";
-import earthImg from "../../images/earth.svg"
-import climate from "../../images/climate-change.png"
-import plant from "../../images/plant.png"
-import agriImg from "../../images/agri-management.jpg"
+
 
 
 
@@ -39,7 +35,7 @@ const SolutionsTemplate = ({
     <div className="container-fluid">
       <div
         className="services-container mb-5"
-        style={{ backgroundImage: `url(${bgImage})` }}
+        style={{ backgroundImage: `url(${header})` }}
       >
         <div className="row w-100">
           <div className="col-md-6 text-white d-flex align-items-center justify-content-center">
@@ -94,7 +90,7 @@ const SolutionsTemplate = ({
             <div key={index} className="col-md-4 col-12 mb-4">
               <div className="d-flex flex-column align-items-center text-center p-3 shadow">
                 <img
-                  src={earthImg}
+                  src={item.img}
                   width="80"
                   className="img-fluid mb-3"
                   alt={item.title}
@@ -143,7 +139,7 @@ const SolutionsTemplate = ({
                 </h3>
                 <div className="col-12 col-md-6 text-center p-md-3">
                   <img
-                    src={agriImg}
+                    src={card.imgSrc}
                     className="small-img"
                     height="130"
                     width="200"
