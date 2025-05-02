@@ -14,7 +14,7 @@ import { useEffect, useRef } from "react";
 import useScrollTriggeredCountUp from "../../hooks/useScrollTriggeredCountUp";
 import { WhyUs, Partners, SlideButtonsPartnersData, projects } from "../../constants";
 import { ProjectCategory } from "../../models";
-import { filterProjectsByCategories } from "../../services";
+import { filterProjectsByCategories } from "../../services/general-services";
 
 const Home = () => {
   //remove when # have been taken out of page
