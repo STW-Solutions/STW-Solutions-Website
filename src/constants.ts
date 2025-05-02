@@ -8,7 +8,7 @@ import minepded from "../src/images/MINEPDED.png";
 import ministryForestry from "../src/images/MinistryForestry.png";
 import volkswagen from "../src/images/Volkswagen.webp";
 import carbonsateCameroon from "../src/images/carbonsate-cameroon.avif";
-import { Project, ProjectCategory } from "./models";
+import {Project, ProjectCategory} from "./models";
 import wasteManagementDouala from "../src/images/STW-Solution-Waste-Management-Douala-Project.jpg"
 import wasteManagementLimbe from "../src/images/STW-Solution-Waste-Management-Limbe.jpg"
 import wasteManagementKribi from "../src/images/STW-Solution-Waste-Management-Kribi.jpg"
@@ -17,6 +17,21 @@ import forestryProjectNgaoundal from "../src/images/STW-Solution-Forest-Projects
 import forestryProjectGaroua from "../src/images/STW-Solution-Forest-Projects-Garoua.jpg";
 import forestryProjectBetare from "../src/images/STW-Solution-Forest-Projects-Betare.jpg";
 import forestryProjectBafia from "../src/images/STW-Solution-Forest-Projects-Bafia(Kiwi_trees).jpg";
+import serviceBg from '../src/images/solutions/service-bg.png';
+import renewResource from '../src/images/solutions/renewResource.jpeg';
+import wasteMgmt from '../src/images/solutions/wasteMgmt.jpeg';
+import earthSvg from '../src/images/solutions/earth.svg';
+import climateChangePng from '../src/images/solutions/climate-change.png';
+import plantPng from '../src/images/solutions/plant.png';
+import renewableResourceBg from '../src/images/solutions/renewableResourceBg.png';
+import image1RenewableResourcesPng from '../src/images/solutions/image1RenewableResources.png';
+import image2RenewableResourcesPng from '../src/images/solutions/image2RenewableResources.png';
+import image3RenewableResourcesPng from '../src/images/solutions/image3RenewableResources.png';
+import wasteMgmtBg from '../src/images/solutions/wasteMgmtBg.png';
+import image1wasteMgmtPng from '../src/images/solutions/image1wasteMgmt.png';
+import image2wasteMgmtPng from '../src/images/solutions/image2wasteMgmt.png';
+import image3wasteMgmtPng from '../src/images/solutions/image3wasteMgmt.png';
+
 
 export const WhyUs = [
   {
@@ -195,3 +210,136 @@ export const SlideButtonsPartnersData = [
     backgroundColor: "#FFFFFF"
   },
 ];
+
+ export const solutions = {
+   solutionForestry: {
+     header: serviceBg,
+     forestryHeader: "solution_forestry_header_1",
+     forestrySubHeader: "Projects_Completed",
+     callToAction: "Get_Involved",
+     forestrySolutions: "Forests_Preserved",
+     businessText: "Our_Forestry_Solutions",
+     exploreText: "Explore_our_initiatives",
+     topProjectsText: "Lets_Talk",
+     cardData: [
+       {
+         title: "Renewable_Resources",
+         imgSrc: renewResource,
+         description: "Our_agriculture_mirrors",
+         linkText: "Learn_More",
+         altText: "Renewable_Resources"
+       },
+       {
+         title: "Waste_Management",
+         imgSrc: wasteMgmt,
+         description: "Recycling_plastic_minimizes",
+         linkText: "Learn_More",
+         altText: "Waste_Management"
+       }
+     ],
+     initiatives: [
+       {
+         img: earthSvg,
+         title: "Forest_Conservation_Initiatives",
+         text: "forest_con_text"
+       },
+       {
+         img: climateChangePng,
+         title: "Improved_Forest_Management",
+         text: "improved_fores_mgmt_text"
+       },
+       {
+         img: plantPng,
+         title: "Paulownia_Tomentosa_Tree",
+         text: "tree_planting_init_text"
+       }
+     ]
+   },
+   solutionRenewableEnergy: {
+     header: renewableResourceBg,
+     forestryHeader: "renewable_resources_header_1",
+     forestrySubHeader: "Projects_Completed",
+     callToAction: "Get_Involved",
+     forestrySolutions: "Forests_Preserved",
+     businessText: "Our_Renewable_Resources",
+     exploreText: "Explore_our_initiatives",
+     topProjectsText: "Lets_Talk",
+     cardData: [
+       {
+         title: "Renewable_Resources",
+         imgSrc: renewResource,
+         description: "Our_agriculture_mirrors",
+         linkText: "Learn_More",
+         altText: "Renewable_Resources"
+       },
+       {
+         title: "Waste_Management",
+         imgSrc: wasteMgmt,
+         description: "Recycling_plastic_minimizes",
+         linkText: "Learn_More",
+         altText: "Waste_Management"
+       }
+     ],
+     initiatives: [
+       {
+         img: image1RenewableResourcesPng,
+         title: "heading_sustainable_agriculture",
+         text: "description_sustainable_agriculture"
+       },
+       {
+         img: image2RenewableResourcesPng,
+         title: "heading_regenerative_agroforestry",
+         text: "description_regenerative_agroforestry"
+       },
+       {
+         img: image3RenewableResourcesPng,
+         title: "heading_waste_to_resource_agriculture",
+         text: "description_waste_to_resource_agriculture"
+       }
+     ]
+   },
+   solutionWasteManagement: {
+     header: wasteMgmtBg,
+     forestryHeader: "waste_management_header_1",
+     forestrySubHeader: "Projects_Completed",
+     callToAction: "Get_Involved",
+     forestrySolutions: "Forests_Preserved",
+     businessText: "Our_Waste_Management",
+     exploreText: "Explore_our_initiatives",
+     topProjectsText: "Lets_Talk",
+     cardData: [
+       {
+         title: "Renewable_Resources",
+         imgSrc: renewResource,
+         description: "Our_agriculture_mirrors",
+         linkText: "Learn_More",
+         altText: "Renewable_Resources"
+       },
+       {
+         title: "Waste_Management",
+         imgSrc: wasteMgmt,
+         description: "Recycling_plastic_minimizes",
+         linkText: "Learn_More",
+         altText: "Waste_Management"
+       }
+     ],
+     initiatives: [
+       {
+         img: image1wasteMgmtPng,
+         title: "heading_waste_collection",
+         text: "description_waste_collection"
+       },
+       {
+         img: image2wasteMgmtPng,
+         title: "heading_circular_economy",
+         text: "description_circular_economy"
+       },
+       {
+         img: image3wasteMgmtPng,
+         title: "heading_community_engagement",
+         text: "description_community_engagement"
+       }
+     ]
+   }
+
+ }
