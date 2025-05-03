@@ -35,6 +35,7 @@ export interface Project {
   startDate?: string,
   endDate?: string
 }
+
 export interface SolutionsTemplateProps {
   header: string;
   forestryHeader: string;
@@ -56,4 +57,55 @@ export interface SolutionsTemplateProps {
     title: string;
     text: string;
   }[];
+}
+
+export interface BlogAuthor {
+  id: number,
+  name: string
+}
+
+export interface BlogComment {
+  id: number,
+  author_name: string,
+  content: {
+    rendered: string
+  },
+  date: string
+}
+
+export interface BlogCategory {
+  id: number,
+  name: string,
+  taxonomy: string
+}
+
+export interface Blog {
+  comment_status: string,//check for comment_status = open before showing comment display
+  content: {
+    protected: boolean,
+    rendered: string
+  },
+  date: string,
+  dateGMT: string,
+  excerpt: {
+    protected: boolean,
+    rendered: string
+  },
+  featured_media: number,
+  guid: {
+    rendered: string
+  },
+  id: number,
+  modified: string,
+  modifiedGMT: string,
+  status: string,
+  title: {
+    rendered: string
+  }
+  type: string,
+  _embedded: {
+    author: BlogAuthor[],
+    replies: BlogComment[][],
+    "wp:term": BlogCategory[][]
+  }
 }
