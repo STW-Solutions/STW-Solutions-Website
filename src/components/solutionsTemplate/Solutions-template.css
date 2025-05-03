@@ -1,0 +1,154 @@
+.services-container {
+    background-size: cover;
+    background-position: center;
+    height: 40rem;
+    opacity: 2.5;
+    border-radius: 3.5rem;
+    display: flex;
+    margin-top: 4rem;
+
+}
+.container-fluid-service{
+    background-color: rgba(7,237,140,0.06);
+    padding: 1.4rem;
+}
+.info-card {
+    background-color: #F1FFF9;
+    width: 100%;
+    max-width: 699px;
+    height: 185px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #257251;
+    position: absolute;
+    right: 13px;
+    border-top-left-radius: 2rem;
+}
+.head-bottom-line {
+    width: 22rem;
+    height: 5px;
+    transform: skewX(-20deg);
+    overflow: hidden;
+    background-color: #257251;
+    margin: 0 auto;
+}
+.header{
+    font-size: 4.5em;
+}
+.svg-image{
+    width:3rem;
+    color: #257251;
+}
+.btn-call{
+    width: 10rem;
+    background-color: #257251;
+}
+.buttom-page{
+    background-color: #257251;
+    padding: 4rem;
+}
+.text-large{
+    font-size: 63px;
+}
+.card-width{
+    width: 40rem;
+}
+.box-margin-top{
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+}
+.title-color{
+    color: #257251;
+}
+.card-class{
+    width: 40rem;
+}
+.explore-text{
+    font-size: 5.5rem;
+    font-weight: bold;
+}
+
+svg{
+    width: 3rem;
+    margin-left: 1rem;
+    color: #257251!important;
+}
+.col-med-8{
+    width: 50%;
+}
+.col-med-3{
+    width: 50%;
+    background-color: #ffffff;
+}
+.box-card{
+    width: 38rem;
+    padding: 3rem;
+    background-color: white;
+}
+.initiatives-box{
+    height: 18rem;
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+    .btn-call {
+        width: 9rem;
+        margin-right: 0!important;
+    }
+    .text-large{
+        font-size: 65px;
+    }
+    .small-img{
+        align-items: center;
+    }
+    .col-med-8{
+        width: 100%;
+    }
+    .col-med-3{
+        width: 100%;
+    }
+    .box-card{
+        width: 40rem;
+        padding: 3rem;
+    }
+    .header{
+        font-size: 3.5em;
+    }
+    .initiatives-box{
+        height: 35rem;
+    }
+}
+@media (max-width: 600px) {
+    .btn-call {
+        width: 9rem;
+        margin-right: 0!important;
+    }
+    .text-large{
+        font-size: 65px;
+    }
+    .small-img{
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .col-med-8{
+        width: 100%;
+    }
+    .col-med-3{
+        width: 100%;
+    }
+    .explore-text{
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+    .box-card{
+        width: 23rem;
+        padding: 3rem;
+    }
+    .header{
+        font-size: 2.5em;
+    }
+    .initiatives-box{
+        height: 28rem;
+    }
+}

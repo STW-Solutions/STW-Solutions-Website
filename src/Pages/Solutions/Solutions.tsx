@@ -1,14 +1,11 @@
 import { useState } from "react";
-import bgImage from "../../images/service-bg.png";
+import bgImage from "../../images/solutions/service-bg.png";
 import serviceImg from "../../images/service1.png";
 import value1 from "../../images/service3.png";
 import { useTranslation } from "react-i18next";
 import value2 from "../../images/values/value2.webp";
 import value3 from "../../images/values/value3.webp";
 import value4 from "../../images/values/value4.webp";
-import svg1 from '../../images/img.png';
-import svg2 from '../../images/img_1.png';
-import svg3 from '../../images/img_2.png';
 import './Solutions.css';
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
 
