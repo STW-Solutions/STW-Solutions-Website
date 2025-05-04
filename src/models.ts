@@ -109,3 +109,10 @@ export interface Blog {
     "wp:term": BlogCategory[][]
   }
 }
+
+export interface PageInfo {
+  size: number,
+  numberOfPages: number,
+  currentPage: number,
+  previousPage: number
+}
