@@ -32,26 +32,28 @@ const Blogs = () => {
   useEffect(() => {
     const page = searchParams.get("page");
     const perPage = searchParams.get("per_page");
-    setIsLoading(true);
-    const controller = new AbortController();
-    apiClient
-      .get<Blog[]>(`/posts?page=${page}&per_page=${perPage}&_embed`, {
-        signal: controller.signal,
-      })
-      .then((res) => {
-        setIsLoading(false);
-        setBlogs(res.data);
-        setBlogsByPage(res.data);
-        setBlogsByPageOriginal(res.data);
-        const numberOfPages = res.headers["x-wp-totalpages"];
-        setPageDetails({ ...pageDetails, numberOfPages });
-        setCategories(updateCategoryList(res.data));
-      })
-      .catch((err) => {
-        if (err instanceof CanceledError) return;
-        setIsLoading(false);
-        setError(err);
-      });
+    if (page && perPage) {
+      setIsLoading(true);
+      const controller = new AbortController();
+      apiClient
+        .get<Blog[]>(`/posts?page=${page}&per_page=${perPage}&_embed`, {
+          signal: controller.signal,
+        })
+        .then((res) => {
+          setIsLoading(false);
+          setBlogs(res.data);
+          setBlogsByPage(res.data);
+          setBlogsByPageOriginal(res.data);
+          const numberOfPages = res.headers["x-wp-totalpages"];
+          setPageDetails({ ...pageDetails, numberOfPages });
+          setCategories(updateCategoryList(res.data));
+        })
+        .catch((err) => {
+          if (err instanceof CanceledError) return;
+          setIsLoading(false);
+          setError(err);
+        });
+    }
   }, [searchParams]);
 
   const updateCategoryList = (blogs: Blog[]) => {
