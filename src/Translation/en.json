@@ -236,5 +236,6 @@
   "1_comment": "1 comment",
   "comments": "comments",
   "no_comments": "no comments",
-  "recent_posts": "recent posts"
+  "recent_posts": "recent posts",
+  "all": "all"
 }

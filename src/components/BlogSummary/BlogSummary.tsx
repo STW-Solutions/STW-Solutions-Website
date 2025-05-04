@@ -71,8 +71,15 @@ const BlogSummary = ({ blog }: Props) => {
         dangerouslySetInnerHTML={{ __html: blog.excerpt.rendered }}
         className="text-muted"
       ></div>
-      <div className="mt-5">
+      <div className="mt-5 position-relative">
         <img src={blogImage} className="w-100 blog-image" />
+        <div className="category-main">
+          {blog._embedded["wp:term"].map((categories) => (
+            categories.map((category) => (
+              <small className="text-black shadow p-2 rounded text-uppercase category-item-box mt-1 d-block fw-bold">{category.name}</small>
+            ))
+          ))}
+        </div>
       </div>
     </Link>
   );

@@ -14,6 +14,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
   const [blogsByPage, setBlogsByPage] = useState<Blog[]>([]);
+  const [blogsByPageOriginal, setBlogsByPageOriginal] = useState<Blog[]>([]);
   const [pageDetails, setPageDetails] = useState<PageInfo>({
     size: 3,
     numberOfPages: 0,
@@ -41,6 +42,7 @@ const Blogs = () => {
         console.log(res);
         setBlogs(res.data);
         setBlogsByPage(res.data);
+        setBlogsByPageOriginal(res.data);
         const numberOfPages = res.headers["x-wp-totalpages"];
         setPageDetails({ ...pageDetails, numberOfPages });
         setCategories(updateCategoryList(res.data));
@@ -54,6 +56,7 @@ const Blogs = () => {
 
   const updateCategoryList = (blogs: Blog[]) => {
     const allCategories = new Set();
+    allCategories.add("all");
     for (const blog of blogs) {
       for (const categories of blog._embedded["wp:term"]) {
         for (const category of categories) {
@@ -68,6 +71,25 @@ const Blogs = () => {
     setSearchParams({ page: pageInfo.currentPage.toString(), per_page: "3" });
   };
 
+  const filterBlogsByCategory = (filterCategory: string, blogs: Blog[]) => {
+    if (filterCategory === "all") {
+      setBlogsByPage(blogs);
+      return;
+    }
+    const filteredBlogsSet = new Set();
+    for (const blog of blogs) {
+      for (const categories of blog._embedded["wp:term"]) {
+        for (const category of categories) {
+          if (category.name === filterCategory) {
+            filteredBlogsSet.add(blog);
+          }
+        }
+      }
+    }
+    const filteredBlogs = Array.from(filteredBlogsSet) as Blog[];
+    setBlogsByPage(filteredBlogs);
+  };
+
   return (
     <>
       <div className="container-fluid">
@@ -80,16 +102,19 @@ const Blogs = () => {
             {blogsByPage.length > 0 && (
               <div>
                 <div className="mt-5">
-                    <Pagination
-                      pageInfo={pageDetails}
-                      onPageInfoChange={handlePageInfoChange}
-                    />
-                  </div>
+                  <Pagination
+                    pageInfo={pageDetails}
+                    onPageInfoChange={handlePageInfoChange}
+                  />
+                </div>
                 <div className="row justify-content-evenly">
                   {blogsByPage.map((blog, i) => (
                     <>
                       {i === 1 && (
-                        <div className="rounded category-box p-3 col-md-4 mt-5" key={i+'recent'}>
+                        <div
+                          className="rounded category-box p-3 col-md-4 mt-5"
+                          key={i + "recent"}
+                        >
                           <h2 className="fs-4 text-center text-uppercase fw-bold">
                             {t("recent_posts")}
                           </h2>
@@ -110,7 +135,7 @@ const Blogs = () => {
                       <div
                         className={
                           i === 0
-                            ? "col-md-7"
+                            ? "mt-5 col-md-7"
                             : i === 1
                             ? "mt-5 col-md-7"
                             : "mt-5 col-md-8"
@@ -120,15 +145,26 @@ const Blogs = () => {
                         <BlogSummary blog={blog} />
                       </div>
                       {i === 0 && (
-                        <div className="rounded category-box py-3 col-md-4" key={i+'category'}>
+                        <div
+                          className="rounded category-box py-3 col-md-4 mt-5"
+                          key={i + "category"}
+                        >
                           <h2 className="fs-4 text-center text-uppercase">
                             {t("categories")}
                           </h2>
                           <ul className="mt-3 ms-0">
                             {categories.map((category, i) => (
                               <li key={i} className="mt-3">
-                                <button className="fs-5 text-decoration-underline border-0 bg-transparent text-black">
-                                  {category}
+                                <button
+                                  className="fs-5 text-decoration-underline border-0 bg-transparent text-black text-capitalize"
+                                  onClick={() =>
+                                    filterBlogsByCategory(
+                                      category,
+                                      blogsByPageOriginal
+                                    )
+                                  }
+                                >
+                                  {t(category)}
                                 </button>
                               </li>
                             ))}
