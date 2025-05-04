@@ -2,13 +2,13 @@ import { Blog } from "../../models";
 import { getImageUrl } from "../../services/general-services";
 import { format } from "date-fns";
 import { useTranslation } from "react-i18next";
-import "./RecentBlogSummary.css"
+import "./BlogMiniSummary.css"
 
 interface Props {
   blog: Blog;
 }
 
-const RecentBlogSummary = ({ blog }: Props) => {
+const BlogMiniSummary = ({ blog }: Props) => {
   const imageUrl = getImageUrl(blog.content.rendered)[0];
   const blogDate = new Date(blog.date);
   const { t } = useTranslation();
@@ -35,4 +35,4 @@ const RecentBlogSummary = ({ blog }: Props) => {
   );
 };
 
-export default RecentBlogSummary;
+export default BlogMiniSummary;

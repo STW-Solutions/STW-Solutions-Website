@@ -1,0 +1,19 @@
+.pagination {
+    width: fit-content;
+}
+
+.pagination button,  .pagination button:focus{
+    background-color: #257251;
+    color: white;
+    box-shadow: none;
+}
+
+.pagination button:hover {
+    background-color: white;
+    color: #257251;
+}
+
+.page-item-active {
+    background-color: #CFFFEB!important;
+    color: #257251 !important;
+}
