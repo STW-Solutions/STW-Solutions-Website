@@ -23,6 +23,7 @@ const Blogs = () => {
   });
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [error, setError] = useState();
 
   useEffect(() => {
     setSearchParams({ page: "1", per_page: "3" });
@@ -39,7 +40,6 @@ const Blogs = () => {
       })
       .then((res) => {
         setIsLoading(false);
-        console.log(res);
         setBlogs(res.data);
         setBlogsByPage(res.data);
         setBlogsByPageOriginal(res.data);
@@ -50,7 +50,7 @@ const Blogs = () => {
       .catch((err) => {
         if (err instanceof CanceledError) return;
         setIsLoading(false);
-        console.log(err);
+        setError(err);
       });
   }, [searchParams]);
 
@@ -95,96 +95,108 @@ const Blogs = () => {
       <div className="container-fluid">
         {isLoading && <div className="spinner-border mx-auto"></div>}
         {!isLoading && (
-          <div className="container">
-            <h1 className="stw-solutions-h1 text-black ms-4 ps-1 text-capitalize">
-              {t("blogs")}
-            </h1>
-            {blogsByPage.length > 0 && (
-              <div>
-                <div className="mt-5">
-                  <Pagination
-                    pageInfo={pageDetails}
-                    onPageInfoChange={handlePageInfoChange}
-                  />
+          <>
+            <div className="container">
+              <h1 className="stw-solutions-h1 text-black ms-4 ps-1 text-capitalize">
+                {t("blogs")}
+              </h1>
+              {error && (
+                <div className="alert alert-danger text-center w-100">
+                  {t("fetch_blogs_error")}
                 </div>
-                <div className="row justify-content-evenly">
-                  {blogsByPage.map((blog, i) => (
-                    <>
-                      {i === 1 && (
-                        <div
-                          className="rounded category-box p-3 col-md-4 mt-5"
-                          key={i + "recent"}
-                        >
-                          <h2 className="fs-4 text-center text-uppercase fw-bold">
-                            {t("recent_posts")}
-                          </h2>
-                          {blogs.map(
-                            (blog, i) =>
-                              i < 3 && (
-                                <Link
-                                  key={blog.id}
-                                  className="text-decoration-none"
-                                  to="#"
-                                >
-                                  <BlogMiniSummary blog={blog} />
-                                </Link>
-                              )
-                          )}
-                        </div>
-                      )}
-                      <div
-                        className={
-                          i === 0
-                            ? "mt-5 col-md-7"
-                            : i === 1
-                            ? "mt-5 col-md-7"
-                            : "mt-5 col-md-8"
-                        }
-                        key={i}
-                      >
-                        <BlogSummary blog={blog} />
-                      </div>
-                      {i === 0 && (
-                        <div
-                          className="rounded category-box py-3 col-md-4 mt-5"
-                          key={i + "category"}
-                        >
-                          <h2 className="fs-4 text-center text-uppercase">
-                            {t("categories")}
-                          </h2>
-                          <ul className="mt-3 ms-0">
-                            {categories.map((category, i) => (
-                              <li key={i} className="mt-3">
-                                <button
-                                  className="fs-5 text-decoration-underline border-0 bg-transparent text-black text-capitalize"
-                                  onClick={() =>
-                                    filterBlogsByCategory(
-                                      category,
-                                      blogsByPageOriginal
-                                    )
-                                  }
-                                >
-                                  {t(category)}
-                                </button>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </>
-                  ))}
+              )}
+              {blogsByPage.length === 0 && (
+                <div className="alert alert-info text-center w-100">
+                  {t("no_blogs")}
                 </div>
-                {pageDetails.numberOfPages > 1 && (
+              )}
+              {blogsByPage.length > 0 && (
+                <div>
                   <div className="mt-5">
                     <Pagination
                       pageInfo={pageDetails}
                       onPageInfoChange={handlePageInfoChange}
                     />
                   </div>
-                )}
-              </div>
-            )}
-          </div>
+                  <div className="row justify-content-evenly">
+                    {blogsByPage.map((blog, i) => (
+                      <>
+                        {i === 1 && (
+                          <div
+                            className="rounded category-box p-3 col-md-4 mt-5"
+                            key={i + "recent"}
+                          >
+                            <h2 className="fs-4 text-center text-uppercase fw-bold">
+                              {t("recent_posts")}
+                            </h2>
+                            {blogs.map(
+                              (blog, i) =>
+                                i < 3 && (
+                                  <Link
+                                    key={blog.id}
+                                    className="text-decoration-none"
+                                    to="#"
+                                  >
+                                    <BlogMiniSummary blog={blog} />
+                                  </Link>
+                                )
+                            )}
+                          </div>
+                        )}
+                        <div
+                          className={
+                            i === 0
+                              ? "mt-5 col-md-7"
+                              : i === 1
+                              ? "mt-5 col-md-7"
+                              : "mt-5 col-md-8"
+                          }
+                          key={i}
+                        >
+                          <BlogSummary blog={blog} />
+                        </div>
+                        {i === 0 && (
+                          <div
+                            className="rounded category-box py-3 col-md-4 mt-5"
+                            key={i + "category"}
+                          >
+                            <h2 className="fs-4 text-center text-uppercase">
+                              {t("categories")}
+                            </h2>
+                            <ul className="mt-3 ms-0">
+                              {categories.map((category, i) => (
+                                <li key={i} className="mt-3">
+                                  <button
+                                    className="fs-5 text-decoration-underline border-0 bg-transparent text-black text-capitalize"
+                                    onClick={() =>
+                                      filterBlogsByCategory(
+                                        category,
+                                        blogsByPageOriginal
+                                      )
+                                    }
+                                  >
+                                    {t(category)}
+                                  </button>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </>
+                    ))}
+                  </div>
+                  {pageDetails.numberOfPages > 1 && (
+                    <div className="mt-5">
+                      <Pagination
+                        pageInfo={pageDetails}
+                        onPageInfoChange={handlePageInfoChange}
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </>
         )}
       </div>
     </>

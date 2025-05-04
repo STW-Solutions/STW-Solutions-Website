@@ -237,5 +237,7 @@
   "comments": "comments",
   "no_comments": "no comments",
   "recent_posts": "recent posts",
-  "all": "all"
+  "all": "all",
+  "fetch_blogs_error": "There may be a problem with your internet connectivity. Reload page or try again later!",
+  "no_blogs": "There are no blogs for now. Check again later!"
 }
