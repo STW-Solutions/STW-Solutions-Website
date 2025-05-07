@@ -1,0 +1,12 @@
+figure, h2.wp-block-heading {
+    display: none;
+}
+
+.blog-details-main {
+    height: 60vh;
+}
+
+.related-blogs-box {
+    background-color: #CFFFEB;
+    height: fit-content;
+}

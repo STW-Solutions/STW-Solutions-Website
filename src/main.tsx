@@ -13,6 +13,7 @@ import "./index.css";
 import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
 import SolutionDetails from "./Pages/Solution-details/Solution-details";
 import Blogs from "./Pages/Blogs/Blogs";
+import BlogDetails from "./Pages/BlogDetails/BlogDetails";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           <Route path="/projects" element={<Projects />} />
           <Route path="/project-details/:name" element={<ProjectDetails />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blog-details/:slug" element={<BlogDetails />} />
         </Routes>
       </MainLayout>
     </StrictMode>
