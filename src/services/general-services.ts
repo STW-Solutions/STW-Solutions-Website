@@ -18,3 +18,8 @@ export const getImageUrl = (htmlContent: any) => {
   }
   return imageLinks;
 };
+
+export const setBlogId = (id: number) => {
+  console.log(id)
+  localStorage.setItem("blogIdentifier", JSON.stringify(id));
+};

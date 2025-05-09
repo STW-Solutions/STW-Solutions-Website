@@ -4,10 +4,11 @@ import apiClient, { CanceledError } from "../../services/api-client";
 import { useTranslation } from "react-i18next";
 import BlogSummary from "../../components/BlogSummary/BlogSummary";
 import "./Blogs.css";
-import BlogMiniSummary from "../../components/RecentBlogSummary/BlogMiniSummary";
+import BlogMiniSummary from "../../components/BlogMiniSummary/BlogMiniSummary";
 import { Link } from "react-router";
 import Pagination from "../../components/Pagination/Pagination";
 import { useSearchParams } from "react-router";
+import { setBlogId } from "../../services/general-services";
 
 const Blogs = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -32,26 +33,28 @@ const Blogs = () => {
   useEffect(() => {
     const page = searchParams.get("page");
     const perPage = searchParams.get("per_page");
-    setIsLoading(true);
-    const controller = new AbortController();
-    apiClient
-      .get<Blog[]>(`/posts?page=${page}&per_page=${perPage}&_embed`, {
-        signal: controller.signal,
-      })
-      .then((res) => {
-        setIsLoading(false);
-        setBlogs(res.data);
-        setBlogsByPage(res.data);
-        setBlogsByPageOriginal(res.data);
-        const numberOfPages = res.headers["x-wp-totalpages"];
-        setPageDetails({ ...pageDetails, numberOfPages });
-        setCategories(updateCategoryList(res.data));
-      })
-      .catch((err) => {
-        if (err instanceof CanceledError) return;
-        setIsLoading(false);
-        setError(err);
-      });
+    if (page && perPage) {
+      setIsLoading(true);
+      const controller = new AbortController();
+      apiClient
+        .get<Blog[]>(`/posts?page=${page}&per_page=${perPage}&_embed`, {
+          signal: controller.signal,
+        })
+        .then((res) => {
+          setIsLoading(false);
+          setBlogs(res.data);
+          setBlogsByPage(res.data);
+          setBlogsByPageOriginal(res.data);
+          const numberOfPages = res.headers["x-wp-totalpages"];
+          setPageDetails({ ...pageDetails, numberOfPages });
+          setCategories(updateCategoryList(res.data));
+        })
+        .catch((err) => {
+          if (err instanceof CanceledError) return;
+          setIsLoading(false);
+          setError(err);
+        });
+    }
   }, [searchParams]);
 
   const updateCategoryList = (blogs: Blog[]) => {
@@ -92,8 +95,17 @@ const Blogs = () => {
 
   return (
     <>
-      <div className="container-fluid">
-        {isLoading && <div className="spinner-border mx-auto"></div>}
+      <div
+        className={`container-fluid  ${
+          (isLoading || error || blogsByPage.length === 0) &&
+          "blogs-main d-flex justify-content-center align-items-center"
+        }`}
+      >
+        {isLoading && (
+          <div className="d-flex justify-content-center">
+            <div className="spinner-border"></div>
+          </div>
+        )}
         {!isLoading && (
           <>
             <div className="container">
@@ -132,13 +144,20 @@ const Blogs = () => {
                             {blogs.map(
                               (blog, i) =>
                                 i < 3 && (
-                                  <Link
+                                  <div
+                                    onClick={() => setBlogId(blog.id)}
                                     key={blog.id}
-                                    className="text-decoration-none"
-                                    to="#"
                                   >
-                                    <BlogMiniSummary blog={blog} />
-                                  </Link>
+                                    <Link
+                                      className="text-decoration-none"
+                                      to={`/blog-details/${blog.slug}`}
+                                    >
+                                      <BlogMiniSummary
+                                        blog={blog}
+                                        titleWidth="mini-summary-blog"
+                                      />
+                                    </Link>
+                                  </div>
                                 )
                             )}
                           </div>
@@ -152,8 +171,14 @@ const Blogs = () => {
                               : "mt-5 col-md-8"
                           }
                           key={i}
+                          onClick={() => setBlogId(blog.id)}
                         >
-                          <BlogSummary blog={blog} />
+                          <Link
+                            className="text-decoration-none"
+                            to={`/blog-details/${blog.slug}`}
+                          >
+                            <BlogSummary blog={blog} useAsDetails={false} />
+                          </Link>
                         </div>
                         {i === 0 && (
                           <div

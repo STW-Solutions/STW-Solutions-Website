@@ -3,8 +3,8 @@
 }
 
 .pagination button,  .pagination button:focus{
-    background-color: #257251;
-    color: white;
+    background-color: #CFFFEB;
+    color: #257251;
     box-shadow: none;
 }
 
@@ -14,6 +14,6 @@
 }
 
 .page-item-active {
-    background-color: #CFFFEB!important;
-    color: #257251 !important;
+    background-color: #257251 !important;
+    color: white !important;
 }

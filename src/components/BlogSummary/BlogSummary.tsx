@@ -2,14 +2,14 @@ import { useTranslation } from "react-i18next";
 import { format } from "date-fns";
 import { Blog } from "../../models";
 import "./BlogSummary.css";
-import { Link } from "react-router";
 import { useEffect, useState } from "react";
 import { getImageUrl } from "../../services/general-services";
 
 interface Props {
   blog: Blog;
+  useAsDetails: boolean;
 }
-const BlogSummary = ({ blog }: Props) => {
+const BlogSummary = ({ blog, useAsDetails }: Props) => {
   const { t } = useTranslation();
   const blogDate = new Date(blog.date);
   const dateNow = new Date();
@@ -23,7 +23,7 @@ const BlogSummary = ({ blog }: Props) => {
   }, []);
 
   return (
-    <Link className="bg-white shadow p-5 d-block text-decoration-none" to="#">
+    <div className={`bg-white ${!useAsDetails ? 'shadow p-5' : ''}`}>
       <div className="d-flex align-items-center justify-content-between">
         <div className="d-flex align-items-center mb-2 text-muted blog-author">
           <span>
@@ -81,7 +81,7 @@ const BlogSummary = ({ blog }: Props) => {
           ))}
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

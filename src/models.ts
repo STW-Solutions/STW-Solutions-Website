@@ -80,7 +80,8 @@ export interface BlogCategory {
 }
 
 export interface Blog {
-  comment_status: string,//check for comment_status = open before showing comment display
+  comment_status: string,
+  categories: number[],
   content: {
     protected: boolean,
     rendered: string
@@ -107,7 +108,8 @@ export interface Blog {
     author: BlogAuthor[],
     replies: BlogComment[][],
     "wp:term": BlogCategory[][]
-  }
+  },
+  slug: string
 }
 
 export interface PageInfo {
