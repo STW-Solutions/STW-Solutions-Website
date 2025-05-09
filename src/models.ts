@@ -36,6 +36,29 @@ export interface Project {
   endDate?: string
 }
 
+export interface SolutionsTemplateProps {
+  header: string;
+  forestryHeader: string;
+  forestrySubHeader: string;
+  callToAction: string;
+  forestrySolutions: string;
+  businessText: string;
+  exploreText: string;
+  topProjectsText: string;
+  cardData: {
+    title: string;
+    imgSrc: string;
+    description: string;
+    linkText: string;
+    altText: string;
+  }[];
+  initiatives: {
+    img: string;
+    title: string;
+    text: string;
+  }[];
+}
+
 export interface BlogAuthor {
   id: number,
   name: string
@@ -57,7 +80,8 @@ export interface BlogCategory {
 }
 
 export interface Blog {
-  comment_status: string,//check for comment_status = open before showing comment display
+  comment_status: string,
+  categories: number[],
   content: {
     protected: boolean,
     rendered: string
@@ -84,5 +108,13 @@ export interface Blog {
     author: BlogAuthor[],
     replies: BlogComment[][],
     "wp:term": BlogCategory[][]
-  }
+  },
+  slug: string
+}
+
+export interface PageInfo {
+  size: number,
+  numberOfPages: number,
+  currentPage: number,
+  previousPage: number
 }

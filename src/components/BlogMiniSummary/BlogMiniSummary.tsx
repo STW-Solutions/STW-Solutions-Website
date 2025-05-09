@@ -2,13 +2,14 @@ import { Blog } from "../../models";
 import { getImageUrl } from "../../services/general-services";
 import { format } from "date-fns";
 import { useTranslation } from "react-i18next";
-import "./RecentBlogSummary.css"
+import "./BlogMiniSummary.css"
 
 interface Props {
   blog: Blog;
+  titleWidth: string;
 }
 
-const RecentBlogSummary = ({ blog }: Props) => {
+const BlogMiniSummary = ({ blog, titleWidth }: Props) => {
   const imageUrl = getImageUrl(blog.content.rendered)[0];
   const blogDate = new Date(blog.date);
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ const RecentBlogSummary = ({ blog }: Props) => {
     <div className="d-flex shadow bg-white p-2 mt-3">
       <img src={imageUrl} className="recent-blog-image" />
       <div className="ms-3">
-        <div className="fs-4 text-black text-truncate fw-bold blog-title">{blog.title.rendered}</div>
+        <div className={`fs-4 text-black text-truncate fw-bold blog-title ${titleWidth}`}>{blog.title.rendered}</div>
         <div className="text-muted">
           {format(blogDate, "MMMM dd, yyyy")}
           {blog.comment_status === "open" && (
@@ -35,4 +36,4 @@ const RecentBlogSummary = ({ blog }: Props) => {
   );
 };
 
-export default RecentBlogSummary;
+export default BlogMiniSummary;

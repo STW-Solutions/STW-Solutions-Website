@@ -91,6 +91,10 @@ ol {
     transform: translate(-50%, -50%);
 }
 
+.mini-summary-blog-details {
+    width: 50%;
+}
+
 @media screen and (max-width: 1024px) {
     .partner-logo-box {
         height: 25vh;
@@ -104,6 +108,12 @@ ol {
     }
     .stw-solutions-h2 {
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mini-summary-blog-details {
+        width: 100%;
     }
 }
 
