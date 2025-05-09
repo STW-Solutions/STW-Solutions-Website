@@ -21,7 +21,7 @@ export enum ProjectCategory {
 export interface Project {
   name: string,
   categories: ProjectCategory[],
-  summary?: string,
+  goal?: string,
   firstDetails?: string,
   secondDetails?: string,
   thirdDetails?: string,
@@ -33,7 +33,9 @@ export interface Project {
   backgroundColor?: string,
   alias?: string,
   startDate?: string,
-  endDate?: string
+  endDate?: string,
+  location?: string,
+  esgs?: string
 }
 
 export interface SolutionsTemplateProps {
