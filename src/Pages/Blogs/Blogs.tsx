@@ -8,6 +8,7 @@ import BlogMiniSummary from "../../components/BlogMiniSummary/BlogMiniSummary";
 import { Link } from "react-router";
 import Pagination from "../../components/Pagination/Pagination";
 import { useSearchParams } from "react-router";
+import { setBlogId } from "../../services/general-services";
 
 const Blogs = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -92,14 +93,19 @@ const Blogs = () => {
     setBlogsByPage(filteredBlogs);
   };
 
-  const setBlogId = (id: number) => {
-    localStorage.setItem("blogIdentifier", JSON.stringify(id));
-  };
-
   return (
     <>
-      <div className = {`container-fluid  ${(isLoading || error || blogsByPage.length === 0) && 'blogs-main d-flex justify-content-center align-items-center'}`}>
-        {isLoading && <div className="d-flex justify-content-center"><div className="spinner-border"></div></div>}
+      <div
+        className={`container-fluid  ${
+          (isLoading || error || blogsByPage.length === 0) &&
+          "blogs-main d-flex justify-content-center align-items-center"
+        }`}
+      >
+        {isLoading && (
+          <div className="d-flex justify-content-center">
+            <div className="spinner-border"></div>
+          </div>
+        )}
         {!isLoading && (
           <>
             <div className="container">
@@ -138,13 +144,18 @@ const Blogs = () => {
                             {blogs.map(
                               (blog, i) =>
                                 i < 3 && (
-                                  <div onClick={() => setBlogId(blog.id)}>
+                                  <div
+                                    onClick={() => setBlogId(blog.id)}
+                                    key={blog.id}
+                                  >
                                     <Link
-                                      key={blog.id}
                                       className="text-decoration-none"
                                       to={`/blog-details/${blog.slug}`}
                                     >
-                                      <BlogMiniSummary blog={blog} />
+                                      <BlogMiniSummary
+                                        blog={blog}
+                                        titleWidth="mini-summary-blog"
+                                      />
                                     </Link>
                                   </div>
                                 )

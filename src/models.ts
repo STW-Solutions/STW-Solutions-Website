@@ -81,6 +81,7 @@ export interface BlogCategory {
 
 export interface Blog {
   comment_status: string,
+  categories: number[],
   content: {
     protected: boolean,
     rendered: string
