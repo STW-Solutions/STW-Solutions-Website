@@ -10,18 +10,13 @@ import AnimateOnScroll from "../../components/AnimateOnScroll/AnimateOnScroll";
 import Carousel from "../../components/Carousel/Carousel";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
 import arrowRightCircle from "../../images/Arrow-right-circle.png";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import useScrollTriggeredCountUp from "../../hooks/useScrollTriggeredCountUp";
 import { WhyUs, Partners, SlideButtonsPartnersData, projects } from "../../constants";
 import { ProjectCategory } from "../../models";
 import { filterProjectsByCategories } from "../../services/general-services";
 
 const Home = () => {
-  //remove when # have been taken out of page
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-
   const { t } = useTranslation();
   const projectsRef = useRef<HTMLDivElement>(null);
   const projectCount = useScrollTriggeredCountUp(projectsRef, 12);
@@ -269,7 +264,7 @@ const Home = () => {
               <h4 className="fw-bold text-center mt-3 mt-md-0 text-break project-title">
                 {t(project.name)}
               </h4>
-              <p className="description">{t(project.summary || '')}</p>
+              <p className="description">{t(project.goal || '')}</p>
               <Link
                 to={project.moreInfo}
                 className="ms-auto ms-md-0 me-5 me-md-0"

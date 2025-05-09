@@ -118,7 +118,7 @@ export const SlideButtonsPartnersData = [
   {
     name: "Ngaoundal - ARR Project",
     categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY],
-    summary: "Reforestation and restoration project",
+    goal: "Reforestation and restoration project",
     moreInfo: "/project-details/koundi-conversation-project",
     imageSrc: forestryProjectNgaoundal,
     imageAlt: "forest_in_ngaoundal",
@@ -127,7 +127,7 @@ export const SlideButtonsPartnersData = [
   {
     name: "Garoua-Boulai - ARR Project",
     categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY],
-    summary: "Forest restoration project",
+    goal: "Forest restoration project",
     moreInfo: "/project-details/koundi-conversation-project",
     imageSrc: forestryProjectGaroua,
     imageAlt: "forest_in_garoua",
@@ -136,7 +136,7 @@ export const SlideButtonsPartnersData = [
   {
     name: "Betare-Oya - ARR Project",
     categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY],
-    summary: "Reforestation and restoration project",
+    goal: "Reforestation and restoration project",
     moreInfo: "/project-details/koundi-conversation-project",
     imageSrc: forestryProjectBetare,
     imageAlt: "forest_in_beta_oya",
@@ -145,7 +145,7 @@ export const SlideButtonsPartnersData = [
   {
     name: "Bafia - ARR Project",
     categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY],
-    summary: "Kiri tree plantation",
+    goal: "Kiri tree plantation",
     moreInfo: "/project-details/koundi-conversation-project",
     imageSrc: forestryProjectBafia,
     imageAlt: "kiri_trees",
@@ -155,7 +155,7 @@ export const SlideButtonsPartnersData = [
   {
     name: "Koundi - REDD+ Project",
     categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY],
-    summary:
+    goal:
       "The Koundi Forest Conservation Project aims to protect and sustainably manage over 100 hectares of critical rainforest in Eastern Cameroon.",
     moreInfo: "/project-details/koundi-conversation-project",
     imageSrc: forestryProjectKoundi,
@@ -167,7 +167,7 @@ export const SlideButtonsPartnersData = [
   {
     name: "Biomass storage with solar energy",
     categories: [ProjectCategory.UNDER_DEVELOPMENT, ProjectCategory.FORESTRY],
-    summary:
+    goal:
       "The Cameroon Project is a unique initiative that combines biomass storage with solar energy and community-driven development to address both environmental and social challenges in Cameroon.",
     firstDetails: "The Cameroon Project is a unique initiative that combines biomass storage with solar energy and community-driven development to address both environmental and social challenges in Cameroon. The project utilizes wood residues from a sawmill for long-term carbon storage. Solar panels are built on top of the storage site to provide reliable electricity to the village.",
     secondDetails: "In Cameroon, waste biomass from forestry operations is often burned, releasing stored carbon back into the atmosphere. The Project offers a sustainable alternative by purchasing this biomass from a local sawmill and storing it in a way that prevents decomposition, achieving long-term carbon removal. This approach not only mitigates CO₂ emissions but also turns a by-product into a valuable resource for climate action.",
@@ -185,7 +185,7 @@ export const SlideButtonsPartnersData = [
   {
     name: "Limbe - Waste handling",
     categories: [ProjectCategory.UNDER_DEVELOPMENT, ProjectCategory.WASTE_MANAGEMENT],
-    summary: "Plastic waste collection",
+    goal: "Plastic waste collection",
     moreInfo: "/project-details/cameroon-project",
     imageSrc: wasteManagementLimbe,
     imageAlt: "waste_management_limbe",
@@ -194,7 +194,7 @@ export const SlideButtonsPartnersData = [
   {
     name: "Douala - Waste handling",
     categories: [ProjectCategory.UNDER_DEVELOPMENT, ProjectCategory.WASTE_MANAGEMENT],
-    summary: "Plastic waste collection",
+    goal: "Plastic waste collection",
     moreInfo: "/project-details/cameroon-project",
     imageSrc: wasteManagementDouala,
     imageAlt: "waste_management_douala",
@@ -203,7 +203,7 @@ export const SlideButtonsPartnersData = [
   {
     name: "Kribi - Waste handling",
     categories: [ProjectCategory.UNDER_DEVELOPMENT, ProjectCategory.WASTE_MANAGEMENT],
-    summary: "Plastic waste collection",
+    goal: "Plastic waste collection",
     moreInfo: "/project-details/cameroon-project",
     imageSrc: wasteManagementKribi,
     imageAlt: "waste_management_kribi",
