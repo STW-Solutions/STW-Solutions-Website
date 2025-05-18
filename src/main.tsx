@@ -11,7 +11,7 @@ import MainLayout from "./MainLayout";
 import Projects from "./Pages/Projects/Projects";
 import "./index.css";
 import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
-import SolutionDetails from "./Pages/Solution-details/Solution-details";
+import SolutionDetails from "./Pages/SolutionDetails/SolutionDetails";
 import Blogs from "./Pages/Blogs/Blogs";
 import BlogDetails from "./Pages/BlogDetails/BlogDetails";
 
