@@ -257,12 +257,12 @@ const Home = () => {
           <div className="bg-white project-items container-fluid py-5" key={index}>
             <div className="container rounded shadow p-5 project-item-box d-flex justify-content-between align-items-center mb-1 flex-column flex-md-row">
               <img
-                src={project.imageSrc}
-                alt={project.imageAlt}
-                className={project.imageClass}
+                src={project.heroImageSrc}
+                alt={project.heroImageAlt}
+                className={project.heroImageClass}
               />
-              <h4 className="fw-bold text-center mt-3 mt-md-0 text-break project-title">
-                {t(project.name)}
+              <h4 className="fw-bold text-center mt-3 mt-md-0 text-break project-title text-capitalize">
+                {t(project.title)}
               </h4>
               <p className="description">{t(project.goal || '')}</p>
               <Link

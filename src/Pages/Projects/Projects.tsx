@@ -278,20 +278,20 @@ const Projects = () => {
             >
               <div className="col-md-12 col-lg-3">
                 <img
-                  src={project.imageSrc}
+                  src={project.heroImageSrc}
                   width="240"
                   height="240"
-                  className={`img-fluid w-100 ${project.imageClass}`}
-                  alt={t(project.imageAlt)}
+                  className={`img-fluid w-100 ${project.heroImageClass}`}
+                  alt={t(project.heroImageAlt)}
                 />
               </div>
               <div className="col-lg-3 col-md-12">
                 <span className="fs-4 fw-bold text-center text-md-start">
-                  {t(project.name)}
+                  {t(project.title)}
                 </span>
               </div>
               <div className="col-lg-3 col-md-12 text-truncate">
-                {t(project.summary || "")}
+                {t(project.goal || "")}
               </div>
               <Link
                 className="col-lg-2 col-md-12 text-end"

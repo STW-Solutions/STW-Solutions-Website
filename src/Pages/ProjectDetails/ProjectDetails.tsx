@@ -6,9 +6,9 @@ import "./ProjectDetails.css";
 import { useEffect } from "react";
 
 const ProjectDetails = () => {
-   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const projectName = useParams().name;
   const { t } = useTranslation();
   const project = projects.find((item) => item.alias === projectName);
@@ -21,16 +21,18 @@ const ProjectDetails = () => {
       <div className="main-container">
         <div className="container py-5 mt-5">
           <h1 className="stw-solutions-h1 text-center">
-            {t(project?.name || "")}
+            {t(project?.title || "")}
           </h1>
-          {project?.firstDetails && <p className="text-justify px-4">{project?.firstDetails}</p>}
+          {project?.goal && (
+            <p className="text-justify px-4">{t(project?.goal)}</p>
+          )}
           <div
             className="project-details-hero mb-5"
-            style={{ backgroundImage: `url(${project?.imageSrc})` }}
+            style={{ backgroundImage: `url(${project?.heroImageSrc})` }}
           ></div>
-          {project?.secondDetails && <p className="text-justify px-4">{project?.secondDetails}</p>}
-          {project?.thirdDetails && <p className="text-justify px-4">{project?.thirdDetails}</p>}
-          {project?.fourthDetails && <p className="text-justify px-4">{project?.fourthDetails}</p>}
+          {project?.description.map((paragraph) => (
+            <p className="text-justify px-4">{t(paragraph)}</p>
+          ))}
           <div className="px-4 mt-5">
             <h6 className="fw-bold text-capitalize text-muted">{t("tags")}</h6>
             <div className="mt-3">
@@ -42,7 +44,7 @@ const ProjectDetails = () => {
             </div>
             <div className="d-flex mt-5 justify-content-between">
               <span>
-                {project?.startDate && (
+                {project?.timeLine.startDate && (
                   <span>
                     <span className="d-flex align-items-center text-secondary">
                       <svg
@@ -56,12 +58,12 @@ const ProjectDetails = () => {
                         {t("started")}
                       </span>
                     </span>
-                    <span className="d-block">{project?.startDate}</span>
+                    <span className="d-block">{project?.timeLine.startDate}</span>
                   </span>
                 )}
               </span>
               <span>
-                {project?.endDate && (
+                {project?.timeLine.endDate && (
                   <span>
                     <span className="d-flex align-items-center text-secondary">
                       <svg
@@ -75,7 +77,7 @@ const ProjectDetails = () => {
                         {t("due_date")}
                       </span>
                     </span>
-                    <span className="d-block">{project?.endDate}</span>
+                    <span className="d-block">{project?.timeLine.endDate}</span>
                   </span>
                 )}
               </span>
