@@ -32,7 +32,7 @@ const SolutionsTemplate = ({
     const { t } = useTranslation();
 
     return (
-    <div className="container-fluid">
+    <div className="container-fluid py-3">
       <div
         className="services-container mb-5"
         style={{ backgroundImage: `url(${header})` }}
@@ -101,8 +101,8 @@ const SolutionsTemplate = ({
             </div>
           ))}
         </div>
-        <div className="row box-margin-top mb-3">
-          <div className="col-med-8 buttom-page text-center text-md-start">
+        <div className="row mt-5 pt-5 mb-3">
+          <div className="col-md-6 explore-section text-md-start shadow border-0 rounded-start">
             <p className="text-white text-large text-wrap explore-text">
               {t(exploreText)}
               <br />
@@ -110,12 +110,12 @@ const SolutionsTemplate = ({
             </p>
             <div className="my-5">
               <Link
-                className="btn bg-white text-success p-4 fs-2"
+                className="btn bg-white text-success p-3 fs-2"
                 to="/projects"
               >
                 {t(callToAction)}
                 <span className="fs-4 text-success bg-white">
-                  <svg
+                  <svg className="svg-image"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                   >
@@ -128,11 +128,11 @@ const SolutionsTemplate = ({
               </Link>
             </div>
           </div>
-          <div className="col-med-3 p-3 d-flex flex-column justify-content-center align-items-center  card-class">
+          <div className="projects-section col-md-6 d-flex flex-column align-items-center bg-white rounded-end shadow border-0">
             {cardData.map((card, index) => (
               <div
                 key={index}
-                className="row py-2 shadow justify-content-center align-items-center mb-4 box-card"
+                className="row p-2 shadow justify-content-center align-items-center mb-3 bg-white"
               >
                 <h3 className="text-center title-color fw-bolder">
                   {t(card.title)}
