@@ -23,48 +23,7 @@ export interface Project {
   categories: ProjectCategory[];
   goal?: string;
   description: string[];
-  impact: {
-    environmental?: {
-      name: string;
-      description: string;
-      imageUrl?: string;
-    };
-    localCommunities?: {
-      name: string;
-      description?: {
-        main?: string;
-        paragraph1?: string;
-        paragraph2?: string;
-      };
-      imageUrl?: string;
-    };
-    project?: {
-      name: string;
-      description: {
-        main?: string;
-        paragraph1?: string;
-        paragraph2?: string;
-        listDescription?: string;
-        listItems?: string[];
-      };
-      imageUrl?: string;
-    };
-    economicTransformation?: {
-      name: string;
-      description: string;
-      imageUrl?: string;
-    };
-    socioEconomic?: {
-      name: string;
-      description: string;
-      imageUrl?: string;
-    };
-    technology?: {
-      name: string;
-      description: string;
-      imageUrl?: string;
-    };
-  };
+  impact: ImpactTransformation[]; 
   heroImageSrc: string;
   heroImageAlt: string;
   heroImageClass?: string;
@@ -83,6 +42,18 @@ export interface Project {
   };
   moreInfo: string;
   geolocation?: string;
+}
+
+export interface ImpactTransformation {
+  name: string;
+  description: {
+    main?: string;
+    paragraph1?: string;
+    paragraph2?: string;
+    listDescription?: string;
+    listItems?: string[];
+  };
+  imageUrl?: string;
 }
 
 export interface SDG {
