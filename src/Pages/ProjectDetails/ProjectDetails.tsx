@@ -3,15 +3,20 @@ import { projects } from "../../constants";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import "./ProjectDetails.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { ImpactTransformation } from "../../models";
 
 const ProjectDetails = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const projectName = useParams().name;
   const { t } = useTranslation();
   const project = projects.find((item) => item.alias === projectName);
+  const [impactValue, setImpactValue] = useState<ImpactTransformation>();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
+    setImpactValue(project?.impact[0]);
+  }, []);
   return (
     <>
       <Helmet>
@@ -20,7 +25,7 @@ const ProjectDetails = () => {
       </Helmet>
       <div className="main-container">
         <div className="container py-5 mt-5">
-          <h1 className="stw-solutions-h1 text-center">
+          <h1 className="stw-solutions-h1 text-center text-capitalize">
             {t(project?.title || "")}
           </h1>
           {project?.goal && (
@@ -30,18 +35,89 @@ const ProjectDetails = () => {
             className="project-details-hero mb-5"
             style={{ backgroundImage: `url(${project?.heroImageSrc})` }}
           ></div>
-          {project?.description.map((paragraph) => (
-            <p className="text-justify px-4">{t(paragraph)}</p>
-          ))}
+          <div className="text-justify px-4">
+            <h5 className="fw-bold text-capitalize text-muted">
+              {t("description")}
+            </h5>
+            {project?.description.map((paragraph, i) => (
+              <p key={i}>{t(paragraph)}</p>
+            ))}
+          </div>
+          {project?.impact.length && (
+            <div className="px-4">
+              <h5 className="fw-bold text-muted">
+                {t("impact_and_transformation")}
+              </h5>
+              <p className="mt-1">
+                <ul className="nav nav-tabs ms-0">
+                  {project.impact.map((impact, i) => (
+                    <li
+                      className={`nav-item ${
+                        impactValue?.name === impact.name
+                          ? " active-impact"
+                          : ""
+                      }`}
+                      key={i}
+                    >
+                      <button
+                        className="border-0 btn"
+                        aria-current="page"
+                        onClick={() => setImpactValue(impact)}
+                      >
+                        {t(impact.name)}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </p>
+              {impactValue && (
+                <div>
+                  {impactValue.description.main && (
+                    <p>{t(impactValue.description.main)}</p>
+                  )}
+                  {impactValue.description.paragraph1 && (
+                    <p>{t(impactValue.description.paragraph1)}</p>
+                  )}
+                  {impactValue.description.paragraph2 && (
+                    <p>{t(impactValue.description.paragraph2)}</p>
+                  )}
+                  {impactValue.description.listDescription && (
+                    <div>
+                      {t(impactValue.description.listDescription)}
+                      <ol>
+                        {impactValue.description.listItems?.map((item, i) => (
+                          <li key={i}>{t(item)}</li>
+                        ))}
+                      </ol>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+
           <div className="px-4 mt-5">
-            <h6 className="fw-bold text-capitalize text-muted">{t("tags")}</h6>
+            <h5 className="fw-bold text-capitalize text-muted">{t("tags")}</h5>
             <div className="mt-3">
-              {project?.categories.map((category) => (
-                <span className="border me-2 p-2 bg-secondary text-white rounded">
+              {project?.categories.map((category, i) => (
+                <span
+                  key={i}
+                  className="border me-2 p-2 bg-secondary text-white rounded"
+                >
                   {category}
                 </span>
               ))}
             </div>
+          </div>
+          <div className="px-4 mt-5">
+            {project?.timeLine.title && (
+              <h5 className="fw-bold text-capitalize text-muted">
+                {t(project?.timeLine.title)}
+              </h5>
+            )}
+            {project?.timeLine.description && (
+              <p>{t(project?.timeLine.description)}</p>
+            )}
             <div className="d-flex mt-5 justify-content-between">
               <span>
                 {project?.timeLine.startDate && (
@@ -58,7 +134,9 @@ const ProjectDetails = () => {
                         {t("started")}
                       </span>
                     </span>
-                    <span className="d-block">{project?.timeLine.startDate}</span>
+                    <span className="d-block">
+                      {project?.timeLine.startDate}
+                    </span>
                   </span>
                 )}
               </span>
@@ -82,6 +160,16 @@ const ProjectDetails = () => {
                 )}
               </span>
             </div>
+          </div>
+          <div className="px-4">
+            {project?.location && (
+              <h5 className="fw-bold text-capitalize text-muted">
+                {t("location")}
+              </h5>
+            )}
+            {project?.location && (
+              <p>{t(project?.location)}</p>
+            )}
           </div>
         </div>
       </div>

@@ -17,3 +17,12 @@
     width: 1rem;
     fill: currentColor;
 }
+
+.active-impact {
+    background-color: #257251;
+    border-radius: 4px;
+}
+
+.active-impact button {
+    color: white !important;
+}

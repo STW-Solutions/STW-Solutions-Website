@@ -124,20 +124,22 @@ export const projects: Project[] = [
       "koundi_forest_conservation_project_description_p3",
       "koundi_forest_conservation_project_description_p4",
     ],
-    impact: {
-      environmental: {
+    impact: [
+      {
         name: "environmental_impact_name",
-        description: "koundi_forest_project_environmental_impact_description",
+        description: {
+          main: "koundi_forest_project_environmental_impact_description",
+        },
         imageUrl: "",
       },
-      localCommunities: {
+      {
         name: "local_communities_impact_name",
         description: {
           main: "koundi_forest_project_local_communities_impact_description",
         },
         imageUrl: "",
       },
-      project: {
+      {
         name: "project_impact_name",
         description: {
           paragraph1: "koundi_forest_project_impact_description_p1",
@@ -152,9 +154,9 @@ export const projects: Project[] = [
         },
         imageUrl: "",
       },
-    },
+    ],
     timeLine: {
-      title: "project_timeline",
+      title: "timeline",
       description: "koundi_forest_project_timeline_description",
       startDate: "",
       endDate: "",
@@ -222,14 +224,15 @@ export const projects: Project[] = [
       "kpawara_community_forest_restoration_project_description_p2",
       "kpawara_community_forest_restoration_project_description_p3",
     ],
-    impact: {
-      environmental: {
+    impact: [
+      {
         name: "environmental_impact_name",
-        description:
-          "kpawara_community_forest_restoration_project_environmental_impact_description",
+        description: {
+          main: "kpawara_community_forest_restoration_project_environmental_impact_description",
+        },
         imageUrl: "",
       },
-      localCommunities: {
+      {
         name: "local_communities_impact_name",
         description: {
           paragraph1:
@@ -239,7 +242,7 @@ export const projects: Project[] = [
         },
         imageUrl: "",
       },
-      project: {
+      {
         name: "project_impact_name",
         description: {
           paragraph1:
@@ -249,14 +252,15 @@ export const projects: Project[] = [
         },
         imageUrl: "",
       },
-      economicTransformation: {
+      {
         name: "economic_transformation_name",
-        description:
-          "kpawara_community_forest_restoration_project_economic_transformation_description",
+        description: {
+          main: "kpawara_community_forest_restoration_project_economic_transformation_description",
+        },
       },
-    },
+    ],
     timeLine: {
-      title: "project_timeline",
+      title: "timeline",
       description:
         "kpawara_community_forest_restoration_project_timeline_description",
       startDate: "",
@@ -330,21 +334,22 @@ export const projects: Project[] = [
       "mandjou_agroforestry_and_reforestation_project_description_p1",
       "mandjou_agroforestry_and_reforestation_project_description_p2",
     ],
-    impact: {
-      environmental: {
+    impact: [
+      {
         name: "environmental_impact_name",
-        description:
-          "mandjou_agroforestry_and_reforestation_project_environmental_impact_description",
+        description: {
+          main: "mandjou_agroforestry_and_reforestation_project_environmental_impact_description",
+        },
         imageUrl: "",
       },
-      localCommunities: {
+      {
         name: "local_communities_impact_name",
         description: {
           main: "mandjou_agroforestry_and_reforestation_project_local_communities_impact_description",
         },
         imageUrl: "",
       },
-      project: {
+      {
         name: "project_impact_name",
         description: {
           paragraph1:
@@ -354,14 +359,15 @@ export const projects: Project[] = [
         },
         imageUrl: "",
       },
-      economicTransformation: {
+      {
         name: "economic_transformation_name",
-        description:
-          "mandjou_agroforestry_and_reforestation_project_economic_transformation_description",
+        description: {
+          main: "mandjou_agroforestry_and_reforestation_project_economic_transformation_description",
+        },
       },
-    },
+    ],
     timeLine: {
-      title: "project_timeline",
+      title: "timeline",
       description:
         "mandjou_agroforestry_and_reforestation_project_timeline_description",
       startDate: "",
@@ -436,35 +442,38 @@ export const projects: Project[] = [
       "banefou_landfill_gas_capture_and_energy_utilization_project_description_p2",
       "banefou_landfill_gas_capture_and_energy_utilization_project_description_p3",
     ],
-    impact: {
-      environmental: {
+    impact: [
+      {
         name: "environmental_impact_name",
-        description:
-          "banefou_landfill_gas_capture_and_energy_utilization_project_environmental_impact_description",
+        description: {
+          main: "banefou_landfill_gas_capture_and_energy_utilization_project_environmental_impact_description",
+        },
         imageUrl: "",
       },
-      project: {
+      {
         name: "project_impact_name",
         description: {
           main: "banefou_landfill_gas_capture_and_energy_utilization_project_impact_main_description",
         },
         imageUrl: "",
       },
-      socioEconomic: {
+      {
         name: "socio_economic_impact_name",
-        description:
-          "banefou_landfill_gas_capture_and_energy_utilization_project_socio_economic_impact_description",
+        description: {
+          main: "banefou_landfill_gas_capture_and_energy_utilization_project_socio_economic_impact_description",
+        },
         imageUrl: "",
       },
-      technology: {
+      {
         name: "technology_impact_name",
-        description:
-          "banefou_landfill_gas_capture_and_energy_utilization_project_technology_impact_description",
+        description: {
+          main: "banefou_landfill_gas_capture_and_energy_utilization_project_technology_impact_description",
+        },
         imageUrl: "",
       },
-    },
+    ],
     timeLine: {
-      title: "project_timeline",
+      title: "timeline",
       description:
         "banefou_landfill_gas_capture_and_energy_utilization_project_timeline_description",
       startDate: "",
@@ -473,7 +482,8 @@ export const projects: Project[] = [
     heroImageSrc: forestryProjectNgaoundal,
     heroImageAlt: "",
     backgroundColor: "#FFFFFF",
-    moreInfo: "/project-details/banefou-landfill-gas-capture-and-energy-utilization-project",
+    moreInfo:
+      "/project-details/banefou-landfill-gas-capture-and-energy-utilization-project",
     alias: "banefou-landfill-gas-capture-and-energy-utilization-project",
     sdgsInfo: {
       description: "sdgs_info_description",
