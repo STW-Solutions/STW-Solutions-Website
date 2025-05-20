@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
-import { Helmet,  HelmetProvider } from "react-helmet-async";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 import "./Home.css";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
@@ -12,7 +12,12 @@ import HowItWorks from "../../components/HowItWorks/HowItWorks";
 import arrowRightCircle from "../../images/Arrow-right-circle.png";
 import { useRef } from "react";
 import useScrollTriggeredCountUp from "../../hooks/useScrollTriggeredCountUp";
-import { WhyUs, Partners, SlideButtonsPartnersData, projects } from "../../constants";
+import {
+  WhyUs,
+  Partners,
+  SlideButtonsPartnersData,
+  projects,
+} from "../../constants";
 import { ProjectCategory } from "../../models";
 import { filterProjectsByCategories } from "../../services/general-services";
 
@@ -37,16 +42,23 @@ const Home = () => {
     forestSmPlantedRef,
     600
   );
+  const sdgsRef = useRef<HTMLDivElement>(null);
+  const sdgsCount = useScrollTriggeredCountUp(sdgsRef, 8);
+  const sdgsSmRef = useRef<HTMLDivElement>(null);
+  const sdgsSmCount = useScrollTriggeredCountUp(sdgsSmRef, 8);
 
-  const projectHighLights = filterProjectsByCategories(projects, [ProjectCategory.UNDER_DEVELOPMENT, ProjectCategory.FORESTRY])
+  const projectHighLights = filterProjectsByCategories(projects, [
+    ProjectCategory.UNDER_DEVELOPMENT,
+    ProjectCategory.FORESTRY,
+  ]);
 
   return (
     <div className="home-main">
       <HelmetProvider>
         <Helmet>
-        <title>{t("home_page")} - STW-Solutions Ltd</title>
-        <meta name="home" content={t("meta_home")} />
-      </Helmet>
+          <title>{t("home_page")} - STW-Solutions Ltd</title>
+          <meta name="home" content={t("meta_home")} />
+        </Helmet>
       </HelmetProvider>
       <section className="hero-main container-fluid py-md-5 pb-0 bg-light-green">
         <div className="container pt-5 pb-lg-5">
@@ -95,10 +107,21 @@ const Home = () => {
                     <span className="d-block">{t("trees_planted")}</span>
                   </div>
                   <div className="col-6 col-sm-4 mt-2">
-                    <span className="bold-green-text text-uppercase">
-                      {t("sdgs")}
+                    <span
+                      className="bold-green-text text-uppercase"
+                      ref={sdgsSmRef}
+                    >
+                      {sdgsSmCount}
                     </span>
-                    <span className="d-block">{t("(1,8,11,13,15,17)")}</span>
+                    <span className="d-block">
+                      <Link
+                        to={"https://sdgs.un.org/goals"}
+                        target="_blank"
+                        className="text-decoration-none text-black"
+                      >
+                        {t("sdgs_supported")}
+                      </Link>
+                    </span>
                   </div>
                   <div className="col-12 col-sm-6 pt-3 pt-md-0 text-center forest-panted-sm-box">
                     <span className="bold-green-text">+</span>
@@ -152,10 +175,21 @@ const Home = () => {
                 <span className="d-block">{t("trees_planted")}</span>
               </div>
               <div>
-                <span className="bold-green-text text-uppercase">
-                  {t("sdgs")}
+                <span
+                  className="bold-green-text text-uppercase"
+                  ref={sdgsRef}
+                >
+                  {sdgsCount}
                 </span>
-                <span className="d-block">{t("(1,8,11,13,15,17)")}</span>
+                <span className="d-block">
+                  <Link
+                    to={"https://sdgs.un.org/goals"}
+                    target="_blank"
+                    className="text-decoration-none text-black"
+                  >
+                    {t("sdgs_supported")}
+                  </Link>
+                </span>
               </div>
               <div>
                 <span className="bold-green-text" ref={forestPlantedRef}>
@@ -231,7 +265,8 @@ const Home = () => {
             slideButtonsData={SlideButtonsPartnersData}
           >
             {Partners.map((partner, index) => (
-              <img key={index}
+              <img
+                key={index}
                 src={partner.imageSrc}
                 className="partner-logo-sm"
                 alt={t(partner.alt)}
@@ -256,7 +291,10 @@ const Home = () => {
           </div>
         </div>
         {projectHighLights.map((project, index) => (
-          <div className="bg-white project-items container-fluid py-5" key={index}>
+          <div
+            className="bg-white project-items container-fluid py-5"
+            key={index}
+          >
             <div className="container rounded shadow p-5 project-item-box d-flex justify-content-between align-items-center mb-1 flex-column flex-md-row">
               <img
                 src={project.heroImageSrc}
@@ -266,7 +304,7 @@ const Home = () => {
               <h4 className="fw-bold text-center mt-3 mt-md-0 text-break project-title text-capitalize">
                 {t(project.title)}
               </h4>
-              <p className="description">{t(project.goal || '')}</p>
+              <p className="description">{t(project.goal || "")}</p>
               <Link
                 to={project.moreInfo}
                 className="ms-auto ms-md-0 me-5 me-md-0"
