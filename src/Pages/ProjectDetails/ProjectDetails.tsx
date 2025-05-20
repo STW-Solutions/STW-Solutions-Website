@@ -1,6 +1,6 @@
-import { useParams } from "react-router";
-import { projects } from "../../constants";
-import { Helmet } from "react-helmet";
+import { Link, useParams } from "react-router";
+import { projects, unSDGs } from "../../constants";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import "./ProjectDetails.css";
 import { useEffect, useState } from "react";
@@ -11,6 +11,7 @@ const ProjectDetails = () => {
   const { t } = useTranslation();
   const project = projects.find((item) => item.alias === projectName);
   const [impactValue, setImpactValue] = useState<ImpactTransformation>();
+  const sdgs = unSDGs;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -19,12 +20,23 @@ const ProjectDetails = () => {
   }, []);
   return (
     <>
-      <Helmet>
-        <title>{t(projectName || "")} - STW-Solutions Ltd</title>
-        <meta name="projects" content={t("meta_" + projectName || "")} />
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>{t(projectName || "")} - STW-Solutions Ltd</title>
+          <meta name="projects" content={t("meta_" + projectName || "")} />
+        </Helmet>
+      </HelmetProvider>
       <div className="main-container">
         <div className="container py-5 mt-5">
+          <Link
+            to={"/projects"}
+            className="btn border-0 back-btn rounded text-white mb-5 align-items-center"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="svg-back-icon me-3">
+              <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
+            {t("back_to_projects")}
+          </Link>
           <h1 className="stw-solutions-h1 text-center text-capitalize">
             {t(project?.title || "")}
           </h1>
@@ -44,11 +56,11 @@ const ProjectDetails = () => {
             ))}
           </div>
           {project?.impact.length && (
-            <div className="px-4">
+            <div className="px-4 mt-5">
               <h5 className="fw-bold text-muted">
                 {t("impact_and_transformation")}
               </h5>
-              <p className="mt-1">
+              <div className="mt-1">
                 <ul className="nav nav-tabs ms-0">
                   {project.impact.map((impact, i) => (
                     <li
@@ -69,7 +81,7 @@ const ProjectDetails = () => {
                     </li>
                   ))}
                 </ul>
-              </p>
+              </div>
               {impactValue && (
                 <div>
                   {impactValue.description.main && (
@@ -93,6 +105,45 @@ const ProjectDetails = () => {
                   )}
                 </div>
               )}
+            </div>
+          )}
+
+          {project?.sdgsInfo.sdgs && (
+            <div className="px-4 mt-5">
+              <h5 className="fw-bold text-muted text-uppercase">
+                {t("sustainable_development_goals")}
+              </h5>
+              <p>{t("sdgs_definition")}</p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t(project.sdgsInfo.description) || "",
+                }}
+              ></p>
+              <div className="p-3 p-sm-1 p-md-2 p-lg-3 row">
+                {sdgs
+                  .filter((sdg) => project.sdgsInfo.sdgs.includes(sdg.id))
+                  .map((projectSdg, i) => (
+                    <div
+                      className="sdg-card card col-12 col-sm-5 col-md-3 col-lg-2 p-3 mt-2 border rounded-3 shadow h-auto me-0 me-sm-1 me-md-2 me-lg-3"
+                      key={i}
+                    >
+                      <img
+                        src={projectSdg.iconSrc}
+                        className="w-100"
+                        alt="..."
+                      />
+                      <div className="card-body px-0">
+                        <Link
+                          to={projectSdg.moreInfoUrl}
+                          target="_blank"
+                          className={`rounded-0 btn ${projectSdg.class}`}
+                        >
+                          {t("more_info")}
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+              </div>
             </div>
           )}
 
@@ -167,10 +218,17 @@ const ProjectDetails = () => {
                 {t("location")}
               </h5>
             )}
-            {project?.location && (
-              <p>{t(project?.location)}</p>
-            )}
+            {project?.location && <p>{t(project?.location)}</p>}
           </div>
+          <Link
+            to={"/projects"}
+            className="btn border-0 back-btn rounded text-white mb-2 align-items-center mt-5"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="svg-back-icon me-3">
+              <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
+            {t("back_to_projects")}
+          </Link>
         </div>
       </div>
     </>

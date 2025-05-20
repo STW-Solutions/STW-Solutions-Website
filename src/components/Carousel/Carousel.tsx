@@ -45,7 +45,7 @@ const Carousel = ({
       <div id={id} className="carousel carousel-dark slide">
         <div className={`carousel-indicators ${carouselIndicatorClasses}`}>
           {slideButtonsData.map((button, index) => (
-            <button
+            <button key={index}
               type="button"
               data-bs-target={`#${id}`}
               data-bs-slide-to={button.dataBsSlideTo}

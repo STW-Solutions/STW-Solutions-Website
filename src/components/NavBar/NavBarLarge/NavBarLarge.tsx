@@ -3,8 +3,8 @@ import { Link } from "react-router";
 import ButtonOutline from "../../ButtonOutline/ButtonOutline";
 import ButtonPrimary from "../../ButtonPrimary/ButtonPrimary";
 import "./NavBarLarge.css";
-import { useState } from "react";
-import { NavHashLink } from "react-router-hash-link"
+import { NavHashLink } from "react-router-hash-link";
+import logo from "../../../images/STW-Solution-Logo.png";
 
 interface Props {
   onClickLanguageChange: (language: string) => void;
@@ -12,11 +12,10 @@ interface Props {
 
 const NavBarLarge = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
   return (
     <div className="bg-white d-none navbar-lg justify-content-between align-items-center text-capitalize py-1 px-5">
       <Link className="stw-solutions-logo-box mx-lg-5" to={"/"}>
-        <img src="STW-Solution-Logo.png" alt={`${t("stw_solutions_logo")}`} />
+        <img src={logo} alt={`${t("stw_solutions_logo")}`} />
       </Link>
       <div className="d-flex align-items-center mx-2">
         <span>
@@ -47,25 +46,25 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
                 {t("company")}
               </Link>
             </li>
-            <li>
+            {/* <li>
               <a className="dropdown-item stw-nav-lg-link" href="">
                 {t("sustainability")}
               </a>
-            </li>
+            </li> */}
             <li>
               <NavHashLink className="dropdown-item stw-nav-lg-link" to="/#our-partners">
                 {t("partners")}
               </NavHashLink>
             </li>
-            <li>
+            {/* <li>
               <a className="dropdown-item stw-nav-lg-link" href="#">
                 {t("careers")}
               </a>
-            </li>
+            </li> */}
             <li>
-              <a className="dropdown-item stw-nav-lg-link" href="#">
+              <Link className="dropdown-item stw-nav-lg-link" to="#">
                 {t("contact")}
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -117,8 +116,8 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
               </Link>
             </li>
             <li>
-              <Link to="/project-details/cameroon-project" className="dropdown-item stw-nav-lg-link">
-              {t("the_cameroon_project")}
+              <Link to="/project-details/koundi-forest-conservation-project" className="dropdown-item stw-nav-lg-link">
+              {t("koundi_conservation_project")}
               </Link>
             </li>
           </ul>
@@ -139,21 +138,21 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
                 {t("blog")}
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link className="dropdown-item stw-nav-lg-link" to="#">
                 {t("events")}
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link className="dropdown-item stw-nav-lg-link" to="#">
                 {t("news")}
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link className="dropdown-item stw-nav-lg-link" to="#">
                 {t("podcast")}
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
@@ -162,7 +161,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           classes={["stw-btn-w text-capitalize", "me-2", "mx-1", "w-100"]}
           children={`${t("contact_us")}`}
         />
-        <ButtonOutline
+        <ButtonOutline to="/blogs"
           classes={["stw-btn-width", "me-2", "mx-1"]}
           children={`${t("blog")}`}
         />
@@ -180,15 +179,14 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             className="text-uppercase form-select rounded-0 px-5 py-2 fw-bold"
             aria-label="language options"
             onChange={(event) => {
-              setSelectedLanguage(event.target.value);
               onClickLanguageChange(event.target.value);
             }}
             id="language-options-lg"
             defaultValue={"en"}
           >
             <option value={"en"}>{t("en")}</option>
-            <option value={"fr"}>{t("fr")}</option>
-            <option value={"de"}>{t("de")}</option>
+            {/* <option value={"fr"}>{t("fr")}</option>
+            <option value={"de"}>{t("de")}</option> */}
           </select>
         </div>
       </div>

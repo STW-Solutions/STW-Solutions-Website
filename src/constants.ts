@@ -7,16 +7,11 @@ import carbonsate from "../src/images/Carbonsate.png";
 import minepded from "../src/images/MINEPDED.png";
 import ministryForestry from "../src/images/MinistryForestry.png";
 import volkswagen from "../src/images/Volkswagen.webp";
-import carbonsateCameroon from "../src/images/carbonsate-cameroon.avif";
-import { Project, ProjectCategory } from "./models";
-import wasteManagementDouala from "../src/images/STW-Solution-Waste-Management-Douala-Project.jpg";
-import wasteManagementLimbe from "../src/images/STW-Solution-Waste-Management-Limbe.jpg";
-import wasteManagementKribi from "../src/images/STW-Solution-Waste-Management-Kribi.jpg";
+import { Project, ProjectCategory, SDG } from "./models";
+import wasteManagementLimbe from "../src/images/carbonsate-cameroon.avif";
 import forestryProjectKoundi from "../src/images/STW-Solution-Forest-Projects-Koundi.jpg";
 import forestryProjectNgaoundal from "../src/images/STW-Solution-Forest-Projects-Ngaoundal.jpg";
 import forestryProjectGaroua from "../src/images/STW-Solution-Forest-Projects-Garoua.jpg";
-import forestryProjectBetare from "../src/images/STW-Solution-Forest-Projects-Betare.jpg";
-import forestryProjectBafia from "../src/images/STW-Solution-Forest-Projects-Bafia(Kiwi_trees).jpg";
 import serviceBg from "../src/images/solutions/service-bg.png";
 import renewResource from "../src/images/solutions/renewResource.jpeg";
 import wasteMgmt from "../src/images/solutions/wasteMgmt.jpeg";
@@ -31,6 +26,23 @@ import wasteMgmtBg from "../src/images/solutions/wasteMgmtBg.png";
 import image1wasteMgmtPng from "../src/images/solutions/image1wasteMgmt.png";
 import image2wasteMgmtPng from "../src/images/solutions/image2wasteMgmt.png";
 import image3wasteMgmtPng from "../src/images/solutions/image3wasteMgmt.png";
+import sdg1 from "../src/images/sdgs/1.png";
+import sdg2 from "../src/images/sdgs/2.png";
+import sdg3 from "../src/images/sdgs/3.png";
+import sdg4 from "../src/images/sdgs/4.png";
+import sdg5 from "../src/images/sdgs/5.png";
+import sdg6 from "../src/images/sdgs/6.png";
+import sdg7 from "../src/images/sdgs/7.png";
+import sdg8 from "../src/images/sdgs/8.png";
+import sdg9 from "../src/images/sdgs/9.png";
+import sdg10 from "../src/images/sdgs/10.png";
+import sdg11 from "../src/images/sdgs/11.png";
+import sdg12 from "../src/images/sdgs/12.png";
+import sdg13 from "../src/images/sdgs/13.png";
+import sdg14 from "../src/images/sdgs/14.png";
+import sdg15 from "../src/images/sdgs/15.png";
+import sdg16 from "../src/images/sdgs/16.png";
+import sdg17 from "../src/images/sdgs/17.png";
 
 export const WhyUs = [
   {
@@ -165,52 +177,11 @@ export const projects: Project[] = [
     heroImageAlt: "forest_in_koundi",
     heroImageClass: "carbonsate-cameroon-img",
     backgroundColor: "#FFFFFF",
-    moreInfo: "/project-details/koundi-conversation-project",
-    alias: "koundi-conversation-project",
+    moreInfo: "/project-details/koundi-forest-conservation-project",
+    alias: "koundi-forest-conservation-project",
     sdgsInfo: {
-      description: "sdgs_info_description",
-      sdgs: [
-        {
-          number: "1",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "8",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "13",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "15",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "17",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-      ],
+      description: "koundi_conservation_project_sdgs_info_description",
+      sdgs: ["1", "8", "13", "15", "17"],
     },
     location: "koundi_conservation_project_location",
     //geolocation: "4°43'59.9"N 13°36'00.0"E"
@@ -267,64 +238,16 @@ export const projects: Project[] = [
       endDate: "",
     },
     heroImageSrc: forestryProjectGaroua,
-    heroImageAlt: "forest_in_garoua",
+    heroImageAlt: "",
     backgroundColor: "#FFFFFF",
     moreInfo: "/project-details/kpawara-community-forest-restoration-project",
     alias: "kpawara-community-forest-restoration-project",
     sdgsInfo: {
-      description: "sdgs_info_description",
-      sdgs: [
-        {
-          number: "1",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "2",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "5",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "13",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "15",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "17",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-      ],
+      description: "kpawara_community_forest_restoration_project_sdgs_info_description",
+      sdgs: ["1", "2", "5", "13", "15", "17"],
     },
-    location: "kpawara_community_forest_restoration_project_location",
+    location:
+      "kpawara_community_forest_restoration_project_location",
   },
   {
     title: "mandjou_agroforestry_and_reforestation_project",
@@ -374,62 +297,14 @@ export const projects: Project[] = [
       endDate: "",
     },
     heroImageSrc: forestryProjectNgaoundal,
-    heroImageAlt: "forest_in_ngaoundal",
+    heroImageAlt: "",
     backgroundColor: "#FFFFFF",
     moreInfo: "/project-details/mandjou-agroforestry-and-reforestation-project",
     alias: "mandjou-agroforestry-and-reforestation-project",
     sdgsInfo: {
-      description: "sdgs_info_description",
-      sdgs: [
-        {
-          number: "1",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "2",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "5",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "13",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "15",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "17",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-      ],
+      description:
+        "mandjou_agroforestry_and_reforestation_project_sdgs_info_description",
+      sdgs: ["1", "2", "5", "13", "15", "17"],
     },
     location: "mandjou_agroforestry_and_reforestation_project_location",
   },
@@ -479,56 +354,16 @@ export const projects: Project[] = [
       startDate: "",
       endDate: "",
     },
-    heroImageSrc: forestryProjectNgaoundal,
+    heroImageSrc: wasteManagementLimbe,
     heroImageAlt: "",
     backgroundColor: "#FFFFFF",
     moreInfo:
       "/project-details/banefou-landfill-gas-capture-and-energy-utilization-project",
     alias: "banefou-landfill-gas-capture-and-energy-utilization-project",
     sdgsInfo: {
-      description: "sdgs_info_description",
-      sdgs: [
-        {
-          number: "7",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "8",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "9",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "13",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-        {
-          number: "17",
-          title: "",
-          description: "",
-          moreInfoUrl: "",
-          iconSrc: "",
-          class: "",
-        },
-      ],
+      description:
+        "banefou_landfill_gas_capture_and_energy_utilization_project_sdgs_info_description",
+      sdgs: ["7", "8", "9", "13", "17"],
     },
     location:
       "banefou_landfill_gas_capture_and_energy_utilization_project_location",
@@ -667,3 +502,125 @@ export const solutions = {
     ],
   },
 };
+
+export const unSDGs: SDG[] = [
+  {
+    id: "1",
+    title: "no_poverty",
+    iconSrc: sdg1,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal1",
+    class: "sdg1-btn"
+  },
+  {
+    id: "2",
+    title: "zero_hunger",
+    iconSrc: sdg2,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal2",
+    class: "sdg2-btn"
+  },
+  {
+    id: "3",
+    title: "good_health_and_wellbeing",
+    iconSrc: sdg3,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal3",
+    class: "sdg3-btn"
+  },
+  {
+    id: "4",
+    title: "quality_education",
+    iconSrc: sdg4,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal4",
+    class: "sdg4-btn"
+  },
+  {
+    id: "5",
+    title: "gender_equality",
+    iconSrc: sdg5,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal5",
+    class: "sdg5-btn"
+  },
+  {
+    id: "6",
+    title: "clean_water_and_sanitation",
+    iconSrc: sdg6,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal6",
+    class: "sdg6-btn"
+  },
+  {
+    id: "7",
+    title: "affordable_and_clean_energy",
+    iconSrc: sdg7,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal7",
+    class: "sdg7-btn"
+  },
+  {
+    id: "8",
+    title: "decent_work_and_economic_growth",
+    iconSrc: sdg8,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal8",
+    class: "sdg8-btn"
+  },
+  {
+    id: "9",
+    title: "industry_innovation_and_infrastructure",
+    iconSrc: sdg9,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal9",
+    class: "sdg9-btn"
+  },
+  {
+    id: "10",
+    title: "reduced_inequalities",
+    iconSrc: sdg10,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal10",
+    class: "sdg10-btn"
+  },
+  {
+    id: "11",
+    title: "sustainable_cities_and_communities",
+    iconSrc: sdg11,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal11",
+    class: "sdg11-btn"
+  },
+  {
+    id: "12",
+    title: "responsible_consumption_and_production",
+    iconSrc: sdg12,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal12",
+    class: "sdg12-btn"
+  },
+  {
+    id: "13",
+    title: "climate_action",
+    iconSrc: sdg13,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal13",
+    class: "sdg13-btn"
+  },
+  {
+    id: "14",
+    title: "life_below_water",
+    iconSrc: sdg14,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal14",
+    class: "sdg14-btn"
+  },
+  {
+    id: "15",
+    title: "life_on_land",
+    iconSrc: sdg15,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal15",
+    class: "sdg15-btn"
+  },
+  {
+    id: "16",
+    title: "peace_justice_and_strong_institutions",
+    iconSrc: sdg16,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal16",
+    class: "sdg16-btn"
+  },
+  {
+    id: "17",
+    title: "partnerships_for_the_goals",
+    iconSrc: sdg17,
+    moreInfoUrl: "https://sdgs.un.org/goals/goal17",
+    class: "sdg17-btn"
+  },
+];
