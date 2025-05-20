@@ -294,5 +294,12 @@
   "technology_impact_name": "Technology impact",
   "local_communities_impact_name": "Local communities impact",
   "banefou_landfill_gas_capture_and_energy_utilization_project_impact_main_description": "In addition to emission reductions, the contribution to Cameroon’s sustainable development is significant in terms of social, environmental and economic well being.",
-  "location": "location"
+  "location": "location",
+  "sdgs_definition": "The Sustainable Development Goals (SDGs), also known as the Global Goals, were adopted by the United Nations in 2015 as a universal call to action to end poverty, protect the planet, and ensure that by 2030 all people enjoy peace and prosperity.",
+  "sustainable_development_goals": "sustainable development goals",
+  "koundi_conservation_project_sdgs_info_description": "The Koundi Forest Conservation Project supports SDGs <b>1, 8, 13, 15 and 17</b>.",
+  "more_info": "More info",
+  "kpawara_community_forest_restoration_project_sdgs_info_description": "The Kpawara Community Forest Restoration Project supports SDGs <b>1, 2, 5, 13, 15 and 17</b>.",
+  "mandjou_agroforestry_and_reforestation_project_sdgs_info_description": "The Mandjou Agroforestry and Reforestation Project supports SDGs <b>1, 2, 5, 13, 15 and 17</b>.",
+  "banefou_landfill_gas_capture_and_energy_utilization_project_sdgs_info_description": "The Banefou Landfill Gas Capture and Energy Utilization Project supports SDGs <b>7, 8, 9, 13, and 17</b>."
 }

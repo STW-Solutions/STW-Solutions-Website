@@ -38,7 +38,7 @@ export interface Project {
   location?: string;
   sdgsInfo: {
     description: string;
-    sdgs: SDG[];
+    sdgs: string[];
   };
   moreInfo: string;
   geolocation?: string;
@@ -57,12 +57,12 @@ export interface ImpactTransformation {
 }
 
 export interface SDG {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   moreInfoUrl: string;
   iconSrc: string;
-  number: string;
-  class: string;
+  id: string;
+  class?: string;
 }
 export interface SolutionsTemplateProps {
   header: string;

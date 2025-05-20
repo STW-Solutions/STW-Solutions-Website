@@ -1,5 +1,5 @@
-import { useParams } from "react-router";
-import { projects } from "../../constants";
+import { Link, useParams } from "react-router";
+import { projects, unSDGs } from "../../constants";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import "./ProjectDetails.css";
@@ -11,6 +11,7 @@ const ProjectDetails = () => {
   const { t } = useTranslation();
   const project = projects.find((item) => item.alias === projectName);
   const [impactValue, setImpactValue] = useState<ImpactTransformation>();
+  const sdgs = unSDGs;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -44,7 +45,7 @@ const ProjectDetails = () => {
             ))}
           </div>
           {project?.impact.length && (
-            <div className="px-4">
+            <div className="px-4 mt-5">
               <h5 className="fw-bold text-muted">
                 {t("impact_and_transformation")}
               </h5>
@@ -93,6 +94,45 @@ const ProjectDetails = () => {
                   )}
                 </div>
               )}
+            </div>
+          )}
+
+          {project?.sdgsInfo.sdgs && (
+            <div className="px-4 mt-5">
+              <h5 className="fw-bold text-muted text-uppercase">
+                {t("sustainable_development_goals")}
+              </h5>
+              <p>{t("sdgs_definition")}</p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t(project.sdgsInfo.description) || "",
+                }}
+              ></p>
+              <div className="p-3 p-sm-1 p-md-2 p-lg-3 row">
+                {sdgs
+                  .filter((sdg) => project.sdgsInfo.sdgs.includes(sdg.id))
+                  .map((projectSdg, i) => (
+                    <div
+                      className="sdg-card card col-12 col-sm-5 col-md-3 col-lg-2 p-3 mt-2 border rounded-3 shadow h-auto me-0 me-sm-1 me-md-2 me-lg-3"
+                      key={i}
+                    >
+                      <img
+                        src={projectSdg.iconSrc}
+                        className="w-100"
+                        alt="..."
+                      />
+                      <div className="card-body px-0">
+                        <Link
+                          to={projectSdg.moreInfoUrl}
+                          target="_blank"
+                          className={`rounded-0 btn ${projectSdg.class}`}
+                        >
+                          {t("more_info")}
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+              </div>
             </div>
           )}
 
@@ -167,9 +207,7 @@ const ProjectDetails = () => {
                 {t("location")}
               </h5>
             )}
-            {project?.location && (
-              <p>{t(project?.location)}</p>
-            )}
+            {project?.location && <p>{t(project?.location)}</p>}
           </div>
         </div>
       </div>
