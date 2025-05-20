@@ -1,15 +1,6 @@
 import SectionHeading from "../SectionHeading/SectionHeading";
 import "./WhatWeDo.css";
-import team1 from "../../images/team/team1.webp";
-import team2 from "../../images/team/team2.webp";
-import team3 from "../../images/team/team3.webp";
 import { useTranslation } from "react-i18next";
-
-interface TestimonialsData {
-  imageSrc: string;
-  experience: string;
-  name: string;
-}
 
 const WhatWeDo = () => {
   const { t } = useTranslation();
@@ -20,23 +11,6 @@ const WhatWeDo = () => {
     t("plastic_waste_initiatives"),
     t("regenerative_farming"),
     t("greenhouse_farming"),
-  ];
-  const testimonials: TestimonialsData[] = [
-    {
-      imageSrc: team1,
-      experience: t("testimonial_experience"),
-      name: "John Doe",
-    },
-    {
-      imageSrc: team2,
-      experience: t("testimonial_experience"),
-      name: "Name 2",
-    },
-    {
-      imageSrc: team3,
-      experience: t("testimonial_experience"),
-      name: "Name 3",
-    },
   ];
 
   return (
@@ -113,48 +87,6 @@ const WhatWeDo = () => {
         <div className="col-12 col-lg-6 horizontal-line-what pb-3"></div>
         <div className="col-12 col-lg-6"></div>
       </div>
-      {/* <div className="mt-5">
-        <SectionHeading
-          heading={t("testimonials_heading")}
-        />
-        <p className="ms-5">{t("testimonials_description")}</p>
-        <div className="row px-5 mx-5 d-none d-lg-flex">
-          {testimonials.map((team, index) => (
-            <div key={index} className="col-md-3 testimonial-item">
-              <div className="testimonial-img-container">
-                <img
-                  src={team.imageSrc}
-                  alt={team.name}
-                  className="img-fluid rounded-circle mb-4 testimonial-image"
-                />
-              </div>
-              <div className="text-start">
-                <p className="">{team.experience}</p>
-                <h5 className="">- {team.name}</h5>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="d-sm-block d-lg-none">
-          {testimonials.map((team, index) => (
-            <div key={index} className="testimonial-item">
-              <div className="row">
-                <div className="testimonial-img-container col-4">
-                  <img
-                    src={team.imageSrc}
-                    alt={team.name}
-                    className="img-fluid rounded-circle mb-4 testimonial-image"
-                  />
-                </div>
-                <div className="text-start col-8 mt-1">
-                  <p className="">{team.experience}</p>
-                  <h5 className="">- {team.name}</h5>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
     </div>
   );
 };

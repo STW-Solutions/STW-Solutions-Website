@@ -1,16 +1,16 @@
-.project-container{
+.project-container {
     background-color: #257251 !important;
     padding: 3rem;
 }
 
-.card-div{
+.card-div {
     border: #257251 1px solid;
     width: 90%;
 }
 
-.isActive{
-    background-color: #C7FBE5!important;
-    border-radius: 0!important;
+.active-class {
+    background-color: #C7FBE5 !important;
+    border-radius: 0 !important;
 }
 
 .category-dropdown {
@@ -34,4 +34,20 @@
 .arrow-svg {
     width: 1rem;
     fill: currentColor;
+}
+
+.stw-truncate {
+    display: -webkit-box;
+    /* Use flexbox layout */
+    -webkit-box-orient: vertical;
+    /* Set the orientation */
+    -webkit-line-clamp: 3;
+    /* Number of lines to show */
+    line-clamp: 3;
+    overflow: hidden;
+    /* Hide overflow */
+    max-height: 4.5em;
+    /* Set max height (adjust as needed) */
+    line-height: 1.5em;
+    /* Set line height */
 }

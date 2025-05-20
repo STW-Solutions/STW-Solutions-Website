@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import "./Footer.css";
 import { Link } from "react-router";
 import { NavHashLink } from "react-router-hash-link";
+import logo from "../../images/STW-Solution-Logo.png";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -13,40 +14,45 @@ const Footer = () => {
             <h6 className="fw-bold">{t("about")}</h6>
             <div className="d-flex justify-content-evenly flex-column text-muted">
               <Link to="/company">{t("company")}</Link>
-              <Link to="#">{t("sustainability")}</Link>
+              {/* <Link to="#">{t("sustainability")}</Link> */}
               <NavHashLink to="/#our-partners">{t("partners")}</NavHashLink>
-              <Link to="#">{t("careers")}</Link>
+              {/* <Link to="#">{t("careers")}</Link> */}
               <Link to="#">{t("contact")}</Link>
             </div>
           </div>
           <div className="col-12 col-sm-6 col-md-3 footer-col">
             <h6 className="fw-bold">{t("solutions")}</h6>
             <div className="d-flex justify-content-evenly flex-column">
-              <Link to="#">{t("forestry_solutions")}</Link>
-              <Link to="#">{t("waste_management_solutions")}</Link>
-              <Link to="#">{t("renewable_energy_solutions")}</Link>
+              <Link to="/solutions/solutions-forestry">{t("forestry_solutions")}</Link>
+              <Link to="/solutions/waste-management">{t("waste_management_solutions")}</Link>
+              <Link to="/solutions/renewable-energy">{t("renewable_energy_solutions")}</Link>
             </div>
           </div>
           <div className="col-12 col-sm-6 col-md-2 footer-col">
             <h6 className="fw-bold">{t("projects")}</h6>
             <div className="d-flex justify-content-center flex-column">
               <Link to="/projects">{t("our_projects")}</Link>
-              <Link to="/project-details/cameroon-project">{t("the_cameroon_project_long")}</Link>
+                <Link to="/project-details/koundi-forest-conservation-project" className="specific-project fw-bold">
+                  {t("koundi_conservation_project_long")}
+                </Link>
+                <Link to="/project-details/kpawara-community-forest-restoration-project" className="specific-project fw-bold">
+                  {t("kpawara_community_forest_restoration_project")}
+                </Link>
             </div>
           </div>
           <div className="col-12 col-sm-6 col-md-2 footer-col">
             <h6 className="fw-bold">{t("insights")}</h6>
             <div className="d-flex justify-content-center flex-column">
-              <Link to="#">{t("blog")}</Link>
-              <Link to="#">{t("events")}</Link>
+              <Link to="/blogs">{t("blog")}</Link>
+              {/* <Link to="#">{t("events")}</Link>
               <Link to="#">{t("news")}</Link>
-              <Link to="#">{t("podcast")}</Link>
+              <Link to="#">{t("podcast")}</Link> */}
             </div>
           </div>
           <div className="col-12 col-md-3 stw-solutions-footer-logo-box order-first order-md-last">
             <Link className="" to={"/"}>
               <img
-                src="STW-Solution-Logo.png"
+                src={logo}
                 alt={`${t("stw_solutions_logo")}`}
               />
             </Link>
@@ -79,7 +85,11 @@ const Footer = () => {
         <div className="lower-footer">
           <div className="row">
             <div className="col-md-3 social-icon d-flex justify-content-center justify-content-md-start">
-              <Link to="https://www.linkedin.com/company/stw-solutions-ltd/" target="_blank" className="svg-icon-box">
+              <Link
+                to="https://www.linkedin.com/company/stw-solutions-ltd/"
+                target="_blank"
+                className="svg-icon-box"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
@@ -88,7 +98,11 @@ const Footer = () => {
                   <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
                 </svg>
               </Link>
-              <Link to="https://www.instagram.com/stwsolutions/" target="_blank" className="svg-icon-box ms-3">
+              <Link
+                to="https://www.instagram.com/stwsolutions/"
+                target="_blank"
+                className="svg-icon-box ms-3"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import apiClient, { CanceledError } from "../../services/api-client";
-import { Blog, BlogCategory } from "../../models";
+import { Blog } from "../../models";
 import BlogSummary from "../../components/BlogSummary/BlogSummary";
 import "./BlogDetails.css";
 import BlogMiniSummary from "../../components/BlogMiniSummary/BlogMiniSummary";
@@ -17,6 +17,9 @@ const BlogDetails = () => {
   const [isOtherBlogsLoading, setIsOtherBlogsLoading] = useState(false);
   const [otherBlogs, setOtherBlogs] = useState<Blog[]>([]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     const blogId = JSON.parse(localStorage.getItem("blogIdentifier") || "");
     setIsLoading(true);

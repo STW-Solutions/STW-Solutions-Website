@@ -27,6 +27,9 @@ const Blogs = () => {
   const [error, setError] = useState();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
     setSearchParams({ page: "1", per_page: "3" });
   }, []);
 
@@ -131,29 +134,29 @@ const Blogs = () => {
                     />
                   </div>
                   <div className="row justify-content-evenly">
-                    {blogsByPage.map((blog, i) => (
+                    {blogsByPage.map((blog, index) => (
                       <>
-                        {i === 1 && (
+                        {index === 1 && (
                           <div
                             className="rounded category-box p-3 col-md-4 mt-5"
-                            key={i + "recent"}
+                            key={`000${index}`}
                           >
                             <h2 className="fs-4 text-center text-uppercase fw-bold">
                               {t("recent_posts")}
                             </h2>
                             {blogs.map(
-                              (blog, i) =>
+                              (recentBlog, i) =>
                                 i < 3 && (
                                   <div
-                                    onClick={() => setBlogId(blog.id)}
-                                    key={blog.id}
+                                    onClick={() => setBlogId(recentBlog.id)}
+                                    key={recentBlog.id}
                                   >
                                     <Link
                                       className="text-decoration-none"
-                                      to={`/blog-details/${blog.slug}`}
+                                      to={`/blog-details/${recentBlog.slug}`}
                                     >
                                       <BlogMiniSummary
-                                        blog={blog}
+                                        blog={recentBlog}
                                         titleWidth="mini-summary-blog"
                                       />
                                     </Link>
@@ -164,13 +167,13 @@ const Blogs = () => {
                         )}
                         <div
                           className={
-                            i === 0
+                            index === 0
                               ? "mt-5 col-md-7"
-                              : i === 1
+                              : index === 1
                               ? "mt-5 col-md-7"
                               : "mt-5 col-md-8"
                           }
-                          key={i}
+                          key={blog.id}
                           onClick={() => setBlogId(blog.id)}
                         >
                           <Link
@@ -180,10 +183,10 @@ const Blogs = () => {
                             <BlogSummary blog={blog} useAsDetails={false} />
                           </Link>
                         </div>
-                        {i === 0 && (
+                        {index === 0 && (
                           <div
                             className="rounded category-box py-3 col-md-4 mt-5"
-                            key={i + "category"}
+                            key={index + "category"}
                           >
                             <h2 className="fs-4 text-center text-uppercase">
                               {t("categories")}
