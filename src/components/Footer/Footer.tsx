@@ -32,10 +32,10 @@ const Footer = () => {
             <h6 className="fw-bold">{t("projects")}</h6>
             <div className="d-flex justify-content-center flex-column">
               <Link to="/projects">{t("our_projects")}</Link>
-                <Link to="/project-details/koundi-forest-conservation-project" className="specific-project text-black fw-bold">
+                <Link to="/project-details/koundi-forest-conservation-project" className="specific-project fw-bold">
                   {t("koundi_conservation_project_long")}
                 </Link>
-                <Link to="/project-details/kpawara-community-forest-restoration-project" className="specific-project text-black fw-bold">
+                <Link to="/project-details/kpawara-community-forest-restoration-project" className="specific-project fw-bold">
                   {t("kpawara_community_forest_restoration_project")}
                 </Link>
             </div>
