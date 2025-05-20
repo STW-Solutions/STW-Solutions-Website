@@ -18,9 +18,18 @@
     fill: currentColor;
 }
 
-.active-impact {
+.active-impact, .back-btn {
     background-color: #257251;
     border-radius: 4px;
+}
+
+.back-btn {
+  background-color: #257251 !important;  
+}
+
+.svg-back-icon {
+    fill: white;
+    width: 1rem;
 }
 
 .active-impact button {

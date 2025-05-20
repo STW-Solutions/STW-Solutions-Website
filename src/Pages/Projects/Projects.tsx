@@ -7,7 +7,7 @@ import "./Projects.css";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import NoItemAlert from "../../components/NoItemAlert/NoItemAlert";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { projects } from "../../constants";
 import { Project, ProjectCategory } from "../../models";
 import { filterProjectsByCategories } from "../../services/general-services";
@@ -50,10 +50,12 @@ const Projects = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{t("projects_page")} - STW-Solutions Ltd</title>
-        <meta name="projects" content={t("meta_projects")} />
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>{t("projects_page")} - STW-Solutions Ltd</title>
+          <meta name="projects" content={t("meta_projects")} />
+        </Helmet>
+      </HelmetProvider>
       <div className="rounded-4  project-container">
         <div className="row pt-5 pb-3">
           <div className="col-12 col-lg-6 text-center mt-md-5">
@@ -134,7 +136,7 @@ const Projects = () => {
                 className={
                   "nav-link text-dark text-uppercase" +
                   (currentTab === ProjectCategory.UNDER_DEVELOPMENT
-                    ? " isActive"
+                    ? " active-class"
                     : "")
                 }
                 aria-current="page"
@@ -151,7 +153,7 @@ const Projects = () => {
                 className={
                   "nav-link text-dark text-uppercase" +
                   (currentTab === ProjectCategory.COMING_SOON
-                    ? " isActive"
+                    ? " active-class"
                     : "")
                 }
                 type="button"
@@ -166,7 +168,9 @@ const Projects = () => {
               <button
                 className={
                   "nav-link text-dark text-uppercase" +
-                  (currentTab === ProjectCategory.FORESTRY ? " isActive" : "")
+                  (currentTab === ProjectCategory.FORESTRY
+                    ? " active-class"
+                    : "")
                 }
                 onClick={() => {
                   setCurrentTab(ProjectCategory.FORESTRY);
@@ -180,7 +184,7 @@ const Projects = () => {
                 className={
                   "nav-link text-dark text-uppercase" +
                   (currentTab === ProjectCategory.WASTE_MANAGEMENT
-                    ? " isActive"
+                    ? " active-class"
                     : "")
                 }
                 onClick={() => {
@@ -194,7 +198,7 @@ const Projects = () => {
         </div>
         <div className="dropdown d-md-none px-2 pt-4">
           <button
-            className="btn isActive dropdown-toggle w-100 py-3"
+            className="btn active-class dropdown-toggle w-100 py-3"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -214,7 +218,7 @@ const Projects = () => {
                 className={
                   "dropdown-item text-uppercase" +
                   (currentTab === ProjectCategory.UNDER_DEVELOPMENT
-                    ? " isActive"
+                    ? " active-class"
                     : "")
                 }
                 onClick={() => {
@@ -229,7 +233,7 @@ const Projects = () => {
                 className={
                   "dropdown-item text-uppercase" +
                   (currentTab === ProjectCategory.COMING_SOON
-                    ? " isActive"
+                    ? " active-class"
                     : "")
                 }
                 onClick={() => {
@@ -243,7 +247,9 @@ const Projects = () => {
               <button
                 className={
                   "dropdown-item text-uppercase" +
-                  (currentTab === ProjectCategory.FORESTRY ? " isActive" : "")
+                  (currentTab === ProjectCategory.FORESTRY
+                    ? " active-class"
+                    : "")
                 }
                 onClick={() => {
                   setCurrentTab(ProjectCategory.FORESTRY);
@@ -257,7 +263,7 @@ const Projects = () => {
                 className={
                   "dropdown-item text-uppercase" +
                   (currentTab === ProjectCategory.WASTE_MANAGEMENT
-                    ? " isActive"
+                    ? " active-class"
                     : "")
                 }
                 onClick={() => {
@@ -290,7 +296,7 @@ const Projects = () => {
                   {t(project.title)}
                 </span>
               </div>
-              <div className="col-lg-3 col-md-12 text-truncate">
+              <div className="col-lg-3 col-md-12 stw-truncate">
                 {t(project.goal || "")}
               </div>
               <Link
@@ -332,7 +338,7 @@ const Projects = () => {
               </svg>
             </button>
           )}
-          {filteredProjects.length === displayedProjects.length && (
+          {(filteredProjects.length === displayedProjects.length) && displayedProjects.length > 2  && (
             <button
               className="shadow more-btn rounded text-white border-0 py-1 px-3"
               onClick={() => toggleProjects("hide", 0)}

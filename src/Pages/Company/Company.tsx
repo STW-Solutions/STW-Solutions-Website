@@ -10,14 +10,14 @@ import Team from "../../components/Team/Team";
 import WhatWeDo from "../../components/whatweDo/WhatWeDo";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
 import { useNavigate } from "react-router";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useEffect } from "react";
 
 const Company = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -27,10 +27,12 @@ const Company = () => {
 
   return (
     <>
-    <Helmet>
-        <title>{t("about_page")} - STW-Solutions Ltd</title>
-        <meta name="home" content={t("meta_company")} />
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>{t("about_page")} - STW-Solutions Ltd</title>
+          <meta name="home" content={t("meta_company")} />
+        </Helmet>
+      </HelmetProvider>
       <div className="container-fluid container-main">
         <div className="row mx-md-5 px-md-5">
           <div className="col-12 col-lg-7 me-auto">

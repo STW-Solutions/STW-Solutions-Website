@@ -8,7 +8,7 @@ import minepded from "../src/images/MINEPDED.png";
 import ministryForestry from "../src/images/MinistryForestry.png";
 import volkswagen from "../src/images/Volkswagen.webp";
 import { Project, ProjectCategory, SDG } from "./models";
-import wasteManagementLimbe from "../src/images/STW-Solution-Waste-Management-Limbe.jpg";
+import wasteManagementLimbe from "../src/images/carbonsate-cameroon.avif";
 import forestryProjectKoundi from "../src/images/STW-Solution-Forest-Projects-Koundi.jpg";
 import forestryProjectNgaoundal from "../src/images/STW-Solution-Forest-Projects-Ngaoundal.jpg";
 import forestryProjectGaroua from "../src/images/STW-Solution-Forest-Projects-Garoua.jpg";

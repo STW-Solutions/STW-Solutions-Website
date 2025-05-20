@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
-import { Helmet } from "react-helmet";
+import { Helmet,  HelmetProvider } from "react-helmet-async";
 
 import "./Home.css";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
@@ -42,10 +42,12 @@ const Home = () => {
 
   return (
     <div className="home-main">
-      <Helmet>
+      <HelmetProvider>
+        <Helmet>
         <title>{t("home_page")} - STW-Solutions Ltd</title>
         <meta name="home" content={t("meta_home")} />
       </Helmet>
+      </HelmetProvider>
       <section className="hero-main container-fluid py-md-5 pb-0 bg-light-green">
         <div className="container pt-5 pb-lg-5">
           <div className="row align-items-center">
