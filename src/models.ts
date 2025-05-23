@@ -81,6 +81,14 @@ export interface Solutions {
       count: number;
       unit?: string;
     }[]
+  },
+  initiatives?: {
+    description: string;
+    items: {
+      imageSrc: string;
+      title: string;
+      description: string;
+    }[]
   }
 }
 

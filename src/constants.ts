@@ -410,6 +410,16 @@ export const solutions: Solutions[] = [
           unit: "Ha"
         }
       ]
+    },
+    initiatives: {
+      description: "forestry_solutions_initiatives_description",
+      items: [
+        {
+          imageSrc: '',
+          description: '',
+          title: ''
+        }
+      ]
     }
   },
   {
