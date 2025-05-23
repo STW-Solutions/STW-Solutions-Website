@@ -23,7 +23,7 @@ export interface Project {
   categories: ProjectCategory[];
   goal?: string;
   description: string[];
-  impact: ImpactTransformation[]; 
+  impact: ImpactTransformation[];
   heroImageSrc: string;
   heroImageAlt: string;
   heroImageClass?: string;
@@ -64,27 +64,24 @@ export interface SDG {
   id: string;
   class?: string;
 }
-export interface SolutionsTemplateProps {
-  header: string;
-  forestryHeader: string;
-  forestrySubHeader: string;
-  callToAction: string;
-  forestrySolutions: string;
-  businessText: string;
-  exploreText: string;
-  topProjectsText: string;
-  cardData: {
-    title: string;
-    imgSrc: string;
+export interface Solutions {
+  heroImages: {
+    image: {
+      src: string;
+      alt: "";
+    };
+  }[];
+  alias: string;
+  title: string;
+  titleDescription: string;
+  statistics: {
     description: string;
-    linkText: string;
-    altText: string;
-  }[];
-  initiatives: {
-    img: string;
-    title: string;
-    text: string;
-  }[];
+    items:{
+      name: string;
+      count: number;
+      unit?: string;
+    }[]
+  }
 }
 
 export interface BlogAuthor {
