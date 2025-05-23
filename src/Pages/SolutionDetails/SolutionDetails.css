@@ -8,14 +8,14 @@
 }
 
 .page-header h1 {
-     line-height: 1.5 !important;
-     border-bottom: white 2px solid;
-     margin-bottom: 0.2em;
+    line-height: 1.5 !important;
+    border-bottom: white 2px solid;
+    margin-bottom: 0.2em;
 }
 
 .page-header p {
-     line-height: 1.5 !important;
-     font-size: 1.2rem;
+    line-height: 1.5 !important;
+    font-size: 1.2rem;
 }
 
 .browse-btn {
@@ -73,7 +73,7 @@
     background-image: (0, 0, 0, 0.5);
 }
 
-.bold-green-text {
+.stat-count {
     color: #257251;
     font-weight: 800;
     font-size: 2rem;
@@ -82,5 +82,21 @@
 .stats-details {
     border-bottom-left-radius: .5rem !important;
     border-bottom-right-radius: .5rem !important;
-     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.stats-div {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .stat-count {
+        font-size: 1.75rem;
+    }
+
+    .stats-div {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }

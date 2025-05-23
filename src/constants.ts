@@ -35,6 +35,9 @@ import forestrySolutionsImg3 from "../src/images/solutions/forestry_solutions_3.
 import renewableEnergySolutionsImg1 from "../src/images/solutions/renewable_energy_solutions_1.jpg";
 import renewableEnergySolutionsImg2 from "../src/images/solutions/renewable_energy_solutions_2.jpg";
 import renewableEnergySolutionsImg3 from "../src/images/solutions/renewable_energy_solutions_3.jpeg";
+import wasteManagementSolutionsImg1 from "../src/images/solutions/waste_management_solutions_1.avif";
+import wasteManagementSolutionsImg2 from "../src/images/solutions/waste_management_solutions_2.webp";
+import wasteManagementSolutionsImg3 from "../src/images/solutions/waste_management_solutions_3.jpg";
 
 export const WhyUs = [
   {
@@ -440,6 +443,41 @@ export const solutions: Solutions[] = [
           name: "of_co2_to_be_captured",
           count: 7.9,
           unit: "mio tons"
+        }
+      ]
+    }
+  },
+  {
+    heroImages: [
+      {
+        image: {
+          src: wasteManagementSolutionsImg1,
+          alt: ''
+        }
+      },
+      {
+        image: {
+          src: wasteManagementSolutionsImg2,
+          alt: ''
+        }
+      },
+      {
+        image: {
+          src: wasteManagementSolutionsImg3,
+          alt: ''
+        }
+      }
+    ],
+    alias: 'waste-management',
+    title: 'waste_management_solutions',
+    titleDescription: 'waste_management_solutions_title_description',
+    statistics: {
+      description: "waste_management_solutions_stats_description",
+      items: [
+        {
+          name: "plastic_waste_collection_and_recycling_hubs",
+          count: 3,
+          unit: ""
         }
       ]
     }

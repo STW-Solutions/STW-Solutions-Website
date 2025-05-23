@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router";
 import { solutions } from "../../constants";
 import "./SolutionDetails.css";
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useScrollTriggeredCountUp from "../../hooks/useScrollTriggeredCountUp";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
@@ -10,7 +10,7 @@ const SolutionForestry = () => {
   const solutionName = useParams().name;
   const solution = solutions.find((item) => item.alias === solutionName);
   const { t } = useTranslation();
-  const refStatsItem1 = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -86,14 +86,14 @@ const SolutionForestry = () => {
                 </div>
               </div>
             </div>
-            <div className="container-fluid bg-white px-5 pt-5">
+            <div className="container-fluid bg-white stats-div pt-5">
               <h2 className="text-center">{t("solution_goals_and_impact")}</h2>
               <div className="row align-items-start justify-content-between mt-3">
                 <div className="col-md-6">
                   <p>{t(solution.statistics.description)}</p>
                   <ul>
-                    {solution.statistics.items.map((item) => (
-                      <li>
+                    {solution.statistics.items.map((item, i) => (
+                      <li key={i}>
                         <span>
                           +{item.count}
                           {t(item.unit || "")}
@@ -103,13 +103,13 @@ const SolutionForestry = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="col-md-6 d-none d-md-block p-5 border-0 stats-details">
+                <div className="col-md-6 d-none d-md-block p-3 p-lg-5 border-0 stats-details">
                   <div className="d-flex justify-content-between">
-                    {solution.statistics.items.map((item) => (
-                      <span>
-                        <span className="bold-green-text" ref={refStatsItem1}>
+                    {solution.statistics.items.map((item, i) => (
+                      <span key={i}>
+                        <span className="bold-green-text">
                           +
-                          {useScrollTriggeredCountUp(refStatsItem1, item.count)}
+                           {item.count}
                           {item.unit}
                         </span>
                         <span className="d-block">{t(item.name)}</span>
