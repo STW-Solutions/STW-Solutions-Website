@@ -7,25 +7,11 @@ import carbonsate from "../src/images/Carbonsate.png";
 import minepded from "../src/images/MINEPDED.png";
 import ministryForestry from "../src/images/MinistryForestry.png";
 import volkswagen from "../src/images/Volkswagen.webp";
-import { Project, ProjectCategory, SDG } from "./models";
+import { Project, ProjectCategory, SDG, Solutions } from "./models";
 import wasteManagementLimbe from "../src/images/carbonsate-cameroon.avif";
 import forestryProjectKoundi from "../src/images/STW-Solution-Forest-Projects-Koundi.jpg";
 import forestryProjectNgaoundal from "../src/images/STW-Solution-Forest-Projects-Ngaoundal.jpg";
 import forestryProjectGaroua from "../src/images/STW-Solution-Forest-Projects-Garoua.jpg";
-import serviceBg from "../src/images/solutions/service-bg.png";
-import renewResource from "../src/images/solutions/renewResource.jpeg";
-import wasteMgmt from "../src/images/solutions/wasteMgmt.jpeg";
-import earthSvg from "../src/images/solutions/earth.svg";
-import climateChangePng from "../src/images/solutions/climate-change.png";
-import plantPng from "../src/images/solutions/plant.png";
-import renewableResourceBg from "../src/images/solutions/renewableResourceBg.png";
-import image1RenewableResourcesPng from "../src/images/solutions/image1RenewableResources.png";
-import image2RenewableResourcesPng from "../src/images/solutions/image2RenewableResources.png";
-import image3RenewableResourcesPng from "../src/images/solutions/image3RenewableResources.png";
-import wasteMgmtBg from "../src/images/solutions/wasteMgmtBg.png";
-import image1wasteMgmtPng from "../src/images/solutions/image1wasteMgmt.png";
-import image2wasteMgmtPng from "../src/images/solutions/image2wasteMgmt.png";
-import image3wasteMgmtPng from "../src/images/solutions/image3wasteMgmt.png";
 import sdg1 from "../src/images/sdgs/1.png";
 import sdg2 from "../src/images/sdgs/2.png";
 import sdg3 from "../src/images/sdgs/3.png";
@@ -43,6 +29,12 @@ import sdg14 from "../src/images/sdgs/14.png";
 import sdg15 from "../src/images/sdgs/15.png";
 import sdg16 from "../src/images/sdgs/16.png";
 import sdg17 from "../src/images/sdgs/17.png";
+import forestrySolutionsImg1 from "../src/images/solutions/forestry_solutions_1.webp";
+import forestrySolutionsImg2 from "../src/images/solutions/forestry_solutions_2.jpg";
+import forestrySolutionsImg3 from "../src/images/solutions/forestry_solutions_3.jpg";
+import renewableEnergySolutionsImg1 from "../src/images/solutions/renewable_energy_solutions_1.jpg";
+import renewableEnergySolutionsImg2 from "../src/images/solutions/renewable_energy_solutions_2.jpg";
+import renewableEnergySolutionsImg3 from "../src/images/solutions/renewable_energy_solutions_3.jpeg";
 
 export const WhyUs = [
   {
@@ -371,137 +363,88 @@ export const projects: Project[] = [
   },
 ];
 
-export const solutions = {
-  solutionForestry: {
-    header: serviceBg,
-    forestryHeader: "solution_forestry_header_1",
-    forestrySubHeader: "Projects_Completed",
-    callToAction: "Get_Involved",
-    forestrySolutions: "Forests_Preserved",
-    businessText: "Our_Forestry_Solutions",
-    exploreText: "Explore_our_initiatives",
-    topProjectsText: "Lets_Talk",
-    cardData: [
+export const solutions: Solutions[] = [
+  {
+    heroImages: [
       {
-        title: "Renewable_Resources",
-        imgSrc: renewResource,
-        description: "Our_agriculture_mirrors",
-        linkText: "Learn_More",
-        altText: "Renewable_Resources",
+        image: {
+          src: forestrySolutionsImg3,
+          alt: ''
+        }
       },
       {
-        title: "Waste_Management",
-        imgSrc: wasteMgmt,
-        description: "Recycling_plastic_minimizes",
-        linkText: "Learn_More",
-        altText: "Waste_Management",
+        image: {
+          src: forestrySolutionsImg2,
+          alt: ''
+        }
       },
+      {
+        image: {
+          src: forestrySolutionsImg1,
+          alt: ''
+        }
+      }
     ],
-    initiatives: [
-      {
-        img: earthSvg,
-        title: "Forest_Conservation_Initiatives",
-        text: "forest_con_text",
-      },
-      {
-        img: climateChangePng,
-        title: "Improved_Forest_Management",
-        text: "improved_fores_mgmt_text",
-      },
-      {
-        img: plantPng,
-        title: "Paulownia_Tomentosa_Tree",
-        text: "tree_planting_init_text",
-      },
-    ],
+    alias: 'forestry',
+    title: 'forestry_solutions',
+    titleDescription: 'forestry_solutions_title_description',
+    statistics: {
+      description: "forestry_solutions_stats_description",
+      items: [
+        {
+          name: "forest_to_be_preserved",
+          count: 1600,
+          unit: "Ha"
+        },
+        {
+          name: "trees_to_be_planted",
+          count: 1.5,
+          unit: "million"
+        },
+        {
+          name: "forest_land_to_be_restored",
+          count: 1500,
+          unit: "Ha"
+        }
+      ]
+    }
   },
-  solutionRenewableEnergy: {
-    header: renewableResourceBg,
-    forestryHeader: "renewable_resources_header_1",
-    forestrySubHeader: "Projects_Completed",
-    callToAction: "Get_Involved",
-    forestrySolutions: "Forests_Preserved",
-    businessText: "Our_Renewable_Resources",
-    exploreText: "Explore_our_initiatives",
-    topProjectsText: "Lets_Talk",
-    cardData: [
+  {
+    heroImages: [
       {
-        title: "Renewable_Resources",
-        imgSrc: renewResource,
-        description: "Our_agriculture_mirrors",
-        linkText: "Learn_More",
-        altText: "Renewable_Resources",
+        image: {
+          src: renewableEnergySolutionsImg1,
+          alt: ''
+        }
       },
       {
-        title: "Waste_Management",
-        imgSrc: wasteMgmt,
-        description: "Recycling_plastic_minimizes",
-        linkText: "Learn_More",
-        altText: "Waste_Management",
+        image: {
+          src: renewableEnergySolutionsImg2,
+          alt: ''
+        }
       },
+      {
+        image: {
+          src: renewableEnergySolutionsImg3,
+          alt: ''
+        }
+      }
     ],
-    initiatives: [
-      {
-        img: image1RenewableResourcesPng,
-        title: "heading_sustainable_agriculture",
-        text: "description_sustainable_agriculture",
-      },
-      {
-        img: image2RenewableResourcesPng,
-        title: "heading_regenerative_agroforestry",
-        text: "description_regenerative_agroforestry",
-      },
-      {
-        img: image3RenewableResourcesPng,
-        title: "heading_waste_to_resource_agriculture",
-        text: "description_waste_to_resource_agriculture",
-      },
-    ],
-  },
-  solutionWasteManagement: {
-    header: wasteMgmtBg,
-    forestryHeader: "waste_management_header_1",
-    forestrySubHeader: "Projects_Completed",
-    callToAction: "Get_Involved",
-    forestrySolutions: "Forests_Preserved",
-    businessText: "Our_Waste_Management",
-    exploreText: "Explore_our_initiatives",
-    topProjectsText: "Lets_Talk",
-    cardData: [
-      {
-        title: "Renewable_Resources",
-        imgSrc: renewResource,
-        description: "Our_agriculture_mirrors",
-        linkText: "Learn_More",
-        altText: "Renewable_Resources",
-      },
-      {
-        title: "Waste_Management",
-        imgSrc: wasteMgmt,
-        description: "Recycling_plastic_minimizes",
-        linkText: "Learn_More",
-        altText: "Waste_Management",
-      },
-    ],
-    initiatives: [
-      {
-        img: image1wasteMgmtPng,
-        title: "heading_waste_collection",
-        text: "description_waste_collection",
-      },
-      {
-        img: image2wasteMgmtPng,
-        title: "heading_circular_economy",
-        text: "description_circular_economy",
-      },
-      {
-        img: image3wasteMgmtPng,
-        title: "heading_community_engagement",
-        text: "description_community_engagement",
-      },
-    ],
-  },
-};
+    alias: 'renewable-energy',
+    title: 'renewable_energy_solutions',
+    titleDescription: 'renewable_energy_solutions_title_description',
+    statistics: {
+      description: "renewable_energy_solutions_stats_description",
+      items: [
+        {
+          name: "of_co2_to_be_captured",
+          count: 7.9,
+          unit: "mio tons"
+        }
+      ]
+    }
+  }
+]
 
 export const unSDGs: SDG[] = [
   {

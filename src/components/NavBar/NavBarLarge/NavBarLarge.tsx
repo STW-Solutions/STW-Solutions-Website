@@ -82,7 +82,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             <li>
               <Link
                 className="dropdown-item stw-nav-lg-link"
-                to="/solutions/solutions-forestry"
+                to="/solutions/forestry"
               >
                 {t("forestry_solutions")}
               </Link>
