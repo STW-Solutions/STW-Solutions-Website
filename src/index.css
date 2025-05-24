@@ -80,7 +80,7 @@ ol {
 }
 
 .partner-logo-box img {
-    width: 80%;
+    width: 75%;
 }
  
 .partner-logo-sm {
@@ -93,6 +93,22 @@ ol {
 
 .mini-summary-blog-details {
     width: 50%;
+}
+
+.stw-vertical-truncate {
+    display: -webkit-box;
+    /* Use flexbox layout */
+    -webkit-box-orient: vertical;
+    /* Set the orientation */
+    -webkit-line-clamp: 3;
+    /* Number of lines to show */
+    line-clamp: 3;
+    overflow: hidden;
+    /* Hide overflow */
+    max-height: 4.5em;
+    /* Set max height (adjust as needed) */
+    line-height: 1.5em;
+    /* Set line height */
 }
 
 @media screen and (max-width: 1024px) {

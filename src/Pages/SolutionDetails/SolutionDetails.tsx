@@ -6,6 +6,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
 import { useNavigate } from "react-router";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import { useEffect } from "react";
 
 const SolutionForestry = () => {
   const solutionName = useParams().name;
@@ -13,9 +14,9 @@ const SolutionForestry = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  //   useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [solutionName]);
 
   return (
     <>
