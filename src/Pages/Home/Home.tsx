@@ -296,16 +296,18 @@ const Home = () => {
             key={index}
           >
             <div className="container rounded shadow p-5 project-item-box d-flex justify-content-between align-items-center mb-1 flex-column flex-md-row">
-              <img
+                <div className="col-md-3">
+                  <img
                 src={project.heroImageSrc}
                 alt={project.heroImageAlt}
-                className={project.heroImageClass}
+                className="img-fluid"
               />
-              <h4 className="fw-bold text-center mt-3 mt-md-0 text-break project-title text-capitalize">
+                </div>
+                <h4 className="fw-bold text-center mt-3 mt-md-0 project-title text-capitalize">
                 {t(project.title)}
               </h4>
-              <p className="description">{t(project.goal || "")}</p>
-              <Link
+                <p className="description stw-vertical-truncate">{t(project.goal || "")}</p>
+                <Link
                 to={project.moreInfo}
                 className="ms-auto ms-md-0 me-5 me-md-0"
               >
@@ -317,6 +319,8 @@ const Home = () => {
                   alt={t("right_arrow")}
                 />
               </Link>
+              {/* </div> */}
+              {/* </div> */}
             </div>
           </div>
         ))}

@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="col-12 col-sm-6 col-md-3 footer-col">
             <h6 className="fw-bold">{t("solutions")}</h6>
             <div className="d-flex justify-content-evenly flex-column">
-              <Link to="/solutions/solutions-forestry">{t("forestry_solutions")}</Link>
+              <Link to="/solutions/forestry">{t("forestry_solutions")}</Link>
               <Link to="/solutions/waste-management">{t("waste_management_solutions")}</Link>
               <Link to="/solutions/renewable-energy">{t("renewable_energy_solutions")}</Link>
             </div>
