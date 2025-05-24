@@ -226,7 +226,7 @@ export const projects: Project[] = [
   },
   {
     title: "kpawara_community_forest_restoration_project",
-    categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY],
+    categories: [ProjectCategory.COMING_SOON, ProjectCategory.FORESTRY, ProjectCategory.UNDER_DEVELOPMENT],
     goal: "kpawara_community_forest_restoration_project_goal",
     description: [
       "kpawara_community_forest_restoration_project_description_p1",

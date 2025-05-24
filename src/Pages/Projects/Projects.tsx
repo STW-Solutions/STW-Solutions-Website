@@ -296,7 +296,7 @@ const Projects = () => {
                   {t(project.title)}
                 </span>
               </div>
-              <div className="col-lg-3 col-md-12 stw-truncate">
+              <div className="col-lg-3 col-md-12 stw-vertical-truncate">
                 {t(project.goal || "")}
               </div>
               <Link
