@@ -69,10 +69,6 @@
     height: 50%;
 }
 
-.overlay {
-    background-image: (0, 0, 0, 0.5);
-}
-
 .stat-count {
     color: #257251;
     font-weight: 800;
@@ -85,9 +81,31 @@
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
 }
 
-.stats-div {
+.stats-div,
+.initiatives-div {
     padding-left: 6rem;
     padding-right: 6rem;
+}
+
+.initiative-card {
+    height: auto;
+    background-color: #E4FFF3;
+}
+
+.initiative-card:hover {
+    animation: bounce 1s;
+}
+
+.initiative-card img {
+    width: 20%;
+}
+
+.explore-initiatives-desc-box {
+    width: 60%;
+}
+
+.lets-talk-btn {
+    width: 20%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -95,8 +113,30 @@
         font-size: 1.75rem;
     }
 
-    .stats-div {
+    .stats-div,
+    .initiatives-div {
         padding-left: 4rem;
         padding-right: 4rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .page-header {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .explore-initiatives-desc-box {
+        width: 100%;
+    }
+
+    .lets-talk-btn {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .page-header {
+        width: 80%;
     }
 }

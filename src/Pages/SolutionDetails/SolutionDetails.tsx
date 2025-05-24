@@ -2,18 +2,20 @@ import { Link, useParams } from "react-router";
 import { solutions } from "../../constants";
 import "./SolutionDetails.css";
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef, useState } from "react";
-import useScrollTriggeredCountUp from "../../hooks/useScrollTriggeredCountUp";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
+import { useNavigate } from "react-router";
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
 
 const SolutionForestry = () => {
   const solutionName = useParams().name;
   const solution = solutions.find((item) => item.alias === solutionName);
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  //   useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //   }, []);
 
   return (
     <>
@@ -86,8 +88,58 @@ const SolutionForestry = () => {
                 </div>
               </div>
             </div>
-            <div className="container-fluid bg-white stats-div pt-5">
-              <h2 className="text-center">{t("solution_goals_and_impact")}</h2>
+            {solution.initiatives && (
+              <div className="container-fluid bg-white initiatives-div">
+                <div className="d-flex align-items-center justify-content-center justify-content-md-between flex-column flex-md-row">
+                  <div className="explore-initiatives-desc-box">
+                    <SectionHeading
+                      heading={t(solution.initiatives.title)}
+                      parentClasses="mb-4"
+                    />
+                    <span>{t(solution.initiatives.description)}</span>
+                  </div>
+                  <div className="lets-talk-btn">
+                    <ButtonPrimary
+                      onButtonClick={() => {
+                        navigate("/contact-us");
+                      }}
+                      children={t("lets_talk")}
+                      classes={["px-3 py-2 w-100"]}
+                    />
+                  </div>
+                </div>
+                {solution.initiatives.items && (
+                  <div className="row justify-content-center mt-5">
+                    {solution.initiatives.items.map((item) => (
+                      <div className="col-12 col-sm-5 col-md-3 me-sm-3 me-md-5 mt-2 mt-md-0 text-center card shadow rounded-3 border-0 initiative-card p-3">
+                        <div>
+                          <img src={item.imageSrc} className="img-fluid" />
+                          <h3 className="mt-2 text-capitalize">
+                            {t(item.title)}
+                          </h3>
+                          <p>{t(item.description)}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {solution.initiatives.moreDetails && (
+                  <div className="row mt-5">
+                     <div className="col-md-12 col-lg-6 d-md-block d-none">
+                      <img src={solution.heroImages[0].image.src} className="img-fluid rounded" />
+                    </div>
+                    <div className="col-12 col-lg-5 mt-2 mt-lg-0">
+                      <p>{t(solution.initiatives.moreDetails)}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+            <div className="container-fluid stats-div pt-5">
+              <SectionHeading
+                      heading={t("solution_goals_and_impact")}
+                      parentClasses="mb-4"
+                    />
               <div className="row align-items-start justify-content-between mt-3">
                 <div className="col-md-6">
                   <p>{t(solution.statistics.description)}</p>
@@ -108,8 +160,7 @@ const SolutionForestry = () => {
                     {solution.statistics.items.map((item, i) => (
                       <span key={i}>
                         <span className="bold-green-text">
-                          +
-                           {item.count}
+                          +{item.count}
                           {item.unit}
                         </span>
                         <span className="d-block">{t(item.name)}</span>

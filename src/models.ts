@@ -83,12 +83,14 @@ export interface Solutions {
     }[]
   },
   initiatives?: {
+    title: string;
     description: string;
-    items: {
+    items?: {
       imageSrc: string;
       title: string;
       description: string;
-    }[]
+    }[];
+    moreDetails?: string;
   }
 }
 
