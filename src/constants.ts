@@ -38,6 +38,9 @@ import renewableEnergySolutionsImg3 from "../src/images/solutions/renewable_ener
 import wasteManagementSolutionsImg1 from "../src/images/solutions/waste_management_solutions_1.avif";
 import wasteManagementSolutionsImg2 from "../src/images/solutions/waste_management_solutions_2.webp";
 import wasteManagementSolutionsImg3 from "../src/images/solutions/waste_management_solutions_3.jpg";
+import forestrySolutionsInitiative1 from "../src/images/solutions/earth.svg";
+import forestrySolutionsInitiative2 from "../src/images/solutions/climate-change.png";
+import forestrySolutionsInitiative3 from "../src/images/solutions/plant.png";
 
 export const WhyUs = [
   {
@@ -238,11 +241,11 @@ export const projects: Project[] = [
     moreInfo: "/project-details/kpawara-community-forest-restoration-project",
     alias: "kpawara-community-forest-restoration-project",
     sdgsInfo: {
-      description: "kpawara_community_forest_restoration_project_sdgs_info_description",
+      description:
+        "kpawara_community_forest_restoration_project_sdgs_info_description",
       sdgs: ["1", "2", "5", "13", "15", "17"],
     },
-    location:
-      "kpawara_community_forest_restoration_project_location",
+    location: "kpawara_community_forest_restoration_project_location",
   },
   {
     title: "mandjou_agroforestry_and_reforestation_project",
@@ -372,117 +375,149 @@ export const solutions: Solutions[] = [
       {
         image: {
           src: forestrySolutionsImg3,
-          alt: ''
-        }
+          alt: "",
+        },
       },
       {
         image: {
           src: forestrySolutionsImg2,
-          alt: ''
-        }
+          alt: "",
+        },
       },
       {
         image: {
           src: forestrySolutionsImg1,
-          alt: ''
-        }
-      }
+          alt: "",
+        },
+      },
     ],
-    alias: 'forestry',
-    title: 'forestry_solutions',
-    titleDescription: 'forestry_solutions_title_description',
+    alias: "forestry",
+    title: "forestry_solutions",
+    titleDescription: "forestry_solutions_title_description",
     statistics: {
       description: "forestry_solutions_stats_description",
       items: [
         {
           name: "forest_to_be_preserved",
           count: 1600,
-          unit: "Ha"
+          unit: "Ha",
         },
         {
           name: "trees_to_be_planted",
           count: 1.5,
-          unit: "million"
+          unit: "million",
         },
         {
           name: "forest_land_to_be_restored",
           count: 1500,
-          unit: "Ha"
-        }
-      ]
-    }
+          unit: "Ha",
+        },
+      ],
+    },
+    initiatives: {
+      title: "explore_our_forestry_initiatives",
+      description: "solutions_initiatives_description",
+      items: [
+        {
+          imageSrc: forestrySolutionsInitiative1,
+          description: "forestry_solutions_conservation_initiave_description",
+          title: "forest_conservation_intiatives",
+        },
+        {
+          imageSrc: forestrySolutionsInitiative2,
+          description:
+            "forestry_solutions_improved_forest_management_practices_description",
+          title: "improved_forest_management_practices",
+        },
+        {
+          imageSrc: forestrySolutionsInitiative3,
+          description: "paulownia_tomentosa_tree_planting_description",
+          title: "paulownia_tomentosa_tree_planting",
+        },
+      ],
+    },
   },
   {
     heroImages: [
       {
         image: {
           src: renewableEnergySolutionsImg1,
-          alt: ''
-        }
+          alt: "",
+        },
       },
       {
         image: {
           src: renewableEnergySolutionsImg2,
-          alt: ''
-        }
+          alt: "",
+        },
       },
       {
         image: {
           src: renewableEnergySolutionsImg3,
-          alt: ''
-        }
-      }
+          alt: "",
+        },
+      },
     ],
-    alias: 'renewable-energy',
-    title: 'renewable_energy_solutions',
-    titleDescription: 'renewable_energy_solutions_title_description',
+    alias: "renewable-energy",
+    title: "renewable_energy_solutions",
+    titleDescription: "renewable_energy_solutions_title_description",
     statistics: {
       description: "renewable_energy_solutions_stats_description",
       items: [
         {
           name: "of_co2_to_be_captured",
           count: 7.9,
-          unit: "mio tons"
-        }
-      ]
-    }
+          unit: "mio tons",
+        },
+      ],
+    },
+     initiatives: {
+      title: "explore_our_renewable_energy_initiatives",
+      description: "solutions_initiatives_description",
+      moreDetails: "renewable_energy_initiatives_more_details",
+    },
   },
   {
     heroImages: [
       {
         image: {
           src: wasteManagementSolutionsImg1,
-          alt: ''
-        }
+          alt: "",
+        },
       },
       {
         image: {
           src: wasteManagementSolutionsImg2,
-          alt: ''
-        }
+          alt: "",
+        },
       },
       {
         image: {
           src: wasteManagementSolutionsImg3,
-          alt: ''
-        }
-      }
+          alt: "",
+        },
+      },
     ],
-    alias: 'waste-management',
-    title: 'waste_management_solutions',
-    titleDescription: 'waste_management_solutions_title_description',
+    alias: "waste-management",
+    title: "waste_management_solutions",
+    titleDescription: "waste_management_solutions_title_description",
     statistics: {
       description: "waste_management_solutions_stats_description",
       items: [
         {
           name: "plastic_waste_collection_and_recycling_hubs",
           count: 3,
-          unit: ""
-        }
-      ]
-    }
-  }
-]
+          unit: "",
+        },
+      ],
+    },
+     initiatives: {
+      title: "explore_our_waste_management_initiatives",
+      description: "solutions_initiatives_description",
+      moreDetails: "waste_management_initiatives_more_details",
+    },
+  },
+];
 
 export const unSDGs: SDG[] = [
   {
@@ -490,118 +525,118 @@ export const unSDGs: SDG[] = [
     title: "no_poverty",
     iconSrc: sdg1,
     moreInfoUrl: "https://sdgs.un.org/goals/goal1",
-    class: "sdg1-btn"
+    class: "sdg1-btn",
   },
   {
     id: "2",
     title: "zero_hunger",
     iconSrc: sdg2,
     moreInfoUrl: "https://sdgs.un.org/goals/goal2",
-    class: "sdg2-btn"
+    class: "sdg2-btn",
   },
   {
     id: "3",
     title: "good_health_and_wellbeing",
     iconSrc: sdg3,
     moreInfoUrl: "https://sdgs.un.org/goals/goal3",
-    class: "sdg3-btn"
+    class: "sdg3-btn",
   },
   {
     id: "4",
     title: "quality_education",
     iconSrc: sdg4,
     moreInfoUrl: "https://sdgs.un.org/goals/goal4",
-    class: "sdg4-btn"
+    class: "sdg4-btn",
   },
   {
     id: "5",
     title: "gender_equality",
     iconSrc: sdg5,
     moreInfoUrl: "https://sdgs.un.org/goals/goal5",
-    class: "sdg5-btn"
+    class: "sdg5-btn",
   },
   {
     id: "6",
     title: "clean_water_and_sanitation",
     iconSrc: sdg6,
     moreInfoUrl: "https://sdgs.un.org/goals/goal6",
-    class: "sdg6-btn"
+    class: "sdg6-btn",
   },
   {
     id: "7",
     title: "affordable_and_clean_energy",
     iconSrc: sdg7,
     moreInfoUrl: "https://sdgs.un.org/goals/goal7",
-    class: "sdg7-btn"
+    class: "sdg7-btn",
   },
   {
     id: "8",
     title: "decent_work_and_economic_growth",
     iconSrc: sdg8,
     moreInfoUrl: "https://sdgs.un.org/goals/goal8",
-    class: "sdg8-btn"
+    class: "sdg8-btn",
   },
   {
     id: "9",
     title: "industry_innovation_and_infrastructure",
     iconSrc: sdg9,
     moreInfoUrl: "https://sdgs.un.org/goals/goal9",
-    class: "sdg9-btn"
+    class: "sdg9-btn",
   },
   {
     id: "10",
     title: "reduced_inequalities",
     iconSrc: sdg10,
     moreInfoUrl: "https://sdgs.un.org/goals/goal10",
-    class: "sdg10-btn"
+    class: "sdg10-btn",
   },
   {
     id: "11",
     title: "sustainable_cities_and_communities",
     iconSrc: sdg11,
     moreInfoUrl: "https://sdgs.un.org/goals/goal11",
-    class: "sdg11-btn"
+    class: "sdg11-btn",
   },
   {
     id: "12",
     title: "responsible_consumption_and_production",
     iconSrc: sdg12,
     moreInfoUrl: "https://sdgs.un.org/goals/goal12",
-    class: "sdg12-btn"
+    class: "sdg12-btn",
   },
   {
     id: "13",
     title: "climate_action",
     iconSrc: sdg13,
     moreInfoUrl: "https://sdgs.un.org/goals/goal13",
-    class: "sdg13-btn"
+    class: "sdg13-btn",
   },
   {
     id: "14",
     title: "life_below_water",
     iconSrc: sdg14,
     moreInfoUrl: "https://sdgs.un.org/goals/goal14",
-    class: "sdg14-btn"
+    class: "sdg14-btn",
   },
   {
     id: "15",
     title: "life_on_land",
     iconSrc: sdg15,
     moreInfoUrl: "https://sdgs.un.org/goals/goal15",
-    class: "sdg15-btn"
+    class: "sdg15-btn",
   },
   {
     id: "16",
     title: "peace_justice_and_strong_institutions",
     iconSrc: sdg16,
     moreInfoUrl: "https://sdgs.un.org/goals/goal16",
-    class: "sdg16-btn"
+    class: "sdg16-btn",
   },
   {
     id: "17",
     title: "partnerships_for_the_goals",
     iconSrc: sdg17,
     moreInfoUrl: "https://sdgs.un.org/goals/goal17",
-    class: "sdg17-btn"
+    class: "sdg17-btn",
   },
 ];

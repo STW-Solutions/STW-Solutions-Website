@@ -81,6 +81,16 @@ export interface Solutions {
       count: number;
       unit?: string;
     }[]
+  },
+  initiatives?: {
+    title: string;
+    description: string;
+    items?: {
+      imageSrc: string;
+      title: string;
+      description: string;
+    }[];
+    moreDetails?: string;
   }
 }
 
