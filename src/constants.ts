@@ -1,12 +1,16 @@
 import reason1 from "../src/images/reason1.png";
 import reason2 from "../src/images/reason2.png";
 import reason3 from "../src/images/reason3.png";
-import cleanhub from "../src/images/CleanHub.png";
 import enef from "../src/images/ENEFCam.png";
 import carbonsate from "../src/images/Carbonsate.png";
 import minepded from "../src/images/MINEPDED.png";
 import ministryForestry from "../src/images/MinistryForestry.png";
-import volkswagen from "../src/images/Volkswagen.webp";
+import goldStandard from "../src/images/gold_standard.png";
+import verifiedCarbonStandard from "../src/images/verified_carbon_standard.png";
+import natureFix from "../src/images/naturefix.png";
+import everWave from "../src/images/everwave-400x51.png";
+import ecosia from "../src/images/Ecosia.png";
+import hysacam from "../src/images/hysacam.png";
 import { Project, ProjectCategory, SDG, Solutions } from "./models";
 import wasteManagementLimbe from "../src/images/carbonsate-cameroon.avif";
 import forestryProjectKoundi from "../src/images/STW-Solution-Forest-Projects-Koundi.jpg";
@@ -65,19 +69,29 @@ export const WhyUs = [
 
 export const Partners = [
   {
-    imageSrc: cleanhub,
-    alt: "CleanHub logo",
-    link: "https://www.cleanhub.com/",
-  },
-  {
     imageSrc: carbonsate,
     alt: "Carbonsate logo",
     link: "https://www.carbonsate.com/cameroon",
   },
   {
-    imageSrc: volkswagen,
-    alt: "Volkswagen logo",
-    link: "https://www.vw.com/",
+    imageSrc: natureFix,
+    alt: "NatureFix logo",
+    link: "https://nature-fix.com/",
+  },
+  {
+    imageSrc: ecosia,
+    alt: "Ecosia logo",
+    link: "https://www.ecosia.org/",
+  },
+  {
+    imageSrc: everWave,
+    alt: "EverWave logo",
+    link: "https://everwave.de/",
+  },
+  {
+    imageSrc: hysacam,
+    alt: "Hysacam logo",
+    link: "https://www.hysacam-proprete.com/",
   },
   {
     imageSrc: enef,
@@ -85,14 +99,24 @@ export const Partners = [
     link: "https://enefcameroun.cm/",
   },
   {
+    imageSrc: ministryForestry,
+    alt: "Ministry of Forestry Logo",
+    link: "https://www.minfof.gov.cm/",
+  },
+  {
     imageSrc: minepded,
     alt: "MINEPDED logo",
     link: "https://minepded.gov.cm/en/",
   },
   {
-    imageSrc: ministryForestry,
-    alt: "Ministry of Forestry Logo",
-    link: "https://www.minfof.gov.cm/",
+    imageSrc: verifiedCarbonStandard,
+    alt: "Verified Carbon Standard logo",
+    link: "https://verra.org/programs/verified-carbon-standard/",
+  },
+  {
+    imageSrc: goldStandard,
+    alt: "Gold Standard logo",
+    link: "https://globalgoals.goldstandard.org/",
   },
 ];
 
@@ -120,6 +144,22 @@ export const SlideButtonsPartnersData = [
   {
     dataBsSlideTo: "5",
     ariaLabel: "Slide 6",
+  },
+  {
+    dataBsSlideTo: "6",
+    ariaLabel: "Slide 7",
+  },
+  {
+    dataBsSlideTo: "7",
+    ariaLabel: "Slide 8",
+  },
+  {
+    dataBsSlideTo: "8",
+    ariaLabel: "Slide 9",
+  },
+   {
+    dataBsSlideTo: "10",
+    ariaLabel: "Slide 11",
   },
 ];
 
@@ -471,7 +511,7 @@ export const solutions: Solutions[] = [
         },
       ],
     },
-     initiatives: {
+    initiatives: {
       title: "explore_our_renewable_energy_initiatives",
       description: "solutions_initiatives_description",
       moreDetails: "renewable_energy_initiatives_more_details",
@@ -509,9 +549,14 @@ export const solutions: Solutions[] = [
           count: 3,
           unit: "",
         },
+        {
+          name: "plastic_waste_to_be_collected_annually",
+          count: 100,
+          unit: "kg",
+        },
       ],
     },
-     initiatives: {
+    initiatives: {
       title: "explore_our_waste_management_initiatives",
       description: "solutions_initiatives_description",
       moreDetails: "waste_management_initiatives_more_details",

@@ -43,7 +43,7 @@ const HowItWorks = () => {
               <img src={step.imageUrl} />
             </div>
             <h5 className="text-black mt-3">{t(step.title)}</h5>
-            <div className="description text-muted">{t(step.description)}</div>
+            <div className="description text-muted" dangerouslySetInnerHTML={{ __html: t(step.description) }}></div>
           </div>
         ))}
       </div>
