@@ -11,6 +11,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
 import arrowRightCircle from "../../images/Arrow-right-circle.png";
 import { useRef } from "react";
+import { useNavigate } from "react-router";
 import useScrollTriggeredCountUp from "../../hooks/useScrollTriggeredCountUp";
 import {
   WhyUs,
@@ -51,6 +52,10 @@ const Home = () => {
     ProjectCategory.UNDER_DEVELOPMENT,
     ProjectCategory.FORESTRY,
   ]);
+   const navigate = useNavigate();
+   const handleClick = () => {
+    navigate("/contact-us");
+  };
 
   return (
     <div className="home-main">
@@ -81,6 +86,7 @@ const Home = () => {
                     "py-3",
                     "d-block d-lg-none w-100",
                   ]}
+                  onButtonClick={()=>handleClick()}
                 />
               </div>
               {/* on small screens */}
@@ -146,6 +152,7 @@ const Home = () => {
                     "py-2",
                     "d-none d-lg-block w-50",
                   ]}
+                  onButtonClick={()=>handleClick()}
                 />
               </div>
             </div>

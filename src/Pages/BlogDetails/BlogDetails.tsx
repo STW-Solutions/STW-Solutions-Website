@@ -16,12 +16,12 @@ const BlogDetails = () => {
   const [categories, setCategories] = useState<number[]>();
   const [isOtherBlogsLoading, setIsOtherBlogsLoading] = useState(false);
   const [otherBlogs, setOtherBlogs] = useState<Blog[]>([]);
+  const blogId = JSON.parse(localStorage.getItem("blogIdentifier") || "");
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   useEffect(() => {
-    const blogId = JSON.parse(localStorage.getItem("blogIdentifier") || "");
     setIsLoading(true);
     const controller = new AbortController();
     apiClient
@@ -31,7 +31,7 @@ const BlogDetails = () => {
       .then((res) => {
         setIsLoading(false);
         setBlog(res.data);
-        setCategories(res.data.categories);
+        // setCategories(res.data.categories);
       })
       .catch((err) => {
         if (err instanceof CanceledError) return;
@@ -40,26 +40,32 @@ const BlogDetails = () => {
       });
   }, []);
 
-  useEffect(() => {
-    setIsOtherBlogsLoading(true);
-    const controller = new AbortController();
-    categories?.forEach((category, i) => {
-      if (i < 4) {
-        apiClient
-          .get<Blog[]>(`/posts?per_page=3&categories=${category}&_embed`, {
-            signal: controller.signal,
-          })
-          .then((res) => {
-            setIsOtherBlogsLoading(false);
-            setOtherBlogs([...otherBlogs, ...res.data]);
-          })
-          .catch((err) => {
-            if (err instanceof CanceledError) return;
-            setIsOtherBlogsLoading(false);
-          });
-      }
-    });
-  }, [categories]);
+  // useEffect(() => {
+  //   if(blog?._embedded.replies[0].length) {
+
+  //   }
+  // })
+
+  // useEffect(() => {
+  //   setIsOtherBlogsLoading(true);
+  //   const controller = new AbortController();
+  //   categories?.forEach((category, i) => {
+  //     if (i < 4) {
+  //       apiClient
+  //         .get<Blog[]>(`/posts?per_page=3&categories=${category}&_embed`, {
+  //           signal: controller.signal,
+  //         })
+  //         .then((res) => {
+  //           setIsOtherBlogsLoading(false);
+  //           setOtherBlogs([...otherBlogs, ...res.data]);
+  //         })
+  //         .catch((err) => {
+  //           if (err instanceof CanceledError) return;
+  //           setIsOtherBlogsLoading(false);
+  //         });
+  //     }
+  //   });
+  // }, [categories]);
 
   return (
     <div
@@ -95,7 +101,7 @@ const BlogDetails = () => {
                     }}
                   ></div>
                 </div>
-                <div className="col-12 col-md-4 col-lg-3 related-blogs-box p-3">
+                {/* <div className="col-12 col-md-4 col-lg-3 related-blogs-box p-3">
                   <h3 className="text-capitalize fw-bold">
                     {t("other_related_blogs")}
                   </h3>
@@ -134,10 +140,10 @@ const BlogDetails = () => {
                       blog={blog}
                     />
                   )}
-                </div>
+                </div> */}
               </div>
               <div className="row">
-
+                  
               </div>
             </>
           )}
