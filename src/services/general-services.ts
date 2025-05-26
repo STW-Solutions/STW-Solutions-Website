@@ -20,6 +20,5 @@ export const getImageUrl = (htmlContent: any) => {
 };
 
 export const setBlogId = (id: number) => {
-  console.log(id)
   localStorage.setItem("blogIdentifier", JSON.stringify(id));
 };

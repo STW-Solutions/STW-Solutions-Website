@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import ButtonOutline from "../../ButtonOutline/ButtonOutline";
 import ButtonPrimary from "../../ButtonPrimary/ButtonPrimary";
 import "./NavBarLarge.css";
@@ -15,6 +15,10 @@ interface Props {
 const NavBarLarge = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
   const location = useLocation().pathname;
+   const navigate = useNavigate();
+   const handleClick = () => {
+    navigate("/contact-us");
+  };
 
   useEffect(() => {
   }, [location]);
@@ -212,6 +216,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
       </div>
       <div className="d-flex justify-content-between mx-3 mx-lg-4 px-lg-4 mx-xl-5 py-2 py-lg-0">
         <ButtonPrimary
+        onButtonClick={() => handleClick()}
           classes={["stw-btn-w text-capitalize", "me-2", "mx-1", "w-100"]}
           children={`${t("contact_us")}`}
         />

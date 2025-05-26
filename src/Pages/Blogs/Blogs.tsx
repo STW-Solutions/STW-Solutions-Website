@@ -99,7 +99,7 @@ const Blogs = () => {
   return (
     <>
       <div
-        className={`container-fluid  ${
+        className={`container-fluid ${
           (isLoading || error || blogsByPage.length === 0) &&
           "blogs-main d-flex justify-content-center align-items-center"
         }`}
@@ -136,10 +136,9 @@ const Blogs = () => {
                   <div className="row justify-content-evenly">
                     {blogsByPage.map((blog, index) => (
                       <>
-                        {index === 1 && (
                           <div
-                            className="rounded category-box p-3 col-md-4 mt-5"
-                            key={blog.id + 'bypage'}
+                            className={`rounded category-box p-3 col-lg-5 mt-5 order-5 order-lg-2 ${index === 1 ? 'd-block' : 'd-none'}`}
+                            key={`${blog.id}recentBlogs`}
                           >
                             <h2 className="fs-4 text-center text-uppercase fw-bold">
                               {t("recent_posts")}
@@ -149,7 +148,7 @@ const Blogs = () => {
                                 i < 3 && (
                                   <div
                                     onClick={() => setBlogId(recentBlog.id)}
-                                    key={recentBlog.id}
+                                    key={`${recentBlog.id}recentBlog`}
                                   >
                                     <Link
                                       className="text-decoration-none"
@@ -164,16 +163,15 @@ const Blogs = () => {
                                 )
                             )}
                           </div>
-                        )}
                         <div
                           className={
                             index === 0
-                              ? "mt-5 col-md-7"
+                              ? "mt-5 col-lg-7 order-0"
                               : index === 1
-                              ? "mt-5 col-md-7"
-                              : "mt-5 col-md-8"
+                              ? "mt-5 col-lg-7 order-2 order-lg-3"
+                              : "mt-5 col-lg-8 order-3 order-lg-4"
                           }
-                          key={`${blog.id}summary`}
+                          key={`${blog.id}`}
                           onClick={() => setBlogId(blog.id)}
                         >
                           <Link
@@ -185,15 +183,15 @@ const Blogs = () => {
                         </div>
                         {index === 0 && (
                           <div
-                            className="rounded category-box py-3 col-md-4 mt-5"
-                            key={index + "summary"}
+                            className="rounded category-box py-3 col-lg-4 mt-5 order-4 order-lg-1"
+                            key={`${blog.id}categories`}
                           >
                             <h2 className="fs-4 text-center text-uppercase">
                               {t("categories")}
                             </h2>
                             <ul className="mt-3 ms-0">
                               {categories.map((category, i) => (
-                                <li key={i+'category'} className="mt-3">
+                                <li key={`${i}category`} className="mt-3">
                                   <button
                                     className="fs-5 text-decoration-underline border-0 bg-transparent text-black text-capitalize"
                                     onClick={() =>
