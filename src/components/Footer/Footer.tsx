@@ -17,7 +17,7 @@ const Footer = () => {
               {/* <Link to="#">{t("sustainability")}</Link> */}
               <HashLink to="/#our-partners">{t("partners")}</HashLink>
               {/* <Link to="#">{t("careers")}</Link> */}
-              <Link to="#">{t("contact")}</Link>
+              <Link to="/contact-us">{t("contact")}</Link>
             </div>
           </div>
           <div className="col-12 col-sm-6 col-md-3 footer-col">

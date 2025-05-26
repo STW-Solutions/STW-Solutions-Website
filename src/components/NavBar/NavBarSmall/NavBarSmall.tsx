@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import "./NavBarSmall.css";
 import ButtonPrimary from "../../ButtonPrimary/ButtonPrimary";
 import ButtonOutline from "../../ButtonOutline/ButtonOutline";
@@ -16,6 +16,10 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
   const languages = ["en", "fr", "de"];
   const location = useLocation().pathname;
+   const navigate = useNavigate();
+   const handleClick = () => {
+    navigate("/contact-us");
+  };
 
   useEffect(() => {}, [location]);
   return (
@@ -306,6 +310,7 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                 <ButtonPrimary
                   classes={["stw-btn-w text-capitalize", "me-2", "w-100"]}
                   children={`${t("contact_us")}`}
+                  onButtonClick={() => handleClick()}
                 />
                 <ButtonOutline
                   to="/blogs"

@@ -18,7 +18,7 @@ const BlogMiniSummary = ({ blog, titleWidth }: Props) => {
     <div className="d-flex shadow bg-white p-2 mt-3">
       <img src={imageUrl} className="recent-blog-image" />
       <div className="ms-3">
-        <div className={`fs-4 text-black text-truncate fw-bold blog-title ${titleWidth}`}>{blog.title.rendered}</div>
+        <div className={`fs-5 text-black text-truncate fw-bold blog-title ${titleWidth}`}>{blog.title.rendered}</div>
         <div className="text-muted">
           {format(blogDate, "MMMM dd, yyyy")}
           {blog.comment_status === "open" && (
