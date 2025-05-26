@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import "./Footer.css";
 import { Link } from "react-router";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import logo from "../../images/STW-Solution-Logo.png";
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="d-flex justify-content-evenly flex-column text-muted">
               <Link to="/company">{t("company")}</Link>
               {/* <Link to="#">{t("sustainability")}</Link> */}
-              <NavHashLink to="/#our-partners">{t("partners")}</NavHashLink>
+              <HashLink to="/#our-partners">{t("partners")}</HashLink>
               {/* <Link to="#">{t("careers")}</Link> */}
               <Link to="#">{t("contact")}</Link>
             </div>

@@ -14,10 +14,11 @@
     color: #000000;
 }
 
-.stw-nav-lg-link:focus {
+.stw-nav-lg-link:focus, .stw-nav-lg-link-active {
     border-bottom: 3px solid;
     border-color: #257251;
 }
+
 
 .stw-select-box {
     width: 20%;

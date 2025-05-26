@@ -139,7 +139,7 @@ const Blogs = () => {
                         {index === 1 && (
                           <div
                             className="rounded category-box p-3 col-md-4 mt-5"
-                            key={`000${index}`}
+                            key={blog.id + 'bypage'}
                           >
                             <h2 className="fs-4 text-center text-uppercase fw-bold">
                               {t("recent_posts")}
@@ -173,7 +173,7 @@ const Blogs = () => {
                               ? "mt-5 col-md-7"
                               : "mt-5 col-md-8"
                           }
-                          key={blog.id}
+                          key={`${blog.id}summary`}
                           onClick={() => setBlogId(blog.id)}
                         >
                           <Link
@@ -186,14 +186,14 @@ const Blogs = () => {
                         {index === 0 && (
                           <div
                             className="rounded category-box py-3 col-md-4 mt-5"
-                            key={index + "category"}
+                            key={index + "summary"}
                           >
                             <h2 className="fs-4 text-center text-uppercase">
                               {t("categories")}
                             </h2>
                             <ul className="mt-3 ms-0">
                               {categories.map((category, i) => (
-                                <li key={i} className="mt-3">
+                                <li key={i+'category'} className="mt-3">
                                   <button
                                     className="fs-5 text-decoration-underline border-0 bg-transparent text-black text-capitalize"
                                     onClick={() =>
