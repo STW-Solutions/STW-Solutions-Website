@@ -100,7 +100,7 @@ const Home = () => {
                   </div>
                   <div className="col-6 co2-sm-box stats-border">
                     <span className="bold-green-text" ref={co2SmRef}>
-                      {co2SmCount} {t("tCO2")}
+                      {co2SmCount}
                     </span>
                     <span className="d-block">
                       {t("annual_tons_of_CO2_reduced")}
