@@ -111,8 +111,8 @@ const SolutionForestry = () => {
                 </div>
                 {solution.initiatives.items && (
                   <div className="row justify-content-center mt-5">
-                    {solution.initiatives.items.map((item) => (
-                      <div className="col-12 col-sm-5 col-md-3 me-sm-3 me-md-5 mt-2 mt-md-0 text-center card shadow rounded-3 border-0 initiative-card p-3">
+                    {solution.initiatives.items.map((item, i) => (
+                      <div key={i} className="col-12 col-sm-5 col-md-3 me-sm-3 me-md-5 mt-2 mt-md-0 text-center card shadow rounded-3 border-0 initiative-card p-3">
                         <div>
                           <img src={item.imageSrc} className="img-fluid" />
                           <h3 className="mt-2 text-capitalize">

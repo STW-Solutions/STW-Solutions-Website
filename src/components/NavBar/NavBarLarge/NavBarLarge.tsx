@@ -3,8 +3,10 @@ import { Link } from "react-router";
 import ButtonOutline from "../../ButtonOutline/ButtonOutline";
 import ButtonPrimary from "../../ButtonPrimary/ButtonPrimary";
 import "./NavBarLarge.css";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import logo from "../../../images/STW-Solution-Logo.png";
+import { useLocation } from "react-router";
+import { useEffect } from "react";
 
 interface Props {
   onClickLanguageChange: (language: string) => void;
@@ -12,6 +14,10 @@ interface Props {
 
 const NavBarLarge = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
+  const location = useLocation().pathname;
+
+  useEffect(() => {
+  }, [location]);
   return (
     <div className="bg-white d-none navbar-lg justify-content-between align-items-center text-capitalize py-1 px-5">
       <Link className="stw-solutions-logo-box mx-lg-5" to={"/"}>
@@ -22,7 +28,9 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           <Link
             aria-current="page"
             to="/"
-            className="py-1 px-2 px-xl-3 stw-nav-lg-link fw-bold"
+            className={`${
+              location === "/" ? "stw-nav-lg-link-active" : ""
+            } py-1 px-2 px-xl-3 stw-nav-lg-link fw-bold`}
           >
             {t("home")}
           </Link>
@@ -42,7 +50,12 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             aria-labelledby="companyDropDownLarge"
           >
             <li>
-              <Link className="dropdown-item stw-nav-lg-link" to={"/company"}>
+              <Link
+                to={"/company"}
+                className={`${
+                  location === "/company" ? "stw-nav-lg-link-active" : ""
+                } dropdown-item stw-nav-lg-link`}
+              >
                 {t("company")}
               </Link>
             </li>
@@ -52,9 +65,14 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
               </a>
             </li> */}
             <li>
-              <NavHashLink className="dropdown-item stw-nav-lg-link" to="/#our-partners">
+              <HashLink
+                to="/#our-partners"
+                className={`${
+                  location === "/#our-partners" ? "stw-nav-lg-link-active" : ""
+                } dropdown-item stw-nav-lg-link`}
+              >
                 {t("partners")}
-              </NavHashLink>
+              </HashLink>
             </li>
             {/* <li>
               <a className="dropdown-item stw-nav-lg-link" href="#">
@@ -62,7 +80,12 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
               </a>
             </li> */}
             <li>
-              <Link className="dropdown-item stw-nav-lg-link" to="#">
+              <Link
+                to="#"
+                className={`${
+                  location === "/contact-us" ? "stw-nav-lg-link-active" : ""
+                } dropdown-item stw-nav-lg-link`}
+              >
                 {t("contact")}
               </Link>
             </li>
@@ -81,19 +104,37 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           <ul className="dropdown-menu" aria-labelledby="solutionsDropdownLg">
             <li>
               <Link
-                className="dropdown-item stw-nav-lg-link"
                 to="/solutions/forestry"
+                className={`${
+                  location === "/solutions/forestry"
+                    ? "stw-nav-lg-link-active"
+                    : ""
+                } dropdown-item stw-nav-lg-link`}
               >
                 {t("forestry_solutions")}
               </Link>
             </li>
             <li>
-              <Link className="dropdown-item stw-nav-lg-link" to="/solutions/waste-management">
+              <Link
+                to="/solutions/waste-management"
+                className={`${
+                  location === "/solutions/waste-management"
+                    ? "stw-nav-lg-link-active"
+                    : ""
+                } dropdown-item stw-nav-lg-link`}
+              >
                 {t("waste_management_solutions")}
               </Link>
             </li>
             <li>
-              <Link className="dropdown-item stw-nav-lg-link" to="/solutions/renewable-energy">
+              <Link
+                to="/solutions/renewable-energy"
+                className={`${
+                  location === "/solutions/renewable-energy"
+                    ? "stw-nav-lg-link-active"
+                    : ""
+                } dropdown-item stw-nav-lg-link`}
+              >
                 {t("renewable_energy_solutions")}
               </Link>
             </li>
@@ -116,8 +157,16 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
               </Link>
             </li>
             <li>
-              <Link to="/project-details/koundi-forest-conservation-project" className="dropdown-item stw-nav-lg-link">
-              {t("koundi_conservation_project")}
+              <Link
+                to="/project-details/koundi-forest-conservation-project"
+                className={`${
+                  location ===
+                  "/project-details/koundi-forest-conservation-project"
+                    ? "stw-nav-lg-link-active"
+                    : ""
+                } dropdown-item stw-nav-lg-link`}
+              >
+                {t("koundi_conservation_project")}
               </Link>
             </li>
           </ul>
@@ -134,7 +183,12 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           </button>
           <ul className="dropdown-menu" aria-labelledby="insightsDropdownLg">
             <li>
-              <Link className="dropdown-item stw-nav-lg-link" to="/blogs">
+              <Link
+                to="/blogs"
+                className={`${
+                  location === "/blogs" ? "stw-nav-lg-link-active" : ""
+                } dropdown-item stw-nav-lg-link`}
+              >
                 {t("blog")}
               </Link>
             </li>
@@ -161,7 +215,8 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           classes={["stw-btn-w text-capitalize", "me-2", "mx-1", "w-100"]}
           children={`${t("contact_us")}`}
         />
-        <ButtonOutline to="/blogs"
+        <ButtonOutline
+          to="/blogs"
           classes={["stw-btn-width", "me-2", "mx-1"]}
           children={`${t("blog")}`}
         />

@@ -35,6 +35,11 @@
     width: 1.5rem;
 }
 
+.stw-nav-sm-link-active {
+    border-bottom: 3px solid;
+    border-color: #257251;
+}
+
 .stw-solutions-logo-sm-box img {
     width: 60px;
 }
