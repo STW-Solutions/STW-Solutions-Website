@@ -2,6 +2,7 @@ import { useState } from "react";
 import {useTranslation} from "react-i18next";
 import "./ContactUs.css"
 import {faqData} from "../../constants";
+import Accordion from "../../components/Accordion/Accordion";
 
 const ContactUs = () => {
     const { t } = useTranslation();
@@ -156,24 +157,9 @@ const ContactUs = () => {
                         <h1 className="text-success stw-solutions-h1 ">{t("freq_asked_ques")}</h1>
                     </div>
                     <div className="col-md-6">
-                        <div className="accordion-container">
-                            {faqData.map((faq, index) => (
-                                <div key={index} className="accordion-item">
-                            <div className="accordion-header d-flex justify-content-between align-items-center py-3">
-                                <span className="fs-3 fs-lg-3">{faq.question}</span>
-                                <span className="plus-icon" onClick={() => toggleAccordion(index)}>
-                                       {activeIndex === index ? "X" : "+"}
-                           </span>
-                            </div>
-                            {activeIndex === index && (
-                                <div className="accordion-content py-3">
-                                    <span className="text-success fs-5 fw-bold">{faq.question}</span>
-                                    <p className="mb-0 fs-6 py-3">{faq.answer}</p>
-                                </div>
-                            )}
-                        </div>
-                            ))}
-                        </div>
+                       <Accordion items={faqData}
+                                  activeIndex={activeIndex}
+                                  toggleAccordion={toggleAccordion}/>
                     </div>
                 </div>
             </section>
