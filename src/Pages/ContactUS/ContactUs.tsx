@@ -8,7 +8,7 @@ const ContactUs = () => {
     const { t } = useTranslation();
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const toggleAccordion = (index: number) => {
-        setActiveIndex(activeIndex === index ? null : index);
+        setActiveIndex(activeIndex === index ? 0 : index);
     };
     const businessAddress = "Carrefour Moussa, Odza 2 BP 31191 Yaounde, Cameroon";
     const email = "info@stw-solution.com"
