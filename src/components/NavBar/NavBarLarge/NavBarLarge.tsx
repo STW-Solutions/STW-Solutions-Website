@@ -85,7 +85,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             </li> */}
             <li>
               <Link
-                to="#"
+                to="/contact-us"
                 className={`${
                   location === "/contact-us" ? "stw-nav-lg-link-active" : ""
                 } dropdown-item stw-nav-lg-link`}

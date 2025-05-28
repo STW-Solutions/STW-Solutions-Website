@@ -19,7 +19,7 @@ const Accordion: React.FC<AccordionProps> = ({
                         className={`accordion-header d-flex justify-content-between align-items-center py-3 ${headerClassName}`}
                         onClick={() => toggleAccordion(index)}
                     >
-                        <span className="fs-3 fs-lg-3">{item.question}</span>
+                        <span className="fs-5 fs-lg-3">{item.question}</span>
                         <span className={`plus-icon ${iconClassName}`}>
               {activeIndex === index ? "X" : "+"}
             </span>

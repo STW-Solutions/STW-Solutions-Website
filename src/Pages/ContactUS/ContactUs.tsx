@@ -6,8 +6,7 @@ import Accordion from "../../components/Accordion/Accordion";
 
 const ContactUs = () => {
     const { t } = useTranslation();
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
+    const [activeIndex, setActiveIndex] = useState<number>(0);
     const toggleAccordion = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
