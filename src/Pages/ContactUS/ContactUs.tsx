@@ -141,7 +141,7 @@ const ContactUs = () => {
                                 <button
                                     type="submit"
                                     className="text-capitalize btn btn-success w-100 w-lg-auto px-lg-5"
-                                    disabled={!formData.name || !formData.email || !formData.address}
+                                    disabled={true}
                                 >
                                     {t("send_message")}
                                 </button>
