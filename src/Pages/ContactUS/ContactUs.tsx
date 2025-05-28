@@ -149,7 +149,7 @@ const ContactUs = () => {
                     </div>
                 </div>
             </div>
-            <section  className="p-2">
+            <section  className="p-2 faq-section">
                 <div className="containers row">
                     <div className="col-md-6">
                         <span className="text-center fw-bolder fs-2">FAQ</span>
