@@ -153,3 +153,15 @@ export interface PageInfo {
   currentPage: number;
   previousPage: number;
 }
+
+
+export interface AccordionProps {
+  items: { question: string; answer: string }[];
+  activeIndex: number | null;
+  toggleAccordion: (index: number) => void;
+  containerClassName?: string;
+  itemClassName?: string;
+  headerClassName?: string;
+  contentClassName?: string;
+  iconClassName?: string;
+}
