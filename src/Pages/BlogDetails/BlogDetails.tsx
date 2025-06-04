@@ -94,7 +94,7 @@ const BlogDetails = () => {
                   </div>
 
                   <div
-                    className={`rounded category-box p-3 mt-5}`}
+                    className={`rounded category-box p-3 mt-3`}
                     key={`${blog.id}recentBlogs`}
                   >
                     <h2 className="fs-4 text-center text-uppercase fw-bold">

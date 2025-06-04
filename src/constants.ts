@@ -157,7 +157,7 @@ export const SlideButtonsPartnersData = [
     dataBsSlideTo: "8",
     ariaLabel: "Slide 9",
   },
-   {
+  {
     dataBsSlideTo: "10",
     ariaLabel: "Slide 11",
   },
@@ -195,7 +195,7 @@ export const projects: Project[] = [
           paragraph1: "koundi_forest_project_impact_description_p1",
           paragraph2: "koundi_forest_project_impact_description_p2",
           listDescription:
-            "koundi_forest_project_impact_description_list_description",
+              "koundi_forest_project_impact_description_list_description",
           listItems: [
             "koundi_forest_project_impact_description_list_item1",
             "koundi_forest_project_impact_description_list_item2",
@@ -245,9 +245,9 @@ export const projects: Project[] = [
         name: "local_communities_impact_name",
         description: {
           paragraph1:
-            "kpawara_community_forest_restoration_project_local_communities_impact_description_p1",
+              "kpawara_community_forest_restoration_project_local_communities_impact_description_p1",
           paragraph2:
-            "kpawara_community_forest_restoration_project_local_communities_impact_description_p2",
+              "kpawara_community_forest_restoration_project_local_communities_impact_description_p2",
         },
         imageUrl: "",
       },
@@ -255,9 +255,9 @@ export const projects: Project[] = [
         name: "project_impact_name",
         description: {
           paragraph1:
-            "kpawara_community_forest_restoration_project_impact_description_p1",
+              "kpawara_community_forest_restoration_project_impact_description_p1",
           paragraph2:
-            "kpawara_community_forest_restoration_project_impact_description_p2",
+              "kpawara_community_forest_restoration_project_impact_description_p2",
         },
         imageUrl: "",
       },
@@ -271,7 +271,7 @@ export const projects: Project[] = [
     timeLine: {
       title: "timeline",
       description:
-        "kpawara_community_forest_restoration_project_timeline_description",
+          "kpawara_community_forest_restoration_project_timeline_description",
       startDate: "",
       endDate: "",
     },
@@ -282,7 +282,7 @@ export const projects: Project[] = [
     alias: "kpawara-community-forest-restoration-project",
     sdgsInfo: {
       description:
-        "kpawara_community_forest_restoration_project_sdgs_info_description",
+          "kpawara_community_forest_restoration_project_sdgs_info_description",
       sdgs: ["1", "2", "5", "13", "15", "17"],
     },
     location: "kpawara_community_forest_restoration_project_location",
@@ -314,9 +314,9 @@ export const projects: Project[] = [
         name: "project_impact_name",
         description: {
           paragraph1:
-            "mandjou_agroforestry_and_reforestation_project_impact_description_p1",
+              "mandjou_agroforestry_and_reforestation_project_impact_description_p1",
           paragraph2:
-            "mandjou_agroforestry_and_reforestation_project_impact_description_p2",
+              "mandjou_agroforestry_and_reforestation_project_impact_description_p2",
         },
         imageUrl: "",
       },
@@ -330,7 +330,7 @@ export const projects: Project[] = [
     timeLine: {
       title: "timeline",
       description:
-        "mandjou_agroforestry_and_reforestation_project_timeline_description",
+          "mandjou_agroforestry_and_reforestation_project_timeline_description",
       startDate: "",
       endDate: "",
     },
@@ -341,7 +341,7 @@ export const projects: Project[] = [
     alias: "mandjou-agroforestry-and-reforestation-project",
     sdgsInfo: {
       description:
-        "mandjou_agroforestry_and_reforestation_project_sdgs_info_description",
+          "mandjou_agroforestry_and_reforestation_project_sdgs_info_description",
       sdgs: ["1", "2", "5", "13", "15", "17"],
     },
     location: "mandjou_agroforestry_and_reforestation_project_location",
@@ -388,7 +388,7 @@ export const projects: Project[] = [
     timeLine: {
       title: "timeline",
       description:
-        "banefou_landfill_gas_capture_and_energy_utilization_project_timeline_description",
+          "banefou_landfill_gas_capture_and_energy_utilization_project_timeline_description",
       startDate: "",
       endDate: "",
     },
@@ -396,15 +396,15 @@ export const projects: Project[] = [
     heroImageAlt: "",
     backgroundColor: "#FFFFFF",
     moreInfo:
-      "/project-details/banefou-landfill-gas-capture-and-energy-utilization-project",
+        "/project-details/banefou-landfill-gas-capture-and-energy-utilization-project",
     alias: "banefou-landfill-gas-capture-and-energy-utilization-project",
     sdgsInfo: {
       description:
-        "banefou_landfill_gas_capture_and_energy_utilization_project_sdgs_info_description",
+          "banefou_landfill_gas_capture_and_energy_utilization_project_sdgs_info_description",
       sdgs: ["7", "8", "9", "13", "17"],
     },
     location:
-      "banefou_landfill_gas_capture_and_energy_utilization_project_location",
+        "banefou_landfill_gas_capture_and_energy_utilization_project_location",
     //geolocation: "5°28'59.4"N 10°29'48.0"E"
   },
 ];
@@ -466,7 +466,7 @@ export const solutions: Solutions[] = [
         {
           imageSrc: forestrySolutionsInitiative2,
           description:
-            "forestry_solutions_improved_forest_management_practices_description",
+              "forestry_solutions_improved_forest_management_practices_description",
           title: "improved_forest_management_practices",
         },
         {
@@ -685,3 +685,35 @@ export const unSDGs: SDG[] = [
     class: "sdg17-btn",
   },
 ];
+
+ export const  faqData = [
+  {
+    question: "What are the key factors to consider when choosing which crops to plant?",
+    answer: "When selecting crops, it's important to consider factors like your local climate and soil conditions, market demand for different crops, available resources such as water and labor, potential pests and diseases in your region, and your own farming goals and expertise."
+  },
+  {
+    question: "How can I improve the fertility of my soil naturally?",
+    answer: "You can enhance soil fertility through various natural methods, including incorporating organic matter like compost and manure, practicing crop rotation, planting cover crops, reducing tillage, and ensuring proper drainage and aeration."
+  },
+  {
+    question: "What are some common sustainable farming practices?",
+    answer: "Sustainable farming practices include no-till or reduced tillage, crop rotation, cover cropping, integrated pest management (IPM), water-efficient irrigation techniques, agroforestry, and the use of renewable energy sources."
+  },
+  {
+    question: "How can I effectively manage pests and diseases in my crops without relying heavily on synthetic pesticides?",
+    answer: "Integrated Pest Management (IPM) is a strategy that emphasizes a combination of methods, including biological control (using natural enemies of pests), cultural practices (like crop rotation and sanitation), physical barriers, and targeted use of pesticides only when necessary and at economic thresholds."
+  },
+  {
+    question: "What are the benefits of crop rotation?",
+    answer: "Crop rotation helps to improve soil health by balancing nutrient use, reducing the buildup of specific pests and diseases, improving soil structure, and can even help with weed suppression."
+  },
+  {
+    question: "How can I conserve water in my agricultural practices?",
+    answer: "Water conservation techniques in agriculture include using drip irrigation or micro-sprinklers, mulching to reduce evaporation, planting drought-tolerant crops, rainwater harvesting, and improving soil health to increase water retention."
+  },
+  {
+    question: "What are some ways to add value to my agricultural products?",
+    answer: "Adding value can involve processing your raw products (e.g., making jam from fruits, grinding grains into flour), packaging and branding your products, selling directly to consumers through farmers' markets or online platforms, or creating value-added products like dried herbs or infused oils."
+  }
+];
+
