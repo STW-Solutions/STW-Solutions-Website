@@ -5,67 +5,42 @@ import { Blog } from "../../models";
 import BlogSummary from "../../components/BlogSummary/BlogSummary";
 import "./BlogDetails.css";
 import BlogMiniSummary from "../../components/BlogMiniSummary/BlogMiniSummary";
-import { Link } from "react-router";
-import { setBlogId } from "../../services/general-services";
+import { Link, useNavigate } from "react-router";
+import { useBlogsContext } from "../../contexts/blogs-context-provider";
 
 const BlogDetails = () => {
   const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
   const [blog, setBlog] = useState<Blog>();
   const [error, setError] = useState();
-  const [categories, setCategories] = useState<number[]>();
-  const [isOtherBlogsLoading, setIsOtherBlogsLoading] = useState(false);
-  const [otherBlogs, setOtherBlogs] = useState<Blog[]>([]);
-  const blogId = JSON.parse(localStorage.getItem("blogIdentifier") || "");
+  const navigate = useNavigate();
+  const { currentCategory, setCurrentCategory, categories, blogDetailId, recentBlogs } = useBlogsContext();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   useEffect(() => {
+    blogDetailId && getBlog(parseInt(blogDetailId));
+  }, []);
+
+  const getBlog = (id: number) => {
+    window.scrollTo(0, 0);
     setIsLoading(true);
     const controller = new AbortController();
     apiClient
-      .get<Blog>(`/posts/${blogId}?_embed`, {
+      .get<Blog>(`/posts/${id}?_embed`, {
         signal: controller.signal,
       })
       .then((res) => {
         setIsLoading(false);
         setBlog(res.data);
-        // setCategories(res.data.categories);
       })
       .catch((err) => {
         if (err instanceof CanceledError) return;
         setIsLoading(false);
         setError(err);
       });
-  }, []);
-
-  // useEffect(() => {
-  //   if(blog?._embedded.replies[0].length) {
-
-  //   }
-  // })
-
-  // useEffect(() => {
-  //   setIsOtherBlogsLoading(true);
-  //   const controller = new AbortController();
-  //   categories?.forEach((category, i) => {
-  //     if (i < 4) {
-  //       apiClient
-  //         .get<Blog[]>(`/posts?per_page=3&categories=${category}&_embed`, {
-  //           signal: controller.signal,
-  //         })
-  //         .then((res) => {
-  //           setIsOtherBlogsLoading(false);
-  //           setOtherBlogs([...otherBlogs, ...res.data]);
-  //         })
-  //         .catch((err) => {
-  //           if (err instanceof CanceledError) return;
-  //           setIsOtherBlogsLoading(false);
-  //         });
-  //     }
-  //   });
-  // }, [categories]);
+  };
 
   return (
     <div
@@ -92,7 +67,7 @@ const BlogDetails = () => {
           {blog && (
             <>
               <div className="row justify-content-evenly">
-                <div className="bg-white shadow p-5 col-12 col-md-8">
+                <div className="bg-white shadow p-5 col-12 col-lg-7">
                   <BlogSummary blog={blog} useAsDetails={true} />
                   <div
                     className="pt-5"
@@ -101,49 +76,60 @@ const BlogDetails = () => {
                     }}
                   ></div>
                 </div>
-                {/* <div className="col-12 col-md-4 col-lg-3 related-blogs-box p-3">
-                  <h3 className="text-capitalize fw-bold">
-                    {t("other_related_blogs")}
-                  </h3>
-                  {isOtherBlogsLoading && (
-                    <div className="d-flex justify-content-center">
-                      <div className="spinner-border"></div>
-                    </div>
-                  )}
-                  {!isOtherBlogsLoading &&
-                    otherBlogs
-                      .filter(
-                        (relatedBlog, index, self) =>
-                          relatedBlog.id !== blog.id &&
-                          index ===
-                            self.findIndex((t) => t.id === relatedBlog.id)
-                      )
-                      .map(
-                        (relatedBlog, i) =>
-                          i < 4 && (
-                            <div onClick={() => setBlogId(relatedBlog.id)} key={i}>
-                              <Link
-                                className="text-decoration-none"
-                                to={`/blog-details/${relatedBlog.slug}`}
-                              >
-                                <BlogMiniSummary
-                                  blog={relatedBlog}
-                                  titleWidth="mini-summary-blog-details"
-                                />
-                              </Link>
-                            </div>
-                          )
-                      )}
-                  {!isOtherBlogsLoading && otherBlogs.length === 0 && (
-                    <BlogMiniSummary
-                      titleWidth="mini-summary-blog-details"
-                      blog={blog}
-                    />
-                  )}
-                </div> */}
-              </div>
-              <div className="row">
-                  
+                <div className="col-lg-5">
+                  <div className="rounded category-box py-3">
+                    <h2 className="fs-4 text-center text-uppercase">
+                      {t("categories")}
+                    </h2>
+                    <ul className="mt-3 ms-0">
+                      {categories?.map((category, i) => (
+                        <li className="mt-3" key={i}>
+                          <button
+                            onClick={() => {
+                              navigate("/blogs");
+                              setCurrentCategory(category);
+                            }}
+                            className="btn border-0 text-decoration-underline fs-5 text-black text-capitalize"
+                          >
+                            {t(category)}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div
+                    className={`rounded category-box p-3 mt-3`}
+                    key={`${blog.id}recentBlogs`}
+                  >
+                    <h2 className="fs-4 text-center text-uppercase fw-bold">
+                      {t("recent_posts")}
+                    </h2>
+                    {recentBlogs?.map(
+                      (recentBlog, i) =>
+                        i < 3 && (
+                          <div
+                            onClick={() => getBlog(recentBlog.id)}
+                            key={`${recentBlog.id}recentBlog`}
+                          >
+                            <Link
+                              className="text-decoration-none"
+                              state={{
+                                blogCategories: categories,
+                                recentBlogs: recentBlogs,
+                              }}
+                              to={`/blog-details/${recentBlog.slug}`}
+                            >
+                              <BlogMiniSummary
+                                blog={recentBlog}
+                                titleWidth="mini-summary-blog"
+                              />
+                            </Link>
+                          </div>
+                        )
+                    )}
+                  </div>
+                </div>
               </div>
             </>
           )}

@@ -326,8 +326,6 @@ const Home = () => {
                   alt={t("right_arrow")}
                 />
               </Link>
-              {/* </div> */}
-              {/* </div> */}
             </div>
           </div>
         ))}
