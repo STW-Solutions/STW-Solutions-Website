@@ -298,5 +298,6 @@
   "phone": "phone",
   "email": "email",
   "send_message": "send message",
-  "freq_asked_ques": "Frequently Asked Questions"
+  "freq_asked_ques": "Frequently Asked Questions",
+  "replies": "replies"
 }
