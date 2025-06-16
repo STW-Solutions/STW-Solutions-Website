@@ -16,6 +16,8 @@ const BlogSummary = ({ blog, useAsDetails }: Props) => {
   const milliseconds = dateNow.getTime() - blogDate.getTime();
   const dateInHours = Math.floor(milliseconds / (1000 * 60 * 60));
   const [blogImage, setBlogImage] = useState("");
+ 
+
 
   useEffect(() => {
     getImageUrl(blog.content.rendered);
@@ -75,8 +77,8 @@ const BlogSummary = ({ blog, useAsDetails }: Props) => {
         <img src={blogImage} className="w-100 blog-image" />
         <div className="category-main">
           {blog._embedded["wp:term"].map((categories) => (
-            categories.map((category) => (
-              <small className="text-black shadow p-2 rounded text-uppercase category-item-box mt-1 d-block fw-bold">{category.name}</small>
+            categories.map((category, index) => (
+              <small key={index} className="text-black shadow p-2 rounded text-uppercase category-item-box mt-1 d-block fw-bold">{category.name}</small>
             ))
           ))}
         </div>

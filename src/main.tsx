@@ -1,8 +1,5 @@
 import ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import "./i18n";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -27,23 +24,23 @@ const router = createBrowserRouter([
       },
       {
         path: "/company",
-        element: <Company/>
+        element: <Company />,
       },
       {
         path: "/solutions/:name",
-        element: <SolutionDetails />
+        element: <SolutionDetails />,
       },
       {
         path: "/projects",
-        element: <Projects />
+        element: <Projects />,
       },
       {
         path: "/project-details/:name",
-        element: <ProjectDetails />
+        element: <ProjectDetails />,
       },
       {
         path: "/blogs",
-        element: <Blogs />
+        element: <Blogs />,
       },
       {
         path: "/blog-details/:slug",
