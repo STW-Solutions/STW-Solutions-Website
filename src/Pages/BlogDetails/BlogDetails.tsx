@@ -1,32 +1,34 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import apiClient, { CanceledError } from "../../services/api-client";
-import { Blog, BlogCategory } from "../../models";
+import { Blog } from "../../models";
 import BlogSummary from "../../components/BlogSummary/BlogSummary";
 import "./BlogDetails.css";
 import BlogMiniSummary from "../../components/BlogMiniSummary/BlogMiniSummary";
 import { Link, useNavigate } from "react-router";
-import { setBlogId } from "../../services/general-services";
-import { useLocation } from "react-router";
+import { useBlogsContext } from "../../contexts/blogs-context-provider";
 
 const BlogDetails = () => {
   const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
   const [blog, setBlog] = useState<Blog>();
   const [error, setError] = useState();
-  const blogId = JSON.parse(localStorage.getItem("blogIdentifier") || "");
-  const categories: string[] = useLocation().state.blogCategories;
-  const recentBlogs: Blog[] = useLocation().state.recentBlogs;
   const navigate = useNavigate();
+  const { currentCategory, setCurrentCategory, categories, blogDetailId, recentBlogs } = useBlogsContext();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   useEffect(() => {
+    blogDetailId && getBlog(parseInt(blogDetailId));
+  }, []);
+
+  const getBlog = (id: number) => {
+    window.scrollTo(0, 0);
     setIsLoading(true);
     const controller = new AbortController();
     apiClient
-      .get<Blog>(`/posts/${blogId}?_embed`, {
+      .get<Blog>(`/posts/${id}?_embed`, {
         signal: controller.signal,
       })
       .then((res) => {
@@ -38,7 +40,7 @@ const BlogDetails = () => {
         setIsLoading(false);
         setError(err);
       });
-  }, []);
+  };
 
   return (
     <div
@@ -80,14 +82,17 @@ const BlogDetails = () => {
                       {t("categories")}
                     </h2>
                     <ul className="mt-3 ms-0">
-                      {categories.map((category, i) => (
-                        <li key={`${i}category`} className="mt-3">
-                          <Link
-                            to={""}
-                            className="fs-5 text-black text-capitalize"
+                      {categories?.map((category, i) => (
+                        <li className="mt-3" key={i}>
+                          <button
+                            onClick={() => {
+                              navigate("/blogs");
+                              setCurrentCategory(category);
+                            }}
+                            className="btn border-0 text-decoration-underline fs-5 text-black text-capitalize"
                           >
                             {t(category)}
-                          </Link>
+                          </button>
                         </li>
                       ))}
                     </ul>
@@ -100,11 +105,11 @@ const BlogDetails = () => {
                     <h2 className="fs-4 text-center text-uppercase fw-bold">
                       {t("recent_posts")}
                     </h2>
-                    {recentBlogs.map(
+                    {recentBlogs?.map(
                       (recentBlog, i) =>
                         i < 3 && (
                           <div
-                            onClick={() => setBlogId(recentBlog.id)}
+                            onClick={() => getBlog(recentBlog.id)}
                             key={`${recentBlog.id}recentBlog`}
                           >
                             <Link
@@ -126,7 +131,6 @@ const BlogDetails = () => {
                   </div>
                 </div>
               </div>
-              <div className="row"></div>
             </>
           )}
         </div>

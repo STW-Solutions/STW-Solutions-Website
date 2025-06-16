@@ -8,12 +8,12 @@ import BlogMiniSummary from "../../components/BlogMiniSummary/BlogMiniSummary";
 import { Link } from "react-router";
 import Pagination from "../../components/Pagination/Pagination";
 import { useSearchParams } from "react-router";
-import { setBlogId } from "../../services/general-services";
+import { useBlogsContext } from "../../contexts/blogs-context-provider";
 
 const Blogs = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingRecentBlog, setIsLoadingRecentBlog] = useState(false);
   const [blogs, setBlogs] = useState<Blog[]>([]);
-  const [categories, setCategories] = useState<string[]>([]);
   const [blogsByPage, setBlogsByPage] = useState<Blog[]>([]);
   const [blogsByPageOriginal, setBlogsByPageOriginal] = useState<Blog[]>([]);
   const [pageDetails, setPageDetails] = useState<PageInfo>({
@@ -25,14 +25,42 @@ const Blogs = () => {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const [error, setError] = useState();
-  const [pageType, setPageType] = useState();
+  const {
+    currentCategory,
+    categories,
+    setCategories,
+    setBlogDetailId,
+    setRecentBlogs,
+    recentBlogs,
+    language
+  } = useBlogsContext();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   useEffect(() => {
     setSearchParams({ page: "1", per_page: "3" });
   }, []);
+
+  const getRecentBlogs = () => {
+    setIsLoadingRecentBlog(true);
+    const controller = new AbortController();
+    apiClient
+      .get<Blog[]>(`/posts?per_page=3&orderby=date&order=desc&_embed`, {
+        signal: controller.signal,
+      })
+      .then((res) => {
+        setIsLoadingRecentBlog(false);
+        setRecentBlogs(res.data);
+        setCategories(updateCategoryList(res.data));
+      })
+      .catch((err) => {
+        if (err instanceof CanceledError) return;
+        setIsLoadingRecentBlog(false);
+        setError(err);
+      });
+  };
 
   useEffect(() => {
     const page = searchParams.get("page");
@@ -45,13 +73,12 @@ const Blogs = () => {
           signal: controller.signal,
         })
         .then((res) => {
+          getRecentBlogs();
           setIsLoading(false);
-          setBlogs(res.data);
-          setBlogsByPage(res.data);
           setBlogsByPageOriginal(res.data);
+          filterBlogsByCategory(currentCategory, res.data)
           const numberOfPages = res.headers["x-wp-totalpages"];
           setPageDetails({ ...pageDetails, numberOfPages });
-          setCategories(updateCategoryList(res.data));
         })
         .catch((err) => {
           if (err instanceof CanceledError) return;
@@ -142,11 +169,10 @@ const Blogs = () => {
                         <div
                           key={`${index}`}
                           className={`${index > 0 ? "mt-5" : "mt-0"}`}
-                          onClick={() => setBlogId(blog.id)}
+                          onClick={() => setBlogDetailId(blog.id.toString())}
                         >
                           <Link
                             className="text-decoration-none"
-                            state={{blogCategories: categories, recentBlogs: blogs}}
                             to={`/blog-details/${blog.slug}`}
                           >
                             <BlogSummary blog={blog} useAsDetails={false} />
@@ -160,7 +186,7 @@ const Blogs = () => {
                           {t("categories")}
                         </h2>
                         <ul className="mt-3 ms-0">
-                          {categories.map((category, i) => (
+                          {categories?.map((category, i) => (
                             <li key={`${i}category`} className="mt-3">
                               <button
                                 className="fs-5 text-decoration-underline border-0 bg-transparent text-black text-capitalize"
@@ -185,19 +211,29 @@ const Blogs = () => {
                           }`}
                           key={`${blog.id}recentBlogs`}
                         >
-                          <h2 className="fs-4 text-center text-uppercase fw-bold">
-                            {t("recent_posts")}
-                          </h2>
-                          {blogs.map(
-                            (recentBlog, i) =>
-                              i < 3 && (
+                          {isLoadingRecentBlog && (
+                            <div className="d-flex justify-content-center">
+                              <div className="spinner-border"></div>
+                            </div>
+                          )}
+                          {!isLoadingRecentBlog && (
+                            <>
+                              <h2 className="fs-4 text-center text-uppercase fw-bold">
+                                {t("recent_posts")}
+                              </h2>
+                              {recentBlogs?.map((recentBlog) => (
                                 <div
-                                  onClick={() => setBlogId(recentBlog.id)}
+                                  onClick={() =>
+                                    setBlogDetailId(recentBlog.id.toString())
+                                  }
                                   key={`${recentBlog.id}recentBlog`}
                                 >
                                   <Link
                                     className="text-decoration-none"
-                                    state={{blogCategories: categories, recentBlogs: blogs}}
+                                    state={{
+                                      blogCategories: categories,
+                                      recentBlogs: blogs,
+                                    }}
                                     to={`/blog-details/${recentBlog.slug}`}
                                   >
                                     <BlogMiniSummary
@@ -206,7 +242,8 @@ const Blogs = () => {
                                     />
                                   </Link>
                                 </div>
-                              )
+                              ))}
+                            </>
                           )}
                         </div>
                       ))}
