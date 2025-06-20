@@ -1,7 +1,7 @@
 import { FormEvent, useRef, useState } from "react";
 import "./ReplyForm.css";
 import { useTranslation } from "react-i18next";
-import { BlogReply } from "../../models";
+import { BlogReplyNoRender } from "../../models";
 import apiClient, { CanceledError } from "../../services/api-client";
 
 interface Props {
@@ -21,7 +21,7 @@ const ReplyForm = ({ postId }: Props) => {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     if (isFormValid) {
-      const reply: BlogReply = {
+      const reply: BlogReplyNoRender = {
         author_email: emailRef.current?.value.trim(),
         author_name: nameRef.current?.value.trim(),
         post: postId,
@@ -31,14 +31,14 @@ const ReplyForm = ({ postId }: Props) => {
     }
   };
 
-  const addComment = (reply: BlogReply) => {
+  const addComment = (reply: BlogReplyNoRender) => {
     const appPassword = "O7BR BkZQ j8PQ HMdx T6QM Rk0l";
     const username = "StwsDevAdmin";
     const authHeader = "Basic " + btoa(`${username}:${appPassword}`);
     setIsLoading(true);
     const controller = new AbortController();
     apiClient
-      .post<BlogReply>(`/comments`, JSON.stringify(reply), {
+      .post<BlogReplyNoRender>(`/comments`, JSON.stringify(reply), {
         signal: controller.signal,
         headers: {
           Authorization: authHeader,
