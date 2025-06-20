@@ -12,7 +12,7 @@ import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
 import SolutionDetails from "./Pages/SolutionDetails/SolutionDetails";
 import Blogs from "./Pages/Blogs/Blogs";
 import BlogDetails from "./Pages/BlogDetails/BlogDetails";
-import ContactUs from "./Pages/ContactUs/ContactUs";
+// import ContactUs from "./Pages/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -46,10 +46,10 @@ const router = createBrowserRouter([
         path: "/blog-details/:slug",
         element: <BlogDetails />
       },
-      {
-        path: "/contact-us",
-        element: <ContactUs/>
-      }
+      // {
+      //   path: "/contact-us",
+      //   element: <ContactUs/>
+      // }
     ],
   },
 ]);
