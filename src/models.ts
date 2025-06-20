@@ -100,14 +100,25 @@ export interface BlogAuthor {
 }
 
 export interface BlogReply {
-  id?: number;
+ id?: number;
   author_name?: string;
-  content?: {
-    // rendered: string;
-  };
   author_email?: string;
   date?: string;
   post?: number;
+}
+
+export interface BlogReplyRender extends BlogReply {
+ 
+  content?: {
+    rendered: string;
+  }
+  
+}
+
+export interface BlogReplyNoRender extends BlogReply {
+  id?: number;
+  author_name?: string;
+  content?: string
 }
 
 export interface BlogCategory {
@@ -143,7 +154,7 @@ export interface Blog {
   type: string;
   _embedded: {
     author: BlogAuthor[];
-    replies: BlogReply[][];
+    replies: BlogReplyRender[][];
     "wp:term": BlogCategory[][];
   };
   slug: string;
