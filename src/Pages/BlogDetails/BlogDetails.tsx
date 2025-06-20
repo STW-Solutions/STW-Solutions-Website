@@ -8,6 +8,7 @@ import BlogMiniSummary from "../../components/BlogMiniSummary/BlogMiniSummary";
 import { Link, useNavigate } from "react-router";
 import { useBlogsContext } from "../../contexts/blogs-context-provider";
 import ReplySummary from "../../components/ReplySummary/ReplySummary";
+import ReplyForm from '../../components/ReplyForm/ReplyForm';
 
 const BlogDetails = () => {
   const { t } = useTranslation();
@@ -140,13 +141,21 @@ const BlogDetails = () => {
               </div>
               {blog._embedded.replies[0].length && (
                 <div className="mt-5 ms-5 ps-5">
-                  <h3 className="text-uppercase fs-4">{t("replies")} {' '} {`(${blog._embedded.replies[0].length})`}</h3>
+                  <h3 className="text-uppercase fs-4">
+                    {t("replies")} {`(${blog._embedded.replies[0].length})`}
+                  </h3>
                   <div className="row">
                     <div className="col-12 col-md-8 mt-3">
-                    {blog._embedded.replies[0].map((reply, i) => (
-                      <ReplySummary reply={reply} key={i} />
-                    ))}
+                      {blog._embedded.replies[0].map((reply, i) => (
+                        <ReplySummary reply={reply} key={i} />
+                      ))}
+                    </div>
                   </div>
+                  <h3 className="text-uppercase fs-4">{t("leave_a_reply")}</h3>
+                  <div className="row">
+                    <div className="col-12 col-md-8 mt-3">
+                      <ReplyForm postId={blog.id}/>
+                    </div>
                   </div>
                 </div>
               )}

@@ -10,7 +10,7 @@ const ContactUs = () => {
     const toggleAccordion = (index: number) => {
         setActiveIndex(activeIndex === index ? 0 : index);
     };
-    const businessAddress = "Carrefour Moussa, Odza 2 BP 31191 Yaounde, Cameroon";
+    const businessAddress = "Carrefour Moussa, Odza 2BP 31191 Yaounde, Cameroon";
     const email = "info@stw-solution.com"
     const phone1 = "+237 677 742 214";
     const phone2 = "+237 675 529 171";

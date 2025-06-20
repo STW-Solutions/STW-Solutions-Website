@@ -100,12 +100,14 @@ export interface BlogAuthor {
 }
 
 export interface BlogReply {
-  id: number;
-  author_name: string;
-  content: {
+  id?: number;
+  author_name?: string;
+  content?: {
     rendered: string;
   };
-  date: string;
+  author_email?: string;
+  date?: string;
+  post?: number;
 }
 
 export interface BlogCategory {

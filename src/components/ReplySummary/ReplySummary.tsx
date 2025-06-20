@@ -20,16 +20,22 @@ const ReplySummary = ({ reply }: Props) => {
         </div>
         <span className="ms-2">
           <span className="fw-semibold">{reply.author_name}</span>
-          <div>
-            <small className="text-muted">{format(new Date(reply.date), "MMMM dd, yyyy")}</small>
-          </div>
+          {reply.date && (
+            <div>
+              <small className="text-muted">
+                {format(new Date(reply.date), "MMMM dd, yyyy")}
+              </small>
+            </div>
+          )}
         </span>
       </div>
-      <p
-        dangerouslySetInnerHTML={{ __html: reply.content.rendered }}
-        className="text-muted mt-2"
-      ></p>
-      <hr className="reply-hr" style={{border: '1px solid'}} />
+      {reply.content && (
+        <p
+          dangerouslySetInnerHTML={{ __html: reply.content.rendered }}
+          className="text-muted mt-2"
+        ></p>
+      )}
+      <hr className="reply-hr" style={{ border: "1px solid" }} />
     </div>
   );
 };

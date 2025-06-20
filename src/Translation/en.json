@@ -299,5 +299,11 @@
   "email": "email",
   "send_message": "send message",
   "freq_asked_ques": "Frequently Asked Questions",
-  "replies": "replies"
+  "replies": "replies",
+  "leave_a_reply": "leave a reply",
+  "reply": "reply",
+  "name": "name",
+  "email_address": "Email address",
+  "post_reply": "post reply",
+  "reply_form_heading": "Your email address will not be published. Required fields are marked"
 }
