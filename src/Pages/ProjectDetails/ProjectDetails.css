@@ -20,7 +20,10 @@
 
 .active-impact, .back-btn {
     background-color: #257251;
-    border-radius: 4px;
+}
+
+.inactive-impact {
+    border: 1px solid #257251;
 }
 
 .back-btn {

@@ -60,14 +60,14 @@ const ProjectDetails = () => {
               <h5 className="fw-bold text-muted">
                 {t("impact_and_transformation")}
               </h5>
-              <div className="mt-1">
+              <div className="mt-4">
                 <ul className="nav nav-tabs ms-0">
                   {project.impact.map((impact, i) => (
                     <li
                       className={`nav-item ${
                         impactValue?.name === impact.name
                           ? " active-impact"
-                          : ""
+                          : " inactive-impact bg-light"
                       }`}
                       key={i}
                     >
@@ -83,7 +83,7 @@ const ProjectDetails = () => {
                 </ul>
               </div>
               {impactValue && (
-                <div>
+                <div className="mt-4">
                   {impactValue.description.main && (
                     <p>{t(impactValue.description.main)}</p>
                   )}
