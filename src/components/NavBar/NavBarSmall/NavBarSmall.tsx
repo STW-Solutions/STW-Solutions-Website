@@ -221,7 +221,7 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                   </ul>
                 </div>
               </li>
-              <li className="dropdown-item bg-white stw-nav-sm-li">
+              {/* <li className="dropdown-item bg-white stw-nav-sm-li">
                 <div className="dropend">
                   <button
                     className="dropdown-toggle border-0 bg-transparent text-capitalize"
@@ -246,24 +246,24 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                         {t("blog")}
                       </Link>
                     </li>
-                    {/* <li>
+                    <li>
                       <Link className="dropdown-item stw-nav-sm-li" to="#">
                         {t("events")}
                       </Link>
-                    </li> */}
-                    {/* <li>
+                    </li>
+                    <li>
                       <Link className="dropdown-item stw-nav-sm-li" to="#">
                         {t("news")}
                       </Link>
-                    </li> */}
-                    {/* <li>
+                    </li>
+                    <li>
                       <Link className="dropdown-item stw-nav-sm-li" to="#">
                         {t("podcast")}
                       </Link>
-                    </li> */}
+                    </li>
                   </ul>
                 </div>
-              </li>
+              </li> */}
               <li className="dropdown-item bg-white stw-nav-sm-li">
                 <div className="dropend">
                   <button

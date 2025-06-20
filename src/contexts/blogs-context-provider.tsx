@@ -1,18 +1,18 @@
 import { useState, createContext, useContext, useEffect } from "react";
-import { Blog } from "../models";
+import { Blog, BlogCategory } from "../models";
 
 interface Props {
   children: any;
 }
 
 interface BlogsContextType {
-  categories: string[] | null;
-  currentCategory: string;
+  categories: BlogCategory[] | null;
+  currentCategory: BlogCategory;
   blogDetailId: string | null;
   recentBlogs: Blog[] | null;
   language: string;
-  setCategories: (categories: string[] | null) => void;
-  setCurrentCategory: (category: string) => void;
+  setCategories: (categories: BlogCategory[] | null) => void;
+  setCurrentCategory: (category: BlogCategory) => void;
   setBlogDetailId: (blogDetailId: string) => void;
   setRecentBlogs: (recentBlogs: Blog[] | null) => void;
   setLanguage: (language: string) => void;
@@ -21,8 +21,12 @@ interface BlogsContextType {
 export const BlogsContext = createContext<BlogsContextType | null>(null);
 
 export const BlogsContextProvider = ({ children }: Props) => {
-  const [currentCategory, setCurrentCategory] = useState<string>("all");
-  const [categories, setCategories] = useState<string[] | null>(() => {
+  const [currentCategory, setCurrentCategory] = useState<BlogCategory>({
+    id: 0,
+    name: "all",
+    taxonomy: "",
+  });
+  const [categories, setCategories] = useState<BlogCategory[] | null>(() => {
     const savedCategories = localStorage.getItem("blogCategories");
     return savedCategories ? JSON.parse(savedCategories) : [];
   });
@@ -33,7 +37,9 @@ export const BlogsContextProvider = ({ children }: Props) => {
     const savedRecentBlogs = localStorage.getItem("recentBlogs");
     return savedRecentBlogs ? JSON.parse(savedRecentBlogs) : [];
   });
-  const [language, setLanguage] = useState<string>(localStorage.getItem('language') || 'en');
+  const [language, setLanguage] = useState<string>(
+    localStorage.getItem("language") || "en"
+  );
 
   const contextValue = {
     categories,
@@ -45,7 +51,7 @@ export const BlogsContextProvider = ({ children }: Props) => {
     setCurrentCategory,
     setCategories,
     setRecentBlogs,
-    setLanguage
+    setLanguage,
   };
 
   useEffect(() => {

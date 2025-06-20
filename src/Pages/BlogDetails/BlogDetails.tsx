@@ -17,7 +17,6 @@ const BlogDetails = () => {
   const [error, setError] = useState();
   const navigate = useNavigate();
   const {
-    currentCategory,
     setCurrentCategory,
     categories,
     blogDetailId,
@@ -90,7 +89,7 @@ const BlogDetails = () => {
           {blog && (
             <>
               <div className="row justify-content-evenly mt-5">
-                <div className="bg-white shadow p-5 col-12 col-lg-8">
+                <div className="bg-white shadow p-5 col-12 col-lg-7">
                   <BlogSummary blog={blog} useAsDetails={true} />
                   <div
                     className="pt-5"
@@ -99,7 +98,7 @@ const BlogDetails = () => {
                     }}
                   ></div>
                 </div>
-                <div className="mt-5 mt-lg-0 col-lg-3">
+                <div className="mt-5 mt-lg-0 col-lg-4">
                   <div className="rounded category-box py-3">
                     <h2 className="fs-4 text-center text-uppercase">
                       {t("categories")}
@@ -114,7 +113,7 @@ const BlogDetails = () => {
                             }}
                             className="btn border-0 text-decoration-underline fs-5 text-black text-capitalize"
                           >
-                            {t(category)}
+                            {t(category.name)}
                           </button>
                         </li>
                       ))}
@@ -122,13 +121,14 @@ const BlogDetails = () => {
                   </div>
 
                   <div
-                    className={`rounded category-box p-3 mt-3`}
+                    className={`rounded category-box px-3 py-4 mt-3`}
                     key={`${blog.id}recentBlogs`}
                   >
                     <h2 className="fs-4 text-center text-uppercase fw-bold">
                       {t("recent_posts")}
                     </h2>
-                    {recentBlogs?.map(
+                    <div className="mx-auto recent-post-blog-details-box">
+                      {recentBlogs?.map(
                       (recentBlog, i) =>
                         i < 3 && (
                           <div
@@ -151,6 +151,7 @@ const BlogDetails = () => {
                           </div>
                         )
                     )}
+                    </div>
                   </div>
                 </div>
               </div>
