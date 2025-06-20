@@ -8,7 +8,7 @@ import BlogMiniSummary from "../../components/BlogMiniSummary/BlogMiniSummary";
 import { Link, useNavigate } from "react-router";
 import { useBlogsContext } from "../../contexts/blogs-context-provider";
 import ReplySummary from "../../components/ReplySummary/ReplySummary";
-import ReplyForm from '../../components/ReplyForm/ReplyForm';
+import ReplyForm from "../../components/ReplyForm/ReplyForm";
 
 const BlogDetails = () => {
   const { t } = useTranslation();
@@ -63,7 +63,22 @@ const BlogDetails = () => {
         </div>
       )}
       {!isLoading && (
-        <div className="px-5">
+        <div className="px-sm-5 px-1">
+          <div className="ms-5 mt-5">
+            <Link
+              to={"/blogs"}
+              className="btn border-0 back-btn rounded text-white mb-5 align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                className="svg-back-icon me-3"
+              >
+                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+              </svg>
+              {t("back_to_blogs")}
+            </Link>
+          </div>
           <h1 className="stw-solutions-h1 text-center text-black text-capitalize mt-3">
             {blog?.title.rendered}
           </h1>
@@ -75,7 +90,7 @@ const BlogDetails = () => {
           {blog && (
             <>
               <div className="row justify-content-evenly mt-5">
-                <div className="bg-white shadow p-5 col-12 col-lg-7">
+                <div className="bg-white shadow p-5 col-12 col-lg-8">
                   <BlogSummary blog={blog} useAsDetails={true} />
                   <div
                     className="pt-5"
@@ -84,7 +99,7 @@ const BlogDetails = () => {
                     }}
                   ></div>
                 </div>
-                <div className="col-lg-5">
+                <div className="mt-5 mt-lg-0 col-lg-3">
                   <div className="rounded category-box py-3">
                     <h2 className="fs-4 text-center text-uppercase">
                       {t("categories")}
@@ -139,8 +154,8 @@ const BlogDetails = () => {
                   </div>
                 </div>
               </div>
-              {blog._embedded.replies[0].length && (
-                <div className="mt-5 ms-5 ps-5">
+              {blog._embedded?.replies && blog._embedded.replies[0].length && (
+                <div className="mt-5 ms-0 ms-sm-5 ps-5">
                   <h3 className="text-uppercase fs-4">
                     {t("replies")} {`(${blog._embedded.replies[0].length})`}
                   </h3>
@@ -151,14 +166,32 @@ const BlogDetails = () => {
                       ))}
                     </div>
                   </div>
-                  <h3 className="text-uppercase fs-4">{t("leave_a_reply")}</h3>
-                  <div className="row">
-                    <div className="col-12 col-md-8 mt-3">
-                      <ReplyForm postId={blog.id}/>
-                    </div>
-                  </div>
                 </div>
               )}
+              <div className="ms-0 ms-sm-5 ps-5 mt-5">
+                <h3 className="text-uppercase fs-4">{t("leave_a_reply")}</h3>
+                  <div className="row">
+                    <div className="col-12 col-md-8 mt-3">
+                      <ReplyForm postId={blog.id} />
+                    </div>
+                  </div>
+              </div>
+
+              <div className="ms-5 mt-5 pt-0 pt-lg-5">
+                <Link
+                  to={"/blogs"}
+                  className="btn border-0 back-btn rounded text-white mb-5 align-items-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    className="svg-back-icon me-3"
+                  >
+                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                  </svg>
+                  {t("back_to_blogs")}
+                </Link>
+              </div>
             </>
           )}
         </div>

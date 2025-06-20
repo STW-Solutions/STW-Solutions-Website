@@ -305,5 +305,8 @@
   "name": "name",
   "email_address": "Email address",
   "post_reply": "post reply",
-  "reply_form_heading": "Your email address will not be published. Required fields are marked"
+  "reply_form_heading": "Your email address will not be published. Required fields are marked",
+  "your_submission_failed": "Your submission failed. Check you internet connectivity and form inputs and try again.",
+  "your_reply_form_submission_worked": "Your comment is awaiting moderation",
+  "back_to_blogs": "back to blogs"
 }

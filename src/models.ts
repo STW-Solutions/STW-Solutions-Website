@@ -103,7 +103,7 @@ export interface BlogReply {
   id?: number;
   author_name?: string;
   content?: {
-    rendered: string;
+    // rendered: string;
   };
   author_email?: string;
   date?: string;
