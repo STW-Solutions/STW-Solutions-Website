@@ -1,4 +1,4 @@
-import { Blog, PageInfo } from "../../models";
+import { Blog, BlogCategory, PageInfo } from "../../models";
 import { useEffect, useState } from "react";
 import apiClient, { CanceledError } from "../../services/api-client";
 import { useTranslation } from "react-i18next";
@@ -15,7 +15,6 @@ const Blogs = () => {
   const [isLoadingRecentBlog, setIsLoadingRecentBlog] = useState(false);
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [blogsByPage, setBlogsByPage] = useState<Blog[]>([]);
-  const [blogsByPageOriginal, setBlogsByPageOriginal] = useState<Blog[]>([]);
   const [pageDetails, setPageDetails] = useState<PageInfo>({
     size: 3,
     numberOfPages: 0,
@@ -32,7 +31,7 @@ const Blogs = () => {
     setBlogDetailId,
     setRecentBlogs,
     recentBlogs,
-    language
+    language,
   } = useBlogsContext();
 
   useEffect(() => {
@@ -62,21 +61,23 @@ const Blogs = () => {
       });
   };
 
-  useEffect(() => {
+  const getBlogsByPage = (categoryId?: number) => {
     const page = searchParams.get("page");
     const perPage = searchParams.get("per_page");
+    const url = categoryId
+      ? `/posts?page=${page}&per_page=${perPage}&categories=${categoryId}&_embed`
+      : `/posts?page=${page}&per_page=${perPage}&_embed`;
     if (page && perPage) {
       setIsLoading(true);
       const controller = new AbortController();
       apiClient
-        .get<Blog[]>(`/posts?page=${page}&per_page=${perPage}&_embed`, {
+        .get<Blog[]>(url, {
           signal: controller.signal,
         })
         .then((res) => {
+          setBlogsByPage(res.data);
           getRecentBlogs();
           setIsLoading(false);
-          setBlogsByPageOriginal(res.data);
-          filterBlogsByCategory(currentCategory, res.data)
           const numberOfPages = res.headers["x-wp-totalpages"];
           setPageDetails({ ...pageDetails, numberOfPages });
         })
@@ -86,42 +87,44 @@ const Blogs = () => {
           setError(err);
         });
     }
+  };
+
+  useEffect(() => {
+    getBlogsByPage(currentCategory.id);
   }, [searchParams]);
 
   const updateCategoryList = (blogs: Blog[]) => {
     const allCategories = new Set();
-    allCategories.add("all");
+    const defaultCategory: BlogCategory = {
+      id: 0,
+      name: "all",
+      taxonomy: "",
+    };
+    allCategories.add(defaultCategory);
     for (const blog of blogs) {
       for (const categories of blog._embedded["wp:term"]) {
         for (const category of categories) {
-          allCategories.add(category.name);
+          allCategories.add({
+            name: category.name,
+            id: category.id,
+            taxonomy: category.taxonomy,
+          });
         }
       }
     }
-    return Array.from(allCategories) as string[];
+    return Array.from(allCategories) as BlogCategory[];
   };
 
   const handlePageInfoChange = (pageInfo: PageInfo) => {
     setSearchParams({ page: pageInfo.currentPage.toString(), per_page: "3" });
   };
 
-  const filterBlogsByCategory = (filterCategory: string, blogs: Blog[]) => {
-    if (filterCategory === "all") {
-      setBlogsByPage(blogs);
+  const filterBlogsByCategory = (filterCategory: BlogCategory) => {
+    if (filterCategory.name === "all") {
+      getBlogsByPage();
       return;
     }
-    const filteredBlogsSet = new Set();
-    for (const blog of blogs) {
-      for (const categories of blog._embedded["wp:term"]) {
-        for (const category of categories) {
-          if (category.name === filterCategory) {
-            filteredBlogsSet.add(blog);
-          }
-        }
-      }
-    }
-    const filteredBlogs = Array.from(filteredBlogsSet) as Blog[];
-    setBlogsByPage(filteredBlogs);
+    getBlogsByPage(filterCategory.id);
   };
 
   return (
@@ -190,14 +193,9 @@ const Blogs = () => {
                             <li key={`${i}category`} className="mt-3">
                               <button
                                 className="fs-5 text-decoration-underline border-0 bg-transparent text-black text-capitalize"
-                                onClick={() =>
-                                  filterBlogsByCategory(
-                                    category,
-                                    blogsByPageOriginal
-                                  )
-                                }
+                                onClick={() => filterBlogsByCategory(category)}
                               >
-                                {t(category)}
+                                {t(category.name)}
                               </button>
                             </li>
                           ))}
