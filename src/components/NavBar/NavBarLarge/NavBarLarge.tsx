@@ -175,7 +175,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             </li>
           </ul>
         </div>
-        <div className="dropdown mx-2 mx-xl-4">
+        {/* <div className="dropdown mx-2 mx-xl-4">
           <button
             className="dropdown-toggle my-1 border-0 bg-white text-capitalize fw-bold"
             data-bs-toggle="dropdown"
@@ -196,23 +196,23 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
                 {t("blog")}
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link className="dropdown-item stw-nav-lg-link" to="#">
                 {t("events")}
               </Link>
-            </li> */}
-            {/* <li>
+            </li>
+            <li>
               <Link className="dropdown-item stw-nav-lg-link" to="#">
                 {t("news")}
               </Link>
-            </li> */}
-            {/* <li>
+            </li>
+            <li>
               <Link className="dropdown-item stw-nav-lg-link" to="#">
                 {t("podcast")}
               </Link>
-            </li> */}
+            </li>
           </ul>
-        </div>
+        </div> */}
       </div>
       <div className="d-flex justify-content-between mx-3 mx-lg-4 px-lg-4 mx-xl-5 py-2 py-lg-0">
         <ButtonPrimary

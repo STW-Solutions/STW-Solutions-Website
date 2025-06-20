@@ -1,4 +1,5 @@
-figure, h2.wp-block-heading {
+figure,
+h2.wp-block-heading {
     display: none;
 }
 
@@ -9,4 +10,14 @@ figure, h2.wp-block-heading {
 .related-blogs-box {
     background-color: #CFFFEB;
     height: fit-content;
+}
+
+.recent-post-blog-details-box {
+    width: 90%;
+}
+
+@media (max-width: 400px) {
+    .recent-post-blog-details-box {
+        width: 100%;
+    }
 }
