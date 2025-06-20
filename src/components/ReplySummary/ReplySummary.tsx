@@ -1,8 +1,8 @@
-import { BlogReply } from "../../models";
+import { BlogReplyRender } from "../../models";
 import { format } from "date-fns";
 
 interface Props {
-  reply: BlogReply;
+  reply: BlogReplyRender;
 }
 
 const ReplySummary = ({ reply }: Props) => {
