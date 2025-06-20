@@ -7,6 +7,8 @@ import "./BlogDetails.css";
 import BlogMiniSummary from "../../components/BlogMiniSummary/BlogMiniSummary";
 import { Link, useNavigate } from "react-router";
 import { useBlogsContext } from "../../contexts/blogs-context-provider";
+import ReplySummary from "../../components/ReplySummary/ReplySummary";
+import ReplyForm from '../../components/ReplyForm/ReplyForm';
 
 const BlogDetails = () => {
   const { t } = useTranslation();
@@ -14,7 +16,13 @@ const BlogDetails = () => {
   const [blog, setBlog] = useState<Blog>();
   const [error, setError] = useState();
   const navigate = useNavigate();
-  const { currentCategory, setCurrentCategory, categories, blogDetailId, recentBlogs } = useBlogsContext();
+  const {
+    currentCategory,
+    setCurrentCategory,
+    categories,
+    blogDetailId,
+    recentBlogs,
+  } = useBlogsContext();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -56,7 +64,7 @@ const BlogDetails = () => {
       )}
       {!isLoading && (
         <div className="px-5">
-          <h1 className="stw-solutions-h1 text-center text-black text-capitalize">
+          <h1 className="stw-solutions-h1 text-center text-black text-capitalize mt-3">
             {blog?.title.rendered}
           </h1>
           {error && (
@@ -66,7 +74,7 @@ const BlogDetails = () => {
           )}
           {blog && (
             <>
-              <div className="row justify-content-evenly">
+              <div className="row justify-content-evenly mt-5">
                 <div className="bg-white shadow p-5 col-12 col-lg-7">
                   <BlogSummary blog={blog} useAsDetails={true} />
                   <div
@@ -131,6 +139,26 @@ const BlogDetails = () => {
                   </div>
                 </div>
               </div>
+              {blog._embedded.replies[0].length && (
+                <div className="mt-5 ms-5 ps-5">
+                  <h3 className="text-uppercase fs-4">
+                    {t("replies")} {`(${blog._embedded.replies[0].length})`}
+                  </h3>
+                  <div className="row">
+                    <div className="col-12 col-md-8 mt-3">
+                      {blog._embedded.replies[0].map((reply, i) => (
+                        <ReplySummary reply={reply} key={i} />
+                      ))}
+                    </div>
+                  </div>
+                  <h3 className="text-uppercase fs-4">{t("leave_a_reply")}</h3>
+                  <div className="row">
+                    <div className="col-12 col-md-8 mt-3">
+                      <ReplyForm postId={blog.id}/>
+                    </div>
+                  </div>
+                </div>
+              )}
             </>
           )}
         </div>
