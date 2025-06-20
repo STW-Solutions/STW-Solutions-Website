@@ -14,7 +14,7 @@
     font-size: 14px;
 }
 
-hr {
+.stw-hr {
     border: 1px solid #257251;
     opacity: 1;
     margin-top: 1rem;
@@ -26,7 +26,7 @@ hr {
         padding-bottom: 5px;
     }
 
-    hr {
+    .stw-hr {
         display: none;
     }
 }

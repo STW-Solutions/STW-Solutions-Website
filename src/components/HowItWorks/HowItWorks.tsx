@@ -34,7 +34,7 @@ const HowItWorks = () => {
         <div className="text-muted">
           {t("discover_the_effortless_process_behind_our_solution")}
         </div>
-        <hr/>
+        <hr className="stw-hr"/>
       </span>
       <div className="d-flex justify-content-center align-items-center flex-column flex-md-row mt-3 mt-md-5">
         {steps.map((step, index) => (
