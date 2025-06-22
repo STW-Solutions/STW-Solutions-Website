@@ -236,7 +236,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             </svg>
           </span>
           <select
-            className="text-uppercase form-select rounded-0 px-5 py-2 fw-bold"
+            className="text-uppercase form-select rounded-0 px-5 py-2 fw-bold language-select"
             aria-label="language options"
             onChange={(event) => {
               onClickLanguageChange(event.target.value);
