@@ -236,7 +236,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             </svg>
           </span>
           <select
-            className="text-uppercase form-select rounded-0 px-5 py-2 fw-bold"
+            className="text-uppercase form-select rounded-0 px-5 py-2 fw-bold language-select"
             aria-label="language options"
             onChange={(event) => {
               onClickLanguageChange(event.target.value);
@@ -245,8 +245,8 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
             defaultValue={"en"}
           >
             <option value={"en"}>{t("en")}</option>
-            {/* <option value={"fr"}>{t("fr")}</option>
-            <option value={"de"}>{t("de")}</option> */}
+            <option value={"fr"}>{t("fr")}</option>
+            {/* <option value={"de"}>{t("de")}</option> */}
           </select>
         </div>
       </div>
