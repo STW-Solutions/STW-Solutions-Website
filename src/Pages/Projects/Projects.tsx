@@ -52,7 +52,7 @@ const Projects = () => {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>{t("projects_page")} - STW-Solutions Ltd</title>
+          <title>{t("projects_page")} - STW Solutions Ltd</title>
           <meta name="projects" content={t("meta_projects")} />
         </Helmet>
       </HelmetProvider>

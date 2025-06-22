@@ -22,8 +22,8 @@ const SolutionForestry = () => {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>{t(solutionName || "")} - STW-Solutions Ltd</title>
-          <meta name="projects" content={t("meta_" + solutionName || "")} />
+          <title>{t(solution?.title || "")} - STW Solutions Ltd</title>
+          <meta name="solution details" content={t("meta_" + solution?.title || "")} />
         </Helmet>
       </HelmetProvider>
       <div>
