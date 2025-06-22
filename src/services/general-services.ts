@@ -18,3 +18,7 @@ export const getImageUrl = (htmlContent: any) => {
   }
   return imageLinks;
 };
+
+export const translateBlogs = () => {
+  
+}
