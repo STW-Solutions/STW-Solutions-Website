@@ -14,7 +14,8 @@ interface Props {
 
 const NavBarSmall = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
-  const languages = ["en", "fr", "de"];
+  // const languages = ["en", "fr", "de"];
+  const languages = ["en", "fr"];
   const location = useLocation().pathname;
    const navigate = useNavigate();
    const handleClick = () => {
@@ -281,7 +282,7 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                   >
                     {languages.map(
                       (item, index) =>
-                        index === 0 && (
+                        (
                           <li className="text-uppercase" key={index}>
                             <a
                               className="dropdown-item border-0 stw-nav-sm-li globe-icon-box"

@@ -25,17 +25,17 @@
 }
 
 .stw-select-box,
-select {
+.language-select {
     background-color: #96FDD1 !important;
     color: #000000 !important;
 }
 
-.stw-select-box select {
+.stw-select-box .language-select {
     box-shadow: none !important;
 }
 
-select:focus,
-select {
+.language-select:focus,
+.language-select {
     border-color: transparent !important;
 }
 
@@ -43,7 +43,7 @@ select {
     width: 50%;
 }
 
-.form-select {
+.language-select {
     width: auto !important;
 }
 

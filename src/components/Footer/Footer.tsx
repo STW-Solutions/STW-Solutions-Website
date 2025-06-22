@@ -20,15 +20,15 @@ const Footer = () => {
               <Link to="/contact-us">{t("contact")}</Link>
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-md-3 footer-col">
+          <div className="col-12 col-sm-6 col-md-2 footer-col">
             <h6 className="fw-bold">{t("solutions")}</h6>
             <div className="d-flex justify-content-evenly flex-column">
-              <Link to="/solutions/forestry">{t("forestry_solutions")}</Link>
-              <Link to="/solutions/waste-management">{t("waste_management_solutions")}</Link>
-              <Link to="/solutions/renewable-energy">{t("renewable_energy_solutions")}</Link>
+              <Link to="/solutions/forestry">{t("forestry")}</Link>
+              <Link to="/solutions/waste-management">{t("waste_management")}</Link>
+              <Link to="/solutions/renewable-energy">{t("renewable_energy")}</Link>
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-md-2 footer-col">
+          <div className="col-12 col-sm-6 col-md-3 footer-col">
             <h6 className="fw-bold">{t("projects")}</h6>
             <div className="d-flex justify-content-center flex-column">
               <Link to="/projects">{t("our_projects")}</Link>

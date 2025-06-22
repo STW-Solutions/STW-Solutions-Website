@@ -12,7 +12,7 @@ import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
 import SolutionDetails from "./Pages/SolutionDetails/SolutionDetails";
 import Blogs from "./Pages/Blogs/Blogs";
 import BlogDetails from "./Pages/BlogDetails/BlogDetails";
-import ContactUs from "./Pages/ContactUs/ContactUs"
+import ContactUs from "./Pages/ContactUS/ContactUs";
 
 const router = createBrowserRouter([
   {
