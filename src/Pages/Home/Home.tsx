@@ -61,7 +61,7 @@ const Home = () => {
     <div className="home-main">
       <HelmetProvider>
         <Helmet>
-          <title>{t("home_page")} - STW-Solutions Ltd</title>
+          <title>{t("home_page")} - STW Solutions Ltd</title>
           <meta name="home" content={t("meta_home")} />
         </Helmet>
       </HelmetProvider>

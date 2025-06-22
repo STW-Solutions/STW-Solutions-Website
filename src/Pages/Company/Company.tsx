@@ -29,8 +29,8 @@ const Company = () => {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>{t("about_page")} - STW-Solutions Ltd</title>
-          <meta name="home" content={t("meta_company")} />
+          <title>{t("about_page")} - STW Solutions Ltd</title>
+          <meta name="company" content={t("meta_company")} />
         </Helmet>
       </HelmetProvider>
       <div className="container-fluid container-main">
