@@ -9,7 +9,7 @@
   "services": "services",
   "projects": "projects",
   "stw_solutions_logo": "STW Solutions Logo",
-  "contact_us": "contact us",
+  "contact_us": "Contact Us",
   "en": "en",
   "fr": "fr",
   "de": "de",
@@ -325,5 +325,15 @@
   "faq_question_two": "How can I improve the fertility of my soil naturally?",
   "faq_answer_two": "You can enhance soil fertility through various natural methods, including incorporating organic matter like compost and manure, practicing crop rotation, planting cover crops, reducing tillage, and ensuring proper drainage and aeration.",
   "faq_question_three": "What are some common sustainable farming practices?",
-  "faq_answer_three": "Sustainable farming practices include no-till or reduced tillage, crop rotation, cover cropping, integrated pest management (IPM), water-efficient irrigation techniques, agroforestry, and the use of renewable energy sources."
+  "faq_answer_three": "Sustainable farming practices include no-till or reduced tillage, crop rotation, cover cropping, integrated pest management (IPM), water-efficient irrigation techniques, agroforestry, and the use of renewable energy sources.",
+  "blogs_page": "Blogs Page",
+  "meta_blogs": "meta blogs",
+  "meta_contact_us": "meta contact us",
+  "meta_koundi_forest_conservation_project": "meta koundi forest conservation project",
+  "meta_kpawara_community_forest_restoration_project": "meta kpawara community forest restoration project",
+  "meta_mandjou_agroforestry_and_reforestation_project": "meta mandjou agroforestry and reforestation project",
+  "meta_banefou_landfill_gas_capture_and_energy_utilization_project": "meta banefou landfill gas capture and energy utilization project",
+  "meta_forestry_solutions": "meta forestry solutions",
+  "meta_waste_management_solutions": "meta waste management solutions",
+  "meta_renewable_energy_solutions": "meta renewable energy solutions"
 }

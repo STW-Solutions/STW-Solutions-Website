@@ -22,8 +22,8 @@ const ProjectDetails = () => {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>{t(projectName || "")} - STW-Solutions Ltd</title>
-          <meta name="projects" content={t("meta_" + projectName || "")} />
+          <title>{t(project?.title || "")} - STW Solutions Ltd</title>
+          <meta name="project details" content={t("meta_" + project?.title || "")} />
         </Helmet>
       </HelmetProvider>
       <div className="main-container">

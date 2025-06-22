@@ -9,6 +9,7 @@ import { Link } from "react-router";
 import Pagination from "../../components/Pagination/Pagination";
 import { useSearchParams } from "react-router";
 import { useBlogsContext } from "../../contexts/blogs-context-provider";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Blogs = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -129,6 +130,12 @@ const Blogs = () => {
 
   return (
     <>
+      <HelmetProvider>
+        <Helmet>
+          <title>{t("blogs_page")} - STW Solutions Ltd</title>
+          <meta name="blogs" content={t("meta_blogs")} />
+        </Helmet>
+      </HelmetProvider>
       <div
         className={`container-fluid ${
           (isLoading || error || blogsByPage.length === 0) &&

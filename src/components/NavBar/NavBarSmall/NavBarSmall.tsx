@@ -142,9 +142,9 @@ const NavBarSmall = ({ onClickLanguageChange }: Props) => {
                   >
                     <li>
                       <Link
-                        to="/solutions/solutions-forestry"
+                        to="/solutions/forestry"
                         className={`${
-                          location === "/solutions/solutions-forestry"
+                          location === "/solutions/forestry"
                             ? "stw-nav-sm-link-active"
                             : ""
                         } dropdown-item stw-nav-lg-link`}
