@@ -51,7 +51,7 @@ const BlogDetails = () => {
       <HelmetProvider>
         <Helmet>
           <title>{`${blog?.title.rendered} - STW Solutions Ltd`}</title>
-          <meta name="blog details" content={t("meta_" + blog?.title.rendered || "")} />
+          <meta name="blog details" content={blog?.title.rendered} />
         </Helmet>
       </HelmetProvider>
       <div
