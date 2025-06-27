@@ -64,7 +64,7 @@ const ProjectDetails = () => {
                 <ul className="nav nav-tabs ms-0">
                   {project.impact.map((impact, i) => (
                     <li
-                      className={`nav-item ${
+                      className={`nav-item me-3 rounded-pill px-2 ${
                         impactValue?.name === impact.name
                           ? " active-impact"
                           : " inactive-impact bg-light"
