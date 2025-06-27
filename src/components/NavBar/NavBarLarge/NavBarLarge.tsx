@@ -15,13 +15,12 @@ interface Props {
 const NavBarLarge = ({ onClickLanguageChange }: Props) => {
   const { t } = useTranslation();
   const location = useLocation().pathname;
-   const navigate = useNavigate();
-   const handleClick = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
     navigate("/contact-us");
   };
 
-  useEffect(() => {
-  }, [location]);
+  useEffect(() => {}, [location]);
   return (
     <div className="bg-white d-none navbar-lg justify-content-between align-items-center text-capitalize py-1 px-5">
       <Link className="stw-solutions-logo-box mx-lg-5" to={"/"}>
@@ -156,7 +155,12 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
           </button>
           <ul className="dropdown-menu" aria-labelledby="projectsDropdownLg">
             <li>
-              <Link className="dropdown-item stw-nav-lg-link" to="/projects">
+              <Link
+                className={`${
+                  location === "/projects" ? "stw-nav-lg-link-active" : ""
+                } dropdown-item stw-nav-lg-link`}
+                to="/projects"
+              >
                 {t("our_projects")}
               </Link>
             </li>
@@ -216,7 +220,7 @@ const NavBarLarge = ({ onClickLanguageChange }: Props) => {
       </div>
       <div className="d-flex justify-content-between mx-3 mx-lg-4 px-lg-4 mx-xl-5 py-2 py-lg-0">
         <ButtonPrimary
-        onButtonClick={() => handleClick()}
+          onButtonClick={() => handleClick()}
           classes={["stw-btn-w text-capitalize", "me-2", "mx-1", "w-100"]}
           children={`${t("contact_us")}`}
         />
