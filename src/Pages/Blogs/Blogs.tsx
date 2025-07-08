@@ -1,5 +1,5 @@
 import { Blog, BlogCategory, PageInfo } from "../../models";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import apiClient, { CanceledError } from "../../services/api-client";
 import { useTranslation } from "react-i18next";
 import BlogSummary from "../../components/BlogSummary/BlogSummary";
@@ -10,6 +10,17 @@ import Pagination from "../../components/Pagination/Pagination";
 import { useSearchParams } from "react-router";
 import { useBlogsContext } from "../../contexts/blogs-context-provider";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+
+declare global {
+  interface Window {
+    google: {
+      translate: {
+        TranslateElement: any; // You can specify a more detailed type if known
+      };
+    };
+    googleTranslateElementInit?: () => void;
+  }
+}
 
 const Blogs = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -128,6 +139,42 @@ const Blogs = () => {
     getBlogsByPage(filterCategory.id);
   };
 
+  //Google translate
+  useEffect(() => {
+    const addGoogleTranslate = () => {
+      const script = document.createElement("script");
+      script.src =
+        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      document.body.appendChild(script);
+    };
+
+    window.googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          includedLanguages: "en,fr,de",
+          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+        },
+        "google_translate_element"
+      );
+    };
+
+    addGoogleTranslate();
+
+    return () => {
+      const script = document.querySelector(
+        'script[src="https://translate.google.com/translate_a/element.js"]'
+      );
+      if (script) {
+        document.body.removeChild(script);
+      }
+      if (window.googleTranslateElementInit) {
+        delete window.googleTranslateElementInit;
+      }
+    };
+  }, []);
+
   return (
     <>
       <HelmetProvider>
@@ -158,7 +205,7 @@ const Blogs = () => {
                   {t("fetch_blogs_error")}
                 </div>
               )}
-              {blogsByPage.length === 0 && (
+              {!error && blogsByPage?.length === 0 && (
                 <div className="alert alert-info text-center w-100">
                   {t("no_blogs")}
                 </div>
@@ -268,6 +315,7 @@ const Blogs = () => {
           </>
         )}
       </div>
+      <div id="google_translate_element"></div>
     </>
   );
 };

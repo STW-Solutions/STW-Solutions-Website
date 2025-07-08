@@ -18,12 +18,12 @@
     fill: currentColor;
 }
 
-.active-impact, .back-btn {
+.back-btn {
     background-color: #257251;
 }
 
-.inactive-impact {
-    border: 1px solid gray;
+.active-impact {
+    border-bottom: 4px solid #257251;
 }
 
 .back-btn {
@@ -33,10 +33,6 @@
 .svg-back-icon {
     fill: white;
     width: 1rem;
-}
-
-.active-impact button {
-    color: white !important;
 }
 
 .sdg-card:hover {

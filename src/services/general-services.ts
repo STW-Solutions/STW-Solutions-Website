@@ -1,4 +1,4 @@
-import { ProjectCategory, Project } from "../models";
+import { ProjectCategory, Project, Blog } from "../models";
 
 export const filterProjectsByCategories = (
   projects: Project[],
@@ -19,6 +19,6 @@ export const getImageUrl = (htmlContent: any) => {
   return imageLinks;
 };
 
-export const translateBlogs = () => {
+export const translateBlogs = (data: Blog | Blog[],  language: string) => {
   
 }
