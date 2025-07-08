@@ -12,10 +12,10 @@ export interface CarouselItems {
 }
 
 export enum ProjectCategory {
-  UNDER_DEVELOPMENT = "UNDER DEVELOPMENT",
-  COMING_SOON = "COMING SOON",
-  FORESTRY = "FORESTRY",
-  WASTE_MANAGEMENT = "WASTE MANAGEMENT",
+  UNDER_DEVELOPMENT = "under_development",
+  COMING_SOON = "coming_soon",
+  FORESTRY = "forestry",
+  WASTE_MANAGEMENT = "waste_management",
 }
 
 export interface Project {

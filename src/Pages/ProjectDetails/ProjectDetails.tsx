@@ -64,15 +64,15 @@ const ProjectDetails = () => {
                 <ul className="nav nav-tabs ms-0">
                   {project.impact.map((impact, i) => (
                     <li
-                      className={`nav-item me-3 rounded-pill px-2 ${
+                      className={`nav-item me-3 text-black ${
                         impactValue?.name === impact.name
                           ? " active-impact"
-                          : " inactive-impact bg-light"
+                          : ""
                       }`}
                       key={i}
                     >
                       <button
-                        className="border-0 btn"
+                        className="border-0 btn text-uppercase"
                         aria-current="page"
                         onClick={() => setImpactValue(impact)}
                       >
@@ -153,9 +153,9 @@ const ProjectDetails = () => {
               {project?.categories.map((category, i) => (
                 <span
                   key={i}
-                  className="border me-2 p-2 bg-secondary text-white rounded"
+                  className="border me-2 p-2 bg-secondary text-white rounded text-uppercase"
                 >
-                  {category}
+                  {t(category)}
                 </span>
               ))}
             </div>

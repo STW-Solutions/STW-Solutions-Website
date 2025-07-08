@@ -111,6 +111,26 @@ ol {
     /* Set line height */
 }
 
+#google_translate_element {
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.goog-te-gadget-simple {
+    background-color: #CFFFEB !important;
+}
+
+iframe.VIpgJd-ZVi9od-ORHb-OEVmcd.skiptranslate{
+  visibility: hidden !important;
+}
+
 @media screen and (max-width: 1024px) {
     .partner-logo-box {
         height: 25vh;
